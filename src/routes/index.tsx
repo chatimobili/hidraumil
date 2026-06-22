@@ -28,7 +28,7 @@ import { CTASection } from "@/components/site/CTASection";
 import { FAQ } from "@/components/site/FAQ";
 import {
   ArrowRight, Trophy, Users, Award, ThumbsUp,
-  Truck, Wrench, CalendarCheck,
+  Truck, Wrench, CalendarCheck, Check,
 } from "lucide-react";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 
@@ -142,36 +142,63 @@ function Home() {
       </section>
 
       {/* EQUIPE — image left, text right */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 grid lg:grid-cols-2 gap-12 items-center">
-          <div className="order-2 lg:order-1">
+      <section className="bg-white relative overflow-hidden">
+        <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-primary/5 blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-secondary/5 blur-3xl pointer-events-none" />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-14 items-center">
+          <div className="order-2 lg:order-1 relative">
+            <div className="absolute -top-4 -left-4 h-24 w-24 rounded-2xl border-4 border-primary/80 hidden md:block" />
+            <div className="absolute -bottom-4 -right-4 h-32 w-32 rounded-2xl bg-secondary/10 hidden md:block" />
             <img
               src={equipeAsset.url}
               alt="Equipe técnica Hidraumil em Cascavel"
-              className="w-full h-auto rounded-2xl shadow-xl object-cover"
+              className="relative w-full h-auto rounded-2xl shadow-2xl object-cover ring-1 ring-black/5"
               loading="lazy"
             />
+            <div className="absolute -bottom-6 left-6 right-6 md:left-10 md:right-auto md:-bottom-8 bg-white rounded-xl shadow-xl border border-border px-5 py-4 flex items-center gap-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <Wrench className="h-6 w-6" />
+              </div>
+              <div>
+                <p className="text-2xl font-extrabold text-secondary leading-none">+15 anos</p>
+                <p className="text-xs text-muted-foreground mt-1">de experiência técnica</p>
+              </div>
+            </div>
           </div>
           <div className="order-1 lg:order-2">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-secondary leading-tight">
-              Equipe de técnicos experientes e altamente qualificada
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Nossa equipe</p>
+            <h2 className="mt-3 text-3xl md:text-4xl font-extrabold text-secondary leading-tight">
+              Técnicos experientes e altamente qualificados
             </h2>
             <p className="mt-5 text-muted-foreground leading-relaxed">
               Realizamos inspeções minuciosas, identificando e corrigindo quaisquer problemas que
               possam comprometer a eficiência dos seus equipamentos.
             </p>
-            <div className="mt-6 grid sm:grid-cols-2 gap-5 text-sm">
-              <p className="text-muted-foreground leading-relaxed">
-                Estamos familiarizados com todas as marcas e modelos de paleteiras hidráulicas,
-                permitindo oferecer soluções personalizadas para suas necessidades — troca de peças,
-                reparos emergenciais ou manutenção preventiva.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Compreendemos que o tempo de inatividade pode impactar suas operações. Por isso,
-                realizamos os serviços de forma rápida e eficiente, minimizando interrupções e
-                garantindo que suas paleteiras estejam sempre prontas para o trabalho.
-              </p>
-            </div>
+            <ul className="mt-7 space-y-4">
+              {[
+                { t: "Todas as marcas e modelos", d: "Soluções personalizadas para qualquer paleteira hidráulica." },
+                { t: "Reparos rápidos", d: "Minimizamos o tempo de inatividade da sua operação." },
+                { t: "Manutenção preventiva", d: "Garantimos que seus equipamentos estejam sempre prontos." },
+              ].map((item) => (
+                <li key={item.t} className="flex items-start gap-3">
+                  <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                    <Check className="h-3.5 w-3.5" />
+                  </span>
+                  <div>
+                    <p className="font-semibold text-secondary">{item.t}</p>
+                    <p className="text-sm text-muted-foreground">{item.d}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <a
+              href={SITE.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-lg hover:bg-[var(--brand-dark)] transition"
+            >
+              <WhatsAppIcon className="h-5 w-5" /> Fale com nossos técnicos
+            </a>
           </div>
         </div>
       </section>
