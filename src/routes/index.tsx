@@ -78,67 +78,104 @@ function OrangeWave({ flip = false, color = "#F97316" }: { flip?: boolean; color
 function Home() {
   return (
     <>
-      {/* HERO — light, bold headline, image inside orange rounded frame */}
-      <section className="relative bg-white overflow-hidden">
-        <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl pointer-events-none" aria-hidden="true" />
-        <div className="absolute top-1/2 -left-40 h-96 w-96 rounded-full bg-primary/5 blur-3xl pointer-events-none" aria-hidden="true" />
-
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28 grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-primary mb-5">
-              Especialistas em paleteiras
-            </p>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.02] text-secondary">
-              Sua paleteira está com algum{" "}
-              <span className="text-primary">defeito</span>?
-            </h1>
-            <p className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed">
-              A maior causa do seu hidráulico estragar é a falta de manutenção.
-              Conte com a Hidraumil para resolver — orçamento gratuito e rápido.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href={SITE.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-[0_10px_30px_-10px_rgba(249,115,22,0.6)] hover:bg-[var(--brand-dark)] hover:-translate-y-0.5 transition"
-              >
-                <WhatsAppIcon className="h-5 w-5" /> Realize um orçamento
-              </a>
-              <a
-                href="#servicos"
-                className="inline-flex items-center gap-2 rounded-full bg-white border-2 border-secondary/15 px-7 py-3.5 text-base font-semibold text-secondary hover:border-primary hover:text-primary transition"
-              >
-                Nossos serviços
-              </a>
-            </div>
-          </div>
-
-          {/* Image inside orange rounded frame (Empregga-style) */}
-          <div className="relative">
-            <div className="absolute -inset-4 rounded-[2.5rem] bg-primary -rotate-2" aria-hidden="true" />
-            <div className="absolute -bottom-6 -right-6 h-24 w-24 rounded-2xl bg-secondary hidden md:block" aria-hidden="true" />
+      {/* HERO — full-bleed image background, white card left, floating pill badges */}
+      <section className="relative bg-white">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8 pb-0">
+          <div className="relative overflow-hidden rounded-[2rem] min-h-[560px] md:min-h-[600px]">
             <img
               src={heroImg}
-              alt="Técnico inspecionando paleteira hidráulica em armazém"
-              width={1200}
-              height={1200}
-              className="relative w-full h-auto rounded-[2rem] shadow-2xl object-cover aspect-[4/5] md:aspect-[5/5]"
+              alt="Técnico Hidraumil pronto para atender em Cascavel"
+              className="absolute inset-0 w-full h-full object-cover"
               fetchPriority="high"
             />
+            <svg
+              viewBox="0 0 800 600"
+              preserveAspectRatio="none"
+              aria-hidden="true"
+              className="absolute inset-0 w-full h-full pointer-events-none"
+            >
+              <path d="M800,200 C600,260 520,420 560,600 L800,600 Z" fill="#F97316" opacity="0.85" />
+              <path d="M800,320 C680,360 620,480 660,600 L800,600 Z" fill="#F97316" />
+            </svg>
+
+            <div className="relative z-10 grid lg:grid-cols-2 h-full">
+              <div className="p-6 md:p-10 lg:p-12 flex items-center">
+                <div className="bg-white rounded-[1.75rem] shadow-2xl p-8 md:p-10 max-w-xl">
+                  <p className="text-xs font-bold uppercase tracking-[0.22em] text-primary mb-5">
+                    ⚡ Bem-vindo(a) à Hidraumil
+                  </p>
+                  <h1 className="text-4xl md:text-5xl font-extrabold leading-[1.05] text-secondary">
+                    Sua paleteira está com algum{" "}
+                    <span className="text-primary">defeito?</span>
+                  </h1>
+                  <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
+                    Conte com a Hidraumil para resolver. Manutenção, conserto, locação e venda
+                    de paleteiras com técnicos especializados em Cascavel e região.
+                  </p>
+                  <div className="mt-7 flex items-center gap-5 flex-wrap">
+                    <a
+                      href={SITE.whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-[0_10px_30px_-10px_rgba(249,115,22,0.6)] hover:bg-[var(--brand-dark)] hover:-translate-y-0.5 transition"
+                    >
+                      Solicitar orçamento
+                    </a>
+                    <a
+                      href="#servicos"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:text-primary transition"
+                    >
+                      Conheça mais ↓
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="hidden lg:block relative">
+                <div className="absolute top-[22%] left-[10%] bg-white rounded-full shadow-xl px-5 py-3 flex items-center gap-2.5">
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary/15 text-primary">
+                    <Wrench className="h-4 w-4" />
+                  </span>
+                  <span className="text-sm font-semibold text-secondary">Rapidez</span>
+                </div>
+                <div className="absolute top-[48%] left-[2%] bg-white rounded-full shadow-xl px-5 py-3 flex items-center gap-2.5">
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary/15 text-primary">
+                    <ShieldCheck className="h-4 w-4" />
+                  </span>
+                  <span className="text-sm font-semibold text-secondary">Garantia</span>
+                </div>
+                <div className="absolute top-[70%] left-[22%] bg-white rounded-full shadow-xl px-5 py-3 flex items-center gap-2.5">
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary/15 text-primary">
+                    <Star className="h-4 w-4" />
+                  </span>
+                  <span className="text-sm font-semibold text-secondary">+15 anos</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
 
-      {/* STATS — light strip with orange numbers */}
-      <section className="bg-surface border-y border-border">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-2 lg:grid-cols-4 gap-10">
-          {stats.map((s) => (
-            <div key={s.label} className="text-center">
-              <div className="text-4xl md:text-5xl font-extrabold text-primary leading-none tracking-tight">{s.value}</div>
-              <div className="mt-3 text-sm text-secondary/70 uppercase tracking-wider font-semibold">{s.label}</div>
-            </div>
-          ))}
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10 pb-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 bg-white rounded-2xl">
+            {stats.map((s, i) => {
+              const Icon = [Star, Wrench, CalendarCheck, ShieldCheck][i] ?? Star;
+              return (
+                <div
+                  key={s.label}
+                  className={`px-6 py-6 text-center lg:text-left ${i > 0 ? "lg:border-l border-border" : ""}`}
+                >
+                  <div className="flex justify-center lg:justify-start text-primary">
+                    <Icon className="h-6 w-6" />
+                  </div>
+                  <div className="mt-3 text-2xl md:text-3xl font-extrabold text-secondary leading-none">
+                    {s.value}
+                  </div>
+                  <div className="mt-2 text-sm text-muted-foreground">{s.label}</div>
+                  <div className="mt-3 h-[3px] w-10 bg-primary mx-auto lg:mx-0 rounded-full" />
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
