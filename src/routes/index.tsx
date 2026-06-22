@@ -271,13 +271,13 @@ function Home() {
                 { icon: Wrench, t: "Equipe técnica", d: "Contamos com uma equipe técnica especializada." },
                 { icon: CalendarCheck, t: "Agendamento", d: "Agendamos a manutenção preventiva." },
               ].map((f) => (
-                <div key={f.t} className="flex items-start gap-5 rounded-2xl border border-white/20 bg-white/10 backdrop-blur p-6">
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-white text-primary">
+                <div key={f.t} className="flex items-start gap-5 rounded-2xl border border-white/10 bg-secondary p-6 shadow-lg">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-white text-secondary">
                     <f.icon className="h-7 w-7" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-primary-foreground">{f.t}</h3>
-                    <p className="mt-1 text-sm text-primary-foreground/80">{f.d}</p>
+                    <h3 className="text-lg font-bold text-white">{f.t}</h3>
+                    <p className="mt-1 text-sm text-white/75">{f.d}</p>
                   </div>
                 </div>
               ))}
