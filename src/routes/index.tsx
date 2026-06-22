@@ -88,6 +88,13 @@ function Home() {
             fetchPriority="high"
           />
 
+          {/* black gradient on the right */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{ background: "linear-gradient(to left, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.55) 35%, rgba(0,0,0,0) 70%)" }}
+            aria-hidden="true"
+          />
+
           {/* subtle orange sweeping arc on the right side */}
           <svg
             viewBox="0 0 1440 700"
