@@ -56,15 +56,6 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h3 className="text-base font-semibold text-secondary mb-5">Atendimento</h3>
-            <ul className="space-y-3 text-sm text-gray-600">
-              <li><a href={SITE.whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-primary">WhatsApp</a></li>
-              <li><a href={`tel:${SITE.phoneE164}`} className="hover:text-primary">Ligar agora</a></li>
-              <li><a href={`mailto:${SITE.email}`} className="hover:text-primary">E-mail</a></li>
-              <li><Link to="/contato" className="hover:text-primary">Solicitar orçamento</Link></li>
-            </ul>
-          </div>
 
           <div>
             <h3 className="text-base font-semibold text-secondary mb-5">Contato</h3>
