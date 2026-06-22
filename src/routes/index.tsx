@@ -244,14 +244,14 @@ function Home() {
       </section>
 
       {/* COM A HIDRAUMIL NÃO EXISTEM DESCULPAS — feature row matching original */}
-      <section className="bg-white">
+      <section className="bg-primary">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-secondary leading-tight">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-primary-foreground leading-tight">
                 Com a Hidraumil não existem desculpas!
               </h2>
-              <p className="mt-5 text-muted-foreground leading-relaxed">
+              <p className="mt-5 text-primary-foreground/85 leading-relaxed">
                 Todo amparo necessário para a manutenção do seu hidráulico. Somos especialistas em
                 reparo e manutenção. Reforme a sua frota de paleteiras com total segurança e
                 garantia que só a Hidraumil oferece.
@@ -260,7 +260,7 @@ function Home() {
                 href={SITE.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-7 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-lg hover:bg-[var(--brand-dark)] transition"
+                className="mt-7 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-base font-semibold text-primary shadow-lg hover:bg-white/90 transition"
               >
                 <WhatsAppIcon className="h-5 w-5" /> Fale com a Hidraumil
               </a>
@@ -271,13 +271,13 @@ function Home() {
                 { icon: Wrench, t: "Equipe técnica", d: "Contamos com uma equipe técnica especializada." },
                 { icon: CalendarCheck, t: "Agendamento", d: "Agendamos a manutenção preventiva." },
               ].map((f) => (
-                <div key={f.t} className="flex items-start gap-5 rounded-2xl border border-border bg-surface p-6">
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                <div key={f.t} className="flex items-start gap-5 rounded-2xl border border-white/20 bg-white/10 backdrop-blur p-6">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-white text-primary">
                     <f.icon className="h-7 w-7" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-secondary">{f.t}</h3>
-                    <p className="mt-1 text-sm text-muted-foreground">{f.d}</p>
+                    <h3 className="text-lg font-bold text-primary-foreground">{f.t}</h3>
+                    <p className="mt-1 text-sm text-primary-foreground/80">{f.d}</p>
                   </div>
                 </div>
               ))}
