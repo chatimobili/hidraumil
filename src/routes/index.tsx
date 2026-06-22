@@ -225,9 +225,6 @@ function Home() {
               className="relative w-full h-auto rounded-[2rem] shadow-xl object-cover"
               loading="lazy"
             />
-            <div className="absolute -left-4 md:-left-8 top-1/2 -translate-y-1/2 h-28 w-28 md:h-32 md:w-32 rounded-full bg-white border-[6px] border-primary flex items-center justify-center shadow-xl">
-              <Wrench className="h-10 w-10 text-primary" />
-            </div>
           </div>
         </div>
       </section>
