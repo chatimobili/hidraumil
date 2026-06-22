@@ -390,7 +390,7 @@ function Home() {
               Empresas que<br />confiam na Hidraumil
             </p>
             <div
-              className="overflow-x-auto scrollbar-hide -mx-4 px-4 cursor-grab active:cursor-grabbing select-none"
+              className="overflow-x-auto scrollbar-hide -mx-4 px-4 cursor-grab active:cursor-grabbing select-none min-w-0"
               onMouseDown={(e) => {
                 const el = e.currentTarget;
                 const startX = e.pageX - el.offsetLeft;
