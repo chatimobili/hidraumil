@@ -350,23 +350,57 @@ function Home() {
         </div>
       </section>
 
-      {/* CLIENTES — logo grid */}
-      <section className="bg-white border-y border-border">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-center text-2xl md:text-3xl font-semibold text-secondary">
-            Empresas que confiam no nosso trabalho
-          </h2>
-          <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-8 items-center">
-            {clientLogos.map((c) => (
-              <div key={c.name} className="flex items-center justify-center h-16">
-                <img
-                  src={c.src}
-                  alt={c.name}
-                  className="h-12 w-auto max-w-[140px] object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition"
-                  loading="lazy"
-                />
+      {/* CLIENTES — Empregga-style: orange split + image, dark bar with logos */}
+      <section className="bg-white">
+        <div className="relative">
+          {/* Orange left panel */}
+          <div className="absolute inset-y-0 left-0 w-full md:w-1/2 lg:w-[42%] bg-primary" aria-hidden="true" />
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            {/* Image + badge */}
+            <div className="relative">
+              <img
+                src={mulherAsset.url}
+                alt="Profissional qualificada"
+                className="relative w-full h-[420px] md:h-[460px] object-cover rounded-tr-[6rem] rounded-bl-[6rem] shadow-2xl"
+                loading="lazy"
+              />
+              <div className="hidden md:flex absolute -left-10 top-1/2 -translate-y-1/2 h-28 w-28 rounded-full bg-white border-[6px] border-primary items-center justify-center shadow-xl">
+                <ShieldCheck className="h-10 w-10 text-primary" />
               </div>
-            ))}
+            </div>
+
+            {/* Text */}
+            <div>
+              <h2 className="text-secondary leading-[1.15]">
+                <span className="text-primary">+500 empresas</span> confiam na Hidraumil para manter suas paleteiras sempre operando.
+              </h2>
+              <p className="mt-6 text-muted-foreground">
+                Em um mercado em que cada hora de paleteira parada significa prejuízo,
+                oferecemos uma solução completa de manutenção, locação e venda para que
+                a sua operação nunca pare.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Dark bar with label + logos */}
+        <div className="bg-[#0F1C2E]">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 grid lg:grid-cols-[260px_1fr] gap-8 items-center">
+            <p className="text-white font-semibold leading-tight text-lg">
+              Empresas que<br />confiam na Hidraumil
+            </p>
+            <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-6 items-center">
+              {clientLogos.map((c) => (
+                <div key={c.name} className="flex items-center justify-center h-12">
+                  <img
+                    src={c.src}
+                    alt={c.name}
+                    className="h-10 w-auto max-w-[120px] object-contain brightness-0 invert opacity-70 hover:opacity-100 transition"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
