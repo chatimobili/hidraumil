@@ -27,8 +27,9 @@ import { SITE } from "@/lib/site";
 import { CTASection } from "@/components/site/CTASection";
 import { FAQ } from "@/components/site/FAQ";
 import {
-  ArrowRight, Trophy, Users, Award, ThumbsUp,
-  Truck, Wrench, CalendarCheck, Check,
+  ArrowRight,
+  Truck, Wrench, CalendarCheck, Star,
+  ShoppingCart, Cog, ShieldCheck,
 } from "lucide-react";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 
