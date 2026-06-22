@@ -1,5 +1,5 @@
 import { SITE } from "@/lib/site";
-import { MessageCircle } from "lucide-react";
+import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 
 export function CTASection({ title, subtitle }: { title?: string; subtitle?: string }) {
   return (
@@ -17,7 +17,7 @@ export function CTASection({ title, subtitle }: { title?: string; subtitle?: str
           rel="noopener noreferrer"
           className="mt-7 inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3.5 text-base font-semibold text-primary-foreground shadow-lg hover:bg-[var(--brand-dark)] transition"
         >
-          <MessageCircle className="h-5 w-5" /> Falar pelo WhatsApp
+          <WhatsAppIcon className="h-5 w-5" /> Falar pelo WhatsApp
         </a>
       </div>
     </section>

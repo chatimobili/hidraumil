@@ -27,9 +27,10 @@ import { SITE } from "@/lib/site";
 import { CTASection } from "@/components/site/CTASection";
 import { FAQ } from "@/components/site/FAQ";
 import {
-  MessageCircle, ArrowRight, Trophy, Users, Award, ThumbsUp,
+  ArrowRight, Trophy, Users, Award, ThumbsUp,
   Truck, Wrench, CalendarCheck,
 } from "lucide-react";
+import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -106,7 +107,7 @@ function Home() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-lg hover:bg-[var(--brand-dark)] transition"
               >
-                <MessageCircle className="h-5 w-5" /> Realize um orçamento
+                <WhatsAppIcon className="h-5 w-5" /> Realize um orçamento
               </a>
               <a
                 href="#servicos"
@@ -261,7 +262,7 @@ function Home() {
                 rel="noopener noreferrer"
                 className="mt-7 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-lg hover:bg-[var(--brand-dark)] transition"
               >
-                <MessageCircle className="h-5 w-5" /> Fale com a Hidraumil
+                <WhatsAppIcon className="h-5 w-5" /> Fale com a Hidraumil
               </a>
             </div>
             <div className="grid sm:grid-cols-1 gap-5">
@@ -322,7 +323,7 @@ function Home() {
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow hover:bg-[var(--brand-dark)] transition"
             >
-              <MessageCircle className="h-4 w-4" /> Entre em contato
+              <WhatsAppIcon className="h-4 w-4" /> Entre em contato
             </a>
           </div>
           <div>

@@ -2,7 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { ContactForm } from "@/components/site/ContactForm";
 import { SITE } from "@/lib/site";
-import { MapPin, Phone, MessageCircle, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 
 export const Route = createFileRoute("/contato")({
   head: () => ({
@@ -33,7 +34,7 @@ function Page() {
             <div className="rounded-xl border border-border bg-white p-6 shadow-sm space-y-5">
               <Info icon={<MapPin className="h-5 w-5 text-primary" />} title="Endereço" value={SITE.address} />
               <Info icon={<Phone className="h-5 w-5 text-primary" />} title="Telefone" value={<a href={`tel:${SITE.phoneE164}`} className="hover:text-primary">{SITE.phoneDisplay}</a>} />
-              <Info icon={<MessageCircle className="h-5 w-5 text-primary" />} title="WhatsApp" value={<a href={SITE.whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-primary">{SITE.phoneDisplay}</a>} />
+              <Info icon={<WhatsAppIcon className="h-5 w-5 text-primary" />} title="WhatsApp" value={<a href={SITE.whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-primary">{SITE.phoneDisplay}</a>} />
               <Info icon={<Mail className="h-5 w-5 text-primary" />} title="E-mail" value={<a href={`mailto:${SITE.email}`} className="hover:text-primary">{SITE.email}</a>} />
               <Info icon={<Clock className="h-5 w-5 text-primary" />} title="Horário" value={SITE.hours} />
             </div>

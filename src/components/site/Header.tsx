@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, ChevronDown, MessageCircle } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
+import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { SITE, services } from "@/lib/site";
 import logoAsset from "@/assets/logo-hidraumil.png.asset.json";
 
@@ -47,7 +48,7 @@ export function Header() {
             rel="noopener noreferrer"
             className="hidden md:inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm hover:bg-[var(--brand-dark)] transition"
           >
-            <MessageCircle className="h-4 w-4" /> Solicitar Orçamento
+            <WhatsAppIcon className="h-4 w-4" /> Solicitar Orçamento
           </a>
 
           <button
@@ -75,7 +76,7 @@ export function Header() {
               <li><Link to="/contato" className="block py-2" onClick={() => setOpen(false)}>Contato</Link></li>
               <li className="pt-3">
                 <a href={SITE.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground">
-                  <MessageCircle className="h-4 w-4" /> Solicitar Orçamento
+                  <WhatsAppIcon className="h-4 w-4" /> Solicitar Orçamento
                 </a>
               </li>
             </ul>
