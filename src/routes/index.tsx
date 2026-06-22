@@ -105,14 +105,14 @@ function Home() {
           {/* White card flush to left edge, rounded only on the right */}
           <div className="absolute inset-y-0 left-0 flex items-center pointer-events-none">
             <div className="bg-white shadow-2xl rounded-r-[2.5rem] p-8 md:p-12 max-w-[560px] w-full pointer-events-auto">
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-primary mb-5 flex items-center gap-2">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary mb-5 flex items-center gap-2">
                 <span>⚡</span> Bem-vindo(a) à Hidraumil
               </p>
-              <h1 className="text-3xl md:text-[44px] font-extrabold leading-[1.1] text-secondary">
+              <h1 className="text-3xl md:text-[44px] font-semibold leading-[1.1] text-secondary">
                 Sua paleteira está com algum{" "}
                 <span className="text-primary">defeito?</span>
               </h1>
-              <p className="mt-5 text-base text-muted-foreground leading-relaxed">
+              <p className="mt-5 text-xl text-muted-foreground leading-[1.5]">
                 Conte com a Hidraumil para resolver. Manutenção, conserto, locação e venda
                 de paleteiras com técnicos especializados em Cascavel e região.
               </p>
@@ -171,7 +171,7 @@ function Home() {
                   <div className="text-primary">
                     <Icon className="h-6 w-6" />
                   </div>
-                  <div className="mt-3 text-xl md:text-2xl font-extrabold text-secondary leading-none">
+                  <div className="mt-3 text-xl md:text-2xl font-semibold text-secondary leading-none">
                     {s.value}
                   </div>
                   <div className="mt-2 text-sm text-muted-foreground">{s.label}</div>
@@ -204,14 +204,14 @@ function Home() {
                 <Wrench className="h-6 w-6" />
               </div>
               <div>
-                <p className="text-2xl font-extrabold text-secondary leading-none">+15 anos</p>
+                <p className="text-2xl font-semibold text-secondary leading-none">+15 anos</p>
                 <p className="text-xs text-muted-foreground mt-1">de experiência técnica</p>
               </div>
             </div>
           </div>
           <div className="order-1 lg:order-2">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Nossa equipe</p>
-            <h2 className="mt-3 text-3xl md:text-5xl font-extrabold text-white leading-tight">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Nossa equipe</p>
+            <h2 className="mt-3 text-3xl md:text-5xl font-semibold text-white leading-tight">
               Técnicos experientes e altamente <span className="text-primary">qualificados</span>
             </h2>
             <p className="mt-5 text-white/75 leading-relaxed text-lg">
@@ -239,8 +239,8 @@ function Home() {
       <section id="servicos" className="bg-surface">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
           <div className="max-w-2xl">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Nossos serviços</p>
-            <h2 className="mt-3 text-3xl md:text-4xl font-extrabold text-secondary leading-tight">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Nossos serviços</p>
+            <h2 className="mt-3 text-3xl md:text-4xl font-semibold text-secondary leading-tight">
               Soluções completas em paleteiras para sua empresa
             </h2>
             <p className="mt-4 text-muted-foreground">
@@ -284,7 +284,7 @@ function Home() {
                 <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/15 text-[#F97316]">
                   <s.icon className="h-7 w-7" />
                 </div>
-                <h3 className="mt-6 text-2xl font-bold text-white leading-tight">{s.title}</h3>
+                <h3 className="mt-6 text-2xl font-semibold text-white leading-tight">{s.title}</h3>
                 <p className="mt-3 text-sm text-[#CBD5E1] leading-relaxed">{s.desc}</p>
                 <span className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-[#F97316] group-hover:gap-2 transition-all">
                   Saiba mais <ArrowRight className="h-4 w-4" />
@@ -316,13 +316,13 @@ function Home() {
                   <CalendarCheck className="h-6 w-6" />
                 </div>
                 <div>
-                  <p className="text-2xl font-extrabold text-secondary leading-none">Sem desculpas</p>
+                  <p className="text-2xl font-semibold text-secondary leading-none">Sem desculpas</p>
                   <p className="text-xs text-muted-foreground mt-1">cuidamos de tudo para você</p>
                 </div>
               </div>
             </div>
             <div>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-primary-foreground leading-tight">
+              <h2 className="text-3xl md:text-4xl font-semibold text-primary-foreground leading-tight">
                 Com a Hidraumil não existem desculpas!
               </h2>
               <p className="mt-5 text-primary-foreground/85 leading-relaxed">
@@ -342,7 +342,7 @@ function Home() {
                       <f.icon className="h-6 w-6" />
                     </div>
                     <div>
-                      <h3 className="text-base font-bold text-white">{f.t}</h3>
+                      <h3 className="text-base font-semibold text-white">{f.t}</h3>
                       <p className="mt-1 text-sm text-white/75">{f.d}</p>
                     </div>
                   </div>
@@ -364,7 +364,7 @@ function Home() {
       {/* CLIENTES — logo grid */}
       <section className="bg-white border-y border-border">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-center text-2xl md:text-3xl font-extrabold text-secondary">
+          <h2 className="text-center text-2xl md:text-3xl font-semibold text-secondary">
             Empresas que confiam no nosso trabalho
           </h2>
           <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-8 items-center">
@@ -386,8 +386,8 @@ function Home() {
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 grid lg:grid-cols-[1fr_1.6fr] gap-12">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">FAQ</p>
-            <h2 className="mt-3 text-3xl md:text-4xl font-extrabold text-secondary leading-tight">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">FAQ</p>
+            <h2 className="mt-3 text-3xl md:text-4xl font-semibold text-secondary leading-tight">
               Perguntas frequentes
             </h2>
             <p className="mt-5 text-muted-foreground">
