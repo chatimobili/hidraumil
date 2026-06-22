@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, Phone, MapPin, Clock, Facebook, Instagram, Linkedin } from "lucide-react";
 import { SITE, services, localBusinessSchema } from "@/lib/site";
+import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import logoAsset from "@/assets/logo-hidraumil.png.asset.json";
 
 export function Footer() {
@@ -16,6 +17,7 @@ export function Footer() {
             <a href="#" aria-label="Facebook" className="p-2 rounded-md bg-gray-100 text-secondary hover:bg-primary hover:text-white transition"><Facebook className="h-4 w-4" /></a>
             <a href="#" aria-label="Instagram" className="p-2 rounded-md bg-gray-100 text-secondary hover:bg-primary hover:text-white transition"><Instagram className="h-4 w-4" /></a>
             <a href="#" aria-label="LinkedIn" className="p-2 rounded-md bg-gray-100 text-secondary hover:bg-primary hover:text-white transition"><Linkedin className="h-4 w-4" /></a>
+            <a href={SITE.whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="p-2 rounded-md bg-gray-100 text-secondary hover:bg-primary hover:text-white transition"><WhatsAppIcon className="h-4 w-4" /></a>
           </div>
         </div>
 
