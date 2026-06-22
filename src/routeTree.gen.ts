@@ -18,6 +18,7 @@ import { Route as ConsertoPaleteiraHidraulicaCascavelRouteImport } from './route
 import { Route as AssistenciaTecnicaEquipamentosHidraulicosCascavelRouteImport } from './routes/assistencia-tecnica-equipamentos-hidraulicos-cascavel'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogManutencaoPreventivaPaleteiraHidraulicaRouteImport } from './routes/blog.manutencao-preventiva-paleteira-hidraulica'
 
 const VendaPecasPaleteirasRoute = VendaPecasPaleteirasRouteImport.update({
   id: '/venda-pecas-paleteiras',
@@ -69,6 +70,12 @@ const BlogIndexRoute = BlogIndexRouteImport.update({
   path: '/blog/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogManutencaoPreventivaPaleteiraHidraulicaRoute =
+  BlogManutencaoPreventivaPaleteiraHidraulicaRouteImport.update({
+    id: '/blog/manutencao-preventiva-paleteira-hidraulica',
+    path: '/blog/manutencao-preventiva-paleteira-hidraulica',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -79,6 +86,7 @@ export interface FileRoutesByFullPath {
   '/sobre-nos': typeof SobreNosRoute
   '/venda-paleteiras-hidraulicas-cascavel': typeof VendaPaleteirasHidraulicasCascavelRoute
   '/venda-pecas-paleteiras': typeof VendaPecasPaleteirasRoute
+  '/blog/manutencao-preventiva-paleteira-hidraulica': typeof BlogManutencaoPreventivaPaleteiraHidraulicaRoute
   '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
@@ -90,6 +98,7 @@ export interface FileRoutesByTo {
   '/sobre-nos': typeof SobreNosRoute
   '/venda-paleteiras-hidraulicas-cascavel': typeof VendaPaleteirasHidraulicasCascavelRoute
   '/venda-pecas-paleteiras': typeof VendaPecasPaleteirasRoute
+  '/blog/manutencao-preventiva-paleteira-hidraulica': typeof BlogManutencaoPreventivaPaleteiraHidraulicaRoute
   '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
@@ -102,6 +111,7 @@ export interface FileRoutesById {
   '/sobre-nos': typeof SobreNosRoute
   '/venda-paleteiras-hidraulicas-cascavel': typeof VendaPaleteirasHidraulicasCascavelRoute
   '/venda-pecas-paleteiras': typeof VendaPecasPaleteirasRoute
+  '/blog/manutencao-preventiva-paleteira-hidraulica': typeof BlogManutencaoPreventivaPaleteiraHidraulicaRoute
   '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
@@ -115,6 +125,7 @@ export interface FileRouteTypes {
     | '/sobre-nos'
     | '/venda-paleteiras-hidraulicas-cascavel'
     | '/venda-pecas-paleteiras'
+    | '/blog/manutencao-preventiva-paleteira-hidraulica'
     | '/blog/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -126,6 +137,7 @@ export interface FileRouteTypes {
     | '/sobre-nos'
     | '/venda-paleteiras-hidraulicas-cascavel'
     | '/venda-pecas-paleteiras'
+    | '/blog/manutencao-preventiva-paleteira-hidraulica'
     | '/blog'
   id:
     | '__root__'
@@ -137,6 +149,7 @@ export interface FileRouteTypes {
     | '/sobre-nos'
     | '/venda-paleteiras-hidraulicas-cascavel'
     | '/venda-pecas-paleteiras'
+    | '/blog/manutencao-preventiva-paleteira-hidraulica'
     | '/blog/'
   fileRoutesById: FileRoutesById
 }
@@ -149,6 +162,7 @@ export interface RootRouteChildren {
   SobreNosRoute: typeof SobreNosRoute
   VendaPaleteirasHidraulicasCascavelRoute: typeof VendaPaleteirasHidraulicasCascavelRoute
   VendaPecasPaleteirasRoute: typeof VendaPecasPaleteirasRoute
+  BlogManutencaoPreventivaPaleteiraHidraulicaRoute: typeof BlogManutencaoPreventivaPaleteiraHidraulicaRoute
   BlogIndexRoute: typeof BlogIndexRoute
 }
 
@@ -217,6 +231,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/manutencao-preventiva-paleteira-hidraulica': {
+      id: '/blog/manutencao-preventiva-paleteira-hidraulica'
+      path: '/blog/manutencao-preventiva-paleteira-hidraulica'
+      fullPath: '/blog/manutencao-preventiva-paleteira-hidraulica'
+      preLoaderRoute: typeof BlogManutencaoPreventivaPaleteiraHidraulicaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -234,6 +255,8 @@ const rootRouteChildren: RootRouteChildren = {
   VendaPaleteirasHidraulicasCascavelRoute:
     VendaPaleteirasHidraulicasCascavelRoute,
   VendaPecasPaleteirasRoute: VendaPecasPaleteirasRoute,
+  BlogManutencaoPreventivaPaleteiraHidraulicaRoute:
+    BlogManutencaoPreventivaPaleteiraHidraulicaRoute,
   BlogIndexRoute: BlogIndexRoute,
 }
 export const routeTree = rootRouteImport
