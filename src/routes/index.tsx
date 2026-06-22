@@ -284,68 +284,48 @@ function Home() {
         </div>
       </section>
 
-      {/* COM A HIDRAUMIL NÃO EXISTEM DESCULPAS — feature row matching original */}
-      <section className="bg-primary relative overflow-hidden">
-        <div className="absolute inset-0 bg-dots-orange opacity-60" aria-hidden="true" />
-        <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-white/10 blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-secondary/30 blur-3xl pointer-events-none" />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
-          <div className="grid lg:grid-cols-2 gap-14 items-center">
-            <div className="relative">
-              <div className="absolute -top-4 -left-4 h-24 w-24 rounded-2xl border-4 border-white/60 hidden md:block" />
-              <div className="absolute -bottom-4 -right-4 h-32 w-32 rounded-2xl bg-secondary/40 hidden md:block" />
-              <img
-                src={mulherAsset.url}
-                alt="Manutenção profissional de paleteiras Hidraumil"
-                className="relative w-full h-auto rounded-2xl shadow-2xl object-cover ring-1 ring-black/10"
-                loading="lazy"
-              />
-              <div className="absolute -bottom-6 left-6 right-6 md:left-10 md:right-auto md:-bottom-8 bg-white rounded-xl shadow-xl px-5 py-4 flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                  <CalendarCheck className="h-6 w-6" />
-                </div>
-                <div>
-                  <p className="text-2xl font-semibold text-secondary leading-none">Sem desculpas</p>
-                  <p className="text-xs text-muted-foreground mt-1">cuidamos de tudo para você</p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h2 className="text-3xl md:text-4xl font-semibold text-primary-foreground leading-tight">
-                Com a Hidraumil não existem desculpas!
-              </h2>
-              <p className="mt-5 text-primary-foreground/85 leading-relaxed">
-                Todo amparo necessário para a manutenção do seu hidráulico. Somos especialistas em
-                reparo e manutenção. Reforme a sua frota de paleteiras com total segurança e
-                garantia que só a Hidraumil oferece.
-              </p>
-              <div className="mt-6 grid gap-4">
-                {[
-                  { icon: Truck, t: "Coleta e entrega", d: "Realizamos a coleta e entrega dos equipamentos." },
-                  { icon: Wrench, t: "Equipe técnica", d: "Contamos com uma equipe técnica especializada." },
-                  { icon: CalendarCheck, t: "Agendamento", d: "Agendamos a manutenção preventiva." },
-                  { icon: Star, t: "Garantia do serviço", d: "Todos os reparos têm garantia por escrito." },
-                ].map((f) => (
-                  <div key={f.t} className="flex items-start gap-4 rounded-2xl border-l-[3px] border-l-[#FFB347] border-y border-r border-white/10 bg-secondary p-5 shadow-lg">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white text-secondary">
-                      <f.icon className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <h3 className="text-base font-semibold text-white">{f.t}</h3>
-                      <p className="mt-1 text-sm text-white/75">{f.d}</p>
-                    </div>
+      {/* BENEFÍCIOS — Empregga-style: centered intro + 3x2 cards grid */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center max-w-4xl mx-auto">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">BENEFÍCIOS HIDRAUMIL</p>
+            <h2 className="mt-4 text-secondary leading-[1.15]">
+              Manutenção rápida e confiável de paleteiras com uma equipe dedicada ao seu negócio
+            </h2>
+            <p className="mt-5 text-muted-foreground text-lg">
+              Entenda as principais vantagens de contar com a Hidraumil na sua operação:
+            </p>
+            <a
+              href={SITE.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-[0_10px_30px_-10px_rgba(249,115,22,0.6)] hover:bg-[var(--brand-dark)] hover:-translate-y-0.5 transition"
+            >
+              <WhatsAppIcon className="h-5 w-5" /> Quero um orçamento
+            </a>
+          </div>
+
+          <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { icon: Wrench, t: "Equipe técnica especializada", d: "Profissionais treinados com mais de 15 anos de experiência em paleteiras." },
+              { icon: Truck, t: "Coleta e entrega", d: "Buscamos e devolvemos o seu equipamento sem que a sua operação pare." },
+              { icon: CalendarCheck, t: "Agendamento ágil", d: "Atendimento rápido e manutenção preventiva programada." },
+              { icon: ShieldCheck, t: "Garantia por escrito", d: "Todos os reparos saem com garantia formal e peças de procedência." },
+              { icon: Star, t: "Atendimento dedicado", d: "Acompanhamento próximo do início ao fim do serviço." },
+              { icon: Cog, t: "Peças originais", d: "Trabalhamos com peças de qualidade para máxima durabilidade." },
+            ].map((f) => (
+              <div key={f.t} className="rounded-2xl border border-gray-200 bg-white px-7 py-7 hover:shadow-md transition">
+                <div className="flex items-start gap-4">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center text-primary">
+                    <f.icon className="h-6 w-6" />
+                  </span>
+                  <div>
+                    <h3 className="text-lg font-semibold text-secondary leading-snug">{f.t}</h3>
+                    <p className="mt-2 text-muted-foreground leading-relaxed">{f.d}</p>
                   </div>
-                ))}
+                </div>
               </div>
-              <a
-                href={SITE.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-7 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-base font-semibold text-secondary shadow-lg hover:bg-white/90 transition"
-              >
-                <WhatsAppIcon className="h-5 w-5" /> Fale com a Hidraumil
-              </a>
-            </div>
+            ))}
           </div>
         </div>
       </section>
