@@ -198,9 +198,11 @@ function Home() {
               </figure>
             ))}
           </div>
-          <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-6 items-center opacity-70">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <div key={i} className="h-12 rounded-md bg-muted flex items-center justify-center text-xs font-semibold text-muted-foreground">Cliente {i + 1}</div>
+          <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-8 items-center">
+            {clientLogos.map((c) => (
+              <div key={c.name} className="flex items-center justify-center h-16 grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition">
+                <img src={c.src} alt={c.name} className="max-h-full max-w-[160px] object-contain" loading="lazy" />
+              </div>
             ))}
           </div>
         </div>
