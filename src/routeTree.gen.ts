@@ -18,6 +18,7 @@ import { Route as ConsertoPaleteiraHidraulicaCascavelRouteImport } from './route
 import { Route as AssistenciaTecnicaEquipamentosHidraulicosCascavelRouteImport } from './routes/assistencia-tecnica-equipamentos-hidraulicos-cascavel'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogQuantoCustaConsertarPaleteiraHidraulicaRouteImport } from './routes/blog.quanto-custa-consertar-paleteira-hidraulica'
 import { Route as BlogManutencaoPreventivaPaleteiraHidraulicaRouteImport } from './routes/blog.manutencao-preventiva-paleteira-hidraulica'
 
 const VendaPecasPaleteirasRoute = VendaPecasPaleteirasRouteImport.update({
@@ -70,6 +71,12 @@ const BlogIndexRoute = BlogIndexRouteImport.update({
   path: '/blog/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogQuantoCustaConsertarPaleteiraHidraulicaRoute =
+  BlogQuantoCustaConsertarPaleteiraHidraulicaRouteImport.update({
+    id: '/blog/quanto-custa-consertar-paleteira-hidraulica',
+    path: '/blog/quanto-custa-consertar-paleteira-hidraulica',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BlogManutencaoPreventivaPaleteiraHidraulicaRoute =
   BlogManutencaoPreventivaPaleteiraHidraulicaRouteImport.update({
     id: '/blog/manutencao-preventiva-paleteira-hidraulica',
@@ -87,6 +94,7 @@ export interface FileRoutesByFullPath {
   '/venda-paleteiras-hidraulicas-cascavel': typeof VendaPaleteirasHidraulicasCascavelRoute
   '/venda-pecas-paleteiras': typeof VendaPecasPaleteirasRoute
   '/blog/manutencao-preventiva-paleteira-hidraulica': typeof BlogManutencaoPreventivaPaleteiraHidraulicaRoute
+  '/blog/quanto-custa-consertar-paleteira-hidraulica': typeof BlogQuantoCustaConsertarPaleteiraHidraulicaRoute
   '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
@@ -99,6 +107,7 @@ export interface FileRoutesByTo {
   '/venda-paleteiras-hidraulicas-cascavel': typeof VendaPaleteirasHidraulicasCascavelRoute
   '/venda-pecas-paleteiras': typeof VendaPecasPaleteirasRoute
   '/blog/manutencao-preventiva-paleteira-hidraulica': typeof BlogManutencaoPreventivaPaleteiraHidraulicaRoute
+  '/blog/quanto-custa-consertar-paleteira-hidraulica': typeof BlogQuantoCustaConsertarPaleteiraHidraulicaRoute
   '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
@@ -112,6 +121,7 @@ export interface FileRoutesById {
   '/venda-paleteiras-hidraulicas-cascavel': typeof VendaPaleteirasHidraulicasCascavelRoute
   '/venda-pecas-paleteiras': typeof VendaPecasPaleteirasRoute
   '/blog/manutencao-preventiva-paleteira-hidraulica': typeof BlogManutencaoPreventivaPaleteiraHidraulicaRoute
+  '/blog/quanto-custa-consertar-paleteira-hidraulica': typeof BlogQuantoCustaConsertarPaleteiraHidraulicaRoute
   '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
@@ -126,6 +136,7 @@ export interface FileRouteTypes {
     | '/venda-paleteiras-hidraulicas-cascavel'
     | '/venda-pecas-paleteiras'
     | '/blog/manutencao-preventiva-paleteira-hidraulica'
+    | '/blog/quanto-custa-consertar-paleteira-hidraulica'
     | '/blog/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -138,6 +149,7 @@ export interface FileRouteTypes {
     | '/venda-paleteiras-hidraulicas-cascavel'
     | '/venda-pecas-paleteiras'
     | '/blog/manutencao-preventiva-paleteira-hidraulica'
+    | '/blog/quanto-custa-consertar-paleteira-hidraulica'
     | '/blog'
   id:
     | '__root__'
@@ -150,6 +162,7 @@ export interface FileRouteTypes {
     | '/venda-paleteiras-hidraulicas-cascavel'
     | '/venda-pecas-paleteiras'
     | '/blog/manutencao-preventiva-paleteira-hidraulica'
+    | '/blog/quanto-custa-consertar-paleteira-hidraulica'
     | '/blog/'
   fileRoutesById: FileRoutesById
 }
@@ -163,6 +176,7 @@ export interface RootRouteChildren {
   VendaPaleteirasHidraulicasCascavelRoute: typeof VendaPaleteirasHidraulicasCascavelRoute
   VendaPecasPaleteirasRoute: typeof VendaPecasPaleteirasRoute
   BlogManutencaoPreventivaPaleteiraHidraulicaRoute: typeof BlogManutencaoPreventivaPaleteiraHidraulicaRoute
+  BlogQuantoCustaConsertarPaleteiraHidraulicaRoute: typeof BlogQuantoCustaConsertarPaleteiraHidraulicaRoute
   BlogIndexRoute: typeof BlogIndexRoute
 }
 
@@ -231,6 +245,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/quanto-custa-consertar-paleteira-hidraulica': {
+      id: '/blog/quanto-custa-consertar-paleteira-hidraulica'
+      path: '/blog/quanto-custa-consertar-paleteira-hidraulica'
+      fullPath: '/blog/quanto-custa-consertar-paleteira-hidraulica'
+      preLoaderRoute: typeof BlogQuantoCustaConsertarPaleteiraHidraulicaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/manutencao-preventiva-paleteira-hidraulica': {
       id: '/blog/manutencao-preventiva-paleteira-hidraulica'
       path: '/blog/manutencao-preventiva-paleteira-hidraulica'
@@ -257,6 +278,8 @@ const rootRouteChildren: RootRouteChildren = {
   VendaPecasPaleteirasRoute: VendaPecasPaleteirasRoute,
   BlogManutencaoPreventivaPaleteiraHidraulicaRoute:
     BlogManutencaoPreventivaPaleteiraHidraulicaRoute,
+  BlogQuantoCustaConsertarPaleteiraHidraulicaRoute:
+    BlogQuantoCustaConsertarPaleteiraHidraulicaRoute,
   BlogIndexRoute: BlogIndexRoute,
 }
 export const routeTree = rootRouteImport
