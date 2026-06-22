@@ -70,7 +70,7 @@ function Page() {
           {planos.map(p => (
             <div key={p.n} className={`rounded-2xl border p-7 bg-white shadow-sm ${p.featured ? "border-primary ring-2 ring-primary/30" : "border-border"}`}>
               {p.featured && <span className="inline-block text-xs font-bold uppercase tracking-wider text-primary mb-2">Mais escolhido</span>}
-              <h3 className="text-2xl font-extrabold text-secondary">{p.n}</h3>
+              <h3 className="text-2xl font-semibold text-secondary">{p.n}</h3>
               <p className="mt-1 text-sm text-muted-foreground">{p.desc}</p>
               <ul className="mt-5 space-y-2 text-sm">
                 {p.b.map(b => (
