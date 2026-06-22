@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroAsset from "@/assets/paleteira-hero.jpg.asset.json";
+import heroAsset from "@/assets/hero-novo.jpg.asset.json";
 import equipeAsset from "@/assets/equipe-nova.jpg.asset.json";
 import mulherAsset from "@/assets/mulher-seguranca.jpg.asset.json";
 import allmayer from "@/assets/clients/Allmayer-supermercado.png.asset.json";
