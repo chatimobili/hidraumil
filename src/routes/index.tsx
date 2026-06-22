@@ -389,17 +389,19 @@ function Home() {
             <p className="text-white font-semibold leading-tight text-lg">
               Empresas que<br />confiam na Hidraumil
             </p>
-            <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-6 items-center">
-              {clientLogos.map((c) => (
-                <div key={c.name} className="flex items-center justify-center h-12">
-                  <img
-                    src={c.src}
-                    alt={c.name}
-                    className="h-10 w-auto max-w-[120px] object-contain bg-white rounded px-2 py-1"
-                    loading="lazy"
-                  />
-                </div>
-              ))}
+            <div className="overflow-x-auto scrollbar-hide -mx-4 px-4">
+              <div className="flex gap-6 items-center min-w-max">
+                {clientLogos.map((c) => (
+                  <div key={c.name} className="flex items-center justify-center h-20 shrink-0">
+                    <img
+                      src={c.src}
+                      alt={c.name}
+                      className="h-16 w-auto max-w-[200px] object-contain bg-white rounded-lg px-4 py-2"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
