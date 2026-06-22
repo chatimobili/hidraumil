@@ -1,7 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PageHero } from "@/components/site/PageHero";
 import { CTASection } from "@/components/site/CTASection";
-import { Award, Zap, ShieldCheck, Users } from "lucide-react";
+import { Flag } from "lucide-react";
+import equipeAsset from "@/assets/equipe-nova.jpg.asset.json";
+import allmayer from "@/assets/clients/Allmayer-supermercado.png.asset.json";
+import consilos from "@/assets/clients/Consilos.png.asset.json";
+import coopavel from "@/assets/clients/Coopavel.png.asset.json";
+import geriba from "@/assets/clients/Geriba-Alimentos.png.asset.json";
 
 export const Route = createFileRoute("/sobre-nos")({
   head: () => ({
@@ -17,71 +21,115 @@ export const Route = createFileRoute("/sobre-nos")({
   component: SobrePage,
 });
 
+const partners = [
+  { src: coopavel.url, name: "Coopavel" },
+  { src: consilos.url, name: "Consilos" },
+  { src: allmayer.url, name: "Allmayer" },
+  { src: geriba.url, name: "Geribá" },
+];
+
+const timeline = [
+  { year: "2009", t: "Os fundadores começam a atuar no mercado de manutenção hidráulica em Cascavel." },
+  { year: "2013", t: "Estruturação da primeira oficina dedicada exclusivamente a paleteiras hidráulicas." },
+  { year: "2016", t: "Expansão do atendimento para toda a região Oeste do Paraná." },
+  { year: "2019", t: "Inauguração da nova sede, com estoque permanente de peças e bancada técnica." },
+  { year: "2022", t: "Início da operação de locação de paleteiras para indústrias e operadores logísticos." },
+  { year: "2025", t: "Mais de 500 empresas atendidas e referência regional em paleteiras hidráulicas." },
+];
+
 function SobrePage() {
   return (
     <>
-      <PageHero
-        eyebrow="Quem somos"
-        title="Sobre a Hidraumil Hidráulicos — Cascavel, Paraná"
-        subtitle="Especialistas em paleteiras hidráulicas para indústrias, supermercados, distribuidoras e operadores logísticos do Oeste do Paraná."
-      />
-
-      <article className="bg-white">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 space-y-12">
-          <section>
-            <h2 className="text-2xl md:text-3xl font-semibold text-secondary">Nossa História</h2>
-            <p className="mt-4 text-muted-foreground leading-relaxed">
-              A Hidraumil nasceu da necessidade de oferecer ao mercado industrial do Oeste do Paraná um serviço técnico de qualidade em paleteiras hidráulicas. Com mais de 15 anos de atuação, nos tornamos referência em Cascavel e região, atendendo centenas de empresas dos setores industrial, alimentício, logístico e varejista.
-            </p>
-            <p className="mt-4 text-muted-foreground leading-relaxed">
-              O que começou como um pequeno serviço técnico evoluiu para uma estrutura completa, com oficina equipada, técnicos certificados, estoque permanente de peças e atendimento em campo. Hoje, somos parceiros estratégicos de operações que não podem parar — entregando manutenção preventiva, conserto rápido, locação flexível e venda de paleteiras novas e revisadas. Nossa trajetória é construída pela confiança dos clientes e pela busca constante por excelência técnica.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl md:text-3xl font-semibold text-secondary">Nossa Missão</h2>
-            <p className="mt-4 text-muted-foreground leading-relaxed">
-              Manter a operação dos nossos clientes em pleno funcionamento, oferecendo soluções técnicas em paleteiras hidráulicas com agilidade, transparência e garantia. Acreditamos que um bom equipamento, bem mantido, é a base de uma logística produtiva e segura.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl md:text-3xl font-semibold text-secondary">Nossos Valores</h2>
-            <div className="mt-6 grid sm:grid-cols-3 gap-6">
-              {[
-                { icon: Award, t: "Qualidade Técnica", d: "Mão de obra especializada, peças de procedência e processos padronizados." },
-                { icon: Zap, t: "Agilidade", d: "Atendimento rápido para emergências, porque cada minuto parado é prejuízo." },
-                { icon: ShieldCheck, t: "Transparência", d: "Diagnóstico claro, orçamento honesto e garantia em todos os serviços." },
-              ].map((v, i) => (
-                <div key={i} className="rounded-xl border border-border p-6 bg-white shadow-sm">
-                  <v.icon className="h-7 w-7 text-primary" />
-                  <h3 className="mt-3 font-bold text-secondary">{v.t}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{v.d}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section>
-            <h2 className="text-2xl md:text-3xl font-semibold text-secondary">Nossa Equipe</h2>
-            <div className="mt-6 grid sm:grid-cols-3 gap-6">
-              {[
-                { n: "Marcos Silva", c: "Diretor Técnico" },
-                { n: "Júlio Oliveira", c: "Técnico Sênior" },
-                { n: "Ana Costa", c: "Atendimento Comercial" },
-              ].map((m, i) => (
-                <div key={i} className="rounded-xl border border-border p-6 bg-white shadow-sm text-center">
-                  <div className="h-20 w-20 mx-auto rounded-full bg-primary/15 text-primary inline-flex items-center justify-center text-2xl font-bold">
-                    <Users className="h-9 w-9" />
-                  </div>
-                  <h3 className="mt-4 font-bold text-secondary">{m.n}</h3>
-                  <p className="text-sm text-muted-foreground">{m.c}</p>
-                </div>
-              ))}
-            </div>
-          </section>
+      {/* HERO — Empregga-style peach background, large centered heading */}
+      <section className="relative bg-[#FEF3EC] overflow-hidden">
+        <div className="absolute -right-20 top-10 text-primary/10 text-[28rem] font-semibold leading-none select-none pointer-events-none hidden lg:block">e</div>
+        <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-24 md:py-32 text-center">
+          <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-primary">
+            <span>👋</span> Sobre nós
+          </p>
+          <h1 className="mt-6 font-semibold leading-[1.1] text-secondary">
+            Somos uma empresa amada pela indústria e necessária para quem não pode deixar a operação parar.
+          </h1>
+          <p className="mt-6 max-w-2xl mx-auto text-muted-foreground text-lg leading-[1.6]">
+            A Hidraumil conecta técnica, agilidade e cuidado e direciona tudo para um só objetivo:
+            manter as paleteiras hidráulicas das empresas brasileiras sempre em funcionamento.
+          </p>
         </div>
-      </article>
+        {/* white wave */}
+        <svg viewBox="0 0 1440 80" className="block w-full h-12 md:h-16" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,30 1440,40 L1440,80 L0,80 Z" fill="white" />
+        </svg>
+      </section>
+
+      {/* PARTNERS */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 grid lg:grid-cols-[1fr_1.4fr] gap-10 items-center">
+          <p className="text-secondary text-xl md:text-2xl font-semibold leading-tight max-w-sm">
+            Movidos pela inovação, assim como nossos parceiros e clientes:
+          </p>
+          <div className="flex flex-wrap items-center justify-around gap-x-10 gap-y-6 border-l border-gray-200 pl-10">
+            {partners.map((p) => (
+              <img key={p.name} src={p.src} alt={p.name} className="h-12 w-auto max-w-[160px] object-contain opacity-70" loading="lazy" />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SOBRE — dark section with text + image */}
+      <section className="bg-[#0F1C2E] relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-hero opacity-60" aria-hidden="true" />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-14 items-center">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">A Hidraumil</p>
+            <h2 className="mt-4 font-semibold leading-[1.1] text-white">Sobre a Hidraumil</h2>
+            <p className="mt-6 text-white/80 text-lg leading-[1.6]">
+              A Hidraumil é uma empresa especializada em manutenção, conserto, locação e venda de
+              paleteiras hidráulicas em Cascavel e em toda a região Oeste do Paraná. Com mais de
+              15 anos de atuação, atendemos indústrias, supermercados, distribuidoras e operadores
+              logísticos que dependem de equipamentos confiáveis para manter a operação fluindo.
+            </p>
+            <p className="mt-5 text-white/70 text-lg leading-[1.6]">
+              Estruturamos oficina equipada, estoque permanente de peças e uma equipe técnica
+              certificada para resolver desde a manutenção preventiva até reparos de emergência.
+              Mais de 500 empresas já confiam na Hidraumil para cuidar das suas paleteiras.
+            </p>
+          </div>
+          <div className="relative">
+            <img
+              src={equipeAsset.url}
+              alt="Equipe Hidraumil"
+              className="relative w-full h-[420px] object-cover rounded-[2rem] shadow-2xl"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* HISTÓRIA — light peach background, timeline cards */}
+      <section className="bg-[#FEF3EC]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+          <div className="text-center max-w-2xl mx-auto">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Conheça nossa história</p>
+            <h2 className="mt-4 font-semibold leading-[1.15] text-secondary">Uma história de cuidado e confiança</h2>
+            <p className="mt-5 text-muted-foreground text-lg leading-[1.6]">
+              A trajetória da Hidraumil é construída pela confiança dos clientes que precisam de
+              paleteiras hidráulicas sempre prontas para operar.
+            </p>
+          </div>
+
+          <div className="mt-12 overflow-x-auto scrollbar-hide -mx-4 px-4">
+            <div className="flex gap-5 min-w-max">
+              {timeline.map((m) => (
+                <article key={m.year} className="bg-white rounded-2xl p-7 w-72 shrink-0 shadow-sm">
+                  <Flag className="h-6 w-6 text-primary" />
+                  <p className="mt-4 text-2xl font-semibold text-secondary">{m.year}</p>
+                  <p className="mt-4 text-muted-foreground leading-relaxed">{m.t}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       <CTASection title="Vamos conversar?" subtitle="Conte para a gente o que sua operação precisa. Atendimento por WhatsApp, telefone ou na nossa oficina em Cascavel." />
     </>
