@@ -94,8 +94,9 @@ function Home() {
               aria-hidden="true"
               className="absolute inset-0 w-full h-full pointer-events-none"
             >
-              <path d="M800,200 C600,260 520,420 560,600 L800,600 Z" fill="#F97316" opacity="0.85" />
-              <path d="M800,320 C680,360 620,480 660,600 L800,600 Z" fill="#F97316" />
+              {/* subtle sweeping arc from top-right to bottom-left */}
+              <path d="M800,80 C620,140 520,300 480,520 C460,580 470,600 470,600 L530,600 C530,600 540,470 600,360 C660,260 760,210 800,200 Z" fill="#F97316" opacity="0.55" />
+              <path d="M800,160 C660,210 580,340 560,540 C555,580 560,600 560,600 L600,600 C600,600 610,490 660,400 C710,320 770,290 800,285 Z" fill="#F97316" opacity="0.85" />
             </svg>
 
             <div className="relative z-10 grid lg:grid-cols-2 h-full">
