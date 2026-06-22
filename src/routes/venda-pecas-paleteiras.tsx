@@ -38,9 +38,9 @@ function Page() {
         <H2>Categorias de peças disponíveis</H2>
         <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {categorias.map((c, i) => (
-            <div key={i} className="rounded-xl border border-border bg-white p-5">
+            <div key={i} className="rounded-2xl border border-gray-200 bg-white p-6 hover:shadow-md transition">
               <c.icon className="h-7 w-7 text-primary" />
-              <h3 className="mt-3 font-bold text-secondary">{c.t}</h3>
+              <h3 className="mt-4 text-lg font-semibold text-secondary">{c.t}</h3>
               <p className="mt-1 text-sm text-muted-foreground">{c.d}</p>
             </div>
           ))}

@@ -53,7 +53,7 @@ function Page() {
             "Entrega rápida no Oeste do Paraná",
             "Consultoria para escolher o modelo ideal",
           ].map((b, i) => (
-            <li key={i} className="flex items-start gap-3 rounded-lg border border-border bg-white p-4">
+            <li key={i} className="flex items-start gap-3 rounded-xl bg-[#FEF3EC] p-4">
               <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
               <span className="text-sm text-secondary">{b}</span>
             </li>

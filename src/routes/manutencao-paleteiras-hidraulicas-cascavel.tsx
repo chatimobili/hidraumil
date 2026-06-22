@@ -69,7 +69,7 @@ function Page() {
         <H2>Sinais de que sua Paleteira Precisa de Manutenção</H2>
         <ul className="mt-4 grid sm:grid-cols-2 gap-3">
           {sinais.map((s, i) => (
-            <li key={i} className="flex items-start gap-3 rounded-lg border border-border bg-white p-4">
+            <li key={i} className="flex items-start gap-3 rounded-xl bg-[#FEF3EC] p-4">
               <AlertTriangle className="h-5 w-5 text-primary shrink-0 mt-0.5" />
               <span className="text-sm text-secondary">{s}</span>
             </li>
@@ -81,9 +81,9 @@ function Page() {
         <H2>Por que Escolher a Hidraumil para Manutenção em Cascavel?</H2>
         <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {diferenciais.map((d, i) => (
-            <div key={i} className="rounded-xl border border-border bg-white p-5">
+            <div key={i} className="rounded-2xl border border-gray-200 bg-white p-6 hover:shadow-md transition">
               <d.icon className="h-7 w-7 text-primary" />
-              <h3 className="mt-3 font-bold text-secondary">{d.t}</h3>
+              <h3 className="mt-4 text-lg font-semibold text-secondary">{d.t}</h3>
               <p className="mt-1 text-sm text-muted-foreground">{d.d}</p>
             </div>
           ))}

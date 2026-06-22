@@ -40,7 +40,7 @@ function Page() {
         <H2>Problemas mais comuns em paleteiras hidráulicas que consertamos</H2>
         <ul className="mt-4 grid sm:grid-cols-2 gap-3">
           {problemas.map((p, i) => (
-            <li key={i} className="flex items-start gap-3 rounded-lg border border-border bg-white p-4">
+            <li key={i} className="flex items-start gap-3 rounded-xl bg-[#FEF3EC] p-4">
               <Wrench className="h-5 w-5 text-primary shrink-0 mt-0.5" />
               <span className="text-sm text-secondary">{p}</span>
             </li>
@@ -62,7 +62,7 @@ function Page() {
         <H2>Consertamos todas as marcas</H2>
         <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-3">
           {marcas.map(m => (
-            <div key={m} className="rounded-lg border border-border bg-white py-4 text-center text-sm font-semibold text-secondary">{m}</div>
+            <div key={m} className="rounded-xl bg-[#FEF3EC] py-4 text-center text-sm font-semibold text-secondary">{m}</div>
           ))}
         </div>
       </section>
