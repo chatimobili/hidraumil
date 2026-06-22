@@ -25,8 +25,6 @@ export function Footer() {
             <div className="flex items-center gap-3">
               <a href="#" aria-label="Instagram" className={socialClass}><Instagram className="h-5 w-5" /></a>
               <a href="#" aria-label="Facebook" className={socialClass}><Facebook className="h-5 w-5" /></a>
-              <a href="#" aria-label="LinkedIn" className={socialClass}><Linkedin className="h-5 w-5" /></a>
-              <a href={SITE.whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className={socialClass}><WhatsAppIcon className="h-5 w-5" /></a>
             </div>
           </div>
         </div>
