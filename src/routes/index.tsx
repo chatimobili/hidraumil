@@ -287,7 +287,7 @@ function Home() {
       </section>
 
       {/* CLIENTES — logo grid */}
-      <section className="bg-surface border-y border-border">
+      <section className="bg-white border-y border-border">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
           <p className="text-center text-xs font-bold uppercase tracking-[0.18em] text-primary">
             Alguns de nossos clientes
@@ -297,7 +297,7 @@ function Home() {
           </h2>
           <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-8 items-center">
             {clientLogos.map((c) => (
-              <div key={c.name} className="flex items-center justify-center h-16 grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition">
+              <div key={c.name} className="flex items-center justify-center h-16 bg-white rounded-md">
                 <img src={c.src} alt={c.name} className="max-h-full max-w-[140px] object-contain" loading="lazy" />
               </div>
             ))}
