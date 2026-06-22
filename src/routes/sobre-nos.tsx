@@ -42,7 +42,7 @@ function SobrePage() {
     <>
       {/* HERO — Empregga-style peach background, large centered heading */}
       <section className="relative bg-[#FEF3EC] overflow-hidden">
-        <div className="absolute -right-20 top-10 text-primary/10 text-[28rem] font-semibold leading-none select-none pointer-events-none hidden lg:block">e</div>
+        
         <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-24 md:py-32 text-center">
           <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-primary">
             <span>👋</span> Sobre nós
