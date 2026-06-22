@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as VendaPecasPaleteirasRouteImport } from './routes/venda-pecas-paleteiras'
 import { Route as VendaPaleteirasHidraulicasCascavelRouteImport } from './routes/venda-paleteiras-hidraulicas-cascavel'
 import { Route as SobreNosRouteImport } from './routes/sobre-nos'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ManutencaoPaleteirasHidraulicasCascavelRouteImport } from './routes/manutencao-paleteiras-hidraulicas-cascavel'
 import { Route as LocacaoPaleteirasHidraulicasCascavelRouteImport } from './routes/locacao-paleteiras-hidraulicas-cascavel'
 import { Route as ContatoRouteImport } from './routes/contato'
@@ -37,6 +38,11 @@ const VendaPaleteirasHidraulicasCascavelRoute =
 const SobreNosRoute = SobreNosRouteImport.update({
   id: '/sobre-nos',
   path: '/sobre-nos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ManutencaoPaleteirasHidraulicasCascavelRoute =
@@ -104,6 +110,7 @@ export interface FileRoutesByFullPath {
   '/contato': typeof ContatoRoute
   '/locacao-paleteiras-hidraulicas-cascavel': typeof LocacaoPaleteirasHidraulicasCascavelRoute
   '/manutencao-paleteiras-hidraulicas-cascavel': typeof ManutencaoPaleteirasHidraulicasCascavelRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre-nos': typeof SobreNosRoute
   '/venda-paleteiras-hidraulicas-cascavel': typeof VendaPaleteirasHidraulicasCascavelRoute
   '/venda-pecas-paleteiras': typeof VendaPecasPaleteirasRoute
@@ -119,6 +126,7 @@ export interface FileRoutesByTo {
   '/contato': typeof ContatoRoute
   '/locacao-paleteiras-hidraulicas-cascavel': typeof LocacaoPaleteirasHidraulicasCascavelRoute
   '/manutencao-paleteiras-hidraulicas-cascavel': typeof ManutencaoPaleteirasHidraulicasCascavelRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre-nos': typeof SobreNosRoute
   '/venda-paleteiras-hidraulicas-cascavel': typeof VendaPaleteirasHidraulicasCascavelRoute
   '/venda-pecas-paleteiras': typeof VendaPecasPaleteirasRoute
@@ -135,6 +143,7 @@ export interface FileRoutesById {
   '/contato': typeof ContatoRoute
   '/locacao-paleteiras-hidraulicas-cascavel': typeof LocacaoPaleteirasHidraulicasCascavelRoute
   '/manutencao-paleteiras-hidraulicas-cascavel': typeof ManutencaoPaleteirasHidraulicasCascavelRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre-nos': typeof SobreNosRoute
   '/venda-paleteiras-hidraulicas-cascavel': typeof VendaPaleteirasHidraulicasCascavelRoute
   '/venda-pecas-paleteiras': typeof VendaPecasPaleteirasRoute
@@ -152,6 +161,7 @@ export interface FileRouteTypes {
     | '/contato'
     | '/locacao-paleteiras-hidraulicas-cascavel'
     | '/manutencao-paleteiras-hidraulicas-cascavel'
+    | '/sitemap.xml'
     | '/sobre-nos'
     | '/venda-paleteiras-hidraulicas-cascavel'
     | '/venda-pecas-paleteiras'
@@ -167,6 +177,7 @@ export interface FileRouteTypes {
     | '/contato'
     | '/locacao-paleteiras-hidraulicas-cascavel'
     | '/manutencao-paleteiras-hidraulicas-cascavel'
+    | '/sitemap.xml'
     | '/sobre-nos'
     | '/venda-paleteiras-hidraulicas-cascavel'
     | '/venda-pecas-paleteiras'
@@ -182,6 +193,7 @@ export interface FileRouteTypes {
     | '/contato'
     | '/locacao-paleteiras-hidraulicas-cascavel'
     | '/manutencao-paleteiras-hidraulicas-cascavel'
+    | '/sitemap.xml'
     | '/sobre-nos'
     | '/venda-paleteiras-hidraulicas-cascavel'
     | '/venda-pecas-paleteiras'
@@ -198,6 +210,7 @@ export interface RootRouteChildren {
   ContatoRoute: typeof ContatoRoute
   LocacaoPaleteirasHidraulicasCascavelRoute: typeof LocacaoPaleteirasHidraulicasCascavelRoute
   ManutencaoPaleteirasHidraulicasCascavelRoute: typeof ManutencaoPaleteirasHidraulicasCascavelRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SobreNosRoute: typeof SobreNosRoute
   VendaPaleteirasHidraulicasCascavelRoute: typeof VendaPaleteirasHidraulicasCascavelRoute
   VendaPecasPaleteirasRoute: typeof VendaPecasPaleteirasRoute
@@ -228,6 +241,13 @@ declare module '@tanstack/react-router' {
       path: '/sobre-nos'
       fullPath: '/sobre-nos'
       preLoaderRoute: typeof SobreNosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/manutencao-paleteiras-hidraulicas-cascavel': {
@@ -314,6 +334,7 @@ const rootRouteChildren: RootRouteChildren = {
     LocacaoPaleteirasHidraulicasCascavelRoute,
   ManutencaoPaleteirasHidraulicasCascavelRoute:
     ManutencaoPaleteirasHidraulicasCascavelRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   SobreNosRoute: SobreNosRoute,
   VendaPaleteirasHidraulicasCascavelRoute:
     VendaPaleteirasHidraulicasCascavelRoute,
