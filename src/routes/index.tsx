@@ -109,35 +109,37 @@ function Home() {
             />
           </svg>
 
-          {/* White card flush to left edge, rounded only on the right */}
-          <div className="absolute inset-y-0 left-0 flex items-center pointer-events-none">
-            <div className="bg-white shadow-2xl rounded-r-[2.5rem] p-8 md:p-12 max-w-[560px] w-full pointer-events-auto">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary mb-5 flex items-center gap-2">
-                <span>⚡</span> Bem-vindo(a) à Hidraumil
-              </p>
-              <h1 className="text-3xl md:text-[44px] font-semibold leading-[1.1] text-secondary">
-                Sua paleteira está com algum{" "}
-                <span className="text-primary">defeito?</span>
-              </h1>
-              <p className="mt-5 text-xl text-muted-foreground leading-[1.5]">
-                Conte com a Hidraumil para resolver. Manutenção, conserto, locação e venda
-                de paleteiras com técnicos especializados em Cascavel e região.
-              </p>
-              <div className="mt-7 flex items-center gap-5 flex-wrap">
-                <a
-                  href={SITE.whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-[0_10px_30px_-10px_rgba(249,115,22,0.6)] hover:bg-[var(--brand-dark)] hover:-translate-y-0.5 transition"
-                >
-                  Solicitar orçamento
-                </a>
-                <a
-                  href="#servicos"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:text-primary transition"
-                >
-                  Conheça mais ↓
-                </a>
+          {/* White card aligned with the page container */}
+          <div className="absolute inset-0 flex items-center pointer-events-none">
+            <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div className="bg-white shadow-2xl rounded-[2rem] p-8 md:p-12 max-w-[560px] w-full pointer-events-auto">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary mb-5 flex items-center gap-2">
+                  <span>⚡</span> Bem-vindo(a) à Hidraumil
+                </p>
+                <h1 className="text-3xl md:text-[44px] font-semibold leading-[1.1] text-secondary">
+                  Sua paleteira está com algum{" "}
+                  <span className="text-primary">defeito?</span>
+                </h1>
+                <p className="mt-5 text-xl text-muted-foreground leading-[1.5]">
+                  Conte com a Hidraumil para resolver. Manutenção, conserto, locação e venda
+                  de paleteiras com técnicos especializados em Cascavel e região.
+                </p>
+                <div className="mt-7 flex items-center gap-5 flex-wrap">
+                  <a
+                    href={SITE.whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-[0_10px_30px_-10px_rgba(249,115,22,0.6)] hover:bg-[var(--brand-dark)] hover:-translate-y-0.5 transition"
+                  >
+                    Solicitar orçamento
+                  </a>
+                  <a
+                    href="#servicos"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:text-primary transition"
+                  >
+                    Conheça mais ↓
+                  </a>
+                </div>
               </div>
             </div>
           </div>
