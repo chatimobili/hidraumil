@@ -67,30 +67,18 @@ const stats = [
 function Home() {
   return (
     <>
-      {/* HERO — light, headline on left, photo on right (matches original) */}
-      <section className="relative bg-surface overflow-hidden">
-        {/* subtle pixel pattern accents */}
-        <div className="absolute top-10 left-10 hidden lg:block" aria-hidden="true">
-          <div className="grid grid-cols-3 gap-1 opacity-40">
-            {Array.from({ length: 9 }).map((_, i) => (
-              <span key={i} className="h-2 w-2 bg-white border border-border" />
-            ))}
-          </div>
-        </div>
-        <div className="absolute bottom-16 right-10 hidden lg:block" aria-hidden="true">
-          <div className="grid grid-cols-4 gap-1 opacity-40">
-            {Array.from({ length: 12 }).map((_, i) => (
-              <span key={i} className="h-2 w-2 bg-white border border-border" />
-            ))}
-          </div>
-        </div>
+      {/* HERO — dark navy with geometric grid */}
+      <section className="relative bg-[#0F1C2E] overflow-hidden">
+        <div className="absolute inset-0 bg-grid-hero opacity-70" aria-hidden="true" />
+        <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-primary/20 blur-3xl pointer-events-none" aria-hidden="true" />
+        <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl pointer-events-none" aria-hidden="true" />
 
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24 grid lg:grid-cols-2 gap-12 items-center">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28 grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05] text-secondary">
-              Sua paleteira está com algum defeito?
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.02] text-white">
+              Sua paleteira está com algum <span className="text-[#F97316]">defeito</span>?
             </h1>
-            <p className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed">
+            <p className="mt-6 text-lg text-[#CBD5E1] max-w-xl leading-relaxed">
               Saiba que a maior causa do seu hidráulico estragar é a falta de manutenção do mesmo.
               Conte com a Hidraumil pra resolver!
             </p>
@@ -105,7 +93,7 @@ function Home() {
               </a>
               <a
                 href="#servicos"
-                className="inline-flex items-center gap-2 rounded-full bg-white border border-border px-7 py-3.5 text-base font-semibold text-secondary hover:border-primary hover:text-primary transition"
+                className="inline-flex items-center gap-2 rounded-full bg-transparent border-2 border-white/80 px-7 py-3.5 text-base font-semibold text-white hover:bg-white/10 transition"
               >
                 Nossos serviços
               </a>
@@ -118,20 +106,22 @@ function Home() {
               alt="Técnico inspecionando paleteira hidráulica em armazém"
               width={1200}
               height={1200}
-              className="relative w-full h-auto rounded-2xl shadow-2xl object-cover aspect-[4/5] md:aspect-[5/5]"
+              className="relative w-full h-auto rounded-2xl shadow-2xl object-cover aspect-[4/5] md:aspect-[5/5] ring-1 ring-white/10"
               fetchPriority="high"
             />
           </div>
         </div>
       </section>
 
-      {/* STATS — clean inline row with icon + number (matches original) */}
-      <section className="bg-white border-y border-border">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
-          <Stat icon={Trophy} value="5.700+" label="Projetos concluídos" />
-          <Stat icon={Users} value="500+" label="Empresas satisfeitas" />
-          <Stat icon={Award} value="15+" label="Anos no negócio" />
-          <Stat icon={ThumbsUp} value="100%" label="Dos clientes satisfeitos" />
+      {/* STATS — full-width navy strip */}
+      <section className="bg-[#0F1C2E]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 grid grid-cols-2 lg:grid-cols-4 gap-10 border-t border-white/10">
+          {stats.map((s) => (
+            <div key={s.label} className="text-center">
+              <div className="text-4xl md:text-5xl font-extrabold text-[#F97316] leading-none tracking-tight">{s.value}</div>
+              <div className="mt-3 text-sm text-[#CBD5E1] uppercase tracking-wider">{s.label}</div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -165,26 +155,10 @@ function Home() {
               Técnicos experientes e altamente qualificados
             </h2>
             <p className="mt-5 text-muted-foreground leading-relaxed">
-              Realizamos inspeções minuciosas, identificando e corrigindo quaisquer problemas que
-              possam comprometer a eficiência dos seus equipamentos.
+              Nossos técnicos são treinados diretamente pelos fabricantes e conhecem cada detalhe
+              de paleteiras manuais e hidráulicas. Cada atendimento tem diagnóstico documentado e
+              prazo cumprido.
             </p>
-            <ul className="mt-7 space-y-4">
-              {[
-                { t: "Todas as marcas e modelos", d: "Soluções personalizadas para qualquer paleteira hidráulica." },
-                { t: "Reparos rápidos", d: "Minimizamos o tempo de inatividade da sua operação." },
-                { t: "Manutenção preventiva", d: "Garantimos que seus equipamentos estejam sempre prontos." },
-              ].map((item) => (
-                <li key={item.t} className="flex items-start gap-3">
-                  <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                    <Check className="h-3.5 w-3.5" />
-                  </span>
-                  <div>
-                    <p className="font-semibold text-secondary">{item.t}</p>
-                    <p className="text-sm text-muted-foreground">{item.d}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
             <a
               href={SITE.whatsappUrl}
               target="_blank"
@@ -214,25 +188,25 @@ function Home() {
           <div className="mt-12 grid md:grid-cols-2 gap-6">
             {[
               {
-                img: caixaAsset.url,
+                icon: Cog,
                 title: "Venda de peças para paleteiras",
                 desc: "Manutenção rápida e eficiente começa com peças de qualidade. Trabalhamos com uma ampla linha de peças para paleteiras, garantindo durabilidade e desempenho.",
                 to: "/venda-pecas-paleteiras",
               },
               {
-                img: tecnicoAsset.url,
+                icon: ShieldCheck,
                 title: "Assistência técnica de equipamentos hidráulicos",
                 desc: "Assistência técnica especializada — garanta qualidade, confiabilidade e desempenho que você precisa para o sucesso dos seus projetos.",
                 to: "/assistencia-tecnica-equipamentos-hidraulicos-cascavel",
               },
               {
-                img: mulherAsset.url,
+                icon: ShoppingCart,
                 title: "Venda de paleteiras hidráulicas",
                 desc: "Encontre as melhores soluções para movimentação de cargas com segurança, eficiência e robustez, otimizando o desempenho das suas operações.",
                 to: "/venda-paleteiras-hidraulicas-cascavel",
               },
               {
-                img: heroImg,
+                icon: CalendarCheck,
                 title: "Locação de paleteiras hidráulicas",
                 desc: "A melhor opção para movimentação de cargas com economia, praticidade e alto desempenho — soluções flexíveis e eficientes para sua empresa.",
                 to: "/locacao-paleteiras-hidraulicas-cascavel",
@@ -241,23 +215,16 @@ function Home() {
               <Link
                 key={s.to}
                 to={s.to}
-                className="group relative overflow-hidden rounded-2xl bg-white border border-border shadow-[var(--shadow-card)] hover:shadow-xl transition"
+                className="group relative overflow-hidden rounded-2xl bg-[#1E2D3D] border border-white/5 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition p-8"
               >
-                <div className="aspect-[16/10] overflow-hidden">
-                  <img
-                    src={s.img}
-                    alt={s.title}
-                    className="h-full w-full object-cover group-hover:scale-105 transition duration-500"
-                    loading="lazy"
-                  />
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/15 text-[#F97316]">
+                  <s.icon className="h-7 w-7" />
                 </div>
-                <div className="p-7">
-                  <h3 className="text-xl font-bold text-secondary">{s.title}</h3>
-                  <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-                  <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:gap-2 transition-all">
-                    Saiba mais <ArrowRight className="h-4 w-4" />
-                  </span>
-                </div>
+                <h3 className="mt-6 text-2xl font-bold text-white leading-tight">{s.title}</h3>
+                <p className="mt-3 text-sm text-[#CBD5E1] leading-relaxed">{s.desc}</p>
+                <span className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-[#F97316] group-hover:gap-2 transition-all">
+                  Saiba mais <ArrowRight className="h-4 w-4" />
+                </span>
               </Link>
             ))}
           </div>
@@ -266,6 +233,7 @@ function Home() {
 
       {/* COM A HIDRAUMIL NÃO EXISTEM DESCULPAS — feature row matching original */}
       <section className="bg-primary relative overflow-hidden">
+        <div className="absolute inset-0 bg-dots-orange opacity-60" aria-hidden="true" />
         <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-white/10 blur-3xl pointer-events-none" />
         <div className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-secondary/30 blur-3xl pointer-events-none" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
@@ -303,8 +271,9 @@ function Home() {
                   { icon: Truck, t: "Coleta e entrega", d: "Realizamos a coleta e entrega dos equipamentos." },
                   { icon: Wrench, t: "Equipe técnica", d: "Contamos com uma equipe técnica especializada." },
                   { icon: CalendarCheck, t: "Agendamento", d: "Agendamos a manutenção preventiva." },
+                  { icon: Star, t: "Garantia do serviço", d: "Todos os reparos têm garantia por escrito." },
                 ].map((f) => (
-                  <div key={f.t} className="flex items-start gap-4 rounded-2xl border border-white/10 bg-secondary p-5 shadow-lg">
+                  <div key={f.t} className="flex items-start gap-4 rounded-2xl border-l-[3px] border-l-[#FFB347] border-y border-r border-white/10 bg-secondary p-5 shadow-lg">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white text-secondary">
                       <f.icon className="h-6 w-6" />
                     </div>
@@ -331,16 +300,18 @@ function Home() {
       {/* CLIENTES — logo grid */}
       <section className="bg-white border-y border-border">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-          <p className="text-center text-xs font-bold uppercase tracking-[0.18em] text-primary">
-            Alguns de nossos clientes
-          </p>
-          <h2 className="mt-3 text-center text-2xl md:text-3xl font-extrabold text-secondary">
-            Empresas que confiam na Hidraumil
+          <h2 className="text-center text-2xl md:text-3xl font-extrabold text-secondary">
+            Empresas que confiam no nosso trabalho
           </h2>
           <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-8 items-center">
             {clientLogos.map((c) => (
-              <div key={c.name} className="flex items-center justify-center h-16 bg-white rounded-md">
-                <img src={c.src} alt={c.name} className="max-h-full max-w-[140px] object-contain" loading="lazy" />
+              <div key={c.name} className="flex items-center justify-center h-16">
+                <img
+                  src={c.src}
+                  alt={c.name}
+                  className="h-12 w-auto max-w-[140px] object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition"
+                  loading="lazy"
+                />
               </div>
             ))}
           </div>
