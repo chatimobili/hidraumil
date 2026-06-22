@@ -1,5 +1,24 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroImg from "@/assets/hero-paleteira.jpg";
+import heroAsset from "@/assets/fotos-paleteiras.png.asset.json";
+import allmayer from "@/assets/clients/Allmayer-supermercado.png.asset.json";
+import consilos from "@/assets/clients/Consilos.png.asset.json";
+import coopavel from "@/assets/clients/Coopavel.png.asset.json";
+import geriba from "@/assets/clients/Geriba-Alimentos.png.asset.json";
+import arteReal from "@/assets/clients/Hidraumil-Arte-real.png.asset.json";
+import infasa from "@/assets/clients/Infasa-industria-de-farinha.png.asset.json";
+import jlConstrutora from "@/assets/clients/JL-Construtora.png.asset.json";
+import megaMix from "@/assets/clients/MEGA-MIX.png.asset.json";
+const heroImg = heroAsset.url;
+const clientLogos = [
+  { src: allmayer.url, name: "Allmayer Supermercado" },
+  { src: coopavel.url, name: "Coopavel" },
+  { src: consilos.url, name: "Consilos" },
+  { src: geriba.url, name: "Gerib\u00e1 Alimentos" },
+  { src: infasa.url, name: "Infasa Ind\u00fastria de Farinha" },
+  { src: jlConstrutora.url, name: "JL Construtora" },
+  { src: megaMix.url, name: "Mega Mix" },
+  { src: arteReal.url, name: "Arte Real" },
+];
 import { SITE, services } from "@/lib/site";
 import { CTASection } from "@/components/site/CTASection";
 import { FAQ } from "@/components/site/FAQ";
