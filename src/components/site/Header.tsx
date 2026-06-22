@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, ChevronDown, MessageCircle } from "lucide-react";
 import { SITE, services } from "@/lib/site";
+import logoAsset from "@/assets/logo-hidraumil.png.asset.json";
 
 export function Header() {
   const [open, setOpen] = useState(false);
