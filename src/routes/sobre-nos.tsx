@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { CTASection } from "@/components/site/CTASection";
+
 import { Flag } from "lucide-react";
 import equipeAsset from "@/assets/equipe-nova.jpg.asset.json";
 import allmayer from "@/assets/clients/Allmayer-supermercado.png.asset.json";
@@ -130,8 +130,6 @@ function SobrePage() {
           </div>
         </div>
       </section>
-
-      <CTASection title="Vamos conversar?" subtitle="Conte para a gente o que sua operação precisa. Atendimento por WhatsApp, telefone ou na nossa oficina em Cascavel." />
     </>
   );
 }
