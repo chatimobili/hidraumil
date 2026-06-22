@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { PageHero } from "@/components/site/PageHero";
-import { CTASection } from "@/components/site/CTASection";
+import { FiquePorDentro } from "@/components/site/FiquePorDentro";
 import { ContactForm } from "@/components/site/ContactForm";
 import { SITE } from "@/lib/site";
 import { MapPin, CheckCircle2 } from "lucide-react";
