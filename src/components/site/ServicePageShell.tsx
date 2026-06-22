@@ -3,7 +3,8 @@ import { PageHero } from "@/components/site/PageHero";
 import { CTASection } from "@/components/site/CTASection";
 import { ContactForm } from "@/components/site/ContactForm";
 import { SITE } from "@/lib/site";
-import { MessageCircle, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
+import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 
 export function ServicePageShell({
   title,
@@ -49,7 +50,7 @@ export function ServicePageShell({
               <h2 className="text-2xl md:text-3xl font-extrabold text-secondary">Solicite seu orçamento</h2>
               <p className="text-muted-foreground">Resposta rápida pelo WhatsApp. Sem compromisso.</p>
               <a href={SITE.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:bg-[var(--brand-dark)] transition">
-                <MessageCircle className="h-4 w-4" /> Falar pelo WhatsApp
+                <WhatsAppIcon className="h-4 w-4" /> Falar pelo WhatsApp
               </a>
             </div>
             <div className="lg:col-span-3"><ContactForm /></div>
