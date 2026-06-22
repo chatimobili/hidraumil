@@ -44,8 +44,8 @@ function SobrePage() {
       <section className="relative bg-[#FEF3EC] overflow-hidden">
         
         <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-24 md:py-32 text-center">
-          <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-            <span>👋</span> Sobre nós
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
+            Sobre nós
           </p>
           <h1 className="mt-6 font-semibold leading-[1.1] text-secondary">
             Somos uma empresa amada pela indústria e necessária para quem não pode deixar a operação parar.
