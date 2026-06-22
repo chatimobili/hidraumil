@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import { Flag } from "lucide-react";
+
 import equipeAsset from "@/assets/equipe-nova.jpg.asset.json";
 import allmayer from "@/assets/clients/Allmayer-supermercado.png.asset.json";
 import consilos from "@/assets/clients/Consilos.png.asset.json";
@@ -121,8 +121,7 @@ function SobrePage() {
             <div className="flex gap-5 min-w-max">
               {timeline.map((m) => (
                 <article key={m.year} className="bg-white rounded-2xl p-7 w-72 shrink-0 shadow-sm">
-                  <Flag className="h-6 w-6 text-primary" />
-                  <p className="mt-4 text-2xl font-semibold text-secondary">{m.year}</p>
+                  <p className="text-2xl font-semibold text-secondary">{m.year}</p>
                   <p className="mt-4 text-muted-foreground leading-relaxed">{m.t}</p>
                 </article>
               ))}
