@@ -133,19 +133,19 @@ function Home() {
               </div>
 
               <div className="hidden lg:block relative">
-                <div className="absolute top-[22%] left-[10%] bg-white rounded-full shadow-xl px-5 py-3 flex items-center gap-2.5">
+                <div className="absolute top-[18%] right-[8%] bg-white rounded-full shadow-xl px-5 py-3 flex items-center gap-2.5">
                   <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary/15 text-primary">
                     <Wrench className="h-4 w-4" />
                   </span>
                   <span className="text-sm font-semibold text-secondary">Rapidez</span>
                 </div>
-                <div className="absolute top-[48%] left-[2%] bg-white rounded-full shadow-xl px-5 py-3 flex items-center gap-2.5">
+                <div className="absolute top-[45%] right-[35%] bg-white rounded-full shadow-xl px-5 py-3 flex items-center gap-2.5">
                   <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary/15 text-primary">
                     <ShieldCheck className="h-4 w-4" />
                   </span>
                   <span className="text-sm font-semibold text-secondary">Garantia</span>
                 </div>
-                <div className="absolute top-[70%] left-[22%] bg-white rounded-full shadow-xl px-5 py-3 flex items-center gap-2.5">
+                <div className="absolute top-[68%] right-[5%] bg-white rounded-full shadow-xl px-5 py-3 flex items-center gap-2.5">
                   <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary/15 text-primary">
                     <Star className="h-4 w-4" />
                   </span>
