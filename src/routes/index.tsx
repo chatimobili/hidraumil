@@ -1,5 +1,24 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroImg from "@/assets/hero-paleteira.jpg";
+import heroAsset from "@/assets/fotos-paleteiras.png.asset.json";
+import allmayer from "@/assets/clients/Allmayer-supermercado.png.asset.json";
+import consilos from "@/assets/clients/Consilos.png.asset.json";
+import coopavel from "@/assets/clients/Coopavel.png.asset.json";
+import geriba from "@/assets/clients/Geriba-Alimentos.png.asset.json";
+import arteReal from "@/assets/clients/Hidraumil-Arte-real.png.asset.json";
+import infasa from "@/assets/clients/Infasa-industria-de-farinha.png.asset.json";
+import jlConstrutora from "@/assets/clients/JL-Construtora.png.asset.json";
+import megaMix from "@/assets/clients/MEGA-MIX.png.asset.json";
+const heroImg = heroAsset.url;
+const clientLogos = [
+  { src: allmayer.url, name: "Allmayer Supermercado" },
+  { src: coopavel.url, name: "Coopavel" },
+  { src: consilos.url, name: "Consilos" },
+  { src: geriba.url, name: "Gerib\u00e1 Alimentos" },
+  { src: infasa.url, name: "Infasa Ind\u00fastria de Farinha" },
+  { src: jlConstrutora.url, name: "JL Construtora" },
+  { src: megaMix.url, name: "Mega Mix" },
+  { src: arteReal.url, name: "Arte Real" },
+];
 import { SITE, services } from "@/lib/site";
 import { CTASection } from "@/components/site/CTASection";
 import { FAQ } from "@/components/site/FAQ";
@@ -179,9 +198,11 @@ function Home() {
               </figure>
             ))}
           </div>
-          <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-6 items-center opacity-70">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <div key={i} className="h-12 rounded-md bg-muted flex items-center justify-center text-xs font-semibold text-muted-foreground">Cliente {i + 1}</div>
+          <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-8 items-center">
+            {clientLogos.map((c) => (
+              <div key={c.name} className="flex items-center justify-center h-16 grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition">
+                <img src={c.src} alt={c.name} className="max-h-full max-w-[160px] object-contain" loading="lazy" />
+              </div>
             ))}
           </div>
         </div>
