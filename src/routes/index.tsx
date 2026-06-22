@@ -22,7 +22,7 @@ const clientLogos = [
 ];
 
 import { SITE } from "@/lib/site";
-import { CTASection } from "@/components/site/CTASection";
+
 import { FAQ } from "@/components/site/FAQ";
 import {
   ArrowRight,
@@ -437,9 +437,7 @@ function Home() {
           </div>
         </div>
       </section>
-
-
-      <CTASection />
     </>
+
   );
 }
