@@ -28,7 +28,7 @@ import { CTASection } from "@/components/site/CTASection";
 import { FAQ } from "@/components/site/FAQ";
 import {
   ArrowRight, Trophy, Users, Award, ThumbsUp,
-  Truck, Wrench, CalendarCheck,
+  Truck, Wrench, CalendarCheck, Check,
 } from "lucide-react";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 
