@@ -183,56 +183,45 @@ function Home() {
 
       </section>
 
-      {/* WAVE divider into dark equipe section */}
-      <OrangeWave />
+      {/* EQUIPE — light section, Empregga-style two-column */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-14 items-center">
+          <div className="order-2 lg:order-1">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Nossa equipe</p>
+            <h2 className="mt-4 text-3xl md:text-[44px] font-semibold text-secondary leading-[1.15]">
+              A Hidraumil nasceu para resolver toda <span className="text-primary">dificuldade que a sua empresa enfrenta</span> com paleteiras paradas ou quebradas.
+            </h2>
+            <p className="mt-6 text-muted-foreground text-lg">Com a Hidraumil, você nunca mais vai precisar:</p>
 
-      {/* EQUIPE — dark navy with orange-framed image card */}
-      <section className="bg-[#0F1C2E] relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid-hero opacity-60" aria-hidden="true" />
-        <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-primary/20 blur-3xl pointer-events-none" />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-14 items-center">
-          <div className="order-2 lg:order-1 relative">
-            <div className="absolute -inset-4 rounded-[2.5rem] bg-primary rotate-2" aria-hidden="true" />
+            <ul className="mt-8 divide-y divide-gray-200 border-t border-b border-gray-200">
+              {[
+                { icon: Wrench, t: "Esperar dias por um conserto" },
+                { icon: ShieldCheck, t: "Improvisar com peças sem garantia" },
+                { icon: CalendarCheck, t: "Perder produção com paleteiras paradas" },
+              ].map(({ icon: Icon, t }) => (
+                <li key={t} className="flex items-center gap-5 py-5">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-primary/10 text-primary shrink-0">
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <span className="text-lg font-semibold text-secondary">{t}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="order-1 lg:order-2 relative">
             <img
               src={equipeAsset.url}
               alt="Equipe técnica Hidraumil em Cascavel"
-              className="relative w-full h-auto rounded-[2rem] shadow-2xl object-cover"
+              className="relative w-full h-auto rounded-[2rem] shadow-xl object-cover"
               loading="lazy"
             />
-            <div className="absolute -bottom-6 left-6 right-6 md:left-10 md:right-auto md:-bottom-8 bg-white rounded-xl shadow-xl border border-border px-5 py-4 flex items-center gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                <Wrench className="h-6 w-6" />
-              </div>
-              <div>
-                <p className="text-2xl font-semibold text-secondary leading-none">+15 anos</p>
-                <p className="text-xs text-muted-foreground mt-1">de experiência técnica</p>
-              </div>
+            <div className="absolute -left-4 md:-left-8 top-1/2 -translate-y-1/2 h-28 w-28 md:h-32 md:w-32 rounded-full bg-white border-[6px] border-primary flex items-center justify-center shadow-xl">
+              <Wrench className="h-10 w-10 text-primary" />
             </div>
-          </div>
-          <div className="order-1 lg:order-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Nossa equipe</p>
-            <h2 className="mt-3 text-3xl md:text-5xl font-semibold text-white leading-tight">
-              Técnicos experientes e altamente <span className="text-primary">qualificados</span>
-            </h2>
-            <p className="mt-5 text-white/75 leading-relaxed text-lg">
-              Nossos técnicos são treinados diretamente pelos fabricantes e conhecem cada detalhe
-              de paleteiras manuais e hidráulicas. Cada atendimento tem diagnóstico documentado e
-              prazo cumprido.
-            </p>
-            <a
-              href={SITE.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-[0_10px_30px_-10px_rgba(249,115,22,0.6)] hover:bg-[var(--brand-dark)] hover:-translate-y-0.5 transition"
-            >
-              <WhatsAppIcon className="h-5 w-5" /> Fale com nossos técnicos
-            </a>
           </div>
         </div>
       </section>
-
-      {/* WAVE divider out of dark section */}
-      <OrangeWave flip />
 
 
       {/* SERVIÇOS — featured cards with images (matches original layout) */}
