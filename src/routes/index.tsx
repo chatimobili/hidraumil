@@ -62,79 +62,100 @@ const stats = [
   { value: "98%", label: "Dos clientes retornam" },
 ];
 
+function OrangeWave({ flip = false, color = "#F97316" }: { flip?: boolean; color?: string }) {
+  return (
+    <div className={`w-full overflow-hidden leading-[0] ${flip ? "rotate-180" : ""}`} aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" className="block w-full h-[60px] md:h-[90px]">
+        <path
+          d="M0,40 C240,90 480,0 720,30 C960,60 1200,90 1440,30 L1440,80 L0,80 Z"
+          fill={color}
+        />
+      </svg>
+    </div>
+  );
+}
+
 function Home() {
   return (
     <>
-      {/* HERO — dark navy with geometric grid */}
-      <section className="relative bg-[#0F1C2E] overflow-hidden">
-        <div className="absolute inset-0 bg-grid-hero opacity-70" aria-hidden="true" />
-        <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-primary/20 blur-3xl pointer-events-none" aria-hidden="true" />
-        <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl pointer-events-none" aria-hidden="true" />
+      {/* HERO — light, bold headline, image inside orange rounded frame */}
+      <section className="relative bg-white overflow-hidden">
+        <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl pointer-events-none" aria-hidden="true" />
+        <div className="absolute top-1/2 -left-40 h-96 w-96 rounded-full bg-primary/5 blur-3xl pointer-events-none" aria-hidden="true" />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28 grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.02] text-white">
-              Sua paleteira está com algum <span className="text-[#F97316]">defeito</span>?
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-primary mb-5">
+              Especialistas em paleteiras
+            </p>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.02] text-secondary">
+              Sua paleteira está com algum{" "}
+              <span className="text-primary">defeito</span>?
             </h1>
-            <p className="mt-6 text-lg text-[#CBD5E1] max-w-xl leading-relaxed">
-              Saiba que a maior causa do seu hidráulico estragar é a falta de manutenção do mesmo.
-              Conte com a Hidraumil pra resolver!
+            <p className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed">
+              A maior causa do seu hidráulico estragar é a falta de manutenção.
+              Conte com a Hidraumil para resolver — orçamento gratuito e rápido.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href={SITE.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-lg hover:bg-[var(--brand-dark)] transition"
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-[0_10px_30px_-10px_rgba(249,115,22,0.6)] hover:bg-[var(--brand-dark)] hover:-translate-y-0.5 transition"
               >
                 <WhatsAppIcon className="h-5 w-5" /> Realize um orçamento
               </a>
               <a
                 href="#servicos"
-                className="inline-flex items-center gap-2 rounded-full bg-transparent border-2 border-white/80 px-7 py-3.5 text-base font-semibold text-white hover:bg-white/10 transition"
+                className="inline-flex items-center gap-2 rounded-full bg-white border-2 border-secondary/15 px-7 py-3.5 text-base font-semibold text-secondary hover:border-primary hover:text-primary transition"
               >
                 Nossos serviços
               </a>
             </div>
           </div>
 
+          {/* Image inside orange rounded frame (Empregga-style) */}
           <div className="relative">
+            <div className="absolute -inset-4 rounded-[2.5rem] bg-primary -rotate-2" aria-hidden="true" />
+            <div className="absolute -bottom-6 -right-6 h-24 w-24 rounded-2xl bg-secondary hidden md:block" aria-hidden="true" />
             <img
               src={heroImg}
               alt="Técnico inspecionando paleteira hidráulica em armazém"
               width={1200}
               height={1200}
-              className="relative w-full h-auto rounded-2xl shadow-2xl object-cover aspect-[4/5] md:aspect-[5/5] ring-1 ring-white/10"
+              className="relative w-full h-auto rounded-[2rem] shadow-2xl object-cover aspect-[4/5] md:aspect-[5/5]"
               fetchPriority="high"
             />
           </div>
         </div>
       </section>
 
-      {/* STATS — full-width navy strip */}
-      <section className="bg-[#0F1C2E]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 grid grid-cols-2 lg:grid-cols-4 gap-10 border-t border-white/10">
+      {/* STATS — light strip with orange numbers */}
+      <section className="bg-surface border-y border-border">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-2 lg:grid-cols-4 gap-10">
           {stats.map((s) => (
             <div key={s.label} className="text-center">
-              <div className="text-4xl md:text-5xl font-extrabold text-[#F97316] leading-none tracking-tight">{s.value}</div>
-              <div className="mt-3 text-sm text-[#CBD5E1] uppercase tracking-wider">{s.label}</div>
+              <div className="text-4xl md:text-5xl font-extrabold text-primary leading-none tracking-tight">{s.value}</div>
+              <div className="mt-3 text-sm text-secondary/70 uppercase tracking-wider font-semibold">{s.label}</div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* EQUIPE — image left, text right */}
-      <section className="bg-white relative overflow-hidden">
-        <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-primary/5 blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-secondary/5 blur-3xl pointer-events-none" />
+      {/* WAVE divider into dark equipe section */}
+      <OrangeWave />
+
+      {/* EQUIPE — dark navy with orange-framed image card */}
+      <section className="bg-[#0F1C2E] relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-hero opacity-60" aria-hidden="true" />
+        <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-primary/20 blur-3xl pointer-events-none" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-14 items-center">
           <div className="order-2 lg:order-1 relative">
-            <div className="absolute -top-4 -left-4 h-24 w-24 rounded-2xl border-4 border-primary/80 hidden md:block" />
-            <div className="absolute -bottom-4 -right-4 h-32 w-32 rounded-2xl bg-secondary/10 hidden md:block" />
+            <div className="absolute -inset-4 rounded-[2.5rem] bg-primary rotate-2" aria-hidden="true" />
             <img
               src={equipeAsset.url}
               alt="Equipe técnica Hidraumil em Cascavel"
-              className="relative w-full h-auto rounded-2xl shadow-2xl object-cover ring-1 ring-black/5"
+              className="relative w-full h-auto rounded-[2rem] shadow-2xl object-cover"
               loading="lazy"
             />
             <div className="absolute -bottom-6 left-6 right-6 md:left-10 md:right-auto md:-bottom-8 bg-white rounded-xl shadow-xl border border-border px-5 py-4 flex items-center gap-4">
@@ -149,10 +170,10 @@ function Home() {
           </div>
           <div className="order-1 lg:order-2">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Nossa equipe</p>
-            <h2 className="mt-3 text-3xl md:text-4xl font-extrabold text-secondary leading-tight">
-              Técnicos experientes e altamente qualificados
+            <h2 className="mt-3 text-3xl md:text-5xl font-extrabold text-white leading-tight">
+              Técnicos experientes e altamente <span className="text-primary">qualificados</span>
             </h2>
-            <p className="mt-5 text-muted-foreground leading-relaxed">
+            <p className="mt-5 text-white/75 leading-relaxed text-lg">
               Nossos técnicos são treinados diretamente pelos fabricantes e conhecem cada detalhe
               de paleteiras manuais e hidráulicas. Cada atendimento tem diagnóstico documentado e
               prazo cumprido.
@@ -161,13 +182,17 @@ function Home() {
               href={SITE.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-lg hover:bg-[var(--brand-dark)] transition"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-[0_10px_30px_-10px_rgba(249,115,22,0.6)] hover:bg-[var(--brand-dark)] hover:-translate-y-0.5 transition"
             >
               <WhatsAppIcon className="h-5 w-5" /> Fale com nossos técnicos
             </a>
           </div>
         </div>
       </section>
+
+      {/* WAVE divider out of dark section */}
+      <OrangeWave flip />
+
 
       {/* SERVIÇOS — featured cards with images (matches original layout) */}
       <section id="servicos" className="bg-surface">
