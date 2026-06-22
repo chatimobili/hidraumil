@@ -78,106 +78,109 @@ function OrangeWave({ flip = false, color = "#F97316" }: { flip?: boolean; color
 function Home() {
   return (
     <>
-      {/* HERO — full-bleed image background, white card left, floating pill badges */}
+      {/* HERO — full-bleed image, white card flush-left, subtle orange arc */}
       <section className="relative bg-white">
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8 pb-0">
-          <div className="relative overflow-hidden rounded-[2rem] min-h-[560px] md:min-h-[600px]">
-            <img
-              src={heroImg}
-              alt="Técnico Hidraumil pronto para atender em Cascavel"
-              className="absolute inset-0 w-full h-full object-cover"
-              fetchPriority="high"
+        <div className="relative w-full overflow-hidden h-[640px] md:h-[680px]">
+          <img
+            src={heroImg}
+            alt="Técnico Hidraumil pronto para atender em Cascavel"
+            className="absolute inset-0 w-full h-full object-cover"
+            fetchPriority="high"
+          />
+
+          {/* subtle orange sweeping arc on the right side */}
+          <svg
+            viewBox="0 0 1440 700"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full pointer-events-none"
+          >
+            <path
+              d="M1440,120 C1180,180 980,360 920,640 C915,680 920,700 920,700 L980,700 C980,700 1000,500 1100,380 C1220,240 1360,200 1440,200 Z"
+              fill="#F97316"
+              opacity="0.7"
             />
-            <svg
-              viewBox="0 0 800 600"
-              preserveAspectRatio="none"
-              aria-hidden="true"
-              className="absolute inset-0 w-full h-full pointer-events-none"
-            >
-              {/* subtle sweeping arc from top-right to bottom-left */}
-              <path d="M800,80 C620,140 520,300 480,520 C460,580 470,600 470,600 L530,600 C530,600 540,470 600,360 C660,260 760,210 800,200 Z" fill="#F97316" opacity="0.55" />
-              <path d="M800,160 C660,210 580,340 560,540 C555,580 560,600 560,600 L600,600 C600,600 610,490 660,400 C710,320 770,290 800,285 Z" fill="#F97316" opacity="0.85" />
-            </svg>
+          </svg>
 
-            <div className="relative z-10 grid lg:grid-cols-2 h-full">
-              <div className="p-6 md:p-10 lg:p-12 flex items-center">
-                <div className="bg-white rounded-[1.75rem] shadow-2xl p-8 md:p-10 max-w-xl">
-                  <p className="text-xs font-bold uppercase tracking-[0.22em] text-primary mb-5">
-                    ⚡ Bem-vindo(a) à Hidraumil
-                  </p>
-                  <h1 className="text-4xl md:text-5xl font-extrabold leading-[1.05] text-secondary">
-                    Sua paleteira está com algum{" "}
-                    <span className="text-primary">defeito?</span>
-                  </h1>
-                  <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
-                    Conte com a Hidraumil para resolver. Manutenção, conserto, locação e venda
-                    de paleteiras com técnicos especializados em Cascavel e região.
-                  </p>
-                  <div className="mt-7 flex items-center gap-5 flex-wrap">
-                    <a
-                      href={SITE.whatsappUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-[0_10px_30px_-10px_rgba(249,115,22,0.6)] hover:bg-[var(--brand-dark)] hover:-translate-y-0.5 transition"
-                    >
-                      Solicitar orçamento
-                    </a>
-                    <a
-                      href="#servicos"
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:text-primary transition"
-                    >
-                      Conheça mais ↓
-                    </a>
-                  </div>
-                </div>
+          {/* White card flush to left edge, rounded only on the right */}
+          <div className="absolute inset-y-0 left-0 flex items-center pointer-events-none">
+            <div className="bg-white shadow-2xl rounded-r-[2.5rem] p-8 md:p-12 max-w-[560px] w-full pointer-events-auto">
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-primary mb-5 flex items-center gap-2">
+                <span>⚡</span> Bem-vindo(a) à Hidraumil
+              </p>
+              <h1 className="text-3xl md:text-[44px] font-extrabold leading-[1.1] text-secondary">
+                Sua paleteira está com algum{" "}
+                <span className="text-primary">defeito?</span>
+              </h1>
+              <p className="mt-5 text-base text-muted-foreground leading-relaxed">
+                Conte com a Hidraumil para resolver. Manutenção, conserto, locação e venda
+                de paleteiras com técnicos especializados em Cascavel e região.
+              </p>
+              <div className="mt-7 flex items-center gap-5 flex-wrap">
+                <a
+                  href={SITE.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-[0_10px_30px_-10px_rgba(249,115,22,0.6)] hover:bg-[var(--brand-dark)] hover:-translate-y-0.5 transition"
+                >
+                  Solicitar orçamento
+                </a>
+                <a
+                  href="#servicos"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:text-primary transition"
+                >
+                  Conheça mais ↓
+                </a>
               </div>
+            </div>
+          </div>
 
-              <div className="hidden lg:block relative">
-                <div className="absolute top-[18%] right-[8%] bg-white rounded-full shadow-xl px-5 py-3 flex items-center gap-2.5">
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary/15 text-primary">
-                    <Wrench className="h-4 w-4" />
-                  </span>
-                  <span className="text-sm font-semibold text-secondary">Rapidez</span>
-                </div>
-                <div className="absolute top-[45%] right-[35%] bg-white rounded-full shadow-xl px-5 py-3 flex items-center gap-2.5">
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary/15 text-primary">
-                    <ShieldCheck className="h-4 w-4" />
-                  </span>
-                  <span className="text-sm font-semibold text-secondary">Garantia</span>
-                </div>
-                <div className="absolute top-[68%] right-[5%] bg-white rounded-full shadow-xl px-5 py-3 flex items-center gap-2.5">
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary/15 text-primary">
-                    <Star className="h-4 w-4" />
-                  </span>
-                  <span className="text-sm font-semibold text-secondary">+15 anos</span>
-                </div>
-              </div>
+          {/* Floating pill badges on the right side over the image */}
+          <div className="hidden lg:block absolute inset-0 pointer-events-none">
+            <div className="absolute top-[22%] right-[10%] bg-white rounded-full shadow-xl px-5 py-3 flex items-center gap-2.5">
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary/15 text-primary">
+                <Wrench className="h-4 w-4" />
+              </span>
+              <span className="text-sm font-semibold text-secondary">Rapidez</span>
+            </div>
+            <div className="absolute top-[48%] right-[28%] bg-white rounded-full shadow-xl px-5 py-3 flex items-center gap-2.5">
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary/15 text-primary">
+                <ShieldCheck className="h-4 w-4" />
+              </span>
+              <span className="text-sm font-semibold text-secondary">Garantia</span>
+            </div>
+            <div className="absolute top-[70%] right-[7%] bg-white rounded-full shadow-xl px-5 py-3 flex items-center gap-2.5">
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary/15 text-primary">
+                <Star className="h-4 w-4" />
+              </span>
+              <span className="text-sm font-semibold text-secondary">+15 anos</span>
             </div>
           </div>
         </div>
 
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10 pb-12">
-          <div className="grid grid-cols-2 lg:grid-cols-4 bg-white rounded-2xl">
+        {/* STATS strip below the hero with thin vertical orange dividers */}
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+          <div className="grid grid-cols-2 lg:grid-cols-4">
             {stats.map((s, i) => {
               const Icon = [Star, Wrench, CalendarCheck, ShieldCheck][i] ?? Star;
               return (
                 <div
                   key={s.label}
-                  className={`px-6 py-6 text-center lg:text-left ${i > 0 ? "lg:border-l border-border" : ""}`}
+                  className={`relative px-6 py-4 ${i > 0 ? "lg:before:absolute lg:before:left-0 lg:before:top-1/2 lg:before:-translate-y-1/2 lg:before:h-12 lg:before:w-[2px] lg:before:bg-primary/40 lg:before:content-['']" : ""}`}
                 >
-                  <div className="flex justify-center lg:justify-start text-primary">
+                  <div className="text-primary">
                     <Icon className="h-6 w-6" />
                   </div>
-                  <div className="mt-3 text-2xl md:text-3xl font-extrabold text-secondary leading-none">
+                  <div className="mt-3 text-xl md:text-2xl font-extrabold text-secondary leading-none">
                     {s.value}
                   </div>
                   <div className="mt-2 text-sm text-muted-foreground">{s.label}</div>
-                  <div className="mt-3 h-[3px] w-10 bg-primary mx-auto lg:mx-0 rounded-full" />
                 </div>
               );
             })}
           </div>
         </div>
+
       </section>
 
       {/* WAVE divider into dark equipe section */}
