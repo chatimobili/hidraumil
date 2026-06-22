@@ -57,19 +57,12 @@ const faqs = [
   { q: "Vocês atendem apenas empresas ou também clientes individuais?", a: "Atendemos tanto empresas que necessitam de soluções em maior escala quanto clientes individuais que buscam paleteiras para uso específico, seja na compra, locação ou manutenção." },
 ];
 
-function Stat({ icon: Icon, value, label }: { icon: typeof Trophy; value: string; label: string }) {
-  return (
-    <div className="flex items-center gap-4">
-      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-white shadow-[var(--shadow-card)] border border-border">
-        <Icon className="h-6 w-6 text-primary" />
-      </div>
-      <div>
-        <div className="text-2xl md:text-3xl font-extrabold text-secondary leading-none">{value}</div>
-        <div className="mt-1 text-sm text-muted-foreground">{label}</div>
-      </div>
-    </div>
-  );
-}
+const stats = [
+  { value: "5.700+", label: "Projetos concluídos" },
+  { value: "500+", label: "Empresas satisfeitas" },
+  { value: "15+", label: "Anos no negócio" },
+  { value: "98%", label: "Dos clientes retornam" },
+];
 
 function Home() {
   return (
