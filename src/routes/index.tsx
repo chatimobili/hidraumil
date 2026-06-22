@@ -389,14 +389,41 @@ function Home() {
             <p className="text-white font-semibold leading-tight text-lg">
               Empresas que<br />confiam na Hidraumil
             </p>
-            <div className="overflow-x-auto scrollbar-hide -mx-4 px-4">
+            <div
+              className="overflow-x-auto scrollbar-hide -mx-4 px-4 cursor-grab active:cursor-grabbing select-none"
+              onMouseDown={(e) => {
+                const el = e.currentTarget;
+                const startX = e.pageX - el.offsetLeft;
+                const startScroll = el.scrollLeft;
+                let moved = false;
+                const onMove = (ev: MouseEvent) => {
+                  moved = true;
+                  el.scrollLeft = startScroll - (ev.pageX - el.offsetLeft - startX);
+                };
+                const onUp = () => {
+                  window.removeEventListener("mousemove", onMove);
+                  window.removeEventListener("mouseup", onUp);
+                  if (moved) {
+                    const prevent = (ev: Event) => {
+                      ev.preventDefault();
+                      ev.stopPropagation();
+                      window.removeEventListener("click", prevent, true);
+                    };
+                    window.addEventListener("click", prevent, true);
+                  }
+                };
+                window.addEventListener("mousemove", onMove);
+                window.addEventListener("mouseup", onUp);
+              }}
+            >
               <div className="flex gap-6 items-center min-w-max">
                 {clientLogos.map((c) => (
                   <div key={c.name} className="flex items-center justify-center h-20 shrink-0">
                     <img
                       src={c.src}
                       alt={c.name}
-                      className="h-16 w-auto max-w-[200px] object-contain bg-white rounded-lg px-4 py-2"
+                      draggable={false}
+                      className="h-16 w-auto max-w-[200px] object-contain bg-white rounded-lg px-4 py-2 pointer-events-none"
                       loading="lazy"
                     />
                   </div>
