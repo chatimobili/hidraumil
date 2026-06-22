@@ -260,7 +260,7 @@ function Home() {
                 href={SITE.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-7 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-base font-semibold text-primary shadow-lg hover:bg-white/90 transition"
+                className="mt-7 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-base font-semibold text-secondary shadow-lg hover:bg-white/90 transition"
               >
                 <WhatsAppIcon className="h-5 w-5" /> Fale com a Hidraumil
               </a>
