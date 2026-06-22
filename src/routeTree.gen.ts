@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as VendaPecasPaleteirasRouteImport } from './routes/venda-pecas-paleteiras'
 import { Route as VendaPaleteirasHidraulicasCascavelRouteImport } from './routes/venda-paleteiras-hidraulicas-cascavel'
 import { Route as SobreNosRouteImport } from './routes/sobre-nos'
 import { Route as ManutencaoPaleteirasHidraulicasCascavelRouteImport } from './routes/manutencao-paleteiras-hidraulicas-cascavel'
@@ -17,6 +18,11 @@ import { Route as ConsertoPaleteiraHidraulicaCascavelRouteImport } from './route
 import { Route as AssistenciaTecnicaEquipamentosHidraulicosCascavelRouteImport } from './routes/assistencia-tecnica-equipamentos-hidraulicos-cascavel'
 import { Route as IndexRouteImport } from './routes/index'
 
+const VendaPecasPaleteirasRoute = VendaPecasPaleteirasRouteImport.update({
+  id: '/venda-pecas-paleteiras',
+  path: '/venda-pecas-paleteiras',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const VendaPaleteirasHidraulicasCascavelRoute =
   VendaPaleteirasHidraulicasCascavelRouteImport.update({
     id: '/venda-paleteiras-hidraulicas-cascavel',
@@ -66,6 +72,7 @@ export interface FileRoutesByFullPath {
   '/manutencao-paleteiras-hidraulicas-cascavel': typeof ManutencaoPaleteirasHidraulicasCascavelRoute
   '/sobre-nos': typeof SobreNosRoute
   '/venda-paleteiras-hidraulicas-cascavel': typeof VendaPaleteirasHidraulicasCascavelRoute
+  '/venda-pecas-paleteiras': typeof VendaPecasPaleteirasRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -75,6 +82,7 @@ export interface FileRoutesByTo {
   '/manutencao-paleteiras-hidraulicas-cascavel': typeof ManutencaoPaleteirasHidraulicasCascavelRoute
   '/sobre-nos': typeof SobreNosRoute
   '/venda-paleteiras-hidraulicas-cascavel': typeof VendaPaleteirasHidraulicasCascavelRoute
+  '/venda-pecas-paleteiras': typeof VendaPecasPaleteirasRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -85,6 +93,7 @@ export interface FileRoutesById {
   '/manutencao-paleteiras-hidraulicas-cascavel': typeof ManutencaoPaleteirasHidraulicasCascavelRoute
   '/sobre-nos': typeof SobreNosRoute
   '/venda-paleteiras-hidraulicas-cascavel': typeof VendaPaleteirasHidraulicasCascavelRoute
+  '/venda-pecas-paleteiras': typeof VendaPecasPaleteirasRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -96,6 +105,7 @@ export interface FileRouteTypes {
     | '/manutencao-paleteiras-hidraulicas-cascavel'
     | '/sobre-nos'
     | '/venda-paleteiras-hidraulicas-cascavel'
+    | '/venda-pecas-paleteiras'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -105,6 +115,7 @@ export interface FileRouteTypes {
     | '/manutencao-paleteiras-hidraulicas-cascavel'
     | '/sobre-nos'
     | '/venda-paleteiras-hidraulicas-cascavel'
+    | '/venda-pecas-paleteiras'
   id:
     | '__root__'
     | '/'
@@ -114,6 +125,7 @@ export interface FileRouteTypes {
     | '/manutencao-paleteiras-hidraulicas-cascavel'
     | '/sobre-nos'
     | '/venda-paleteiras-hidraulicas-cascavel'
+    | '/venda-pecas-paleteiras'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -124,10 +136,18 @@ export interface RootRouteChildren {
   ManutencaoPaleteirasHidraulicasCascavelRoute: typeof ManutencaoPaleteirasHidraulicasCascavelRoute
   SobreNosRoute: typeof SobreNosRoute
   VendaPaleteirasHidraulicasCascavelRoute: typeof VendaPaleteirasHidraulicasCascavelRoute
+  VendaPecasPaleteirasRoute: typeof VendaPecasPaleteirasRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/venda-pecas-paleteiras': {
+      id: '/venda-pecas-paleteiras'
+      path: '/venda-pecas-paleteiras'
+      fullPath: '/venda-pecas-paleteiras'
+      preLoaderRoute: typeof VendaPecasPaleteirasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/venda-paleteiras-hidraulicas-cascavel': {
       id: '/venda-paleteiras-hidraulicas-cascavel'
       path: '/venda-paleteiras-hidraulicas-cascavel'
@@ -193,6 +213,7 @@ const rootRouteChildren: RootRouteChildren = {
   SobreNosRoute: SobreNosRoute,
   VendaPaleteirasHidraulicasCascavelRoute:
     VendaPaleteirasHidraulicasCascavelRoute,
+  VendaPecasPaleteirasRoute: VendaPecasPaleteirasRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
