@@ -395,7 +395,7 @@ function Home() {
                   <img
                     src={c.src}
                     alt={c.name}
-                    className="h-10 w-auto max-w-[120px] object-contain brightness-0 invert opacity-70 hover:opacity-100 transition"
+                    className="h-10 w-auto max-w-[120px] object-contain bg-white rounded px-2 py-1"
                     loading="lazy"
                   />
                 </div>
