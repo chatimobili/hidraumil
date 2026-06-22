@@ -382,32 +382,39 @@ function Home() {
         </div>
       </section>
 
-      {/* FAQ — title left, items right (matches original) */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 grid lg:grid-cols-[1fr_1.6fr] gap-12">
+      {/* FAQ — Empregga-style: peach background, left intro + help card, right accordion */}
+      <section className="bg-[#FEF3EC]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 grid lg:grid-cols-[1fr_1.4fr] gap-12 items-start">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">FAQ</p>
-            <h2 className="mt-3 text-3xl md:text-4xl font-semibold text-secondary leading-tight">
-              Perguntas frequentes
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">CENTRAL DE AJUDA</p>
+            <h2 className="mt-3 text-secondary leading-tight">
+              Ficou com alguma dúvida?
             </h2>
             <p className="mt-5 text-muted-foreground">
-              Navegue pelas nossas perguntas frequentes para encontrar respostas rápidas às suas
-              dúvidas. Tem mais alguma dúvida? Entre em contato conosco.
+              Confira nossas respostas com as perguntas mais frequentes sobre a Hidraumil
+              e nossos serviços de paleteiras.
             </p>
-            <a
-              href={SITE.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow hover:bg-[var(--brand-dark)] transition"
-            >
-              <WhatsAppIcon className="h-4 w-4" /> Entre em contato
-            </a>
+
+            <div className="mt-10 bg-white rounded-2xl px-8 py-8 text-center max-w-sm shadow-sm">
+              <div className="mx-auto flex h-10 w-10 items-center justify-center text-primary text-3xl font-semibold">?</div>
+              <h3 className="mt-3 text-secondary">Não encontrou o que procura?</h3>
+              <p className="mt-2 text-sm text-muted-foreground">Fale com nosso time.</p>
+              <a
+                href={SITE.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-flex items-center gap-2 rounded-full border-2 border-primary px-6 py-2.5 text-sm font-semibold text-primary hover:bg-primary hover:text-primary-foreground transition"
+              >
+                Tirar outra dúvida!
+              </a>
+            </div>
           </div>
           <div>
             <FAQ items={faqs} />
           </div>
         </div>
       </section>
+
 
       <CTASection />
     </>
