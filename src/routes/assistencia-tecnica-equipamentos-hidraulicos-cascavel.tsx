@@ -44,9 +44,9 @@ function Page() {
         <H2>Nosso processo de assistência técnica</H2>
         <div className="mt-6 grid sm:grid-cols-2 gap-5">
           {etapas.map((e, i) => (
-            <div key={i} className="rounded-xl border border-border bg-white p-6">
+            <div key={i} className="rounded-2xl border border-gray-200 bg-white p-7 hover:shadow-md transition">
               <e.icon className="h-7 w-7 text-primary" />
-              <h3 className="mt-3 font-bold text-secondary">{e.t}</h3>
+              <h3 className="mt-4 text-lg font-semibold text-secondary">{e.t}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{e.d}</p>
             </div>
           ))}

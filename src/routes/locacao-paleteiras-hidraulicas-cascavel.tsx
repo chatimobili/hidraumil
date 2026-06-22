@@ -49,7 +49,7 @@ function Page() {
         <H2>O que está incluído na locação?</H2>
         <ul className="mt-4 grid sm:grid-cols-2 gap-3">
           {incluido.map((i, idx) => (
-            <li key={idx} className="flex items-start gap-3 rounded-lg border border-border bg-white p-4">
+            <li key={idx} className="flex items-start gap-3 rounded-xl bg-[#FEF3EC] p-4">
               <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
               <span className="text-sm text-secondary">{i}</span>
             </li>
@@ -69,7 +69,7 @@ function Page() {
         <div className="mt-6 grid lg:grid-cols-3 gap-6">
           {planos.map(p => (
             <div key={p.n} className={`rounded-2xl border p-7 bg-white shadow-sm ${p.featured ? "border-primary ring-2 ring-primary/30" : "border-border"}`}>
-              {p.featured && <span className="inline-block text-xs font-bold uppercase tracking-wider text-primary mb-2">Mais escolhido</span>}
+              {p.featured && <span className="inline-block text-xs font-semibold uppercase tracking-wider text-primary mb-2">Mais escolhido</span>}
               <h3 className="text-2xl font-semibold text-secondary">{p.n}</h3>
               <p className="mt-1 text-sm text-muted-foreground">{p.desc}</p>
               <ul className="mt-5 space-y-2 text-sm">
