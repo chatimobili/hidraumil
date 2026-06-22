@@ -34,7 +34,7 @@ export function Footer() {
         <div className="mt-10 border-t border-gray-200" />
 
         {/* Link columns */}
-        <div className="grid gap-10 py-12 md:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-10 py-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <h3 className="text-base font-semibold text-secondary mb-5">Empresa</h3>
             <ul className="space-y-3 text-sm text-gray-600">
