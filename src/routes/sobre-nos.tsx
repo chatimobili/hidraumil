@@ -29,7 +29,7 @@ function SobrePage() {
       <article className="bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 space-y-12">
           <section>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-secondary">Nossa História</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold text-secondary">Nossa História</h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               A Hidraumil nasceu da necessidade de oferecer ao mercado industrial do Oeste do Paraná um serviço técnico de qualidade em paleteiras hidráulicas. Com mais de 15 anos de atuação, nos tornamos referência em Cascavel e região, atendendo centenas de empresas dos setores industrial, alimentício, logístico e varejista.
             </p>
@@ -39,14 +39,14 @@ function SobrePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-secondary">Nossa Missão</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold text-secondary">Nossa Missão</h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               Manter a operação dos nossos clientes em pleno funcionamento, oferecendo soluções técnicas em paleteiras hidráulicas com agilidade, transparência e garantia. Acreditamos que um bom equipamento, bem mantido, é a base de uma logística produtiva e segura.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-secondary">Nossos Valores</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold text-secondary">Nossos Valores</h2>
             <div className="mt-6 grid sm:grid-cols-3 gap-6">
               {[
                 { icon: Award, t: "Qualidade Técnica", d: "Mão de obra especializada, peças de procedência e processos padronizados." },
@@ -63,7 +63,7 @@ function SobrePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-secondary">Nossa Equipe</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold text-secondary">Nossa Equipe</h2>
             <div className="mt-6 grid sm:grid-cols-3 gap-6">
               {[
                 { n: "Marcos Silva", c: "Diretor Técnico" },
