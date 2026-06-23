@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
-import { CTASection } from "@/components/site/CTASection";
+
 import { posts } from "@/lib/site";
 import { Calendar, ArrowRight, BookOpen } from "lucide-react";
 
@@ -48,7 +48,7 @@ function BlogIndex() {
           ))}
         </div>
       </section>
-      <CTASection />
+      
     </>
   );
 }
