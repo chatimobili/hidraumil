@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
-import { CTASection } from "@/components/site/CTASection";
+
 import { Calendar, ChevronLeft } from "lucide-react";
 
 export function BlogArticle({
