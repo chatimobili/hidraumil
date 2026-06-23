@@ -135,7 +135,7 @@ export function Testimonials() {
               Satisfação 97/100
             </p>
             <h2 className="mt-3 text-3xl md:text-5xl font-semibold leading-[1.1] text-secondary">
-              Milhares de <span className="text-primary">clientes felizes</span>
+              Clientes <span className="text-primary">satisfeitos</span>
             </h2>
           </div>
 
