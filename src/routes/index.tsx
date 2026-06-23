@@ -425,77 +425,8 @@ function Home() {
         </div>
       </section>
 
-      {/* DEPOIMENTOS — Empregga-style: eyebrow + heading com destaque + cards brancos com estrelas */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
-          <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-              Satisfação 97/100
-            </p>
-            <h2 className="mt-3 text-3xl md:text-5xl font-semibold leading-[1.1] text-secondary">
-              Milhares de <span className="text-primary">clientes felizes</span>
-            </h2>
-            <p className="mt-5 text-muted-foreground text-lg leading-[1.6]">
-              Veja o que dizem as indústrias, supermercados e operadores logísticos que
-              confiam na Hidraumil para manter suas paleteiras hidráulicas em operação.
-            </p>
-          </div>
+      <Testimonials />
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                name: "Marcos Andrade",
-                role: "Gerente de Logística",
-                company: "Distribuidora Vale Verde",
-                initials: "MA",
-                quote:
-                  "Equipe extremamente ágil. Chamei pela manhã e no mesmo dia a paleteira já estava operando. Nunca mais paramos por falta de manutenção.",
-              },
-              {
-                name: "Patrícia Lemos",
-                role: "Diretora de Operações",
-                company: "Supermercado Allmayer",
-                initials: "PL",
-                quote:
-                  "Atendimento humano, orçamento transparente e prazo cumprido à risca. A Hidraumil virou parceira oficial da nossa rede em Cascavel.",
-              },
-              {
-                name: "Ricardo Schmitt",
-                role: "Supervisor Industrial",
-                company: "Coopavel",
-                initials: "RS",
-                quote:
-                  "Locação com manutenção inclusa resolveu nossa demanda sazonal. Equipamentos sempre revisados e a coleta/entrega no prazo combinado.",
-              },
-            ].map((d) => (
-              <article
-                key={d.name}
-                className="relative bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition p-7 flex flex-col"
-              >
-                <div className="flex items-center gap-1 text-primary" aria-label="Avaliação 5 de 5 estrelas">
-                  {[0,1,2,3,4].map((i) => (
-                    <Star key={i} className="h-5 w-5 fill-current" />
-                  ))}
-                </div>
-                <p className="mt-5 text-secondary text-base leading-[1.65] flex-1">
-                  “{d.quote}”
-                </p>
-                <div className="mt-6 pt-6 border-t border-gray-100 flex items-center gap-3">
-                  <div className="h-11 w-11 rounded-full bg-primary text-white flex items-center justify-center font-semibold text-sm shrink-0" aria-hidden="true">
-                    {d.initials}
-                  </div>
-                  <div className="min-w-0">
-                    <p className="font-semibold text-secondary leading-tight">{d.name}</p>
-                    <p className="text-sm text-muted-foreground truncate">
-                      {d.role} · {d.company}
-                    </p>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
 
 
 
