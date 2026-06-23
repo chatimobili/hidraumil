@@ -122,7 +122,7 @@ function Home() {
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary mb-5 flex items-center gap-2">
                   <span>⚡</span> Bem-vindo(a) à Hidraumil
                 </p>
-                <h1 className="text-3xl md:text-[44px] font-semibold leading-[1.1] text-secondary">
+                <h1 className="text-2xl md:text-[35px] font-semibold leading-[1.1] text-secondary">
                   Manutenção, Conserto e Aluguel de{" "}
                   <span className="text-primary">Paleteiras em Cascavel</span>
                 </h1>
