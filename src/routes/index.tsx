@@ -306,6 +306,31 @@ function Home() {
         </div>
       </section>
 
+      {/* TEXTO RICO — SEO: Por que escolher */}
+      <section className="bg-surface">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20">
+          <h2 className="text-3xl md:text-4xl font-semibold text-secondary leading-tight">
+            Por que escolher a Hidraumil para <span className="text-primary">Manutenção, Conserto e Aluguel de Paleteiras?</span>
+          </h2>
+          <div className="mt-6 space-y-5 text-muted-foreground text-lg leading-relaxed">
+            <p>
+              A Hidraumil é referência em manutenção de paleteira em Cascavel e região Oeste do Paraná.
+              Com mais de 15 anos de experiência, nossa equipe técnica realiza o conserto de paleteira —
+              manual ou hidráulica — com agilidade, peças originais e garantia formal.
+            </p>
+            <p>
+              Além do conserto e da manutenção de paleteiras, oferecemos aluguel de paleteira para empresas
+              que precisam de equipamentos por tempo determinado, sem a necessidade de investir na compra.
+              Nossos contratos de locação são flexíveis, com entrega e retirada incluídas.
+            </p>
+            <p>
+              Atendemos indústrias, distribuidoras, atacadistas e comércios em Cascavel, Foz do Iguaçu,
+              Toledo, Marechal Cândido Rondon e toda a região Oeste do Paraná.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* BENEFÍCIOS — Empregga-style: centered intro + 3x2 cards grid */}
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
