@@ -53,7 +53,7 @@ export function BlogArticle({
         </div>
       </article>
 
-      <CTASection />
+      
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     </>
