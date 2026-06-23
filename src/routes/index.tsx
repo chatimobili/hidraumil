@@ -41,7 +41,10 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: "/" },
       { property: "og:image", content: heroImg },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [
+      { rel: "canonical", href: "/" },
+      { rel: "preload", as: "image", href: heroImg, fetchpriority: "high" } as any,
+    ],
   }),
   component: Home,
 });
@@ -86,6 +89,8 @@ function Home() {
             alt="Técnico Hidraumil pronto para atender em Cascavel"
             className="absolute inset-0 w-full h-full object-cover"
             fetchPriority="high"
+            loading="eager"
+            decoding="async"
           />
 
           {/* black gradient on the right */}
