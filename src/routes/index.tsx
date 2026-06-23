@@ -35,10 +35,10 @@ import { Testimonials } from "@/components/site/Testimonials";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Manutenção e Conserto de Paleteiras Hidráulicas em Cascavel | Hidraumil" },
-      { name: "description", content: "A Hidraumil oferece manutenção, conserto, locação e venda de paleteiras hidráulicas em Cascavel e região Oeste do Paraná. Atendimento rápido, técnicos especializados e orçamento gratuito." },
-      { property: "og:title", content: "Manutenção e Conserto de Paleteiras Hidráulicas em Cascavel | Hidraumil" },
-      { property: "og:description", content: "Manutenção, conserto, locação e venda de paleteiras hidráulicas em Cascavel, PR. Orçamento gratuito." },
+      { title: "Manutenção de Paleteira | Conserto e Aluguel de Paleteiras em Cascavel | Hidraumil" },
+      { name: "description", content: "Hidraumil: manutenção de paleteira, conserto de paleteira e aluguel de paleteira em Cascavel e região. Técnicos especializados, peças originais e atendimento rápido. Solicite seu orçamento!" },
+      { property: "og:title", content: "Manutenção de Paleteira | Conserto e Aluguel | Hidraumil Cascavel" },
+      { property: "og:description", content: "Especialistas em manutenção, conserto e aluguel de paleteiras hidráulicas em Cascavel. Orçamento grátis, coleta e entrega inclusa." },
       { property: "og:url", content: "/" },
       { property: "og:image", content: heroImg },
     ],
@@ -51,11 +51,11 @@ export const Route = createFileRoute("/")({
 });
 
 const faqs = [
-  { q: "Quais tipos de paleteiras vocês oferecem?", a: "Oferecemos uma ampla linha de paleteiras manuais e hidráulicas, novas e seminovas, ideais para diferentes necessidades de movimentação de cargas, sempre com segurança, robustez e eficiência." },
-  { q: "Vocês também fazem consertos de paleteiras?", a: "Sim! Contamos com equipe especializada em conserto e manutenção de paleteiras, garantindo a restauração da durabilidade, desempenho e confiabilidade do seu equipamento." },
-  { q: "É possível alugar paleteiras em vez de comprar?", a: "Claro! Trabalhamos com a locação de paleteiras hidráulicas e manuais, uma solução econômica e prática para empresas que buscam flexibilidade e não querem investir na compra imediata." },
-  { q: "Vocês oferecem peças de reposição para paleteiras?", a: "Sim, temos uma linha completa de peças de reposição originais e de alta qualidade, assegurando maior durabilidade e desempenho para o seu equipamento." },
-  { q: "Como funciona a assistência técnica?", a: "Nossa assistência técnica é ágil e eficiente, com serviços de manutenção preventiva e corretiva. O objetivo é minimizar o tempo de inatividade e garantir que suas operações não sejam prejudicadas." },
+  { q: "Vocês fazem manutenção de paleteira?", a: "Sim! A Hidraumil é especializada em manutenção de paleteira hidráulica e manual. Nossos técnicos realizam diagnóstico, troca de peças e manutenção preventiva com rapidez e garantia por escrito." },
+  { q: "Vocês fazem conserto de paleteira?", a: "Sim. O conserto de paleteira é um dos nossos principais serviços. Atendemos paleteiras manuais e hidráulicas, com retirada e entrega no local do cliente em Cascavel e região." },
+  { q: "É possível fazer aluguel de paleteira?", a: "Sim! Oferecemos aluguel de paleteira (locação) para empresas que precisam de flexibilidade. Contratos mensais, equipamentos revisados e entrega rápida." },
+  { q: "Vocês oferecem peças de reposição para paleteiras?", a: "Sim, temos uma linha completa de peças para manutenção de paleteira — originais e de alta qualidade — assegurando maior durabilidade e desempenho do seu equipamento." },
+  { q: "Como funciona a assistência técnica?", a: "Nossa assistência técnica é ágil e eficiente. Realizamos o conserto de paleteira no local do cliente ou com coleta e entrega, com serviços de manutenção preventiva e corretiva para minimizar o tempo de inatividade." },
   { q: "Vocês atendem apenas empresas ou também clientes individuais?", a: "Atendemos tanto empresas que necessitam de soluções em maior escala quanto clientes individuais que buscam paleteiras para uso específico, seja na compra, locação ou manutenção." },
 ];
 
@@ -123,12 +123,16 @@ function Home() {
                   <span>⚡</span> Bem-vindo(a) à Hidraumil
                 </p>
                 <h1 className="text-3xl md:text-[44px] font-semibold leading-[1.1] text-secondary">
-                  Sua paleteira está com algum{" "}
-                  <span className="text-primary">defeito?</span>
+                  Manutenção, Conserto e Aluguel de{" "}
+                  <span className="text-primary">Paleteiras em Cascavel</span>
                 </h1>
+                <p className="mt-4 text-lg font-semibold text-secondary">
+                  Sua paleteira com defeito? A Hidraumil resolve.
+                </p>
                 <p className="mt-5 text-xl text-muted-foreground leading-[1.5]">
-                  Conte com a Hidraumil para resolver. Manutenção, conserto, locação e venda
-                  de paleteiras com técnicos especializados em Cascavel e região.
+                  Oferecemos manutenção de paleteira, conserto de paleteira e aluguel de paleteira
+                  com técnicos especializados em Cascavel e região Oeste do Paraná. Atendimento rápido,
+                  peças originais e garantia por escrito.
                 </p>
                 <div className="mt-7 flex items-center gap-5 flex-wrap">
                   <a
@@ -204,7 +208,7 @@ function Home() {
           <div className="order-2 lg:order-1">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Nossa equipe</p>
             <h2 className="mt-4 text-3xl md:text-[44px] font-semibold text-secondary leading-[1.15]">
-              A Hidraumil nasceu para resolver toda <span className="text-primary">dificuldade que a sua empresa enfrenta</span> com paleteiras paradas ou quebradas.
+              Especialistas em <span className="text-primary">Manutenção e Conserto</span> de Paleteiras Hidráulicas
             </h2>
             <p className="mt-6 text-muted-foreground text-lg">Com a Hidraumil, você nunca mais vai precisar:</p>
 
@@ -253,28 +257,34 @@ function Home() {
           <div className="mt-12 grid md:grid-cols-2 gap-6">
             {[
               {
-                icon: Cog,
-                title: "Venda de peças para paleteiras",
-                desc: "Manutenção rápida e eficiente começa com peças de qualidade. Trabalhamos com uma ampla linha de peças para paleteiras, garantindo durabilidade e desempenho.",
-                to: "/venda-pecas-paleteiras",
-              },
-              {
-                icon: ShieldCheck,
-                title: "Assistência técnica de equipamentos hidráulicos",
-                desc: "Assistência técnica especializada — garanta qualidade, confiabilidade e desempenho que você precisa para o sucesso dos seus projetos.",
+                icon: Wrench,
+                title: "Manutenção de Paleteiras",
+                desc: "Manutenção de paleteira preventiva e corretiva, com técnicos especializados, peças originais e garantia por escrito para sua operação não parar.",
                 to: "/assistencia-tecnica-equipamentos-hidraulicos-cascavel",
               },
               {
-                icon: ShoppingCart,
-                title: "Venda de paleteiras hidráulicas",
-                desc: "Encontre as melhores soluções para movimentação de cargas com segurança, eficiência e robustez, otimizando o desempenho das suas operações.",
-                to: "/venda-paleteiras-hidraulicas-cascavel",
+                icon: ShieldCheck,
+                title: "Conserto de Paleteiras Hidráulicas",
+                desc: "Conserto de paleteira manual e hidráulica: vazamentos, bomba, cilindro, rodas e mais. Coleta e entrega inclusa em Cascavel e região.",
+                to: "/assistencia-tecnica-equipamentos-hidraulicos-cascavel",
               },
               {
                 icon: CalendarCheck,
-                title: "Locação de paleteiras hidráulicas",
-                desc: "A melhor opção para movimentação de cargas com economia, praticidade e alto desempenho — soluções flexíveis e eficientes para sua empresa.",
+                title: "Aluguel de Paleteiras Hidráulicas",
+                desc: "Aluguel de paleteira (locação de paleteira) com contratos flexíveis, equipamentos revisados, manutenção inclusa e entrega rápida.",
                 to: "/locacao-paleteiras-hidraulicas-cascavel",
+              },
+              {
+                icon: ShoppingCart,
+                title: "Venda de Paleteiras Hidráulicas",
+                desc: "Paleteiras novas e revisadas — manuais, semielétricas e elétricas — com segurança, robustez e alto desempenho para sua operação.",
+                to: "/venda-paleteiras-hidraulicas-cascavel",
+              },
+              {
+                icon: Cog,
+                title: "Venda de Peças para Paleteiras",
+                desc: "Peças para manutenção de paleteira: cilindros, bombas, rodas, garfos, selos e vedações originais com entrega rápida.",
+                to: "/venda-pecas-paleteiras",
               },
             ].map((s) => (
               <Link
@@ -302,7 +312,7 @@ function Home() {
           <div className="text-center max-w-4xl mx-auto">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">BENEFÍCIOS HIDRAUMIL</p>
             <h2 className="mt-4 text-secondary leading-[1.15]">
-              Manutenção rápida e confiável de paleteiras com uma equipe dedicada ao seu negócio
+              Manutenção Rápida e Confiável de Paleteiras — Conserto com Garantia e Aluguel Flexível
             </h2>
             <p className="mt-5 text-muted-foreground text-lg">
               Entenda as principais vantagens de contar com a Hidraumil na sua operação:

@@ -15,39 +15,33 @@ export const SITE = {
 
 export const services = [
   {
-    slug: "manutencao-paleteiras-hidraulicas-cascavel",
-    title: "Manutenção Preventiva e Corretiva",
-    short: "Manutenção completa para garantir desempenho e segurança da sua paleteira hidráulica.",
+    slug: "assistencia-tecnica-equipamentos-hidraulicos-cascavel",
+    title: "Manutenção de Paleteira",
+    short: "Manutenção de paleteira preventiva e corretiva com técnicos especializados e garantia por escrito.",
     icon: "Wrench",
   },
   {
-    slug: "conserto-paleteira-hidraulica-cascavel",
-    title: "Conserto de Paleteiras",
-    short: "Reparo rápido para vazamentos, falhas na bomba, cilindro, rodas e mais.",
+    slug: "assistencia-tecnica-equipamentos-hidraulicos-cascavel",
+    title: "Conserto de Paleteira",
+    short: "Conserto de paleteira manual e hidráulica com coleta e entrega em Cascavel e região.",
     icon: "Hammer",
   },
   {
     slug: "locacao-paleteiras-hidraulicas-cascavel",
-    title: "Locação de Paleteiras Hidráulicas",
-    short: "Aluguel mensal flexível com manutenção inclusa e equipamentos revisados.",
+    title: "Aluguel de Paleteira",
+    short: "Aluguel de paleteira (locação) com contratos flexíveis e manutenção inclusa.",
     icon: "Calendar",
   },
   {
     slug: "venda-paleteiras-hidraulicas-cascavel",
-    title: "Venda de Paleteiras Hidráulicas",
+    title: "Venda de Paleteiras",
     short: "Paleteiras novas e revisadas: manuais, semielétricas e elétricas.",
     icon: "ShoppingCart",
   },
   {
-    slug: "assistencia-tecnica-equipamentos-hidraulicos-cascavel",
-    title: "Assistência Técnica Especializada",
-    short: "Atendimento técnico em equipamentos hidráulicos industriais, incluindo Bovenau.",
-    icon: "ShieldCheck",
-  },
-  {
     slug: "venda-pecas-paleteiras",
-    title: "Venda de Peças e Componentes",
-    short: "Cilindros, bombas, rodas, garfos, selos e vedações com entrega rápida.",
+    title: "Venda de Peças",
+    short: "Peças para manutenção de paleteira: cilindros, bombas, rodas, garfos, selos e vedações.",
     icon: "Cog",
   },
 ];
