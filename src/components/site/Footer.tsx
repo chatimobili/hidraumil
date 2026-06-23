@@ -96,26 +96,6 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Decorative orange swoosh */}
-      <div className="relative h-24 overflow-hidden" aria-hidden="true">
-        <svg
-          viewBox="0 0 1440 200"
-          preserveAspectRatio="none"
-          className="absolute inset-x-0 bottom-[-40px] w-full h-[180px] text-primary"
-        >
-          <path
-            d="M0,120 C240,40 480,200 720,120 C960,40 1200,200 1440,120 L1440,200 L0,200 Z"
-            fill="currentColor"
-            opacity="0.9"
-          />
-          <path
-            d="M0,150 C240,90 480,210 720,150 C960,90 1200,210 1440,150"
-            stroke="currentColor"
-            strokeWidth="6"
-            fill="none"
-          />
-        </svg>
-      </div>
 
       <script
         type="application/ld+json"
