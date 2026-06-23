@@ -24,7 +24,7 @@ export function PageHero({
       <div className="absolute -top-32 -right-32 h-[420px] w-[420px] rounded-full bg-primary/15 blur-3xl pointer-events-none" aria-hidden="true" />
       <div className="absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-primary/10 blur-3xl pointer-events-none" aria-hidden="true" />
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="max-w-3xl">
           {eyebrow && (
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
