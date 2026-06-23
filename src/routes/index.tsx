@@ -30,6 +30,7 @@ import {
   ShoppingCart, Cog, ShieldCheck,
 } from "lucide-react";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
+import { Testimonials } from "@/components/site/Testimonials";
 
 export const Route = createFileRoute("/")({
   head: () => ({
