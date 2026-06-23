@@ -1,62 +1,86 @@
-import { Link } from "@tanstack/react-router";
-import { posts } from "@/lib/site";
-import { ArrowRight, Calendar, BookOpen } from "lucide-react";
+import { useState, type FormEvent } from "react";
+import { z } from "zod";
+
+const emailSchema = z.string().trim().email("E-mail inválido").max(255);
 
 export function FiquePorDentro() {
-  const latest = posts.slice(0, 3);
-  return (
-    <section className="bg-[#FEF3EC]">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-24">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-          <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Conteúdos Hidraumil</p>
-            <h2 className="mt-3 text-secondary leading-[1.15]">Fique por dentro</h2>
-            <p className="mt-4 text-muted-foreground text-lg">
-              Guias, dicas técnicas e novidades sobre paleteiras hidráulicas para a sua operação.
-            </p>
-          </div>
-          <Link
-            to="/blog"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all"
-          >
-            Ver todos os artigos <ArrowRight className="h-4 w-4" />
-          </Link>
-        </div>
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [error, setError] = useState<string | null>(null);
 
-        <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-7">
-          {latest.map((p) => (
-            <article
-              key={p.slug}
-              className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition flex flex-col"
-            >
-              <div className="relative aspect-[16/10] bg-gradient-to-br from-secondary via-secondary to-primary/70 flex items-center justify-center overflow-hidden">
-                <BookOpen className="h-14 w-14 text-white/70" />
-                <span className="absolute top-4 left-4 inline-flex items-center rounded-full bg-white/95 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
-                  {p.category}
-                </span>
+  function onSubmit(e: FormEvent) {
+    e.preventDefault();
+    const parsed = emailSchema.safeParse(email);
+    if (!parsed.success) {
+      setError(parsed.error.issues[0]?.message ?? "E-mail inválido");
+      setStatus("error");
+      return;
+    }
+    setError(null);
+    setStatus("success");
+    setEmail("");
+  }
+
+  return (
+    <section className="bg-white">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="relative overflow-hidden rounded-[2rem] bg-primary text-primary-foreground px-8 md:px-14 py-10 md:py-12">
+          {/* Decorative X shape */}
+          <svg
+            viewBox="0 0 400 400"
+            aria-hidden="true"
+            className="absolute -right-10 -top-10 h-[120%] w-auto opacity-15 pointer-events-none"
+          >
+            <path
+              d="M50 50 L350 350 M350 50 L50 350"
+              stroke="white"
+              strokeWidth="80"
+              strokeLinecap="round"
+              fill="none"
+            />
+          </svg>
+
+          <div className="relative grid lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <h2 className="text-white font-semibold leading-[1.15]">Fique por dentro</h2>
+              <p className="mt-3 text-white/90 text-base md:text-lg max-w-md leading-relaxed">
+                Receba novidades, conteúdos exclusivos e atualizações sobre paleteiras
+                hidráulicas diretamente no seu e-mail.
+              </p>
+            </div>
+
+            <form onSubmit={onSubmit} className="w-full">
+              <div className="flex items-center bg-white rounded-full p-1.5 shadow-lg max-w-xl lg:ml-auto">
+                <input
+                  type="email"
+                  required
+                  value={email}
+                  maxLength={255}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    if (status !== "idle") setStatus("idle");
+                  }}
+                  placeholder="Insira seu melhor e-mail"
+                  aria-label="Seu e-mail"
+                  className="flex-1 bg-transparent px-5 py-3 text-secondary placeholder:text-muted-foreground focus:outline-none text-base"
+                />
+                <button
+                  type="submit"
+                  className="shrink-0 rounded-full bg-primary px-6 py-3 text-sm md:text-base font-semibold text-primary-foreground hover:bg-[var(--brand-dark)] transition"
+                >
+                  Assine a Newsletter
+                </button>
               </div>
-              <div className="p-7 flex-1 flex flex-col">
-                <h3 className="text-xl font-semibold text-secondary leading-snug">
-                  <Link to={`/blog/${p.slug}` as any} className="hover:text-primary transition">
-                    {p.title}
-                  </Link>
-                </h3>
-                <p className="mt-3 text-muted-foreground leading-relaxed flex-1">{p.excerpt}</p>
-                <div className="mt-6 flex items-center justify-between text-sm">
-                  <span className="inline-flex items-center gap-1.5 text-muted-foreground">
-                    <Calendar className="h-4 w-4" />
-                    {new Date(p.date).toLocaleDateString("pt-BR")}
-                  </span>
-                  <Link
-                    to={`/blog/${p.slug}` as any}
-                    className="inline-flex items-center gap-1 font-semibold text-primary group-hover:gap-2 transition-all"
-                  >
-                    Ler artigo <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </div>
-              </div>
-            </article>
-          ))}
+              {status === "error" && error && (
+                <p className="mt-3 text-sm text-white font-medium lg:text-right">{error}</p>
+              )}
+              {status === "success" && (
+                <p className="mt-3 text-sm text-white font-medium lg:text-right">
+                  ✓ Inscrição recebida! Em breve você receberá nossos conteúdos.
+                </p>
+              )}
+            </form>
+          </div>
         </div>
       </div>
     </section>
