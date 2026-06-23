@@ -48,7 +48,7 @@ function BlogIndex() {
           ))}
         </div>
       </section>
-      <CTASection />
+      
     </>
   );
 }
