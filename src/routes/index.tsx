@@ -129,11 +129,11 @@ function Home() {
                 <p className="mt-4 text-lg font-semibold text-secondary">
                   Sua paleteira com defeito? A Hidraumil resolve.
                 </p>
-                <p className="mt-5 text-xl text-muted-foreground leading-[1.5]">
-                  Oferecemos manutenção de paleteira, conserto de paleteira e aluguel de paleteira
-                  com técnicos especializados em Cascavel e região Oeste do Paraná. Atendimento rápido,
-                  peças originais e garantia por escrito.
+                <p className="mt-4 text-base text-muted-foreground leading-[1.5]">
+                  Manutenção, conserto e aluguel de paleteira com técnicos especializados
+                  em Cascavel e região Oeste do Paraná. Atendimento rápido e garantia por escrito.
                 </p>
+
                 <div className="mt-7 flex items-center gap-5 flex-wrap">
                   <a
                     href={SITE.whatsappUrl}
