@@ -2,16 +2,39 @@ import { SITE } from "@/lib/site";
 
 export function WhatsAppFloat() {
   return (
-    <a
-      href={SITE.whatsappUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Fale conosco pelo WhatsApp"
-      className="fixed bottom-20 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-black/20 hover:scale-105 transition"
-    >
-      <svg viewBox="0 0 32 32" className="h-7 w-7" fill="currentColor" aria-hidden="true">
-        <path d="M19.11 17.39c-.29-.14-1.7-.84-1.97-.94-.26-.1-.46-.14-.65.15s-.74.94-.91 1.14c-.17.19-.34.22-.62.07-.29-.14-1.22-.45-2.32-1.43-.86-.77-1.43-1.71-1.6-2-.17-.29-.02-.45.13-.59.13-.13.29-.34.43-.5.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.15-.65-1.57-.89-2.14-.23-.56-.47-.48-.65-.49l-.55-.01c-.19 0-.5.07-.76.36s-1 .98-1 2.4 1.03 2.78 1.17 2.98c.14.19 2.03 3.1 4.92 4.34.69.3 1.22.48 1.64.61.69.22 1.31.19 1.81.12.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34zM16.02 5.33c-5.9 0-10.7 4.8-10.7 10.69 0 1.88.49 3.72 1.43 5.34L5 27l5.79-1.52a10.66 10.66 0 0 0 5.22 1.33h.01c5.9 0 10.7-4.8 10.7-10.69 0-2.86-1.11-5.55-3.13-7.57a10.62 10.62 0 0 0-7.57-3.22zm0 19.5h-.01a8.86 8.86 0 0 1-4.52-1.24l-.32-.19-3.43.9.92-3.35-.21-.34a8.86 8.86 0 0 1-1.36-4.72c0-4.9 4-8.89 8.92-8.89 2.38 0 4.62.93 6.3 2.61a8.82 8.82 0 0 1 2.6 6.3c0 4.9-4 8.89-8.89 8.89z"/>
-      </svg>
-    </a>
+    <div className="fixed bottom-20 right-5 z-50 group">
+      {/* Tooltip / label */}
+      <div
+        className="absolute right-full top-1/2 -translate-y-1/2 mr-3 whitespace-nowrap rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background shadow-lg opacity-0 translate-x-2 pointer-events-none transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0"
+      >
+        Fale conosco no WhatsApp
+        <span className="absolute left-full top-1/2 -translate-y-1/2 -ml-1 h-2 w-2 rotate-45 bg-foreground" />
+      </div>
+
+      <a
+        href={SITE.whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Fale conosco pelo WhatsApp"
+        className="relative inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl shadow-[#25D366]/40 hover:scale-110 active:scale-95 transition-transform duration-300 wa-float-in"
+      >
+        {/* Pulse rings */}
+        <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-60 wa-pulse" />
+        <span
+          className="absolute inset-0 rounded-full bg-[#25D366] opacity-40 wa-pulse"
+          style={{ animationDelay: "0.8s" }}
+        />
+
+        {/* Online indicator */}
+        <span className="absolute top-0 right-0 flex h-3.5 w-3.5">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-300 opacity-75" />
+          <span className="relative inline-flex h-3.5 w-3.5 rounded-full bg-emerald-400 ring-2 ring-white" />
+        </span>
+
+        <svg viewBox="0 0 32 32" className="relative h-7 w-7 drop-shadow" fill="currentColor" aria-hidden="true">
+          <path d="M19.11 17.39c-.29-.14-1.7-.84-1.97-.94-.26-.1-.46-.14-.65.15s-.74.94-.91 1.14c-.17.19-.34.22-.62.07-.29-.14-1.22-.45-2.32-1.43-.86-.77-1.43-1.71-1.6-2-.17-.29-.02-.45.13-.59.13-.13.29-.34.43-.5.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.15-.65-1.57-.89-2.14-.23-.56-.47-.48-.65-.49l-.55-.01c-.19 0-.5.07-.76.36s-1 .98-1 2.4 1.03 2.78 1.17 2.98c.14.19 2.03 3.1 4.92 4.34.69.3 1.22.48 1.64.61.69.22 1.31.19 1.81.12.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34zM16.02 5.33c-5.9 0-10.7 4.8-10.7 10.69 0 1.88.49 3.72 1.43 5.34L5 27l5.79-1.52a10.66 10.66 0 0 0 5.22 1.33h.01c5.9 0 10.7-4.8 10.7-10.69 0-2.86-1.11-5.55-3.13-7.57a10.62 10.62 0 0 0-7.57-3.22zm0 19.5h-.01a8.86 8.86 0 0 1-4.52-1.24l-.32-.19-3.43.9.92-3.35-.21-.34a8.86 8.86 0 0 1-1.36-4.72c0-4.9 4-8.89 8.92-8.89 2.38 0 4.62.93 6.3 2.61a8.82 8.82 0 0 1 2.6 6.3c0 4.9-4 8.89-8.89 8.89z" />
+        </svg>
+      </a>
+    </div>
   );
 }
