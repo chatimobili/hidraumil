@@ -61,9 +61,23 @@ function Page() {
         Exija sempre um diagnóstico por escrito antes de aprovar o serviço, com descrição do problema, peças necessárias, prazo e garantia. Desconfie de orçamentos genéricos por telefone — paleteira não é commodity. E prefira empresas locais com estrutura para honrar a garantia, como a Hidraumil em Cascavel.
       </p>
 
+      <h2>Sinais de que o orçamento que você recebeu está "errado"</h2>
+      <ul>
+        <li><strong>Preço fechado sem diagnóstico:</strong> ninguém séria orça paleteira por telefone sem ver o equipamento.</li>
+        <li><strong>"Trocar tudo" como única opção:</strong> oficina que recomenda revisão completa em qualquer paleteira não está olhando a sua.</li>
+        <li><strong>Sem garantia por escrito:</strong> reparo sem garantia é loteria.</li>
+        <li><strong>Peças "genéricas" sem origem:</strong> peças de baixa qualidade falham em semanas e levam outras junto.</li>
+        <li><strong>Valor muito abaixo do mercado:</strong> alguém vai pagar a diferença — geralmente você, com o equipamento de volta na oficina em 30 dias.</li>
+      </ul>
+
+      <h2>Conserto barato sai caro: histórias reais que vemos toda semana</h2>
+      <p>
+        Cliente leva paleteira na "oficina do cunhado", paga metade do preço, volta em 20 dias com o mesmo problema — e agora com bomba comprometida. O orçamento que parecia caro vira o mais barato no fim, porque resolve de uma vez, com peça certa e garantia. Em conserto de paleteira hidráulica, a regra é simples: pague para resolver, não para tentar.
+      </p>
+
       <h2>Solicite um orçamento sem compromisso</h2>
       <p>
-        Mande pelo WhatsApp uma foto ou vídeo do problema e nossa equipe envia uma estimativa inicial. Se aprovar, agendamos o diagnóstico técnico gratuito e seguimos com o reparo com garantia.
+        Mande pelo WhatsApp uma foto ou vídeo do problema e nossa equipe envia uma estimativa inicial. Se aprovar, agendamos o diagnóstico técnico gratuito e seguimos com o reparo com garantia. Atendemos Cascavel e todo o Oeste do Paraná.
       </p>
     </BlogArticle>
   );

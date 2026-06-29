@@ -21,8 +21,12 @@ import { Route as AssistenciaTecnicaEquipamentosHidraulicosCascavelRouteImport }
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogQuantoCustaConsertarPaleteiraHidraulicaRouteImport } from './routes/blog.quanto-custa-consertar-paleteira-hidraulica'
+import { Route as BlogPrincipaisDefeitosPaleteiraHidraulicaRouteImport } from './routes/blog.principais-defeitos-paleteira-hidraulica'
 import { Route as BlogPaleteiraManualVsHidraulicaRouteImport } from './routes/blog.paleteira-manual-vs-hidraulica'
 import { Route as BlogManutencaoPreventivaPaleteiraHidraulicaRouteImport } from './routes/blog.manutencao-preventiva-paleteira-hidraulica'
+import { Route as BlogLocacaoVsCompraPaleteiraCascavelRouteImport } from './routes/blog.locacao-vs-compra-paleteira-cascavel'
+import { Route as BlogGuiaConsertoPaleteiraHidraulicaCascavelRouteImport } from './routes/blog.guia-conserto-paleteira-hidraulica-cascavel'
+import { Route as BlogAluguelPaleteiraHidraulicaCascavelRouteImport } from './routes/blog.aluguel-paleteira-hidraulica-cascavel'
 
 const VendaPecasPaleteirasRoute = VendaPecasPaleteirasRouteImport.update({
   id: '/venda-pecas-paleteiras',
@@ -90,6 +94,12 @@ const BlogQuantoCustaConsertarPaleteiraHidraulicaRoute =
     path: '/blog/quanto-custa-consertar-paleteira-hidraulica',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BlogPrincipaisDefeitosPaleteiraHidraulicaRoute =
+  BlogPrincipaisDefeitosPaleteiraHidraulicaRouteImport.update({
+    id: '/blog/principais-defeitos-paleteira-hidraulica',
+    path: '/blog/principais-defeitos-paleteira-hidraulica',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BlogPaleteiraManualVsHidraulicaRoute =
   BlogPaleteiraManualVsHidraulicaRouteImport.update({
     id: '/blog/paleteira-manual-vs-hidraulica',
@@ -100,6 +110,24 @@ const BlogManutencaoPreventivaPaleteiraHidraulicaRoute =
   BlogManutencaoPreventivaPaleteiraHidraulicaRouteImport.update({
     id: '/blog/manutencao-preventiva-paleteira-hidraulica',
     path: '/blog/manutencao-preventiva-paleteira-hidraulica',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogLocacaoVsCompraPaleteiraCascavelRoute =
+  BlogLocacaoVsCompraPaleteiraCascavelRouteImport.update({
+    id: '/blog/locacao-vs-compra-paleteira-cascavel',
+    path: '/blog/locacao-vs-compra-paleteira-cascavel',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogGuiaConsertoPaleteiraHidraulicaCascavelRoute =
+  BlogGuiaConsertoPaleteiraHidraulicaCascavelRouteImport.update({
+    id: '/blog/guia-conserto-paleteira-hidraulica-cascavel',
+    path: '/blog/guia-conserto-paleteira-hidraulica-cascavel',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogAluguelPaleteiraHidraulicaCascavelRoute =
+  BlogAluguelPaleteiraHidraulicaCascavelRouteImport.update({
+    id: '/blog/aluguel-paleteira-hidraulica-cascavel',
+    path: '/blog/aluguel-paleteira-hidraulica-cascavel',
     getParentRoute: () => rootRouteImport,
   } as any)
 
@@ -114,8 +142,12 @@ export interface FileRoutesByFullPath {
   '/sobre-nos': typeof SobreNosRoute
   '/venda-paleteiras-hidraulicas-cascavel': typeof VendaPaleteirasHidraulicasCascavelRoute
   '/venda-pecas-paleteiras': typeof VendaPecasPaleteirasRoute
+  '/blog/aluguel-paleteira-hidraulica-cascavel': typeof BlogAluguelPaleteiraHidraulicaCascavelRoute
+  '/blog/guia-conserto-paleteira-hidraulica-cascavel': typeof BlogGuiaConsertoPaleteiraHidraulicaCascavelRoute
+  '/blog/locacao-vs-compra-paleteira-cascavel': typeof BlogLocacaoVsCompraPaleteiraCascavelRoute
   '/blog/manutencao-preventiva-paleteira-hidraulica': typeof BlogManutencaoPreventivaPaleteiraHidraulicaRoute
   '/blog/paleteira-manual-vs-hidraulica': typeof BlogPaleteiraManualVsHidraulicaRoute
+  '/blog/principais-defeitos-paleteira-hidraulica': typeof BlogPrincipaisDefeitosPaleteiraHidraulicaRoute
   '/blog/quanto-custa-consertar-paleteira-hidraulica': typeof BlogQuantoCustaConsertarPaleteiraHidraulicaRoute
   '/blog/': typeof BlogIndexRoute
 }
@@ -130,8 +162,12 @@ export interface FileRoutesByTo {
   '/sobre-nos': typeof SobreNosRoute
   '/venda-paleteiras-hidraulicas-cascavel': typeof VendaPaleteirasHidraulicasCascavelRoute
   '/venda-pecas-paleteiras': typeof VendaPecasPaleteirasRoute
+  '/blog/aluguel-paleteira-hidraulica-cascavel': typeof BlogAluguelPaleteiraHidraulicaCascavelRoute
+  '/blog/guia-conserto-paleteira-hidraulica-cascavel': typeof BlogGuiaConsertoPaleteiraHidraulicaCascavelRoute
+  '/blog/locacao-vs-compra-paleteira-cascavel': typeof BlogLocacaoVsCompraPaleteiraCascavelRoute
   '/blog/manutencao-preventiva-paleteira-hidraulica': typeof BlogManutencaoPreventivaPaleteiraHidraulicaRoute
   '/blog/paleteira-manual-vs-hidraulica': typeof BlogPaleteiraManualVsHidraulicaRoute
+  '/blog/principais-defeitos-paleteira-hidraulica': typeof BlogPrincipaisDefeitosPaleteiraHidraulicaRoute
   '/blog/quanto-custa-consertar-paleteira-hidraulica': typeof BlogQuantoCustaConsertarPaleteiraHidraulicaRoute
   '/blog': typeof BlogIndexRoute
 }
@@ -147,8 +183,12 @@ export interface FileRoutesById {
   '/sobre-nos': typeof SobreNosRoute
   '/venda-paleteiras-hidraulicas-cascavel': typeof VendaPaleteirasHidraulicasCascavelRoute
   '/venda-pecas-paleteiras': typeof VendaPecasPaleteirasRoute
+  '/blog/aluguel-paleteira-hidraulica-cascavel': typeof BlogAluguelPaleteiraHidraulicaCascavelRoute
+  '/blog/guia-conserto-paleteira-hidraulica-cascavel': typeof BlogGuiaConsertoPaleteiraHidraulicaCascavelRoute
+  '/blog/locacao-vs-compra-paleteira-cascavel': typeof BlogLocacaoVsCompraPaleteiraCascavelRoute
   '/blog/manutencao-preventiva-paleteira-hidraulica': typeof BlogManutencaoPreventivaPaleteiraHidraulicaRoute
   '/blog/paleteira-manual-vs-hidraulica': typeof BlogPaleteiraManualVsHidraulicaRoute
+  '/blog/principais-defeitos-paleteira-hidraulica': typeof BlogPrincipaisDefeitosPaleteiraHidraulicaRoute
   '/blog/quanto-custa-consertar-paleteira-hidraulica': typeof BlogQuantoCustaConsertarPaleteiraHidraulicaRoute
   '/blog/': typeof BlogIndexRoute
 }
@@ -165,8 +205,12 @@ export interface FileRouteTypes {
     | '/sobre-nos'
     | '/venda-paleteiras-hidraulicas-cascavel'
     | '/venda-pecas-paleteiras'
+    | '/blog/aluguel-paleteira-hidraulica-cascavel'
+    | '/blog/guia-conserto-paleteira-hidraulica-cascavel'
+    | '/blog/locacao-vs-compra-paleteira-cascavel'
     | '/blog/manutencao-preventiva-paleteira-hidraulica'
     | '/blog/paleteira-manual-vs-hidraulica'
+    | '/blog/principais-defeitos-paleteira-hidraulica'
     | '/blog/quanto-custa-consertar-paleteira-hidraulica'
     | '/blog/'
   fileRoutesByTo: FileRoutesByTo
@@ -181,8 +225,12 @@ export interface FileRouteTypes {
     | '/sobre-nos'
     | '/venda-paleteiras-hidraulicas-cascavel'
     | '/venda-pecas-paleteiras'
+    | '/blog/aluguel-paleteira-hidraulica-cascavel'
+    | '/blog/guia-conserto-paleteira-hidraulica-cascavel'
+    | '/blog/locacao-vs-compra-paleteira-cascavel'
     | '/blog/manutencao-preventiva-paleteira-hidraulica'
     | '/blog/paleteira-manual-vs-hidraulica'
+    | '/blog/principais-defeitos-paleteira-hidraulica'
     | '/blog/quanto-custa-consertar-paleteira-hidraulica'
     | '/blog'
   id:
@@ -197,8 +245,12 @@ export interface FileRouteTypes {
     | '/sobre-nos'
     | '/venda-paleteiras-hidraulicas-cascavel'
     | '/venda-pecas-paleteiras'
+    | '/blog/aluguel-paleteira-hidraulica-cascavel'
+    | '/blog/guia-conserto-paleteira-hidraulica-cascavel'
+    | '/blog/locacao-vs-compra-paleteira-cascavel'
     | '/blog/manutencao-preventiva-paleteira-hidraulica'
     | '/blog/paleteira-manual-vs-hidraulica'
+    | '/blog/principais-defeitos-paleteira-hidraulica'
     | '/blog/quanto-custa-consertar-paleteira-hidraulica'
     | '/blog/'
   fileRoutesById: FileRoutesById
@@ -214,8 +266,12 @@ export interface RootRouteChildren {
   SobreNosRoute: typeof SobreNosRoute
   VendaPaleteirasHidraulicasCascavelRoute: typeof VendaPaleteirasHidraulicasCascavelRoute
   VendaPecasPaleteirasRoute: typeof VendaPecasPaleteirasRoute
+  BlogAluguelPaleteiraHidraulicaCascavelRoute: typeof BlogAluguelPaleteiraHidraulicaCascavelRoute
+  BlogGuiaConsertoPaleteiraHidraulicaCascavelRoute: typeof BlogGuiaConsertoPaleteiraHidraulicaCascavelRoute
+  BlogLocacaoVsCompraPaleteiraCascavelRoute: typeof BlogLocacaoVsCompraPaleteiraCascavelRoute
   BlogManutencaoPreventivaPaleteiraHidraulicaRoute: typeof BlogManutencaoPreventivaPaleteiraHidraulicaRoute
   BlogPaleteiraManualVsHidraulicaRoute: typeof BlogPaleteiraManualVsHidraulicaRoute
+  BlogPrincipaisDefeitosPaleteiraHidraulicaRoute: typeof BlogPrincipaisDefeitosPaleteiraHidraulicaRoute
   BlogQuantoCustaConsertarPaleteiraHidraulicaRoute: typeof BlogQuantoCustaConsertarPaleteiraHidraulicaRoute
   BlogIndexRoute: typeof BlogIndexRoute
 }
@@ -306,6 +362,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogQuantoCustaConsertarPaleteiraHidraulicaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/principais-defeitos-paleteira-hidraulica': {
+      id: '/blog/principais-defeitos-paleteira-hidraulica'
+      path: '/blog/principais-defeitos-paleteira-hidraulica'
+      fullPath: '/blog/principais-defeitos-paleteira-hidraulica'
+      preLoaderRoute: typeof BlogPrincipaisDefeitosPaleteiraHidraulicaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/paleteira-manual-vs-hidraulica': {
       id: '/blog/paleteira-manual-vs-hidraulica'
       path: '/blog/paleteira-manual-vs-hidraulica'
@@ -318,6 +381,27 @@ declare module '@tanstack/react-router' {
       path: '/blog/manutencao-preventiva-paleteira-hidraulica'
       fullPath: '/blog/manutencao-preventiva-paleteira-hidraulica'
       preLoaderRoute: typeof BlogManutencaoPreventivaPaleteiraHidraulicaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/locacao-vs-compra-paleteira-cascavel': {
+      id: '/blog/locacao-vs-compra-paleteira-cascavel'
+      path: '/blog/locacao-vs-compra-paleteira-cascavel'
+      fullPath: '/blog/locacao-vs-compra-paleteira-cascavel'
+      preLoaderRoute: typeof BlogLocacaoVsCompraPaleteiraCascavelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/guia-conserto-paleteira-hidraulica-cascavel': {
+      id: '/blog/guia-conserto-paleteira-hidraulica-cascavel'
+      path: '/blog/guia-conserto-paleteira-hidraulica-cascavel'
+      fullPath: '/blog/guia-conserto-paleteira-hidraulica-cascavel'
+      preLoaderRoute: typeof BlogGuiaConsertoPaleteiraHidraulicaCascavelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/aluguel-paleteira-hidraulica-cascavel': {
+      id: '/blog/aluguel-paleteira-hidraulica-cascavel'
+      path: '/blog/aluguel-paleteira-hidraulica-cascavel'
+      fullPath: '/blog/aluguel-paleteira-hidraulica-cascavel'
+      preLoaderRoute: typeof BlogAluguelPaleteiraHidraulicaCascavelRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -339,9 +423,17 @@ const rootRouteChildren: RootRouteChildren = {
   VendaPaleteirasHidraulicasCascavelRoute:
     VendaPaleteirasHidraulicasCascavelRoute,
   VendaPecasPaleteirasRoute: VendaPecasPaleteirasRoute,
+  BlogAluguelPaleteiraHidraulicaCascavelRoute:
+    BlogAluguelPaleteiraHidraulicaCascavelRoute,
+  BlogGuiaConsertoPaleteiraHidraulicaCascavelRoute:
+    BlogGuiaConsertoPaleteiraHidraulicaCascavelRoute,
+  BlogLocacaoVsCompraPaleteiraCascavelRoute:
+    BlogLocacaoVsCompraPaleteiraCascavelRoute,
   BlogManutencaoPreventivaPaleteiraHidraulicaRoute:
     BlogManutencaoPreventivaPaleteiraHidraulicaRoute,
   BlogPaleteiraManualVsHidraulicaRoute: BlogPaleteiraManualVsHidraulicaRoute,
+  BlogPrincipaisDefeitosPaleteiraHidraulicaRoute:
+    BlogPrincipaisDefeitosPaleteiraHidraulicaRoute,
   BlogQuantoCustaConsertarPaleteiraHidraulicaRoute:
     BlogQuantoCustaConsertarPaleteiraHidraulicaRoute,
   BlogIndexRoute: BlogIndexRoute,

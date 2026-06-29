@@ -69,6 +69,19 @@ function Page() {
         Existe ainda a opção semielétrica, com tração elétrica e elevação manual (ou vice-versa). É um excelente compromisso para operações que precisam reduzir esforço sem o custo total da elétrica.
       </p>
 
+      <h2>Custo total ao longo da vida útil</h2>
+      <p>
+        Manual: investimento inicial baixo, manutenção também baixa, sem custo de energia. Elétrica: investimento alto, manutenção mais cara (bateria, motor, eletrônica), custo de energia, mas ganho expressivo de produtividade e redução de afastamentos por LER/DORT. Em operações intensas, a elétrica costuma pagar a diferença em 18 a 36 meses só pelo ganho de produtividade.
+      </p>
+
+      <h2>Erros comuns ao escolher</h2>
+      <ul>
+        <li><strong>Comprar elétrica para uso esporádico:</strong> o equipamento fica parado, bateria sulfata e o investimento se perde.</li>
+        <li><strong>Insistir na manual para operação pesada:</strong> operador adoece, produtividade cai, paleteira se desgasta mais rápido.</li>
+        <li><strong>Não considerar a estrutura do galpão:</strong> piso desnivelado, rampas e portas estreitas limitam o uso da elétrica.</li>
+        <li><strong>Olhar só o preço:</strong> a equação certa inclui produtividade, saúde do operador e vida útil.</li>
+      </ul>
+
       <h2>Precisa de ajuda para escolher?</h2>
       <p>
         A Hidraumil atende empresas em Cascavel e Oeste do Paraná na venda, locação e manutenção de paleteiras manuais, semielétricas e elétricas. Fale com nosso time pelo WhatsApp e receba uma consultoria gratuita para escolher o modelo certo para a sua operação.
