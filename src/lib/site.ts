@@ -48,6 +48,34 @@ export const services = [
 
 export const posts = [
   {
+    slug: "guia-conserto-paleteira-hidraulica-cascavel",
+    title: "Conserto de Paleteira Hidráulica em Cascavel: Guia Completo de Diagnóstico e Reparo",
+    excerpt: "Guia técnico completo de conserto de paleteira hidráulica em Cascavel-PR: diagnóstico, etapas do reparo, prazos, garantia e como escolher uma assistência confiável.",
+    date: "2026-06-25",
+    category: "Conserto",
+  },
+  {
+    slug: "principais-defeitos-paleteira-hidraulica",
+    title: "Conserto de Paleteira Hidráulica: Os 7 Defeitos Mais Comuns e Como Resolver",
+    excerpt: "Conheça os 7 defeitos que mais aparecem no conserto de paleteira hidráulica, suas causas, sinais de alerta e o reparo certo para cada um deles.",
+    date: "2026-06-22",
+    category: "Conserto",
+  },
+  {
+    slug: "aluguel-paleteira-hidraulica-cascavel",
+    title: "Aluguel de Paleteira em Cascavel-PR: Como Funciona, Quanto Custa e Quando Vale a Pena",
+    excerpt: "Tudo sobre aluguel de paleteira em Cascavel-PR: modalidades de locação, valores médios, manutenção inclusa, prazos e quando alugar compensa mais que comprar.",
+    date: "2026-06-18",
+    category: "Aluguel",
+  },
+  {
+    slug: "locacao-vs-compra-paleteira-cascavel",
+    title: "Locação de Paleteira Hidráulica em Cascavel: Vantagens vs. Compra para Empresas do Oeste do Paraná",
+    excerpt: "Locação ou compra de paleteira? Compare custos, riscos e benefícios para empresas de Cascavel e Oeste do Paraná e descubra qual modelo é o ideal para sua operação.",
+    date: "2026-06-15",
+    category: "Aluguel",
+  },
+  {
     slug: "manutencao-preventiva-paleteira-hidraulica",
     title: "Manutenção Preventiva de Paleteira Hidráulica: Guia Completo",
     excerpt: "Como fazer a manutenção preventiva da sua paleteira hidráulica, evitar falhas e aumentar a vida útil do equipamento.",

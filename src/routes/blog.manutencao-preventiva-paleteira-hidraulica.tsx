@@ -59,6 +59,20 @@ function Page() {
         Mesmo com manutenção preventiva em dia, fique atento: vazamento de óleo sob o equipamento, dificuldade de elevar a carga, garfo descendo sozinho, ruído metálico ao acionar a bomba, rodas travadas ou com folga, e empunhadura dura são sinais claros de que algo precisa ser corrigido antes que evolua para uma falha total.
       </p>
 
+      <h2>Erros comuns que destroem a paleteira antes da hora</h2>
+      <ul>
+        <li><strong>Sobrecarga frequente:</strong> operar acima da capacidade nominal deforma garfo, força a bomba e estoura o cilindro.</li>
+        <li><strong>Óleo errado ou contaminado:</strong> usar óleo de motor, água ou misturar fluidos destrói selos em semanas.</li>
+        <li><strong>Manobras bruscas:</strong> bater em batente, descer com peso de uma vez, virar com carga elevada — tudo isso castiga a estrutura.</li>
+        <li><strong>Ignorar pequenos sintomas:</strong> gota de óleo, gatilho duro, ruído nas rodas. O que parece "normal" hoje vira reparo caro em três meses.</li>
+        <li><strong>Armazenar paleteira carregada por longos períodos:</strong> achata rodas e fadiga a estrutura.</li>
+      </ul>
+
+      <h2>Manutenção preventiva x corretiva: a conta que poucos fazem</h2>
+      <p>
+        Um plano preventivo básico custa uma fração de um único conserto de emergência. Mais importante: previne paradas não planejadas, que sempre acontecem na pior hora — final do mês, dia de embarque, pico de produção. Para quem opera com poucas paleteiras, uma única parada não programada pode custar mais do que a manutenção preventiva anual inteira.
+      </p>
+
       <h2>Como a Hidraumil pode ajudar</h2>
       <p>
         A Hidraumil oferece planos de manutenção preventiva sob medida para empresas em Cascavel e região Oeste do Paraná. Cuidamos do agendamento, do checklist técnico, das peças de reposição e da garantia. Você foca na sua operação; nós cuidamos da paleteira. Fale com a gente pelo WhatsApp e monte um plano para a sua frota.
