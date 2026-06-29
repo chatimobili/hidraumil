@@ -47,7 +47,8 @@ export function BlogArticle({
       </PageHero>
 
       <article className="bg-white">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16 prose-content">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+          <div className="max-w-3xl prose-content">
           <Link to="/blog" className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline mb-8">
             <ChevronLeft className="h-4 w-4" /> Voltar ao blog
           </Link>
@@ -66,6 +67,7 @@ export function BlogArticle({
 
           <div className="space-y-5 text-muted-foreground leading-relaxed [&_h2]:text-secondary [&_h2]:text-2xl [&_h2]:md:text-3xl [&_h2]:font-semibold [&_h2]:mt-10 [&_h2]:mb-3 [&_h3]:text-secondary [&_h3]:text-xl [&_h3]:font-bold [&_h3]:mt-6 [&_h3]:mb-2 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:space-y-2 [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:space-y-2 [&_strong]:text-secondary [&_table]:w-full [&_table]:border-collapse [&_th]:bg-muted [&_th]:p-3 [&_th]:text-left [&_th]:text-secondary [&_td]:border [&_td]:border-border [&_td]:p-3 [&_th]:border [&_th]:border-border">
             {children}
+          </div>
           </div>
         </div>
       </article>
