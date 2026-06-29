@@ -47,7 +47,8 @@ export function BlogArticle({
       </PageHero>
 
       <article className="bg-white">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16 prose-content">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+          <div className="max-w-3xl prose-content">
           <Link to="/blog" className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline mb-8">
             <ChevronLeft className="h-4 w-4" /> Voltar ao blog
           </Link>
