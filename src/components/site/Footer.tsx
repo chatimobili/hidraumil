@@ -23,7 +23,7 @@ export function Footer() {
           <div className="flex items-center gap-4">
             <span className="text-sm text-secondary/80">Siga nossas redes</span>
             <div className="flex items-center gap-3">
-              <a href="#" aria-label="Instagram" className={socialClass}><Instagram className="h-5 w-5" /></a>
+              <a href="https://www.instagram.com/hidraumil/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className={socialClass}><Instagram className="h-5 w-5" /></a>
               <a href="#" aria-label="Facebook" className={socialClass}><Facebook className="h-5 w-5" /></a>
             </div>
           </div>
