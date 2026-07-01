@@ -299,6 +299,8 @@ function SobrePage() {
             <img
               src={tecnicoAsset.url}
               alt="Técnico Hidraumil atendendo cliente em Cascavel, Paraná"
+              width={1200}
+              height={900}
               className="w-full h-[420px] object-cover rounded-[2rem] shadow-2xl"
               loading="lazy"
               decoding="async"
