@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ServicePageShell, H2, P } from "@/components/site/ServicePageShell";
-import { CheckCircle2, MapPin, Truck, Clock, Wrench } from "lucide-react";
+import { CheckCircle2, MapPin, Truck, Clock, Wrench, HelpCircle } from "lucide-react";
+import { SITE } from "@/lib/site";
 
 export interface CityContent {
   city: string;
@@ -16,6 +17,92 @@ export interface CityContent {
 export function CityServicePage({ content }: { content: CityContent }) {
   const title = `Manutenção de Paleteira Hidráulica em ${content.city} - PR`;
   const subtitle = `Assistência técnica, conserto, aluguel e venda de paleteiras em ${content.city} e região. Atendimento a partir de Cascavel com coleta, entrega e garantia por escrito.`;
+  const pageUrl = `https://hidraumil.lovable.app/manutencao-paleteira-hidraulica-${content.citySlug}`;
+
+  const faqs = [
+    {
+      q: `A Hidraumil faz manutenção de paleteira hidráulica em ${content.city}?`,
+      a: `Sim. Atendemos ${content.city} com manutenção preventiva e corretiva de paleteiras hidráulicas manuais, semielétricas e elétricas, de todas as marcas. O atendimento é feito a partir da nossa sede em Cascavel, com coleta e entrega agendadas ou visita técnica em campo para contratos de manutenção.`,
+    },
+    {
+      q: `Quanto tempo demora para atender um chamado em ${content.city}?`,
+      a: `A distância entre Cascavel e ${content.city} é de cerca de ${content.distanceKm} km (aproximadamente ${content.driveTime}). Para chamados de coleta, conseguimos agendar retirada em até 1 a 2 dias úteis. Contratos de manutenção mensal têm visitas programadas com data e horário fixos.`,
+    },
+    {
+      q: `Vocês consertam paleteira hidráulica de qualquer marca em ${content.city}?`,
+      a: `Sim. Atendemos Bovenau, Paletrans, Ybarra, Tecnomafra, Lift Mais, Marcon, Aço Toledo e outras marcas nacionais e importadas. O diagnóstico é gratuito e o orçamento é enviado antes de qualquer serviço.`,
+    },
+    {
+      q: `A Hidraumil aluga paleteira hidráulica para empresas de ${content.city}?`,
+      a: `Sim. Oferecemos aluguel de paleteiras manuais, semielétricas e elétricas com contratos flexíveis (mensal, trimestral ou anual) e manutenção inclusa. É uma opção comum para empresas de ${content.city} que precisam de equipamento reserva ou para operações sazonais.`,
+    },
+    {
+      q: `Como solicitar um orçamento de paleteira em ${content.city}?`,
+      a: `Basta chamar no WhatsApp (${SITE.phoneDisplay}) descrevendo o serviço — conserto, manutenção, aluguel ou compra — e a localização em ${content.city}. Retornamos com estimativa inicial em minutos e agendamos a visita técnica ou a coleta do equipamento.`,
+    },
+  ];
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": `${pageUrl}#localbusiness`,
+    name: `${SITE.name} - Atendimento em ${content.city}`,
+    description: subtitle,
+    url: pageUrl,
+    telephone: SITE.phoneE164,
+    image: "https://hidraumil.lovable.app/og-hidraumil.jpg",
+    priceRange: "$$",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Cascavel",
+      addressRegion: "PR",
+      addressCountry: "BR",
+    },
+    areaServed: [
+      { "@type": "City", name: content.city, containedInPlace: { "@type": "AdministrativeArea", name: "Paraná" } },
+      ...content.nearbyCities.map((c) => ({ "@type": "City", name: c.name })),
+    ],
+    openingHoursSpecification: [{
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "08:00",
+      closes: "18:00",
+    }],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: `Serviços de paleteira hidráulica em ${content.city}`,
+      itemListElement: [
+        "Manutenção preventiva e corretiva de paleteira hidráulica",
+        "Conserto de paleteira hidráulica",
+        "Aluguel de paleteira hidráulica",
+        "Venda de paleteiras hidráulicas",
+        "Venda de peças para paleteira hidráulica",
+      ].map((s) => ({
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: `${s} em ${content.city}` },
+      })),
+    },
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Início", item: "https://hidraumil.lovable.app/" },
+      { "@type": "ListItem", position: 2, name: "Cidades atendidas", item: "https://hidraumil.lovable.app/" },
+      { "@type": "ListItem", position: 3, name: `Paleteira em ${content.city}`, item: pageUrl },
+    ],
+  };
 
   return (
     <ServicePageShell
