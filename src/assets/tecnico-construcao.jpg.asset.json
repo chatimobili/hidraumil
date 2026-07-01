@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "asset_id": "8b92fd76-e1bc-4431-b768-d3402d6aac3b",
+  "asset_id": "99e40e5b-d3bc-4ca9-9f8a-dc10595e9f2d",
   "project_id": "bd21dfbe-18f6-4c1e-b9a5-6a751cda4822",
-  "url": "/__l5e/assets-v1/8b92fd76-e1bc-4431-b768-d3402d6aac3b/tecnico-construcao.jpg",
-  "r2_key": "a/v1/bd21dfbe-18f6-4c1e-b9a5-6a751cda4822/8b92fd76-e1bc-4431-b768-d3402d6aac3b/tecnico-construcao.jpg",
-  "original_filename": "tecnico-construcao.jpg",
-  "size": 253440,
-  "content_type": "image/jpeg",
-  "created_at": "2026-06-22T16:46:53Z"
+  "url": "/__l5e/assets-v1/99e40e5b-d3bc-4ca9-9f8a-dc10595e9f2d/tecnico-construcao.webp",
+  "r2_key": "a/v1/bd21dfbe-18f6-4c1e-b9a5-6a751cda4822/99e40e5b-d3bc-4ca9-9f8a-dc10595e9f2d/tecnico-construcao.webp",
+  "original_filename": "tecnico-construcao.webp",
+  "size": 126164,
+  "content_type": "image/webp",
+  "created_at": "2026-07-01T23:40:09Z"
 }
