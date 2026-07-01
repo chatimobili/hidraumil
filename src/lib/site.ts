@@ -8,7 +8,7 @@ export const SITE = {
   phoneE164: "+5545999130659",
   whatsappNumber: "5545999130659",
   whatsappUrl: "https://wa.me/5545999130659",
-  email: "contato@hidraumil.com.br",
+  email: "hidraumil@hotmail.com",
   address: "Cascavel, Paraná - Brasil",
   hours: "Segunda a Sexta, 08:00 às 18:00",
 };
