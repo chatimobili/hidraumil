@@ -234,8 +234,11 @@ function Home() {
             <img
               src={equipeAsset.url}
               alt="Equipe técnica Hidraumil em Cascavel"
+              width={1200}
+              height={900}
               className="relative w-full h-auto rounded-[2rem] shadow-xl object-cover"
               loading="lazy"
+              decoding="async"
             />
           </div>
         </div>
