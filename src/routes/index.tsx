@@ -393,8 +393,11 @@ function Home() {
               <img
                 src={mulherAsset.url}
                 alt="Profissional qualificada"
+                width={900}
+                height={1000}
                 className="relative w-full h-[420px] md:h-[460px] object-cover rounded-tr-[6rem] rounded-bl-[6rem] shadow-2xl"
                 loading="lazy"
+                decoding="async"
               />
               <div className="hidden md:flex absolute -left-10 top-1/2 -translate-y-1/2 h-28 w-28 rounded-full bg-white border-[6px] border-primary items-center justify-center shadow-xl">
                 <ShieldCheck className="h-10 w-10 text-primary" />
