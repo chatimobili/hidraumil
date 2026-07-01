@@ -177,6 +177,8 @@ function SobrePage() {
             <img
               src={equipeAsset.url}
               alt="Equipe da Hidraumil em Cascavel ao lado de paleteiras hidráulicas"
+              width={1200}
+              height={900}
               className="relative w-full h-[460px] object-cover rounded-[2rem] shadow-2xl"
               loading="lazy"
               decoding="async"
