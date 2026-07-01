@@ -17,7 +17,7 @@ export interface CityContent {
 export function CityServicePage({ content }: { content: CityContent }) {
   const title = `Manutenção de Paleteira Hidráulica em ${content.city} - PR`;
   const subtitle = `Assistência técnica, conserto, aluguel e venda de paleteiras em ${content.city} e região. Atendimento a partir de Cascavel com coleta, entrega e garantia por escrito.`;
-  const pageUrl = `https://hidraumil.lovable.app/manutencao-paleteira-hidraulica-${content.citySlug}`;
+  const pageUrl = `https://hidraumil.com.br/manutencao-paleteira-hidraulica-${content.citySlug}`;
 
   const faqs = [
     {
@@ -50,7 +50,7 @@ export function CityServicePage({ content }: { content: CityContent }) {
     description: subtitle,
     url: pageUrl,
     telephone: SITE.phoneE164,
-    image: "https://hidraumil.lovable.app/og-hidraumil.jpg",
+    image: "https://hidraumil.com.br/og-hidraumil.jpg",
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",
@@ -98,8 +98,8 @@ export function CityServicePage({ content }: { content: CityContent }) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Início", item: "https://hidraumil.lovable.app/" },
-      { "@type": "ListItem", position: 2, name: "Cidades atendidas", item: "https://hidraumil.lovable.app/" },
+      { "@type": "ListItem", position: 1, name: "Início", item: "https://hidraumil.com.br/" },
+      { "@type": "ListItem", position: 2, name: "Cidades atendidas", item: "https://hidraumil.com.br/" },
       { "@type": "ListItem", position: 3, name: `Paleteira em ${content.city}`, item: pageUrl },
     ],
   };

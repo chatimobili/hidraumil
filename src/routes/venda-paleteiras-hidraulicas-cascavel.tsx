@@ -9,9 +9,9 @@ export const Route = createFileRoute("/venda-paleteiras-hidraulicas-cascavel")({
       { name: "description", content: "Compre paleteiras hidráulicas em Cascavel com a Hidraumil. Equipamentos novos e revisados, manuais e elétricas, com assistência técnica e garantia." },
       { property: "og:title", content: "Venda de Paleteiras Hidráulicas em Cascavel | Hidraumil" },
       { property: "og:description", content: "Paleteiras novas e revisadas com garantia em Cascavel, PR." },
-      { property: "og:url", content: "/venda-paleteiras-hidraulicas-cascavel" },
+      { property: "og:url", content: "https://hidraumil.com.br/venda-paleteiras-hidraulicas-cascavel" },
     ],
-    links: [{ rel: "canonical", href: "/venda-paleteiras-hidraulicas-cascavel" }],
+    links: [{ rel: "canonical", href: "https://hidraumil.com.br/venda-paleteiras-hidraulicas-cascavel" }],
   }),
   component: Page,
 });

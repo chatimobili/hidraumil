@@ -33,10 +33,10 @@ export const Route = createFileRoute("/sobre-nos")({
         content:
           "15+ anos, 500+ empresas atendidas. Conserto, manutenção e locação de paleteiras hidráulicas em Cascavel e região.",
       },
-      { property: "og:url", content: "/sobre-nos" },
+      { property: "og:url", content: "https://hidraumil.com.br/sobre-nos" },
       { property: "og:image", content: equipeAsset.url },
     ],
-    links: [{ rel: "canonical", href: "/sobre-nos" }],
+    links: [{ rel: "canonical", href: "https://hidraumil.com.br/sobre-nos" }],
   }),
   component: SobrePage,
 });

@@ -9,9 +9,9 @@ export const Route = createFileRoute("/conserto-paleteira-hidraulica-cascavel")(
       { name: "description", content: "Conserto especializado de paleteiras hidráulicas em Cascavel e Oeste do Paraná. Diagnóstico gratuito, reparo rápido e garantia. Atendemos todas as marcas." },
       { property: "og:title", content: "Conserto de Paleteira Hidráulica em Cascavel | Hidraumil" },
       { property: "og:description", content: "Reparo rápido com garantia para todas as marcas em Cascavel." },
-      { property: "og:url", content: "/conserto-paleteira-hidraulica-cascavel" },
+      { property: "og:url", content: "https://hidraumil.com.br/conserto-paleteira-hidraulica-cascavel" },
     ],
-    links: [{ rel: "canonical", href: "/conserto-paleteira-hidraulica-cascavel" }],
+    links: [{ rel: "canonical", href: "https://hidraumil.com.br/conserto-paleteira-hidraulica-cascavel" }],
   }),
   component: Page,
 });

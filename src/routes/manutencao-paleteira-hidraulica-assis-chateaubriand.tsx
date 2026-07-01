@@ -11,10 +11,10 @@ export const Route = createFileRoute("/manutencao-paleteira-hidraulica-assis-cha
       { name: "description", content: `Manutenção, conserto, aluguel e venda de paleteiras hidráulicas em Assis Chateaubriand e região. Assistência técnica com coleta, entrega e garantia — Hidraumil Cascavel.` },
       { property: "og:title", content: `Manutenção de Paleteira Hidráulica em Assis Chateaubriand - PR | Hidraumil` },
       { property: "og:description", content: `Atendimento técnico especializado em paleteiras hidráulicas em Assis Chateaubriand e Oeste do Paraná.` },
-      { property: "og:url", content: "/manutencao-paleteira-hidraulica-assis-chateaubriand" },
+      { property: "og:url", content: "https://hidraumil.com.br/manutencao-paleteira-hidraulica-assis-chateaubriand" },
       { property: "og:type", content: "website" },
     ],
-    links: [{ rel: "canonical", href: "/manutencao-paleteira-hidraulica-assis-chateaubriand" }],
+    links: [{ rel: "canonical", href: "https://hidraumil.com.br/manutencao-paleteira-hidraulica-assis-chateaubriand" }],
   }),
   component: () => <CityServicePage content={content} />,
 });

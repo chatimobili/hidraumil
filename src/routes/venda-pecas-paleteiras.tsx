@@ -9,9 +9,9 @@ export const Route = createFileRoute("/venda-pecas-paleteiras")({
       { name: "description", content: "Compre peças para paleteiras hidráulicas em Cascavel. Cilindros, bombas, rodas, garfos, selos e muito mais. Peças originais e compatíveis com entrega rápida." },
       { property: "og:title", content: "Peças para Paleteiras Hidráulicas em Cascavel | Hidraumil" },
       { property: "og:description", content: "Cilindros, bombas, rodas, selos e mais — entrega rápida em Cascavel e região." },
-      { property: "og:url", content: "/venda-pecas-paleteiras" },
+      { property: "og:url", content: "https://hidraumil.com.br/venda-pecas-paleteiras" },
     ],
-    links: [{ rel: "canonical", href: "/venda-pecas-paleteiras" }],
+    links: [{ rel: "canonical", href: "https://hidraumil.com.br/venda-pecas-paleteiras" }],
   }),
   component: Page,
 });

@@ -9,9 +9,9 @@ export const Route = createFileRoute("/assistencia-tecnica-equipamentos-hidrauli
       { name: "description", content: "Assistência técnica especializada em equipamentos hidráulicos em Cascavel. Atendemos paleteiras, equipamentos Bovenau e outros sistemas hidráulicos industriais." },
       { property: "og:title", content: "Assistência Técnica em Equipamentos Hidráulicos em Cascavel | Hidraumil" },
       { property: "og:description", content: "Atendimento especializado em equipamentos hidráulicos industriais, incluindo Bovenau." },
-      { property: "og:url", content: "/assistencia-tecnica-equipamentos-hidraulicos-cascavel" },
+      { property: "og:url", content: "https://hidraumil.com.br/assistencia-tecnica-equipamentos-hidraulicos-cascavel" },
     ],
-    links: [{ rel: "canonical", href: "/assistencia-tecnica-equipamentos-hidraulicos-cascavel" }],
+    links: [{ rel: "canonical", href: "https://hidraumil.com.br/assistencia-tecnica-equipamentos-hidraulicos-cascavel" }],
   }),
   component: Page,
 });

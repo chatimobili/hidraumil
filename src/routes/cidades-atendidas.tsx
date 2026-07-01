@@ -10,10 +10,10 @@ export const Route = createFileRoute("/cidades-atendidas")({
       { name: "description", content: "Manutenção, conserto, aluguel e venda de paleteiras hidráulicas em Cascavel, Toledo, Foz do Iguaçu, Marechal C. Rondon, Medianeira, Palotina e mais cidades do Oeste do PR." },
       { property: "og:title", content: "Cidades Atendidas no Oeste do Paraná | Hidraumil" },
       { property: "og:description", content: "Veja todas as cidades atendidas pela Hidraumil no Oeste do Paraná." },
-      { property: "og:url", content: "https://hidraumil.lovable.app/cidades-atendidas" },
+      { property: "og:url", content: "https://hidraumil.com.br/cidades-atendidas" },
       { property: "og:type", content: "website" },
     ],
-    links: [{ rel: "canonical", href: "https://hidraumil.lovable.app/cidades-atendidas" }],
+    links: [{ rel: "canonical", href: "https://hidraumil.com.br/cidades-atendidas" }],
     scripts: [{
       type: "application/ld+json",
       children: JSON.stringify({
@@ -27,7 +27,7 @@ export const Route = createFileRoute("/cidades-atendidas")({
           "@type": "ListItem",
           position: i + 1,
           name: `Paleteira hidráulica em ${c.city}`,
-          url: `https://hidraumil.lovable.app${c.route}`,
+          url: `https://hidraumil.com.br${c.route}`,
         })),
       }),
     }],

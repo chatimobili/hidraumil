@@ -12,9 +12,9 @@ export const Route = createFileRoute("/contato")({
       { name: "description", content: "Entre em contato com a Hidraumil em Cascavel, PR. Solicite orçamento para manutenção, conserto ou locação de paleteiras hidráulicas. Atendimento rápido pelo WhatsApp." },
       { property: "og:title", content: "Contato | Hidraumil Hidráulicos" },
       { property: "og:description", content: "Fale conosco em Cascavel, PR. Orçamento rápido pelo WhatsApp." },
-      { property: "og:url", content: "/contato" },
+      { property: "og:url", content: "https://hidraumil.com.br/contato" },
     ],
-    links: [{ rel: "canonical", href: "/contato" }],
+    links: [{ rel: "canonical", href: "https://hidraumil.com.br/contato" }],
   }),
   component: Page,
 });

@@ -9,9 +9,9 @@ export const Route = createFileRoute("/locacao-paleteiras-hidraulicas-cascavel")
       { name: "description", content: "Aluguel de paleteiras hidráulicas em Cascavel e Oeste do Paraná. Planos mensais flexíveis, equipamentos revisados e manutenção inclusa. Ideal para demandas temporárias." },
       { property: "og:title", content: "Locação de Paleteiras Hidráulicas em Cascavel | Hidraumil" },
       { property: "og:description", content: "Aluguel com manutenção inclusa em Cascavel e região." },
-      { property: "og:url", content: "/locacao-paleteiras-hidraulicas-cascavel" },
+      { property: "og:url", content: "https://hidraumil.com.br/locacao-paleteiras-hidraulicas-cascavel" },
     ],
-    links: [{ rel: "canonical", href: "/locacao-paleteiras-hidraulicas-cascavel" }],
+    links: [{ rel: "canonical", href: "https://hidraumil.com.br/locacao-paleteiras-hidraulicas-cascavel" }],
   }),
   component: Page,
 });
