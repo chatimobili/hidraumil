@@ -88,6 +88,8 @@ function Home() {
           <img
             src={heroImg}
             alt="Técnico Hidraumil pronto para atender em Cascavel"
+            width={1920}
+            height={1080}
             className="absolute inset-0 w-full h-full object-cover"
             fetchPriority="high"
             loading="eager"
