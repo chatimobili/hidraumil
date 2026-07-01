@@ -110,10 +110,15 @@ export const localBusinessSchema = {
   "@id": "https://hidraumil.com.br/#localbusiness",
   url: "https://hidraumil.com.br",
   telephone: SITE.phoneE164,
+  email: SITE.email,
+  description:
+    "Especialistas em manutenção, conserto e aluguel de paleteiras hidráulicas em Cascavel e região Oeste do Paraná. Atendimento rápido, peças originais e garantia por escrito.",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "Rua Parecis, 1039 - Santo Onofre",
     addressLocality: "Cascavel",
     addressRegion: "PR",
+    postalCode: "85806-410",
     addressCountry: "BR",
   },
   areaServed: [
@@ -131,5 +136,26 @@ export const localBusinessSchema = {
     "@type": "AggregateRating",
     ratingValue: "4.9",
     reviewCount: "47",
+  },
+};
+
+export const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://hidraumil.com.br/#website",
+  url: "https://hidraumil.com.br",
+  name: "Hidraumil Hidráulicos",
+  description:
+    "Manutenção, conserto e aluguel de paleteiras hidráulicas em Cascavel e região Oeste do Paraná.",
+  inLanguage: "pt-BR",
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://hidraumil.com.br/#organization",
+    name: "Hidraumil Hidráulicos",
+    url: "https://hidraumil.com.br",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hidraumil.com.br/__l5e/assets-v1/864d08f1-ec9e-4344-a14e-e0aa27695b28/logo-hidraumil.png",
+    },
   },
 };
