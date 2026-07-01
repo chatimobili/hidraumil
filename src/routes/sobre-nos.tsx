@@ -129,6 +129,8 @@ function SobrePage() {
                 key={p.name}
                 src={p.src}
                 alt={`Logotipo ${p.name}`}
+                width={160}
+                height={48}
                 className="h-12 w-auto max-w-[160px] object-contain opacity-70"
                 loading="lazy"
                 decoding="async"
