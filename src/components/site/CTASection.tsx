@@ -10,7 +10,7 @@ export function CTASection({ title, subtitle }: { title?: string; subtitle?: str
         alt=""
         aria-hidden="true"
         width={1920}
-        height={800}
+        height={1024}
         className="absolute inset-0 h-full w-full object-cover opacity-40"
         loading="lazy"
         decoding="async"
