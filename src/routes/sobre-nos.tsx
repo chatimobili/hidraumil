@@ -16,7 +16,7 @@ import allmayer from "@/assets/clients/Allmayer-supermercado.png.asset.json";
 import consilos from "@/assets/clients/Consilos.png.asset.json";
 import coopavel from "@/assets/clients/Coopavel.png.asset.json";
 import geriba from "@/assets/clients/Geriba-Alimentos.png.asset.json";
-import { SITE } from "@/lib/site";
+import { SITE, absoluteUrl } from "@/lib/site";
 
 export const Route = createFileRoute("/sobre-nos")({
   head: () => ({
@@ -34,7 +34,7 @@ export const Route = createFileRoute("/sobre-nos")({
           "15+ anos, 500+ empresas atendidas. Conserto, manutenção e locação de paleteiras hidráulicas em Cascavel e região.",
       },
       { property: "og:url", content: "https://hidraumil.com.br/sobre-nos" },
-      { property: "og:image", content: equipeAsset.url },
+      { property: "og:image", content: absoluteUrl(equipeAsset.url) },
     ],
     links: [{ rel: "canonical", href: "https://hidraumil.com.br/sobre-nos" }],
   }),
