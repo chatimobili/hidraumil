@@ -95,7 +95,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:description", content: "Manutenção, conserto e aluguel de paleteiras em Cascavel. Técnicos especializados, peças originais e atendimento rápido. Solicite seu orçamento!" },
       { property: "og:url", content: "https://hidraumil.com.br/" },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/45786cdc-f9fe-4bda-94fe-09c272b04745/id-preview-00bcbe62--bd21dfbe-18f6-4c1e-b9a5-6a751cda4822.lovable.app-1782163360437.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/45786cdc-f9fe-4bda-94fe-09c272b04745/id-preview-00bcbe62--bd21dfbe-18f6-4c1e-b9a5-6a751cda4822.lovable.app-1782163360437.png" },
+      { name: "twitter:image", content: "https://hidraumil.com.br/__l5e/assets-v1/a0a56660-e3fa-4e74-9bc7-0599471126ce/hero-novo.jpg" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
