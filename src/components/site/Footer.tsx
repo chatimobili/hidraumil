@@ -33,7 +33,10 @@ export function Footer() {
 
         {/* Link columns */}
         <div className="mt-8">
-          <h3 className="text-base font-semibold text-secondary mb-4">Cidades atendidas</h3>
+          <div className="flex items-baseline justify-between mb-4 gap-4 flex-wrap">
+            <h3 className="text-base font-semibold text-secondary">Cidades atendidas</h3>
+            <Link to="/cidades-atendidas" className="text-xs font-semibold text-primary hover:underline">Ver todas →</Link>
+          </div>
           <div className="flex flex-wrap gap-2">
             {[
               ["Cascavel","/manutencao-paleteiras-hidraulicas-cascavel"],
