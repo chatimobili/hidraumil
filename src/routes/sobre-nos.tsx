@@ -236,13 +236,7 @@ function SobrePage() {
                 key={m.name}
                 className="text-center bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition"
               >
-                <div
-                  className={`mx-auto h-24 w-24 rounded-full ${m.color} text-white flex items-center justify-center text-2xl font-semibold shadow-lg`}
-                  aria-hidden="true"
-                >
-                  {m.initials}
-                </div>
-                <h3 className="mt-5 text-lg font-semibold text-secondary">{m.name}</h3>
+                <h3 className="text-lg font-semibold text-secondary">{m.name}</h3>
                 <p className="text-sm font-medium text-primary">{m.role}</p>
                 <p className="mt-3 text-muted-foreground leading-relaxed text-sm">{m.bio}</p>
               </article>
