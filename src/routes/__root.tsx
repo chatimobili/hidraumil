@@ -15,6 +15,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import faviconAsset from "@/assets/favicon.png.asset.json";
+import { websiteSchema } from "@/lib/site";
 
 function NotFoundComponent() {
   return (
