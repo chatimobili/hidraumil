@@ -94,15 +94,20 @@ export function CityServicePage({ content }: { content: CityContent }) {
           manutenção, conserto, aluguel e venda de paleteiras hidráulicas:
         </P>
         <div className="mt-5 grid grid-cols-2 sm:grid-cols-3 gap-3">
-          {content.nearbyCities.map((c) => (
-            <Link
-              key={c.slug}
-              to={`/manutencao-paleteira-hidraulica-${c.slug}` as string}
-              className="rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-semibold text-secondary hover:border-primary hover:text-primary transition"
-            >
-              Paleteira em {c.name}
-            </Link>
-          ))}
+          {content.nearbyCities.map((c) => {
+            const href = c.slug === "cascavel"
+              ? "/manutencao-paleteiras-hidraulicas-cascavel"
+              : `/manutencao-paleteira-hidraulica-${c.slug}`;
+            return (
+              <Link
+                key={c.slug}
+                to={href as string}
+                className="rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-semibold text-secondary hover:border-primary hover:text-primary transition"
+              >
+                Paleteira em {c.name}
+              </Link>
+            );
+          })}
         </div>
       </section>
     </ServicePageShell>
