@@ -31,6 +31,14 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/blog/quanto-custa-consertar-paleteira-hidraulica", changefreq: "yearly", priority: "0.6" },
           { path: "/blog/paleteira-manual-vs-hidraulica", changefreq: "yearly", priority: "0.6" },
           { path: "/contato", changefreq: "yearly", priority: "0.7" },
+          { path: "/manutencao-paleteira-hidraulica-toledo", changefreq: "monthly", priority: "0.8" },
+          { path: "/manutencao-paleteira-hidraulica-foz-do-iguacu", changefreq: "monthly", priority: "0.8" },
+          { path: "/manutencao-paleteira-hidraulica-marechal-candido-rondon", changefreq: "monthly", priority: "0.8" },
+          { path: "/manutencao-paleteira-hidraulica-medianeira", changefreq: "monthly", priority: "0.8" },
+          { path: "/manutencao-paleteira-hidraulica-assis-chateaubriand", changefreq: "monthly", priority: "0.8" },
+          { path: "/manutencao-paleteira-hidraulica-palotina", changefreq: "monthly", priority: "0.8" },
+          { path: "/manutencao-paleteira-hidraulica-santa-helena", changefreq: "monthly", priority: "0.8" },
+          { path: "/manutencao-paleteira-hidraulica-corbelia", changefreq: "monthly", priority: "0.8" },
         ];
 
         const urls = entries.map(e =>
