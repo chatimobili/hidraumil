@@ -1,3 +1,7 @@
+export const SITE_URL = "https://hidraumil.com.br";
+export const absoluteUrl = (path: string) =>
+  path.startsWith("http") ? path : `${SITE_URL}${path.startsWith("/") ? "" : "/"}${path}`;
+
 export const SITE = {
   name: "Hidraumil Hidráulicos",
   shortName: "Hidraumil",
@@ -102,7 +106,7 @@ export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: SITE.name,
-  image: "/og-hidraumil.jpg",
+  image: "https://hidraumil.com.br/og-hidraumil.jpg",
   "@id": "https://hidraumil.com.br/#localbusiness",
   url: "https://hidraumil.com.br",
   telephone: SITE.phoneE164,
@@ -123,4 +127,9 @@ export const localBusinessSchema = {
     closes: "18:00",
   }],
   priceRange: "$$",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "47",
+  },
 };

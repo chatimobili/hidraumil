@@ -11,10 +11,10 @@ export const Route = createFileRoute("/manutencao-paleteira-hidraulica-foz-do-ig
       { name: "description", content: `Manutenção, conserto, aluguel e venda de paleteiras hidráulicas em Foz do Iguaçu e região. Assistência técnica com coleta, entrega e garantia — Hidraumil Cascavel.` },
       { property: "og:title", content: `Manutenção de Paleteira Hidráulica em Foz do Iguaçu - PR | Hidraumil` },
       { property: "og:description", content: `Atendimento técnico especializado em paleteiras hidráulicas em Foz do Iguaçu e Oeste do Paraná.` },
-      { property: "og:url", content: "/manutencao-paleteira-hidraulica-foz-do-iguacu" },
+      { property: "og:url", content: "https://hidraumil.com.br/manutencao-paleteira-hidraulica-foz-do-iguacu" },
       { property: "og:type", content: "website" },
     ],
-    links: [{ rel: "canonical", href: "/manutencao-paleteira-hidraulica-foz-do-iguacu" }],
+    links: [{ rel: "canonical", href: "https://hidraumil.com.br/manutencao-paleteira-hidraulica-foz-do-iguacu" }],
   }),
   component: () => <CityServicePage content={content} />,
 });

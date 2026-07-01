@@ -12,9 +12,9 @@ export const Route = createFileRoute("/blog/")({
       { name: "description", content: "Dicas, guias e artigos técnicos sobre manutenção, conserto, aluguel e venda de paleteiras hidráulicas em Cascavel e Oeste do Paraná." },
       { property: "og:title", content: "Blog Hidraumil — Paleteiras Hidráulicas" },
       { property: "og:description", content: "Conteúdo técnico sobre paleteiras hidráulicas." },
-      { property: "og:url", content: "/blog" },
+      { property: "og:url", content: "https://hidraumil.com.br/blog" },
     ],
-    links: [{ rel: "canonical", href: "/blog" }],
+    links: [{ rel: "canonical", href: "https://hidraumil.com.br/blog" }],
   }),
   component: BlogIndex,
 });

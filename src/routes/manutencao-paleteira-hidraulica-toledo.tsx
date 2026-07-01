@@ -11,10 +11,10 @@ export const Route = createFileRoute("/manutencao-paleteira-hidraulica-toledo")(
       { name: "description", content: `Manutenção, conserto, aluguel e venda de paleteiras hidráulicas em Toledo e região. Assistência técnica com coleta, entrega e garantia — Hidraumil Cascavel.` },
       { property: "og:title", content: `Manutenção de Paleteira Hidráulica em Toledo - PR | Hidraumil` },
       { property: "og:description", content: `Atendimento técnico especializado em paleteiras hidráulicas em Toledo e Oeste do Paraná.` },
-      { property: "og:url", content: "/manutencao-paleteira-hidraulica-toledo" },
+      { property: "og:url", content: "https://hidraumil.com.br/manutencao-paleteira-hidraulica-toledo" },
       { property: "og:type", content: "website" },
     ],
-    links: [{ rel: "canonical", href: "/manutencao-paleteira-hidraulica-toledo" }],
+    links: [{ rel: "canonical", href: "https://hidraumil.com.br/manutencao-paleteira-hidraulica-toledo" }],
   }),
   component: () => <CityServicePage content={content} />,
 });
