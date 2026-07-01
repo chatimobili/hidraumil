@@ -68,24 +68,24 @@ const valores = [
 
 const equipe = [
   {
-    name: "Carlos Henrique Müller",
+    name: "Adilson Marciano Alves",
     role: "Fundador & Diretor Técnico",
     bio: "Mais de 20 anos em hidráulica industrial. Lidera as decisões técnicas e o atendimento aos grandes clientes.",
-    initials: "CM",
+    initials: "AM",
     color: "bg-primary",
   },
   {
-    name: "Juliana Ferreira",
-    role: "Gerente de Operações",
-    bio: "Coordena a oficina e a equipe de campo, garantindo prazos curtos e qualidade em cada serviço entregue.",
-    initials: "JF",
+    name: "Jéssica Gonçalves",
+    role: "Gerente Administrativa",
+    bio: "Responsável pela rotina administrativa, financeira e pelo relacionamento com clientes da Hidraumil.",
+    initials: "JG",
     color: "bg-secondary",
   },
   {
-    name: "Rodrigo Almeida",
+    name: "Luiz Antônio Marciano Alves",
     role: "Líder de Assistência Técnica",
     bio: "Especialista em diagnóstico e reparo de paleteiras hidráulicas de todas as marcas que circulam pela região.",
-    initials: "RA",
+    initials: "LA",
     color: "bg-primary",
   },
 ];
