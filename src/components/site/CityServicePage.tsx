@@ -197,6 +197,34 @@ export function CityServicePage({ content }: { content: CityContent }) {
           })}
         </div>
       </section>
+
+      <section>
+        <H2>Perguntas frequentes sobre paleteira hidráulica em {content.city}</H2>
+        <div className="mt-6 space-y-4">
+          {faqs.map((f) => (
+            <details key={f.q} className="group rounded-2xl border border-gray-200 bg-white p-6 open:shadow-md transition">
+              <summary className="flex items-start gap-3 cursor-pointer list-none font-semibold text-secondary">
+                <HelpCircle className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                <span className="flex-1">{f.q}</span>
+              </summary>
+              <p className="mt-3 pl-8 text-muted-foreground leading-relaxed">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
     </ServicePageShell>
   );
 }
