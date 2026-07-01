@@ -14,6 +14,14 @@ import { Route as VendaPaleteirasHidraulicasCascavelRouteImport } from './routes
 import { Route as SobreNosRouteImport } from './routes/sobre-nos'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ManutencaoPaleteirasHidraulicasCascavelRouteImport } from './routes/manutencao-paleteiras-hidraulicas-cascavel'
+import { Route as ManutencaoPaleteiraHidraulicaToledoRouteImport } from './routes/manutencao-paleteira-hidraulica-toledo'
+import { Route as ManutencaoPaleteiraHidraulicaSantaHelenaRouteImport } from './routes/manutencao-paleteira-hidraulica-santa-helena'
+import { Route as ManutencaoPaleteiraHidraulicaPalotinaRouteImport } from './routes/manutencao-paleteira-hidraulica-palotina'
+import { Route as ManutencaoPaleteiraHidraulicaMedianeiraRouteImport } from './routes/manutencao-paleteira-hidraulica-medianeira'
+import { Route as ManutencaoPaleteiraHidraulicaMarechalCandidoRondonRouteImport } from './routes/manutencao-paleteira-hidraulica-marechal-candido-rondon'
+import { Route as ManutencaoPaleteiraHidraulicaFozDoIguacuRouteImport } from './routes/manutencao-paleteira-hidraulica-foz-do-iguacu'
+import { Route as ManutencaoPaleteiraHidraulicaCorbeliaRouteImport } from './routes/manutencao-paleteira-hidraulica-corbelia'
+import { Route as ManutencaoPaleteiraHidraulicaAssisChateaubriandRouteImport } from './routes/manutencao-paleteira-hidraulica-assis-chateaubriand'
 import { Route as LocacaoPaleteirasHidraulicasCascavelRouteImport } from './routes/locacao-paleteiras-hidraulicas-cascavel'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as ConsertoPaleteiraHidraulicaCascavelRouteImport } from './routes/conserto-paleteira-hidraulica-cascavel'
@@ -53,6 +61,54 @@ const ManutencaoPaleteirasHidraulicasCascavelRoute =
   ManutencaoPaleteirasHidraulicasCascavelRouteImport.update({
     id: '/manutencao-paleteiras-hidraulicas-cascavel',
     path: '/manutencao-paleteiras-hidraulicas-cascavel',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ManutencaoPaleteiraHidraulicaToledoRoute =
+  ManutencaoPaleteiraHidraulicaToledoRouteImport.update({
+    id: '/manutencao-paleteira-hidraulica-toledo',
+    path: '/manutencao-paleteira-hidraulica-toledo',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ManutencaoPaleteiraHidraulicaSantaHelenaRoute =
+  ManutencaoPaleteiraHidraulicaSantaHelenaRouteImport.update({
+    id: '/manutencao-paleteira-hidraulica-santa-helena',
+    path: '/manutencao-paleteira-hidraulica-santa-helena',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ManutencaoPaleteiraHidraulicaPalotinaRoute =
+  ManutencaoPaleteiraHidraulicaPalotinaRouteImport.update({
+    id: '/manutencao-paleteira-hidraulica-palotina',
+    path: '/manutencao-paleteira-hidraulica-palotina',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ManutencaoPaleteiraHidraulicaMedianeiraRoute =
+  ManutencaoPaleteiraHidraulicaMedianeiraRouteImport.update({
+    id: '/manutencao-paleteira-hidraulica-medianeira',
+    path: '/manutencao-paleteira-hidraulica-medianeira',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ManutencaoPaleteiraHidraulicaMarechalCandidoRondonRoute =
+  ManutencaoPaleteiraHidraulicaMarechalCandidoRondonRouteImport.update({
+    id: '/manutencao-paleteira-hidraulica-marechal-candido-rondon',
+    path: '/manutencao-paleteira-hidraulica-marechal-candido-rondon',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ManutencaoPaleteiraHidraulicaFozDoIguacuRoute =
+  ManutencaoPaleteiraHidraulicaFozDoIguacuRouteImport.update({
+    id: '/manutencao-paleteira-hidraulica-foz-do-iguacu',
+    path: '/manutencao-paleteira-hidraulica-foz-do-iguacu',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ManutencaoPaleteiraHidraulicaCorbeliaRoute =
+  ManutencaoPaleteiraHidraulicaCorbeliaRouteImport.update({
+    id: '/manutencao-paleteira-hidraulica-corbelia',
+    path: '/manutencao-paleteira-hidraulica-corbelia',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ManutencaoPaleteiraHidraulicaAssisChateaubriandRoute =
+  ManutencaoPaleteiraHidraulicaAssisChateaubriandRouteImport.update({
+    id: '/manutencao-paleteira-hidraulica-assis-chateaubriand',
+    path: '/manutencao-paleteira-hidraulica-assis-chateaubriand',
     getParentRoute: () => rootRouteImport,
   } as any)
 const LocacaoPaleteirasHidraulicasCascavelRoute =
@@ -137,6 +193,14 @@ export interface FileRoutesByFullPath {
   '/conserto-paleteira-hidraulica-cascavel': typeof ConsertoPaleteiraHidraulicaCascavelRoute
   '/contato': typeof ContatoRoute
   '/locacao-paleteiras-hidraulicas-cascavel': typeof LocacaoPaleteirasHidraulicasCascavelRoute
+  '/manutencao-paleteira-hidraulica-assis-chateaubriand': typeof ManutencaoPaleteiraHidraulicaAssisChateaubriandRoute
+  '/manutencao-paleteira-hidraulica-corbelia': typeof ManutencaoPaleteiraHidraulicaCorbeliaRoute
+  '/manutencao-paleteira-hidraulica-foz-do-iguacu': typeof ManutencaoPaleteiraHidraulicaFozDoIguacuRoute
+  '/manutencao-paleteira-hidraulica-marechal-candido-rondon': typeof ManutencaoPaleteiraHidraulicaMarechalCandidoRondonRoute
+  '/manutencao-paleteira-hidraulica-medianeira': typeof ManutencaoPaleteiraHidraulicaMedianeiraRoute
+  '/manutencao-paleteira-hidraulica-palotina': typeof ManutencaoPaleteiraHidraulicaPalotinaRoute
+  '/manutencao-paleteira-hidraulica-santa-helena': typeof ManutencaoPaleteiraHidraulicaSantaHelenaRoute
+  '/manutencao-paleteira-hidraulica-toledo': typeof ManutencaoPaleteiraHidraulicaToledoRoute
   '/manutencao-paleteiras-hidraulicas-cascavel': typeof ManutencaoPaleteirasHidraulicasCascavelRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre-nos': typeof SobreNosRoute
@@ -157,6 +221,14 @@ export interface FileRoutesByTo {
   '/conserto-paleteira-hidraulica-cascavel': typeof ConsertoPaleteiraHidraulicaCascavelRoute
   '/contato': typeof ContatoRoute
   '/locacao-paleteiras-hidraulicas-cascavel': typeof LocacaoPaleteirasHidraulicasCascavelRoute
+  '/manutencao-paleteira-hidraulica-assis-chateaubriand': typeof ManutencaoPaleteiraHidraulicaAssisChateaubriandRoute
+  '/manutencao-paleteira-hidraulica-corbelia': typeof ManutencaoPaleteiraHidraulicaCorbeliaRoute
+  '/manutencao-paleteira-hidraulica-foz-do-iguacu': typeof ManutencaoPaleteiraHidraulicaFozDoIguacuRoute
+  '/manutencao-paleteira-hidraulica-marechal-candido-rondon': typeof ManutencaoPaleteiraHidraulicaMarechalCandidoRondonRoute
+  '/manutencao-paleteira-hidraulica-medianeira': typeof ManutencaoPaleteiraHidraulicaMedianeiraRoute
+  '/manutencao-paleteira-hidraulica-palotina': typeof ManutencaoPaleteiraHidraulicaPalotinaRoute
+  '/manutencao-paleteira-hidraulica-santa-helena': typeof ManutencaoPaleteiraHidraulicaSantaHelenaRoute
+  '/manutencao-paleteira-hidraulica-toledo': typeof ManutencaoPaleteiraHidraulicaToledoRoute
   '/manutencao-paleteiras-hidraulicas-cascavel': typeof ManutencaoPaleteirasHidraulicasCascavelRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre-nos': typeof SobreNosRoute
@@ -178,6 +250,14 @@ export interface FileRoutesById {
   '/conserto-paleteira-hidraulica-cascavel': typeof ConsertoPaleteiraHidraulicaCascavelRoute
   '/contato': typeof ContatoRoute
   '/locacao-paleteiras-hidraulicas-cascavel': typeof LocacaoPaleteirasHidraulicasCascavelRoute
+  '/manutencao-paleteira-hidraulica-assis-chateaubriand': typeof ManutencaoPaleteiraHidraulicaAssisChateaubriandRoute
+  '/manutencao-paleteira-hidraulica-corbelia': typeof ManutencaoPaleteiraHidraulicaCorbeliaRoute
+  '/manutencao-paleteira-hidraulica-foz-do-iguacu': typeof ManutencaoPaleteiraHidraulicaFozDoIguacuRoute
+  '/manutencao-paleteira-hidraulica-marechal-candido-rondon': typeof ManutencaoPaleteiraHidraulicaMarechalCandidoRondonRoute
+  '/manutencao-paleteira-hidraulica-medianeira': typeof ManutencaoPaleteiraHidraulicaMedianeiraRoute
+  '/manutencao-paleteira-hidraulica-palotina': typeof ManutencaoPaleteiraHidraulicaPalotinaRoute
+  '/manutencao-paleteira-hidraulica-santa-helena': typeof ManutencaoPaleteiraHidraulicaSantaHelenaRoute
+  '/manutencao-paleteira-hidraulica-toledo': typeof ManutencaoPaleteiraHidraulicaToledoRoute
   '/manutencao-paleteiras-hidraulicas-cascavel': typeof ManutencaoPaleteirasHidraulicasCascavelRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre-nos': typeof SobreNosRoute
@@ -200,6 +280,14 @@ export interface FileRouteTypes {
     | '/conserto-paleteira-hidraulica-cascavel'
     | '/contato'
     | '/locacao-paleteiras-hidraulicas-cascavel'
+    | '/manutencao-paleteira-hidraulica-assis-chateaubriand'
+    | '/manutencao-paleteira-hidraulica-corbelia'
+    | '/manutencao-paleteira-hidraulica-foz-do-iguacu'
+    | '/manutencao-paleteira-hidraulica-marechal-candido-rondon'
+    | '/manutencao-paleteira-hidraulica-medianeira'
+    | '/manutencao-paleteira-hidraulica-palotina'
+    | '/manutencao-paleteira-hidraulica-santa-helena'
+    | '/manutencao-paleteira-hidraulica-toledo'
     | '/manutencao-paleteiras-hidraulicas-cascavel'
     | '/sitemap.xml'
     | '/sobre-nos'
@@ -220,6 +308,14 @@ export interface FileRouteTypes {
     | '/conserto-paleteira-hidraulica-cascavel'
     | '/contato'
     | '/locacao-paleteiras-hidraulicas-cascavel'
+    | '/manutencao-paleteira-hidraulica-assis-chateaubriand'
+    | '/manutencao-paleteira-hidraulica-corbelia'
+    | '/manutencao-paleteira-hidraulica-foz-do-iguacu'
+    | '/manutencao-paleteira-hidraulica-marechal-candido-rondon'
+    | '/manutencao-paleteira-hidraulica-medianeira'
+    | '/manutencao-paleteira-hidraulica-palotina'
+    | '/manutencao-paleteira-hidraulica-santa-helena'
+    | '/manutencao-paleteira-hidraulica-toledo'
     | '/manutencao-paleteiras-hidraulicas-cascavel'
     | '/sitemap.xml'
     | '/sobre-nos'
@@ -240,6 +336,14 @@ export interface FileRouteTypes {
     | '/conserto-paleteira-hidraulica-cascavel'
     | '/contato'
     | '/locacao-paleteiras-hidraulicas-cascavel'
+    | '/manutencao-paleteira-hidraulica-assis-chateaubriand'
+    | '/manutencao-paleteira-hidraulica-corbelia'
+    | '/manutencao-paleteira-hidraulica-foz-do-iguacu'
+    | '/manutencao-paleteira-hidraulica-marechal-candido-rondon'
+    | '/manutencao-paleteira-hidraulica-medianeira'
+    | '/manutencao-paleteira-hidraulica-palotina'
+    | '/manutencao-paleteira-hidraulica-santa-helena'
+    | '/manutencao-paleteira-hidraulica-toledo'
     | '/manutencao-paleteiras-hidraulicas-cascavel'
     | '/sitemap.xml'
     | '/sobre-nos'
@@ -261,6 +365,14 @@ export interface RootRouteChildren {
   ConsertoPaleteiraHidraulicaCascavelRoute: typeof ConsertoPaleteiraHidraulicaCascavelRoute
   ContatoRoute: typeof ContatoRoute
   LocacaoPaleteirasHidraulicasCascavelRoute: typeof LocacaoPaleteirasHidraulicasCascavelRoute
+  ManutencaoPaleteiraHidraulicaAssisChateaubriandRoute: typeof ManutencaoPaleteiraHidraulicaAssisChateaubriandRoute
+  ManutencaoPaleteiraHidraulicaCorbeliaRoute: typeof ManutencaoPaleteiraHidraulicaCorbeliaRoute
+  ManutencaoPaleteiraHidraulicaFozDoIguacuRoute: typeof ManutencaoPaleteiraHidraulicaFozDoIguacuRoute
+  ManutencaoPaleteiraHidraulicaMarechalCandidoRondonRoute: typeof ManutencaoPaleteiraHidraulicaMarechalCandidoRondonRoute
+  ManutencaoPaleteiraHidraulicaMedianeiraRoute: typeof ManutencaoPaleteiraHidraulicaMedianeiraRoute
+  ManutencaoPaleteiraHidraulicaPalotinaRoute: typeof ManutencaoPaleteiraHidraulicaPalotinaRoute
+  ManutencaoPaleteiraHidraulicaSantaHelenaRoute: typeof ManutencaoPaleteiraHidraulicaSantaHelenaRoute
+  ManutencaoPaleteiraHidraulicaToledoRoute: typeof ManutencaoPaleteiraHidraulicaToledoRoute
   ManutencaoPaleteirasHidraulicasCascavelRoute: typeof ManutencaoPaleteirasHidraulicasCascavelRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SobreNosRoute: typeof SobreNosRoute
@@ -311,6 +423,62 @@ declare module '@tanstack/react-router' {
       path: '/manutencao-paleteiras-hidraulicas-cascavel'
       fullPath: '/manutencao-paleteiras-hidraulicas-cascavel'
       preLoaderRoute: typeof ManutencaoPaleteirasHidraulicasCascavelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/manutencao-paleteira-hidraulica-toledo': {
+      id: '/manutencao-paleteira-hidraulica-toledo'
+      path: '/manutencao-paleteira-hidraulica-toledo'
+      fullPath: '/manutencao-paleteira-hidraulica-toledo'
+      preLoaderRoute: typeof ManutencaoPaleteiraHidraulicaToledoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/manutencao-paleteira-hidraulica-santa-helena': {
+      id: '/manutencao-paleteira-hidraulica-santa-helena'
+      path: '/manutencao-paleteira-hidraulica-santa-helena'
+      fullPath: '/manutencao-paleteira-hidraulica-santa-helena'
+      preLoaderRoute: typeof ManutencaoPaleteiraHidraulicaSantaHelenaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/manutencao-paleteira-hidraulica-palotina': {
+      id: '/manutencao-paleteira-hidraulica-palotina'
+      path: '/manutencao-paleteira-hidraulica-palotina'
+      fullPath: '/manutencao-paleteira-hidraulica-palotina'
+      preLoaderRoute: typeof ManutencaoPaleteiraHidraulicaPalotinaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/manutencao-paleteira-hidraulica-medianeira': {
+      id: '/manutencao-paleteira-hidraulica-medianeira'
+      path: '/manutencao-paleteira-hidraulica-medianeira'
+      fullPath: '/manutencao-paleteira-hidraulica-medianeira'
+      preLoaderRoute: typeof ManutencaoPaleteiraHidraulicaMedianeiraRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/manutencao-paleteira-hidraulica-marechal-candido-rondon': {
+      id: '/manutencao-paleteira-hidraulica-marechal-candido-rondon'
+      path: '/manutencao-paleteira-hidraulica-marechal-candido-rondon'
+      fullPath: '/manutencao-paleteira-hidraulica-marechal-candido-rondon'
+      preLoaderRoute: typeof ManutencaoPaleteiraHidraulicaMarechalCandidoRondonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/manutencao-paleteira-hidraulica-foz-do-iguacu': {
+      id: '/manutencao-paleteira-hidraulica-foz-do-iguacu'
+      path: '/manutencao-paleteira-hidraulica-foz-do-iguacu'
+      fullPath: '/manutencao-paleteira-hidraulica-foz-do-iguacu'
+      preLoaderRoute: typeof ManutencaoPaleteiraHidraulicaFozDoIguacuRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/manutencao-paleteira-hidraulica-corbelia': {
+      id: '/manutencao-paleteira-hidraulica-corbelia'
+      path: '/manutencao-paleteira-hidraulica-corbelia'
+      fullPath: '/manutencao-paleteira-hidraulica-corbelia'
+      preLoaderRoute: typeof ManutencaoPaleteiraHidraulicaCorbeliaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/manutencao-paleteira-hidraulica-assis-chateaubriand': {
+      id: '/manutencao-paleteira-hidraulica-assis-chateaubriand'
+      path: '/manutencao-paleteira-hidraulica-assis-chateaubriand'
+      fullPath: '/manutencao-paleteira-hidraulica-assis-chateaubriand'
+      preLoaderRoute: typeof ManutencaoPaleteiraHidraulicaAssisChateaubriandRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/locacao-paleteiras-hidraulicas-cascavel': {
@@ -416,6 +584,22 @@ const rootRouteChildren: RootRouteChildren = {
   ContatoRoute: ContatoRoute,
   LocacaoPaleteirasHidraulicasCascavelRoute:
     LocacaoPaleteirasHidraulicasCascavelRoute,
+  ManutencaoPaleteiraHidraulicaAssisChateaubriandRoute:
+    ManutencaoPaleteiraHidraulicaAssisChateaubriandRoute,
+  ManutencaoPaleteiraHidraulicaCorbeliaRoute:
+    ManutencaoPaleteiraHidraulicaCorbeliaRoute,
+  ManutencaoPaleteiraHidraulicaFozDoIguacuRoute:
+    ManutencaoPaleteiraHidraulicaFozDoIguacuRoute,
+  ManutencaoPaleteiraHidraulicaMarechalCandidoRondonRoute:
+    ManutencaoPaleteiraHidraulicaMarechalCandidoRondonRoute,
+  ManutencaoPaleteiraHidraulicaMedianeiraRoute:
+    ManutencaoPaleteiraHidraulicaMedianeiraRoute,
+  ManutencaoPaleteiraHidraulicaPalotinaRoute:
+    ManutencaoPaleteiraHidraulicaPalotinaRoute,
+  ManutencaoPaleteiraHidraulicaSantaHelenaRoute:
+    ManutencaoPaleteiraHidraulicaSantaHelenaRoute,
+  ManutencaoPaleteiraHidraulicaToledoRoute:
+    ManutencaoPaleteiraHidraulicaToledoRoute,
   ManutencaoPaleteirasHidraulicasCascavelRoute:
     ManutencaoPaleteirasHidraulicasCascavelRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,

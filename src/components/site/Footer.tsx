@@ -32,6 +32,27 @@ export function Footer() {
         <div className="mt-10 border-t border-gray-200" />
 
         {/* Link columns */}
+        <div className="mt-8">
+          <h3 className="text-base font-semibold text-secondary mb-4">Cidades atendidas</h3>
+          <div className="flex flex-wrap gap-2">
+            {[
+              ["Cascavel","/manutencao-paleteiras-hidraulicas-cascavel"],
+              ["Toledo","/manutencao-paleteira-hidraulica-toledo"],
+              ["Foz do Iguaçu","/manutencao-paleteira-hidraulica-foz-do-iguacu"],
+              ["Marechal C. Rondon","/manutencao-paleteira-hidraulica-marechal-candido-rondon"],
+              ["Medianeira","/manutencao-paleteira-hidraulica-medianeira"],
+              ["Assis Chateaubriand","/manutencao-paleteira-hidraulica-assis-chateaubriand"],
+              ["Palotina","/manutencao-paleteira-hidraulica-palotina"],
+              ["Santa Helena","/manutencao-paleteira-hidraulica-santa-helena"],
+              ["Corbélia","/manutencao-paleteira-hidraulica-corbelia"],
+            ].map(([name, href]) => (
+              <Link key={href} to={href} className="rounded-full border border-gray-200 px-3 py-1.5 text-xs text-gray-600 hover:border-primary hover:text-primary transition">
+                {name}
+              </Link>
+            ))}
+          </div>
+        </div>
+
         <div className="grid gap-10 py-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <h3 className="text-base font-semibold text-secondary mb-5">Empresa</h3>
