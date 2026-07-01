@@ -44,7 +44,7 @@ export const Route = createFileRoute("/")({
     ],
     links: [
       { rel: "canonical", href: "https://hidraumil.com.br/" },
-      { rel: "preload", as: "image", href: heroImg, fetchpriority: "high" } as any,
+      { rel: "preload", as: "image", href: heroImg, fetchPriority: "high" },
     ],
   }),
   component: Home,
@@ -88,8 +88,8 @@ function Home() {
           <img
             src={heroImg}
             alt="Técnico Hidraumil pronto para atender em Cascavel"
-            width={1920}
-            height={1080}
+            width={1536}
+            height={1024}
             className="absolute inset-0 w-full h-full object-cover"
             fetchPriority="high"
             loading="eager"
@@ -234,8 +234,8 @@ function Home() {
             <img
               src={equipeAsset.url}
               alt="Equipe técnica Hidraumil em Cascavel"
-              width={1200}
-              height={900}
+              width={1536}
+              height={1022}
               className="relative w-full h-auto rounded-[2rem] shadow-xl object-cover"
               loading="lazy"
               decoding="async"
@@ -293,7 +293,7 @@ function Home() {
               },
             ].map((s) => (
               <Link
-                key={s.to}
+                key={`${s.to}-${s.title}`}
                 to={s.to}
                 className="group relative overflow-hidden rounded-2xl bg-[#1E2D3D] border border-white/5 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition p-8"
               >
@@ -393,8 +393,8 @@ function Home() {
               <img
                 src={mulherAsset.url}
                 alt="Profissional qualificada"
-                width={900}
-                height={1000}
+                width={1536}
+                height={1022}
                 className="relative w-full h-[420px] md:h-[460px] object-cover rounded-tr-[6rem] rounded-bl-[6rem] shadow-2xl"
                 loading="lazy"
                 decoding="async"
@@ -457,8 +457,8 @@ function Home() {
                     <img
                       src={c.src}
                       alt={c.name}
-                      width={200}
-                      height={80}
+                      width={197}
+                      height={112}
                       draggable={false}
                       className="h-16 w-auto max-w-[200px] object-contain bg-white rounded-lg px-4 py-2 pointer-events-none"
                       loading="lazy"

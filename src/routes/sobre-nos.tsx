@@ -129,8 +129,8 @@ function SobrePage() {
                 key={p.name}
                 src={p.src}
                 alt={`Logotipo ${p.name}`}
-                width={160}
-                height={48}
+                width={197}
+                height={112}
                 className="h-12 w-auto max-w-[160px] object-contain opacity-70"
                 loading="lazy"
                 decoding="async"
@@ -177,8 +177,8 @@ function SobrePage() {
             <img
               src={equipeAsset.url}
               alt="Equipe da Hidraumil em Cascavel ao lado de paleteiras hidráulicas"
-              width={1200}
-              height={900}
+              width={1536}
+              height={1022}
               className="relative w-full h-[460px] object-cover rounded-[2rem] shadow-2xl"
               loading="lazy"
               decoding="async"
@@ -299,8 +299,8 @@ function SobrePage() {
             <img
               src={tecnicoAsset.url}
               alt="Técnico Hidraumil atendendo cliente em Cascavel, Paraná"
-              width={1200}
-              height={900}
+              width={1536}
+              height={1024}
               className="w-full h-[420px] object-cover rounded-[2rem] shadow-2xl"
               loading="lazy"
               decoding="async"

@@ -58,8 +58,8 @@ export function BlogArticle({
               <img
                 src={cover}
                 alt={title}
-                width={1600}
-                height={900}
+                width={1024}
+                height={1024}
                 className="w-full h-auto rounded-xl shadow-lg object-cover aspect-[16/9]"
               />
             </figure>

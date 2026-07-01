@@ -18,7 +18,7 @@ export function Footer() {
         {/* Top row: logo + social */}
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <Link to="/" aria-label="Hidraumil Hidráulicos">
-            <img src={logoAsset.url} alt="Hidraumil Hidráulicos" className="h-12 w-auto" width={200} height={82} />
+            <img src={logoAsset.url} alt="Hidraumil Hidráulicos" className="h-12 w-auto" width={831} height={236} />
           </Link>
           <div className="flex items-center gap-4">
             <span className="text-sm text-secondary/80">Siga nossas redes</span>
@@ -71,7 +71,7 @@ export function Footer() {
             <h3 className="text-base font-semibold text-secondary mb-5">Serviços</h3>
             <ul className="space-y-3 text-sm text-gray-600">
               {services.map(s => (
-                <li key={s.slug}>
+                <li key={`${s.slug}-${s.title}`}>
                   <Link to={`/${s.slug}`} className="hover:text-primary">{s.title}</Link>
                 </li>
               ))}

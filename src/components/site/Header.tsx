@@ -14,7 +14,7 @@ export function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between gap-4">
           <Link to="/" className="flex items-center gap-2 group" aria-label="Hidraumil - Início">
-            <img src={logoAsset.url} alt="Hidraumil Hidráulicos" className="h-10 w-auto" width={180} height={74} />
+            <img src={logoAsset.url} alt="Hidraumil Hidráulicos" className="h-10 w-auto" width={831} height={236} />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-secondary" aria-label="Principal">
@@ -28,7 +28,7 @@ export function Header() {
                 <div className="absolute left-0 top-full pt-2 w-80">
                   <ul className="rounded-lg border border-border bg-white shadow-lg py-2">
                     {services.map(s => (
-                      <li key={s.slug}>
+                      <li key={`${s.slug}-${s.title}`}>
                         <Link to={`/${s.slug}`} className="block px-4 py-2 text-sm hover:bg-muted hover:text-primary">
                           {s.title}
                         </Link>
@@ -68,7 +68,7 @@ export function Header() {
               <li><Link to="/sobre-nos" className="block py-2" onClick={() => setOpen(false)}>Sobre Nós</Link></li>
               <li className="pt-2 pb-1 text-xs uppercase tracking-wider text-muted-foreground">Serviços</li>
               {services.map(s => (
-                <li key={s.slug}>
+                <li key={`${s.slug}-${s.title}`}>
                   <Link to={`/${s.slug}`} className="block py-2 pl-3" onClick={() => setOpen(false)}>{s.title}</Link>
                 </li>
               ))}

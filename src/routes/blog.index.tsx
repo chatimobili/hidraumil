@@ -42,8 +42,8 @@ function BlogIndex() {
                       src={cover}
                       alt={p.title}
                       loading="lazy"
-                      width={1600}
-                      height={1000}
+                      width={1024}
+                      height={1024}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   ) : (

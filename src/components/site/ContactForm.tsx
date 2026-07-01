@@ -35,7 +35,7 @@ export function ContactForm({ compact = false }: { compact?: boolean }) {
             <span className="text-sm font-medium text-secondary">Tipo de serviço</span>
             <select required value={form.servico} onChange={e => setForm({...form, servico: e.target.value})} className="mt-1 w-full rounded-md border border-input bg-white px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ring">
               <option value="">Selecione...</option>
-              {services.map(s => <option key={s.slug} value={s.title}>{s.title}</option>)}
+              {services.map(s => <option key={`${s.slug}-${s.title}`} value={s.title}>{s.title}</option>)}
               <option>Outro</option>
             </select>
           </label>
