@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://hidraumil.com.br/sitemap.xml
