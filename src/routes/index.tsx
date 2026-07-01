@@ -457,9 +457,12 @@ function Home() {
                     <img
                       src={c.src}
                       alt={c.name}
+                      width={200}
+                      height={80}
                       draggable={false}
                       className="h-16 w-auto max-w-[200px] object-contain bg-white rounded-lg px-4 py-2 pointer-events-none"
                       loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 ))}
