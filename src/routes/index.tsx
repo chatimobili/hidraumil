@@ -44,7 +44,6 @@ export const Route = createFileRoute("/")({
     ],
     links: [
       { rel: "canonical", href: "https://hidraumil.com.br/" },
-      { rel: "preload", as: "image", href: heroImg, fetchPriority: "high" },
     ],
   }),
   component: Home,
@@ -84,12 +83,7 @@ function Home() {
     <>
       {/* HERO — full-bleed image, white card flush-left, subtle orange arc */}
       <section className="relative bg-white">
-        <div className="relative w-full overflow-hidden h-[640px] md:h-[680px]">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${heroImg})` }}
-            aria-hidden="true"
-          />
+        <div className="relative w-full overflow-hidden h-[640px] md:h-[680px] bg-secondary">
 
           {/* black gradient on the right */}
           <div
