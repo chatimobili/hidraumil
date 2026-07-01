@@ -9,8 +9,11 @@ export function CTASection({ title, subtitle }: { title?: string; subtitle?: str
         src={warehouseAsset.url}
         alt=""
         aria-hidden="true"
+        width={1920}
+        height={800}
         className="absolute inset-0 h-full w-full object-cover opacity-40"
         loading="lazy"
+        decoding="async"
       />
       <div className="absolute inset-0 bg-[#0F1C2E]/85" aria-hidden="true" />
       <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-20 text-center">
