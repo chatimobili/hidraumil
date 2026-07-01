@@ -25,6 +25,7 @@ import { Route as ManutencaoPaleteiraHidraulicaAssisChateaubriandRouteImport } f
 import { Route as LocacaoPaleteirasHidraulicasCascavelRouteImport } from './routes/locacao-paleteiras-hidraulicas-cascavel'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as ConsertoPaleteiraHidraulicaCascavelRouteImport } from './routes/conserto-paleteira-hidraulica-cascavel'
+import { Route as CidadesAtendidasRouteImport } from './routes/cidades-atendidas'
 import { Route as AssistenciaTecnicaEquipamentosHidraulicosCascavelRouteImport } from './routes/assistencia-tecnica-equipamentos-hidraulicos-cascavel'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
@@ -128,6 +129,11 @@ const ConsertoPaleteiraHidraulicaCascavelRoute =
     path: '/conserto-paleteira-hidraulica-cascavel',
     getParentRoute: () => rootRouteImport,
   } as any)
+const CidadesAtendidasRoute = CidadesAtendidasRouteImport.update({
+  id: '/cidades-atendidas',
+  path: '/cidades-atendidas',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AssistenciaTecnicaEquipamentosHidraulicosCascavelRoute =
   AssistenciaTecnicaEquipamentosHidraulicosCascavelRouteImport.update({
     id: '/assistencia-tecnica-equipamentos-hidraulicos-cascavel',
@@ -190,6 +196,7 @@ const BlogAluguelPaleteiraHidraulicaCascavelRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/assistencia-tecnica-equipamentos-hidraulicos-cascavel': typeof AssistenciaTecnicaEquipamentosHidraulicosCascavelRoute
+  '/cidades-atendidas': typeof CidadesAtendidasRoute
   '/conserto-paleteira-hidraulica-cascavel': typeof ConsertoPaleteiraHidraulicaCascavelRoute
   '/contato': typeof ContatoRoute
   '/locacao-paleteiras-hidraulicas-cascavel': typeof LocacaoPaleteirasHidraulicasCascavelRoute
@@ -218,6 +225,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/assistencia-tecnica-equipamentos-hidraulicos-cascavel': typeof AssistenciaTecnicaEquipamentosHidraulicosCascavelRoute
+  '/cidades-atendidas': typeof CidadesAtendidasRoute
   '/conserto-paleteira-hidraulica-cascavel': typeof ConsertoPaleteiraHidraulicaCascavelRoute
   '/contato': typeof ContatoRoute
   '/locacao-paleteiras-hidraulicas-cascavel': typeof LocacaoPaleteirasHidraulicasCascavelRoute
@@ -247,6 +255,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/assistencia-tecnica-equipamentos-hidraulicos-cascavel': typeof AssistenciaTecnicaEquipamentosHidraulicosCascavelRoute
+  '/cidades-atendidas': typeof CidadesAtendidasRoute
   '/conserto-paleteira-hidraulica-cascavel': typeof ConsertoPaleteiraHidraulicaCascavelRoute
   '/contato': typeof ContatoRoute
   '/locacao-paleteiras-hidraulicas-cascavel': typeof LocacaoPaleteirasHidraulicasCascavelRoute
@@ -277,6 +286,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/assistencia-tecnica-equipamentos-hidraulicos-cascavel'
+    | '/cidades-atendidas'
     | '/conserto-paleteira-hidraulica-cascavel'
     | '/contato'
     | '/locacao-paleteiras-hidraulicas-cascavel'
@@ -305,6 +315,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/assistencia-tecnica-equipamentos-hidraulicos-cascavel'
+    | '/cidades-atendidas'
     | '/conserto-paleteira-hidraulica-cascavel'
     | '/contato'
     | '/locacao-paleteiras-hidraulicas-cascavel'
@@ -333,6 +344,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/assistencia-tecnica-equipamentos-hidraulicos-cascavel'
+    | '/cidades-atendidas'
     | '/conserto-paleteira-hidraulica-cascavel'
     | '/contato'
     | '/locacao-paleteiras-hidraulicas-cascavel'
@@ -362,6 +374,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AssistenciaTecnicaEquipamentosHidraulicosCascavelRoute: typeof AssistenciaTecnicaEquipamentosHidraulicosCascavelRoute
+  CidadesAtendidasRoute: typeof CidadesAtendidasRoute
   ConsertoPaleteiraHidraulicaCascavelRoute: typeof ConsertoPaleteiraHidraulicaCascavelRoute
   ContatoRoute: typeof ContatoRoute
   LocacaoPaleteirasHidraulicasCascavelRoute: typeof LocacaoPaleteirasHidraulicasCascavelRoute
@@ -502,6 +515,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConsertoPaleteiraHidraulicaCascavelRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cidades-atendidas': {
+      id: '/cidades-atendidas'
+      path: '/cidades-atendidas'
+      fullPath: '/cidades-atendidas'
+      preLoaderRoute: typeof CidadesAtendidasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/assistencia-tecnica-equipamentos-hidraulicos-cascavel': {
       id: '/assistencia-tecnica-equipamentos-hidraulicos-cascavel'
       path: '/assistencia-tecnica-equipamentos-hidraulicos-cascavel'
@@ -579,6 +599,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AssistenciaTecnicaEquipamentosHidraulicosCascavelRoute:
     AssistenciaTecnicaEquipamentosHidraulicosCascavelRoute,
+  CidadesAtendidasRoute: CidadesAtendidasRoute,
   ConsertoPaleteiraHidraulicaCascavelRoute:
     ConsertoPaleteiraHidraulicaCascavelRoute,
   ContatoRoute: ContatoRoute,
