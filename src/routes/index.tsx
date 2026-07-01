@@ -88,6 +88,8 @@ function Home() {
           <img
             src={heroImg}
             alt="Técnico Hidraumil pronto para atender em Cascavel"
+            width={1920}
+            height={1080}
             className="absolute inset-0 w-full h-full object-cover"
             fetchPriority="high"
             loading="eager"
@@ -232,8 +234,11 @@ function Home() {
             <img
               src={equipeAsset.url}
               alt="Equipe técnica Hidraumil em Cascavel"
+              width={1200}
+              height={900}
               className="relative w-full h-auto rounded-[2rem] shadow-xl object-cover"
               loading="lazy"
+              decoding="async"
             />
           </div>
         </div>
@@ -388,8 +393,11 @@ function Home() {
               <img
                 src={mulherAsset.url}
                 alt="Profissional qualificada"
+                width={900}
+                height={1000}
                 className="relative w-full h-[420px] md:h-[460px] object-cover rounded-tr-[6rem] rounded-bl-[6rem] shadow-2xl"
                 loading="lazy"
+                decoding="async"
               />
               <div className="hidden md:flex absolute -left-10 top-1/2 -translate-y-1/2 h-28 w-28 rounded-full bg-white border-[6px] border-primary items-center justify-center shadow-xl">
                 <ShieldCheck className="h-10 w-10 text-primary" />
@@ -449,9 +457,12 @@ function Home() {
                     <img
                       src={c.src}
                       alt={c.name}
+                      width={200}
+                      height={80}
                       draggable={false}
                       className="h-16 w-auto max-w-[200px] object-contain bg-white rounded-lg px-4 py-2 pointer-events-none"
                       loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 ))}
