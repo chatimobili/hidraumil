@@ -84,13 +84,13 @@ function Home() {
     <>
       {/* HERO — full-bleed image, white card flush-left, subtle orange arc */}
       <section className="relative bg-white">
-        <div className="relative w-full overflow-hidden h-[640px] md:h-[680px]">
+        <div className="relative w-full overflow-hidden">
           <img
             src={heroImg}
             alt="Técnico Hidraumil pronto para atender em Cascavel"
             width={1536}
             height={1024}
-            className="absolute inset-0 w-full h-full object-cover"
+            className="block w-full h-[640px] md:h-[680px] object-cover"
             fetchPriority="high"
             loading="eager"
             decoding="async"
@@ -205,7 +205,7 @@ function Home() {
       </section>
 
       {/* EQUIPE — light section, Empregga-style two-column */}
-      <section className="bg-white">
+      <section className="bg-white content-auto">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-14 items-center">
           <div className="order-2 lg:order-1">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Nossa equipe</p>
@@ -246,7 +246,7 @@ function Home() {
 
 
       {/* SERVIÇOS — featured cards with images (matches original layout) */}
-      <section id="servicos" className="bg-surface">
+      <section id="servicos" className="bg-surface content-auto">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Nossos serviços</p>
@@ -312,7 +312,7 @@ function Home() {
       </section>
 
       {/* TEXTO RICO — SEO: Por que escolher */}
-      <section className="bg-surface">
+      <section className="bg-surface content-auto">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
           <h2 className="text-3xl md:text-4xl font-semibold text-secondary leading-tight">
             Por que escolher a Hidraumil para <span className="text-primary">Manutenção, Conserto e Aluguel de Paleteiras?</span>
@@ -337,7 +337,7 @@ function Home() {
       </section>
 
       {/* BENEFÍCIOS — Empregga-style: centered intro + 3x2 cards grid */}
-      <section className="bg-white">
+      <section className="bg-white content-auto">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center max-w-4xl mx-auto">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">BENEFÍCIOS HIDRAUMIL</p>
@@ -383,7 +383,7 @@ function Home() {
       </section>
 
       {/* CLIENTES — Empregga-style: orange split + image, dark bar with logos */}
-      <section className="bg-white">
+      <section className="bg-white content-auto">
         <div className="relative">
           {/* Orange left panel */}
           <div className="absolute inset-y-0 left-0 w-full md:w-1/2 lg:w-[42%] bg-primary" aria-hidden="true" />
@@ -478,7 +478,7 @@ function Home() {
 
 
       {/* FAQ — Empregga-style: peach background, left intro + help card, right accordion */}
-      <section className="bg-[#FEF3EC]">
+      <section className="bg-[#FEF3EC] content-auto">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 grid lg:grid-cols-[1fr_1.4fr] gap-12 items-start">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">CENTRAL DE AJUDA</p>
