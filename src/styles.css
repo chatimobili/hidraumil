@@ -113,11 +113,6 @@
   p  { font-size: 18px; line-height: 1.6; }
 }
 
-@utility content-auto {
-  content-visibility: auto;
-  contain-intrinsic-size: 1px 900px;
-}
-
 @utility bg-grid-hero {
   background-image:
     linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
