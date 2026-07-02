@@ -44,6 +44,7 @@ export const Route = createFileRoute("/")({
     ],
     links: [
       { rel: "canonical", href: "https://hidraumil.com.br/" },
+      { rel: "preload", as: "image", href: heroImg, fetchPriority: "high" },
     ],
   }),
   component: Home,
@@ -83,7 +84,17 @@ function Home() {
     <>
       {/* HERO — full-bleed image, white card flush-left, subtle orange arc */}
       <section className="relative bg-white">
-        <div className="relative w-full overflow-hidden h-[640px] md:h-[680px] bg-secondary">
+        <div className="relative w-full overflow-hidden">
+          <img
+            src={heroImg}
+            alt="Técnico Hidraumil pronto para atender em Cascavel"
+            width={1536}
+            height={1024}
+            className="block w-full h-[640px] md:h-[680px] object-cover"
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
+          />
 
           {/* black gradient on the right */}
           <div
@@ -113,12 +124,10 @@ function Home() {
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary mb-5 flex items-center gap-2">
                   <span>⚡</span> Bem-vindo(a) à Hidraumil
                 </p>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html:
-                      '<h1 class="text-[34px] md:text-[52px] font-semibold leading-[1.05] text-secondary">Manutenção, Conserto e Aluguel de <span class="text-primary">Paleteiras em Cascavel</span></h1>',
-                  }}
-                />
+                <h1 className="text-2xl md:text-[35px] font-semibold leading-[1.1] text-secondary">
+                  Manutenção, Conserto e Aluguel de{" "}
+                  <span className="text-primary">Paleteiras em Cascavel</span>
+                </h1>
                 <p className="mt-4 text-lg font-semibold text-secondary">
                   Sua paleteira com defeito? A Hidraumil resolve.
                 </p>

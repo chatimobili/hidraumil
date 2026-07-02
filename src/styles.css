@@ -35,8 +35,8 @@
   --color-navy: var(--navy);
   --color-navy-foreground: var(--navy-foreground);
   --color-surface: var(--surface);
-  --font-sans: Arial, ui-sans-serif, system-ui, sans-serif;
-  --font-display: Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
