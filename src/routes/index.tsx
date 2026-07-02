@@ -113,10 +113,12 @@ function Home() {
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary mb-5 flex items-center gap-2">
                   <span>⚡</span> Bem-vindo(a) à Hidraumil
                 </p>
-                <h1 className="text-[34px] md:text-[52px] font-semibold leading-[1.05] text-secondary">
-                  Manutenção, Conserto e Aluguel de{" "}
-                  <span className="text-primary">Paleteiras em Cascavel</span>
-                </h1>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      '<h1 class="text-[34px] md:text-[52px] font-semibold leading-[1.05] text-secondary">Manutenção, Conserto e Aluguel de <span class="text-primary">Paleteiras em Cascavel</span></h1>',
+                  }}
+                />
                 <p className="mt-4 text-lg font-semibold text-secondary">
                   Sua paleteira com defeito? A Hidraumil resolve.
                 </p>
