@@ -10,7 +10,7 @@ import infasa from "@/assets/clients/Infasa-industria-de-farinha.png.asset.json"
 import jlConstrutora from "@/assets/clients/JL-Construtora.png.asset.json";
 import megaMix from "@/assets/clients/MEGA-MIX.png.asset.json";
 
-const heroImg = "/hero-novo-lcp.jpg";
+const heroImg = heroAsset.url;
 const clientLogos = [
   { src: jlConstrutora.url, name: "JL Construtora" },
   { src: infasa.url, name: "Infasa Indústria de Farinha" },
@@ -44,7 +44,6 @@ export const Route = createFileRoute("/")({
     ],
     links: [
       { rel: "canonical", href: "https://hidraumil.com.br/" },
-      { rel: "preload", as: "image", href: heroImg, fetchPriority: "high" },
     ],
   }),
   component: Home,
@@ -84,12 +83,7 @@ function Home() {
     <>
       {/* HERO — full-bleed image, white card flush-left, subtle orange arc */}
       <section className="relative bg-white">
-        <div className="relative w-full overflow-hidden h-[640px] md:h-[680px]">
-          <div
-            className="hero-media absolute inset-0"
-            style={{ "--hero-image": `url(${heroImg})` } as Record<string, string>}
-            aria-hidden="true"
-          />
+        <div className="relative w-full overflow-hidden h-[640px] md:h-[680px] bg-secondary">
 
           {/* black gradient on the right */}
           <div

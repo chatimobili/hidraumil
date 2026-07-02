@@ -118,15 +118,6 @@
   contain-intrinsic-size: 1px 900px;
 }
 
-.hero-media::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: var(--hero-image);
-  background-position: center;
-  background-size: cover;
-}
-
 @utility bg-grid-hero {
   background-image:
     linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
