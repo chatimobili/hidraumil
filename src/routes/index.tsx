@@ -83,7 +83,17 @@ function Home() {
     <>
       {/* HERO — full-bleed image, white card flush-left, subtle orange arc */}
       <section className="relative bg-white">
-        <div className="relative w-full overflow-hidden h-[640px] md:h-[680px] bg-secondary">
+        <div className="relative w-full overflow-hidden">
+          <img
+            src={heroImg}
+            alt="Técnico Hidraumil pronto para atender em Cascavel"
+            width={1536}
+            height={1024}
+            className="block w-full h-[640px] md:h-[680px] object-cover"
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
+          />
 
           {/* black gradient on the right */}
           <div
