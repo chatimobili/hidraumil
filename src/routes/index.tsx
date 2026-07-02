@@ -86,8 +86,8 @@ function Home() {
       <section className="relative bg-white">
         <div className="relative w-full overflow-hidden h-[640px] md:h-[680px]">
           <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${heroImg})` }}
+            className="hero-media absolute inset-0"
+            style={{ "--hero-image": `url(${heroImg})` } as Record<string, string>}
             aria-hidden="true"
           />
 
