@@ -10,7 +10,7 @@ import infasa from "@/assets/clients/Infasa-industria-de-farinha.png.asset.json"
 import jlConstrutora from "@/assets/clients/JL-Construtora.png.asset.json";
 import megaMix from "@/assets/clients/MEGA-MIX.png.asset.json";
 
-const heroImg = heroAsset.url;
+const heroImg = "/hero-novo-lcp.jpg";
 const clientLogos = [
   { src: jlConstrutora.url, name: "JL Construtora" },
   { src: infasa.url, name: "Infasa Indústria de Farinha" },
