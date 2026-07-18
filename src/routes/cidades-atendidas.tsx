@@ -42,6 +42,8 @@ function CidadesAtendidas() {
     distanceKm: 0,
     driveTime: "sede",
     href: "/manutencao-paleteiras-hidraulicas-cascavel",
+    description:
+      "Sede da Hidraumil. Oficina completa em Cascavel, com estoque de peças, técnicos próprios e atendimento em campo para indústrias, cooperativas, supermercados e transportadoras.",
     highlight: true,
   };
   const others = CITIES.map(c => ({
@@ -50,10 +52,12 @@ function CidadesAtendidas() {
     distanceKm: c.distanceKm,
     driveTime: c.driveTime,
     href: `/manutencao-paleteira-hidraulica-${c.citySlug}`,
+    description: c.intro.split(". ")[0] + ".",
     highlight: false,
   })).sort((a, b) => a.distanceKm - b.distanceKm);
 
   const allCities = [cascavel, ...others];
+
 
   return (
     <>
