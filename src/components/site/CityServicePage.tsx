@@ -99,7 +99,7 @@ export function CityServicePage({ content }: { content: CityContent }) {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Início", item: "https://hidraumil.com.br/" },
-      { "@type": "ListItem", position: 2, name: "Cidades atendidas", item: "https://hidraumil.com.br/" },
+      { "@type": "ListItem", position: 2, name: "Cidades atendidas", item: "https://hidraumil.com.br/cidades-atendidas" },
       { "@type": "ListItem", position: 3, name: `Paleteira em ${content.city}`, item: pageUrl },
     ],
   };
