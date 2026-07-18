@@ -92,6 +92,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:url", content: "https://hidraumil.com.br/" },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/45786cdc-f9fe-4bda-94fe-09c272b04745/id-preview-00bcbe62--bd21dfbe-18f6-4c1e-b9a5-6a751cda4822.lovable.app-1782163360437.png" },
       { name: "twitter:image", content: "https://hidraumil.com.br/__l5e/assets-v1/46a77bab-1b5e-4296-8b12-398f7b16e7ad/hero-novo.webp" },
+      { name: "google-site-verification", content: "demHa1IuAYM4z5G-5wlJNHzstoDBoi_kx2l9gkxh6sU" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
