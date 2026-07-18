@@ -167,11 +167,8 @@ export function CityServicePage({ content }: { content: CityContent }) {
         <P>{content.extendedContent}</P>
       </section>
 
-              <p className="mt-2 text-sm text-muted-foreground">{s.d}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+
+
 
       <section>
         <H2>Por que empresas de {content.city} escolhem a Hidraumil</H2>
