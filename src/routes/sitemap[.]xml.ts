@@ -9,6 +9,10 @@ interface SitemapEntry {
   priority?: string;
 }
 
+const LASTMOD = new Date().toISOString().slice(0, 10);
+
+
+
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
