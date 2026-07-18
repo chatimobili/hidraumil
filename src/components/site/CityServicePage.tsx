@@ -12,7 +12,17 @@ export interface CityContent {
   economy: string;
   neighborhoods: string[];
   nearbyCities: { name: string; slug: string }[];
+  industryH2: string;
+  industryProfile: string;
+  logisticsH2: string;
+  logistics: string;
+  useCasesH2: string;
+  useCases: string[];
+  extendedH2: string;
+  extendedContent: string;
+  uniqueFaqs: { q: string; a: string }[];
 }
+
 
 export function CityServicePage({ content }: { content: CityContent }) {
   const title = `Manutenção de Paleteira Hidráulica em ${content.city} - PR`;
