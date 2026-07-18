@@ -122,17 +122,51 @@ export function CityServicePage({ content }: { content: CityContent }) {
       </section>
 
       <section>
+        <H2>{content.industryH2}</H2>
+        <P>{content.industryProfile}</P>
+      </section>
+
+      <section>
+        <H2>{content.logisticsH2}</H2>
+        <P>{content.logistics}</P>
+      </section>
+
+      <section>
         <H2>Serviços que atendemos em {content.city}</H2>
         <div className="mt-6 grid sm:grid-cols-2 gap-5">
           {[
-            { icon: Wrench, t: "Manutenção preventiva e corretiva", d: `Planos de manutenção mensais para empresas de ${content.city}, com técnicos que vão até o seu galpão.` },
-            { icon: Truck, t: "Conserto de paleteira hidráulica", d: `Diagnóstico gratuito e reparo com peças de procedência. Coleta e entrega em ${content.city}.` },
-            { icon: Clock, t: "Aluguel de paleteira", d: `Locação de paleteiras manuais, semielétricas e elétricas com contratos flexíveis para operações em ${content.city}.` },
-            { icon: CheckCircle2, t: "Venda de paleteiras e peças", d: `Equipamentos novos e revisados, com garantia, e peças originais para reposição em ${content.city}.` },
+            { icon: Wrench, t: "Manutenção preventiva e corretiva", d: `Planos de manutenção mensais para empresas de ${content.city}, com técnicos que vão até o seu galpão.`, href: "/manutencao-paleteiras-hidraulicas-cascavel" },
+            { icon: Truck, t: "Conserto de paleteira hidráulica", d: `Diagnóstico gratuito e reparo com peças de procedência. Coleta e entrega em ${content.city}.`, href: "/conserto-paleteira-hidraulica-cascavel" },
+            { icon: Clock, t: "Aluguel de paleteira", d: `Locação de paleteiras manuais, semielétricas e elétricas com contratos flexíveis para operações em ${content.city}.`, href: "/locacao-paleteiras-hidraulicas-cascavel" },
+            { icon: CheckCircle2, t: "Venda de paleteiras e peças", d: `Equipamentos novos e revisados, com garantia, e peças originais para reposição em ${content.city}.`, href: "/venda-paleteiras-hidraulicas-cascavel" },
           ].map((s, i) => (
-            <div key={i} className="rounded-2xl border border-gray-200 bg-white p-7 hover:shadow-md transition">
+            <Link key={i} to={s.href} className="block rounded-2xl border border-gray-200 bg-white p-7 hover:shadow-md hover:border-primary transition">
               <s.icon className="h-7 w-7 text-primary" />
               <h3 className="mt-4 text-lg font-semibold text-secondary">{s.t}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{s.d}</p>
+              <span className="mt-3 inline-block text-sm font-semibold text-primary">Ver detalhes →</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section>
+        <H2>{content.useCasesH2}</H2>
+        <ul className="mt-6 space-y-3">
+          {content.useCases.map((u) => (
+            <li key={u} className="flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4">
+              <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+              <span className="text-sm text-secondary">{u}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section>
+        <H2>{content.extendedH2}</H2>
+        <P>{content.extendedContent}</P>
+      </section>
+
               <p className="mt-2 text-sm text-muted-foreground">{s.d}</p>
             </div>
           ))}
