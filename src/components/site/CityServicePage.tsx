@@ -30,27 +30,17 @@ export function CityServicePage({ content }: { content: CityContent }) {
   const pageUrl = `https://hidraumil.com.br/manutencao-paleteira-hidraulica-${content.citySlug}`;
 
   const faqs = [
+    ...content.uniqueFaqs,
     {
       q: `A Hidraumil faz manutenção de paleteira hidráulica em ${content.city}?`,
       a: `Sim. Atendemos ${content.city} com manutenção preventiva e corretiva de paleteiras hidráulicas manuais, semielétricas e elétricas, de todas as marcas. O atendimento é feito a partir da nossa sede em Cascavel, com coleta e entrega agendadas ou visita técnica em campo para contratos de manutenção.`,
-    },
-    {
-      q: `Quanto tempo demora para atender um chamado em ${content.city}?`,
-      a: `A distância entre Cascavel e ${content.city} é de cerca de ${content.distanceKm} km (aproximadamente ${content.driveTime}). Para chamados de coleta, conseguimos agendar retirada em até 1 a 2 dias úteis. Contratos de manutenção mensal têm visitas programadas com data e horário fixos.`,
-    },
-    {
-      q: `Vocês consertam paleteira hidráulica de qualquer marca em ${content.city}?`,
-      a: `Sim. Atendemos Bovenau, Paletrans, Ybarra, Tecnomafra, Lift Mais, Marcon, Aço Toledo e outras marcas nacionais e importadas. O diagnóstico é gratuito e o orçamento é enviado antes de qualquer serviço.`,
-    },
-    {
-      q: `A Hidraumil aluga paleteira hidráulica para empresas de ${content.city}?`,
-      a: `Sim. Oferecemos aluguel de paleteiras manuais, semielétricas e elétricas com contratos flexíveis (mensal, trimestral ou anual) e manutenção inclusa. É uma opção comum para empresas de ${content.city} que precisam de equipamento reserva ou para operações sazonais.`,
     },
     {
       q: `Como solicitar um orçamento de paleteira em ${content.city}?`,
       a: `Basta chamar no WhatsApp (${SITE.phoneDisplay}) descrevendo o serviço — conserto, manutenção, aluguel ou compra — e a localização em ${content.city}. Retornamos com estimativa inicial em minutos e agendamos a visita técnica ou a coleta do equipamento.`,
     },
   ];
+
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
