@@ -9,6 +9,10 @@ interface SitemapEntry {
   priority?: string;
 }
 
+const LASTMOD = new Date().toISOString().slice(0, 10);
+
+
+
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
@@ -43,8 +47,9 @@ export const Route = createFileRoute("/sitemap.xml")({
         ];
 
         const urls = entries.map(e =>
-          `  <url>\n    <loc>${BASE_URL}${e.path}</loc>\n    <changefreq>${e.changefreq}</changefreq>\n    <priority>${e.priority}</priority>\n  </url>`
+          `  <url>\n    <loc>${BASE_URL}${e.path}</loc>\n    <lastmod>${LASTMOD}</lastmod>\n    <changefreq>${e.changefreq}</changefreq>\n    <priority>${e.priority}</priority>\n  </url>`
         );
+
 
         const xml = [
           `<?xml version="1.0" encoding="UTF-8"?>`,
