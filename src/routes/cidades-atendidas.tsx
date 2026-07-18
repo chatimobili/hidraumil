@@ -101,8 +101,9 @@ function CidadesAtendidas() {
                 )}
 
                 <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-                  Manutenção, conserto, aluguel e venda de paleteiras hidráulicas em {c.city}.
+                  {c.description}
                 </p>
+
 
                 <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:gap-2 transition-all">
                   Ver serviços em {c.city} <ArrowRight className="h-4 w-4" />
