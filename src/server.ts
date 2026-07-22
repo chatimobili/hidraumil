@@ -37,9 +37,40 @@ async function normalizeCatastrophicSsrResponse(response: Response): Promise<Res
   });
 }
 
+const REDIRECT_MAP: Record<string, string> = {
+  "/paleteiras-hidraulicas-cascavel": "/venda-paleteiras-hidraulicas-cascavel",
+  "/paleteiras-hidraulicas-venda": "/venda-paleteiras-hidraulicas-cascavel",
+  "/manutencao-e-reparo-de-paleteiras-hidraulicas": "/manutencao-paleteiras-hidraulicas-cascavel",
+  "/manutencao-preventiva-paleteiras-hidraulicas": "/blog/manutencao-preventiva-paleteira-hidraulica",
+  "/locacao-paleteiras-hidraulicas": "/locacao-paleteiras-hidraulicas-cascavel",
+  "/conserto-paleteira-cascavel": "/conserto-paleteira-hidraulica-cascavel",
+  "/assistencia-tecnica-em-equipamentos-hidraulicos": "/assistencia-tecnica-equipamentos-hidraulicos-cascavel",
+  "/pecas-para-paleteiras": "/venda-pecas-paleteiras",
+  "/manutencao-de-paleteiras-hidraulicas-em-toledo": "/manutencao-paleteira-hidraulica-toledo",
+  "/manutencao-de-paleteiras-hidraulicas-em-corbelia": "/manutencao-paleteira-hidraulica-corbelia",
+  "/manutencao-de-paleteiras-hidraulicas-em-marechal-candido-rondon": "/manutencao-paleteira-hidraulica-marechal-candido-rondon",
+  "/manutencao-de-paleteiras-hidraulicas-em-santa-tereza": "/cidades-atendidas",
+};
+
+function checkLegacyRedirect(request: Request): Response | null {
+  const url = new URL(request.url);
+  // Normalize: strip trailing slash (except root)
+  let pathname = url.pathname;
+  if (pathname.length > 1 && pathname.endsWith("/")) {
+    pathname = pathname.replace(/\/+$/, "");
+  }
+  const target = REDIRECT_MAP[pathname];
+  if (!target) return null;
+  const dest = new URL(target, url);
+  dest.search = url.search;
+  return Response.redirect(dest.toString(), 301);
+}
+
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
+      const redirect = checkLegacyRedirect(request);
+      if (redirect) return redirect;
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
       return await normalizeCatastrophicSsrResponse(response);
