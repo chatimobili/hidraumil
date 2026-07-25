@@ -139,13 +139,13 @@ export function Testimonials() {
             </h2>
           </div>
 
-          <div className="hidden sm:flex items-center gap-3 shrink-0">
+          <div className="flex items-center gap-3 shrink-0">
             <button
               type="button"
               onClick={() => scrollBy(-1)}
               disabled={!canPrev}
               aria-label="Avaliação anterior"
-              className="h-12 w-12 rounded-full bg-primary text-white flex items-center justify-center shadow-md hover:bg-[var(--brand-dark)] disabled:opacity-40 disabled:cursor-not-allowed transition"
+              className="h-11 w-11 sm:h-12 sm:w-12 rounded-full bg-primary text-white flex items-center justify-center shadow-md hover:bg-[var(--brand-dark)] disabled:opacity-40 disabled:cursor-not-allowed transition"
             >
               <ChevronLeft className="h-6 w-6" />
             </button>
@@ -154,7 +154,7 @@ export function Testimonials() {
               onClick={() => scrollBy(1)}
               disabled={!canNext}
               aria-label="Próxima avaliação"
-              className="h-12 w-12 rounded-full bg-primary text-white flex items-center justify-center shadow-md hover:bg-[var(--brand-dark)] disabled:opacity-40 disabled:cursor-not-allowed transition"
+              className="h-11 w-11 sm:h-12 sm:w-12 rounded-full bg-primary text-white flex items-center justify-center shadow-md hover:bg-[var(--brand-dark)] disabled:opacity-40 disabled:cursor-not-allowed transition"
             >
               <ChevronRight className="h-6 w-6" />
             </button>
@@ -163,12 +163,14 @@ export function Testimonials() {
 
         <div
           ref={trackRef}
-          className="mt-10 flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide -mx-4 px-4 pb-4"
+          className="mt-10 flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide -mx-4 px-4 pb-4 touch-pan-x overscroll-x-contain"
+          style={{ WebkitOverflowScrolling: "touch" }}
         >
           {reviews.map((r) => (
             <ReviewCard key={r.name} r={r} />
           ))}
         </div>
+
       </div>
     </section>
   );
