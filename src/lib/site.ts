@@ -100,6 +100,55 @@ export const posts = [
     date: "2025-05-15",
     category: "Guia",
   },
+  {
+    slug: "assistencia-tecnica-paleteira-cascavel",
+    title: "Assistência Técnica de Paleteira Hidráulica em Cascavel: Como Escolher a Empresa Certa",
+    excerpt: "Como escolher a melhor assistência técnica de paleteira hidráulica em Cascavel-PR: critérios, sinais de alerta, garantia, prazos e o que uma empresa séria oferece.",
+    date: "2026-07-05",
+    category: "Assistência técnica",
+  },
+  {
+    slug: "pecas-paleteira-hidraulica-cascavel",
+    title: "Peças para Paleteira Hidráulica em Cascavel: Guia de Compra e Onde Encontrar Originais",
+    excerpt: "Guia completo de peças para paleteira hidráulica em Cascavel-PR: quais componentes mais quebram, como identificar originais Bovenau e evitar peça paralela de baixa qualidade.",
+    date: "2026-07-02",
+    category: "Peças",
+  },
+  {
+    slug: "paleteira-industria-alimentos-cascavel",
+    title: "Paleteira Hidráulica para Indústria de Alimentos em Cascavel: Qual Modelo Escolher",
+    excerpt: "Guia para escolher paleteira hidráulica em indústrias de alimentos de Cascavel-PR: rodas certas, aço inox, higiene, capacidade e manutenção específica para ambientes frios e úmidos.",
+    date: "2026-06-30",
+    category: "Guia",
+  },
+  {
+    slug: "paleteira-2000kg-vs-3000kg-cascavel",
+    title: "Paleteira Hidráulica 2000kg ou 3000kg: Qual Escolher em Cascavel-PR",
+    excerpt: "Comparativo entre paleteira hidráulica de 2000kg e 3000kg em Cascavel-PR: diferenças de preço, aplicações ideais, durabilidade e como dimensionar para sua operação.",
+    date: "2026-06-28",
+    category: "Guia",
+  },
+  {
+    slug: "seguranca-operacao-paleteira-cascavel",
+    title: "Segurança na Operação de Paleteira Hidráulica: NR-11 e Boas Práticas para Empresas de Cascavel",
+    excerpt: "Guia de segurança na operação de paleteira hidráulica em Cascavel-PR: exigências da NR-11, EPIs, treinamento, inspeção diária e como reduzir acidentes na sua indústria.",
+    date: "2026-06-27",
+    category: "Segurança",
+  },
+  {
+    slug: "oleo-hidraulico-paleteira-cascavel",
+    title: "Óleo Hidráulico para Paleteira: Qual Usar, Quando Trocar e Onde Comprar em Cascavel",
+    excerpt: "Guia técnico sobre óleo hidráulico para paleteira em Cascavel-PR: viscosidade correta, quando trocar, riscos de misturar óleos e onde comprar o óleo certo.",
+    date: "2026-06-26",
+    category: "Manutenção",
+  },
+  {
+    slug: "paleteira-cooperativas-oeste-parana",
+    title: "Paleteira Hidráulica para Cooperativas Agrícolas do Oeste do Paraná: Guia Completo",
+    excerpt: "Paleteira hidráulica em cooperativas agrícolas do Oeste do Paraná: modelos ideais, uso com big bag, safra e entressafra, manutenção rural e por que Bovenau é referência.",
+    date: "2026-06-24",
+    category: "Aplicações",
+  },
 ];
 
 export const localBusinessSchema = {
