@@ -180,7 +180,7 @@ function Home() {
         </div>
 
         {/* STATS strip below the hero with thin vertical orange dividers */}
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10 pb-2 lg:py-10">
           <div className="grid grid-cols-2 lg:grid-cols-4">
             {stats.map((s, i) => {
               const Icon = [Star, Wrench, CalendarCheck, ShieldCheck][i] ?? Star;
