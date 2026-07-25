@@ -179,7 +179,7 @@ function SobrePage() {
               alt="Equipe da Hidraumil em Cascavel ao lado de paleteiras hidráulicas"
               width={1536}
               height={1022}
-              className="relative w-full h-[460px] object-cover rounded-[2rem] shadow-2xl"
+              className="relative w-full h-64 sm:h-80 lg:h-[460px] object-cover rounded-[2rem] shadow-2xl"
               loading="lazy"
               decoding="async"
             />
