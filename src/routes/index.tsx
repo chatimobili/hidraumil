@@ -180,7 +180,7 @@ function Home() {
         </div>
 
         {/* STATS strip below the hero with thin vertical orange dividers */}
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10 pb-2 lg:py-10">
           <div className="grid grid-cols-2 lg:grid-cols-4">
             {stats.map((s, i) => {
               const Icon = [Star, Wrench, CalendarCheck, ShieldCheck][i] ?? Star;
@@ -206,7 +206,7 @@ function Home() {
 
       {/* EQUIPE — light section, Empregga-style two-column */}
       <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-24 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 lg:py-24 grid lg:grid-cols-2 gap-4 lg:gap-14 items-center">
           <div className="order-2 lg:order-1">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Nossa equipe</p>
             <h2 className="mt-4 text-3xl md:text-[44px] font-semibold text-secondary leading-[1.15]">
