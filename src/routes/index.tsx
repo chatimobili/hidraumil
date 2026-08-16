@@ -39,7 +39,7 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Manutenção, conserto e aluguel de paleteiras em Cascavel. Técnicos especializados, peças originais e atendimento rápido. Solicite seu orçamento!" },
       { property: "og:title", content: "Manutenção de Paleteira | Conserto e Aluguel | Hidraumil Cascavel" },
       { property: "og:description", content: "Especialistas em manutenção, conserto e aluguel de paleteiras hidráulicas em Cascavel. Orçamento grátis, coleta e entrega inclusa." },
-      { property: "og:url", content: "https://hidraumil.com.br/" },
+      { property: "og:url", content: "https://hidraumil.com.br" },
       { property: "og:image", content: absoluteUrl(heroImg) },
     ],
     links: [
