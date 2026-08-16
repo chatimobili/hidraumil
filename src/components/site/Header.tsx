@@ -29,7 +29,7 @@ export function Header() {
                   <ul className="rounded-lg border border-border bg-white shadow-lg py-2">
                     {services.map(s => (
                       <li key={`${s.slug}-${s.title}`}>
-                        <Link to={s.slug.startsWith("/") ? (s.slug as any) : (`/${s.slug}` as any)} className="block px-4 py-2 text-sm hover:bg-muted hover:text-primary">
+                        <Link to={s.slug as any} className="block px-4 py-2 text-sm hover:bg-muted hover:text-primary">
                           {s.title}
                         </Link>
                       </li>
@@ -69,7 +69,7 @@ export function Header() {
               <li className="pt-2 pb-1 text-xs uppercase tracking-wider text-muted-foreground">Serviços</li>
               {services.map(s => (
                 <li key={`${s.slug}-${s.title}`}>
-                  <Link to={s.slug.startsWith("/") ? (s.slug as any) : (`/${s.slug}` as any)} className="block py-2 pl-3" onClick={() => setOpen(false)}>{s.title}</Link>
+                  <Link to={s.slug as any} className="block py-2 pl-3" onClick={() => setOpen(false)}>{s.title}</Link>
                 </li>
               ))}
               <li><Link to="/blog" className="block py-2" onClick={() => setOpen(false)}>Blog</Link></li>
