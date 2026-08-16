@@ -265,13 +265,13 @@ function Home() {
                 icon: Wrench,
                 title: "Manutenção de Paleteiras",
                 desc: "Manutenção de paleteira preventiva e corretiva, com técnicos especializados, peças originais e garantia por escrito para sua operação não parar.",
-                to: "/assistencia-tecnica-equipamentos-hidraulicos-cascavel",
+                to: "/manutencao-paleteiras-hidraulicas-cascavel",
               },
               {
                 icon: ShieldCheck,
                 title: "Conserto de Paleteiras Hidráulicas",
                 desc: "Conserto de paleteira manual e hidráulica: vazamentos, bomba, cilindro, rodas e mais. Coleta e entrega inclusa em Cascavel e região.",
-                to: "/assistencia-tecnica-equipamentos-hidraulicos-cascavel",
+                to: "/conserto-paleteira-hidraulica-cascavel",
               },
               {
                 icon: CalendarCheck,

@@ -31,19 +31,19 @@ export const services = [
     icon: "Hammer",
   },
   {
-    slug: "locacao-paleteiras-hidraulicas-cascavel",
+    slug: "/locacao-paleteiras-hidraulicas-cascavel",
     title: "Aluguel de Paleteira",
     short: "Aluguel de paleteira (locação) com contratos flexíveis e manutenção inclusa.",
     icon: "Calendar",
   },
   {
-    slug: "venda-paleteiras-hidraulicas-cascavel",
+    slug: "/venda-paleteiras-hidraulicas-cascavel",
     title: "Venda de Paleteiras",
     short: "Paleteiras novas e revisadas: manuais, semielétricas e elétricas.",
     icon: "ShoppingCart",
   },
   {
-    slug: "venda-pecas-paleteiras",
+    slug: "/venda-pecas-paleteiras",
     title: "Venda de Peças",
     short: "Peças para manutenção de paleteira: cilindros, bombas, rodas, garfos, selos e vedações.",
     icon: "Cog",
