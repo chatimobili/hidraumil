@@ -24,7 +24,6 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/conserto-paleteira-hidraulica-cascavel", changefreq: "monthly", priority: "0.9" },
           { path: "/locacao-paleteiras-hidraulicas-cascavel", changefreq: "monthly", priority: "0.9" },
           { path: "/venda-paleteiras-hidraulicas-cascavel", changefreq: "monthly", priority: "0.9" },
-          
           { path: "/venda-pecas-paleteiras", changefreq: "monthly", priority: "0.8" },
           { path: "/blog", changefreq: "weekly", priority: "0.7" },
           { path: "/blog/guia-conserto-paleteira-hidraulica-cascavel", changefreq: "monthly", priority: "0.7" },
