@@ -17,9 +17,9 @@ export const Route = createFileRoute("/blog/paleteira-manual-vs-hidraulica")({
       { property: "og:type", content: "article" },
       { property: "og:title", content: meta.title },
       { property: "og:description", content: meta.excerpt },
-      { property: "og:url", content: `/blog/${meta.slug}` },
+      { property: "og:url", content: `https://hidraumil.com.br/blog/${meta.slug}` },
     ],
-    links: [{ rel: "canonical", href: `/blog/${meta.slug}` }],
+    links: [{ rel: "canonical", href: `https://hidraumil.com.br/blog/${meta.slug}` }],
   }),
   component: Page,
 });

@@ -39,7 +39,7 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Manutenção, conserto e aluguel de paleteiras em Cascavel. Técnicos especializados, peças originais e atendimento rápido. Solicite seu orçamento!" },
       { property: "og:title", content: "Manutenção de Paleteira | Conserto e Aluguel | Hidraumil Cascavel" },
       { property: "og:description", content: "Especialistas em manutenção, conserto e aluguel de paleteiras hidráulicas em Cascavel. Orçamento grátis, coleta e entrega inclusa." },
-      { property: "og:url", content: "https://hidraumil.com.br/" },
+      { property: "og:url", content: "https://hidraumil.com.br" },
       { property: "og:image", content: absoluteUrl(heroImg) },
     ],
     links: [
@@ -265,13 +265,13 @@ function Home() {
                 icon: Wrench,
                 title: "Manutenção de Paleteiras",
                 desc: "Manutenção de paleteira preventiva e corretiva, com técnicos especializados, peças originais e garantia por escrito para sua operação não parar.",
-                to: "/assistencia-tecnica-equipamentos-hidraulicos-cascavel",
+                to: "/manutencao-paleteiras-hidraulicas-cascavel",
               },
               {
                 icon: ShieldCheck,
                 title: "Conserto de Paleteiras Hidráulicas",
                 desc: "Conserto de paleteira manual e hidráulica: vazamentos, bomba, cilindro, rodas e mais. Coleta e entrega inclusa em Cascavel e região.",
-                to: "/assistencia-tecnica-equipamentos-hidraulicos-cascavel",
+                to: "/conserto-paleteira-hidraulica-cascavel",
               },
               {
                 icon: CalendarCheck,

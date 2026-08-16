@@ -19,31 +19,31 @@ export const SITE = {
 
 export const services = [
   {
-    slug: "assistencia-tecnica-equipamentos-hidraulicos-cascavel",
+    slug: "/manutencao-paleteiras-hidraulicas-cascavel",
     title: "Manutenção de Paleteira",
     short: "Manutenção de paleteira preventiva e corretiva com técnicos especializados e garantia por escrito.",
     icon: "Wrench",
   },
   {
-    slug: "assistencia-tecnica-equipamentos-hidraulicos-cascavel",
+    slug: "/conserto-paleteira-hidraulica-cascavel",
     title: "Conserto de Paleteira",
     short: "Conserto de paleteira manual e hidráulica com coleta e entrega em Cascavel e região.",
     icon: "Hammer",
   },
   {
-    slug: "locacao-paleteiras-hidraulicas-cascavel",
+    slug: "/locacao-paleteiras-hidraulicas-cascavel",
     title: "Aluguel de Paleteira",
     short: "Aluguel de paleteira (locação) com contratos flexíveis e manutenção inclusa.",
     icon: "Calendar",
   },
   {
-    slug: "venda-paleteiras-hidraulicas-cascavel",
+    slug: "/venda-paleteiras-hidraulicas-cascavel",
     title: "Venda de Paleteiras",
     short: "Paleteiras novas e revisadas: manuais, semielétricas e elétricas.",
     icon: "ShoppingCart",
   },
   {
-    slug: "venda-pecas-paleteiras",
+    slug: "/venda-pecas-paleteiras",
     title: "Venda de Peças",
     short: "Peças para manutenção de paleteira: cilindros, bombas, rodas, garfos, selos e vedações.",
     icon: "Cog",

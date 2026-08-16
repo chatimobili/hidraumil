@@ -50,6 +50,7 @@ const REDIRECT_MAP: Record<string, string> = {
   "/manutencao-de-paleteiras-hidraulicas-em-corbelia": "/manutencao-paleteira-hidraulica-corbelia",
   "/manutencao-de-paleteiras-hidraulicas-em-marechal-candido-rondon": "/manutencao-paleteira-hidraulica-marechal-candido-rondon",
   "/manutencao-de-paleteiras-hidraulicas-em-santa-tereza": "/cidades-atendidas",
+  "/locacao-paleteiras-hidraulicas/": "/locacao-paleteiras-hidraulicas-cascavel",
 };
 
 function checkLegacyRedirect(request: Request): Response | null {
