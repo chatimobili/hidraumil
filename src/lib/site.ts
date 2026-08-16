@@ -19,13 +19,13 @@ export const SITE = {
 
 export const services = [
   {
-    slug: "assistencia-tecnica-equipamentos-hidraulicos-cascavel",
+    slug: "/manutencao-paleteiras-hidraulicas-cascavel",
     title: "Manutenção de Paleteira",
     short: "Manutenção de paleteira preventiva e corretiva com técnicos especializados e garantia por escrito.",
     icon: "Wrench",
   },
   {
-    slug: "assistencia-tecnica-equipamentos-hidraulicos-cascavel",
+    slug: "/conserto-paleteira-hidraulica-cascavel",
     title: "Conserto de Paleteira",
     short: "Conserto de paleteira manual e hidráulica com coleta e entrega em Cascavel e região.",
     icon: "Hammer",
