@@ -5,6 +5,7 @@ const BASE_URL = "https://hidraumil.com.br";
 
 interface SitemapEntry {
   path: string;
+  canonicalUrl?: string;
   changefreq?: "weekly" | "monthly" | "yearly";
   priority?: string;
 }
@@ -20,6 +21,8 @@ export const Route = createFileRoute("/sitemap.xml")({
         const entries: SitemapEntry[] = [
           { path: "/", changefreq: "weekly", priority: "1.0" },
           { path: "/assistencia-tecnica-equipamentos-hidraulicos-cascavel", changefreq: "monthly", priority: "0.9" },
+          { path: "/conserto-macaco-hidraulico-cascavel", canonicalUrl: "https://hidraumil.lovable.app/conserto-macaco-hidraulico-cascavel", changefreq: "monthly", priority: "0.9" },
+          { path: "/reparo-cilindro-hidraulico-cascavel", canonicalUrl: "https://hidraumil.lovable.app/reparo-cilindro-hidraulico-cascavel", changefreq: "monthly", priority: "0.9" },
           { path: "/sobre-nos", changefreq: "monthly", priority: "0.8" },
           { path: "/manutencao-paleteiras-hidraulicas-cascavel", changefreq: "monthly", priority: "0.9" },
           { path: "/conserto-paleteira-hidraulica-cascavel", changefreq: "monthly", priority: "0.9" },
@@ -54,7 +57,7 @@ export const Route = createFileRoute("/sitemap.xml")({
         ];
 
         const urls = entries.map(e =>
-          `  <url>\n    <loc>${BASE_URL}${e.path}</loc>\n    <lastmod>${LASTMOD}</lastmod>\n    <changefreq>${e.changefreq}</changefreq>\n    <priority>${e.priority}</priority>\n  </url>`
+          `  <url>\n    <loc>${e.canonicalUrl ?? `${BASE_URL}${e.path}`}</loc>\n    <lastmod>${LASTMOD}</lastmod>\n    <changefreq>${e.changefreq}</changefreq>\n    <priority>${e.priority}</priority>\n  </url>`
         );
 
 

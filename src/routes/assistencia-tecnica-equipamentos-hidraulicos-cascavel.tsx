@@ -1,5 +1,5 @@
 import { ServiceFAQ } from "@/components/site/ServiceFAQ";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ServicePageShell, H2, P } from "@/components/site/ServicePageShell";
 import { Search, Wrench, Cog, ShieldCheck } from "lucide-react";
 
@@ -63,6 +63,12 @@ function Page() {
         <H2>Atendimento em campo ou na oficina</H2>
         <P>
           Vamos até a sua planta industrial em Cascavel ou recebemos o equipamento em nossa oficina, com retirada e devolução agendadas. Trabalhamos com contratos de manutenção mensal para empresas que precisam de disponibilidade técnica garantida.
+        </P>
+      </section>
+      <section>
+        <H2>Conserto de macacos e reparo de cilindros</H2>
+        <P>
+          Consulte os serviços de <Link to="/conserto-macaco-hidraulico-cascavel" className="font-semibold text-primary hover:underline">conserto de macaco hidráulico em Cascavel</Link> para modelos jacaré, garrafa e de oficina, e de <Link to="/reparo-cilindro-hidraulico-cascavel" className="font-semibold text-primary hover:underline">reparo de cilindro e pistão hidráulico em Cascavel</Link> para indústria, agronegócio e equipamentos de movimentação.
         </P>
       </section>
     </ServicePageShell>

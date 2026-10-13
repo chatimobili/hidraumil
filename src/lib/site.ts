@@ -19,6 +19,18 @@ export const SITE = {
 
 export const services = [
   {
+    slug: "/conserto-macaco-hidraulico-cascavel",
+    title: "Conserto de Macaco Hidráulico",
+    short: "Conserto de macacos jacaré, garrafa e de oficina em Cascavel e região.",
+    icon: "Wrench",
+  },
+  {
+    slug: "/reparo-cilindro-hidraulico-cascavel",
+    title: "Reparo de Cilindro Hidráulico",
+    short: "Troca de vedações, recuperação de haste e testes de cilindros hidráulicos.",
+    icon: "Cog",
+  },
+  {
     slug: "/manutencao-paleteiras-hidraulicas-cascavel",
     title: "Manutenção de Paleteira",
     short: "Manutenção de paleteira preventiva e corretiva com técnicos especializados e garantia por escrito.",

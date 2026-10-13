@@ -296,6 +296,18 @@ function Home() {
                 desc: "Peças para manutenção de paleteira: cilindros, bombas, rodas, garfos, selos e vedações originais com entrega rápida.",
                 to: "/venda-pecas-paleteiras",
               },
+              {
+                icon: Wrench,
+                title: "Conserto de Macaco Hidráulico",
+                desc: "Conserto de macacos jacaré, garrafa e de oficina: avaliação de vazamentos, perda de pressão e falhas de elevação em Cascavel.",
+                to: "/conserto-macaco-hidraulico-cascavel",
+              },
+              {
+                icon: Cog,
+                title: "Reparo de Cilindro Hidráulico",
+                desc: "Reparo de cilindros e pistões para indústria e agro: troca de vedações, recuperação de haste, revisão e testes.",
+                to: "/reparo-cilindro-hidraulico-cascavel",
+              },
             ].map((s) => (
               <Link
                 key={`${s.to}-${s.title}`}
