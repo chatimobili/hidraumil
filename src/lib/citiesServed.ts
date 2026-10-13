@@ -2,379 +2,559 @@ import type { CityContent } from "@/components/site/CityServicePage";
 
 export const CITIES: CityContent[] = [
   {
-    city: "Toledo",
-    citySlug: "toledo",
-    distanceKm: 50,
-    driveTime: "45 minutos",
-    intro:
-      "Toledo é um dos maiores polos agroindustriais do Oeste do Paraná, com forte presença de frigoríficos, cooperativas, distribuidoras e empresas de logística. Essa combinação faz da paleteira hidráulica um equipamento essencial na rotina de armazéns, docas de expedição e centros de distribuição de Toledo — e é exatamente onde a Hidraumil atua.",
-    economy:
-      "A operação industrial de Toledo não pode parar. Uma paleteira parada em uma doca de expedição atrasa carregamento, gera hora extra e coloca prazo de entrega em risco. Por isso trabalhamos com atendimento ágil, contratos de manutenção preventiva e estoque de peças críticas — para que o equipamento volte a operar no menor tempo possível.",
-    neighborhoods: ["Centro", "Vila Industrial", "Jardim La Salle", "Jardim Coopagro", "Vila Pioneiro", "Jardim Panorama", "Distrito de Vila Nova"],
-    nearbyCities: [
-      { name: "Cascavel", slug: "cascavel" },
-      { name: "Marechal Cândido Rondon", slug: "marechal-candido-rondon" },
-      { name: "Palotina", slug: "palotina" },
-      { name: "Assis Chateaubriand", slug: "assis-chateaubriand" },
+    "city": "Toledo",
+    "citySlug": "toledo",
+    "distanceKm": 50,
+    "road": "BR-467",
+    "seoTitle": "Manutenção de Paleteira em Toledo, PR | Hidraumil",
+    "description": "Manutenção de paleteiras em Toledo para agroindústrias e frigoríficos. Atendimento a partir de Cascavel. Peça orçamento pelo WhatsApp.",
+    "subtitle": "Agroindústria, alimentos e distribuição: manutenção orientada ao ambiente de trabalho em Toledo.",
+    "intro": "Toledo tem uma base econômica ligada à transformação de produtos agropecuários, com atividades de processamento de carnes, produção de alimentos e distribuição de insumos. A ligação entre o campo e a indústria cria diferentes necessidades de movimentação: embalagens chegam ao depósito, matérias-primas seguem para setores produtivos e caixas prontas aguardam expedição. A paleteira participa desses trajetos quando a carga está sobre um palete compatível, permitindo reposicionar lotes sem depender de uma máquina maior para cada pequeno deslocamento.",
+    "economy": "No ambiente frigorífico, o equipamento pode alternar entre áreas refrigeradas e espaços de recebimento. Já em distribuidores, a maior exigência costuma estar nas rodas e no acionamento, pela repetição de manobras. Esses usos não pedem uma revisão idêntica: temperatura, umidade, tipo de piso e características da carga ajudam a definir a inspeção. Em Toledo, descrever onde a paleteira trabalha é tão importante quanto informar que ela não sobe. O contexto evita tratar como simples troca de óleo um problema que envolve vedação ou desgaste mecânico.",
+    "logistics": "O acesso de Cascavel a Toledo utiliza a BR-467, em um percurso de aproximadamente 50 km, variável conforme os pontos de saída e chegada. A Hidraumil permanece sediada em Cascavel; esta página não representa uma oficina instalada em Toledo. Para organizar o orçamento e a logística de coleta ou atendimento, envie pelo WhatsApp a localização, o modelo e fotografias do equipamento. Informe também restrições de entrada, condições de carregamento e o setor onde ocorreu a falha.",
+    "useCases": [
+      "Frigoríficos e processamento de carnes — movimentação de caixas paletizadas e embalagens.",
+      "Cooperativas agroindustriais — depósitos de produtos ensacados e materiais de apoio.",
+      "Indústrias de alimentos — abastecimento de áreas de embalagem e expedição.",
+      "Distribuidores atacadistas — separação de lotes para abastecimento regional.",
+      "Supermercados — recebimento e organização de mercadorias em estoque."
     ],
-    industryH2: "Perfil industrial de Toledo e o papel da paleteira hidráulica",
-    industryProfile:
-      "Toledo abriga uma das maiores plantas de abate e processamento de aves do país, além de unidades de laticínios, frigoríficos de suínos, indústrias de rações e um forte parque de cooperativas agrícolas. Nesses ambientes, a paleteira hidráulica manual é o equipamento de movimentação mais usado dentro de câmaras frias, salas de embalagem, docas de expedição e depósitos de insumos. A operação é intensa — muitas empresas movimentam de 200 a 800 pallets por turno — o que acelera o desgaste de rodas, rolamentos, vedações do cilindro hidráulico e do sistema de acionamento. Por isso, em Toledo, manutenção preventiva não é luxo: é o que garante que a linha de expedição não pare no meio da tarde e o caminhão não fique retido na doca.",
-    logisticsH2: "Como funciona a coleta e a entrega em Toledo",
-    logistics:
-      "Toledo fica a 50 km de Cascavel pela BR-467, com trajeto de cerca de 45 minutos em condições normais. Nossa equipe faz coleta agendada do equipamento diretamente na sua empresa, leva para a oficina em Cascavel, executa o serviço com peças em estoque e devolve com garantia por escrito. Para clientes com contrato de manutenção mensal, enviamos técnico em campo — sem custo de deslocamento adicional — em datas e horários fixos, sempre no mesmo turno para evitar impacto na sua operação. Em casos de urgência, conseguimos coletar no mesmo dia útil, dependendo do horário do chamado.",
-    useCasesH2: "Onde a Hidraumil atende em Toledo",
-    useCases: [
-      "Frigoríficos e plantas de processamento de proteína animal — manutenção de paleteiras que operam em câmaras frias e ambientes com lavagem constante.",
-      "Cooperativas agroindustriais — reparo de paleteiras usadas em armazéns de sementes, insumos e embalados.",
-      "Distribuidoras de bebidas e alimentos — troca de rodas, revisão de sistema hidráulico e ajuste de garfo para paletes padrão.",
-      "Supermercados de médio e grande porte — conserto pontual e locação de reserva durante períodos de reforma ou pico de vendas.",
-    ],
-    extendedH2: "Manutenção corretiva x preventiva em Toledo",
-    extendedContent:
-      "Grande parte dos chamados que recebemos de Toledo são corretivos — a paleteira parou, vazou óleo, não desce ou empena o garfo — e nesses casos priorizamos coleta rápida. Mas o que reduz custo de verdade para indústrias de Toledo é o contrato preventivo: uma revisão mensal ou bimestral que inspeciona nível de óleo do sistema hidráulico, folgas nos rolamentos, estado das vedações, torque dos parafusos do timão e integridade das rodas. Nossos relatórios ficam registrados e servem como histórico técnico do equipamento — útil para auditorias internas de segurança do trabalho e para decisões de renovação de frota. Também emitimos laudos técnicos quando solicitados por seguradoras ou pela área de SST da empresa.",
-    uniqueFaqs: [
+    "problemsH2": "Problemas mais comuns em paleteiras da agroindústria de Toledo",
+    "problems": [
       {
-        q: "A Hidraumil atende frigoríficos de Toledo com paleteiras que trabalham em câmara fria?",
-        a: "Sim. Temos experiência específica em paleteiras que operam em ambientes frios e úmidos — usamos óleo hidráulico adequado à faixa de temperatura, vedações resistentes à lavagem com jato e rodas de poliuretano compatíveis com piso molhado. Isso prolonga a vida útil do equipamento e reduz a frequência de manutenção.",
+        "title": "Vedação em áreas refrigeradas",
+        "text": "O frio pode alterar o comportamento do óleo e dos materiais de vedação. Um equipamento inadequado à temperatura de operação pode elevar com dificuldade ou apresentar vazamentos. A inspeção considera a especificação do modelo, em vez de substituir o fluido por uma alternativa escolhida apenas por parecer mais fina."
       },
       {
-        q: "Vocês fornecem peças para paleteiras de grandes marcas usadas em Toledo, como Bovenau e Paletrans?",
-        a: "Sim. Trabalhamos com peças originais e compatíveis para Bovenau, Paletrans, Ybarra, Marcon, Tecnomafra e outras. Temos estoque em Cascavel dos itens de maior giro — kits de vedação, rodas, rolamentos, válvulas e cilindros completos — para reduzir o tempo de máquina parada em Toledo.",
+        "title": "Rodas após lavagem do piso",
+        "text": "Água e produtos usados na higienização podem alcançar rolamentos e pontos de articulação. Ruído, resistência ao deslocamento e corrosão merecem avaliação, principalmente quando o percurso cruza áreas molhadas. O cuidado deve respeitar os procedimentos sanitários da operação e as orientações de limpeza do fabricante."
       },
       {
-        q: "É possível fechar contrato de manutenção mensal para uma frota de paleteiras em Toledo?",
-        a: "Sim. Atendemos indústrias, cooperativas e distribuidoras de Toledo com contratos mensais que incluem visita técnica programada, revisão preventiva, laudo técnico e desconto em peças de reposição. O preço é fixo por equipamento e não há taxa adicional de deslocamento.",
-      },
+        "title": "Garfos na expedição de alimentos",
+        "text": "Paletes quebrados, entrada desalinhada e cargas mal distribuídas podem concentrar esforços nos garfos. Se houver deformação, contato irregular com o piso ou dificuldade de encaixe, retire a paleteira de uso. A capacidade indicada não deve ser ultrapassada para acelerar a saída de um lote."
+      }
     ],
+    "preventive": "Uma rotina de observação em Toledo pode separar os registros de equipamentos do frigorífico daqueles usados no estoque seco. Anote o sintoma, o setor, as condições do piso e se a dificuldade aparece carregada ou vazia. Essa informação orienta a manutenção sem presumir intervalos iguais para todas as aplicações.",
+    "uniqueFaqs": [
+      {
+        "q": "Vocês atendem empresas agroindustriais em Toledo?",
+        "a": "O atendimento à cidade é organizado pela sede em Cascavel. Para uma operação agroindustrial, informe no WhatsApp o ambiente de uso, a identificação da paleteira e a necessidade técnica. Assim é possível confirmar a forma de avaliação, sem presumir uma solução antes de conhecer o equipamento."
+      },
+      {
+        "q": "Como combinar a coleta de uma paleteira em Toledo?",
+        "a": "Envie o endereço de retirada e descreva as condições de acesso ao depósito. Pelo WhatsApp, a equipe combina coleta ou outra forma de encaminhamento, orçamento e logística. Não há um horário de retirada garantido somente pela proximidade da BR-467."
+      },
+      {
+        "q": "Qual é o prazo de conserto para Toledo?",
+        "a": "A previsão depende da avaliação, dos componentes necessários e do transporte combinado. Consulte o WhatsApp com os sintomas e o modelo para receber orientação sobre o caso. O funcionamento em câmara fria deve ser informado porque pode mudar o escopo da revisão."
+      }
+    ],
+    "nearbyCities": [
+      {
+        "name": "Marechal Cândido Rondon",
+        "slug": "marechal-candido-rondon"
+      },
+      {
+        "name": "Assis Chateaubriand",
+        "slug": "assis-chateaubriand"
+      },
+      {
+        "name": "Palotina",
+        "slug": "palotina"
+      }
+    ],
+    "nearbyIntro": "Para operações distribuídas no entorno de Toledo, consulte também as páginas de Marechal Cândido Rondon, Assis Chateaubriand e Palotina. A lista regional reúne os demais destinos de atendimento.",
+    "coverage": "Para encaminhar equipamentos de Toledo à sede em Cascavel, confirme a localização e as condições do depósito. A cobertura regional não implica uma unidade local nem coleta automática.",
+    "budget": "Solicite pelo WhatsApp a avaliação da paleteira usada no seu frigorífico, armazém ou comércio de Toledo. O orçamento considera o diagnóstico e o encaminhamento acordado.",
+    "benefits": [
+      "Contexto de temperatura e higiene",
+      "Inspeção das rodas e do conjunto hidráulico",
+      "Logística de Toledo mediante combinação"
+    ]
   },
   {
-    city: "Foz do Iguaçu",
-    citySlug: "foz-do-iguacu",
-    distanceKm: 140,
-    driveTime: "1h50",
-    intro:
-      "Foz do Iguaçu concentra hotéis, centros de convenções, atacadistas, importadoras e operações de logística ligadas à fronteira. Todo esse ecossistema depende de movimentação constante de cargas paletizadas, seja em depósitos hoteleiros, cozinhas industriais ou armazéns de importação — e a paleteira hidráulica é o equipamento que faz esse trabalho.",
-    economy:
-      "Em Foz do Iguaçu, o custo de trocar um equipamento com defeito por um novo raramente compensa. Uma manutenção bem-feita devolve a paleteira à operação por uma fração do preço. Nós fazemos coleta agendada, executamos o serviço em Cascavel e devolvemos o equipamento com garantia — sem que sua empresa precise deslocar equipe ou parar por muitos dias.",
-    neighborhoods: ["Vila Portes", "Vila Yolanda", "Jardim América", "Centro", "Parque Industrial", "Três Lagoas", "Cidade Nova"],
-    nearbyCities: [
-      { name: "Cascavel", slug: "cascavel" },
-      { name: "Medianeira", slug: "medianeira" },
-      { name: "Santa Helena", slug: "santa-helena" },
-      { name: "Toledo", slug: "toledo" },
+    "city": "Foz do Iguaçu",
+    "citySlug": "foz-do-iguacu",
+    "distanceKm": 140,
+    "road": "BR-277",
+    "seoTitle": "Manutenção de Paleteira em Foz do Iguaçu, PR | Hidraumil",
+    "description": "Paleteiras em Foz do Iguaçu: manutenção para hotelaria, atacado e logística de fronteira. Combine o atendimento pelo WhatsApp.",
+    "subtitle": "Movimentação de estoques hoteleiros e cargas comerciais na região de fronteira.",
+    "intro": "A economia de Foz do Iguaçu reúne turismo, comércio e atividades relacionadas à circulação de mercadorias na fronteira. O abastecimento de hotéis, restaurantes e estabelecimentos comerciais envolve recebimento de alimentos, bebidas e materiais de consumo. Nos depósitos em que esses produtos chegam paletizados, a paleteira ajuda a transferir lotes entre o ponto de descarga e o estoque, antes da separação para cada área. Sua importância está no fluxo de abastecimento, não em transportar hóspedes ou substituir equipamentos de elevação em qualquer situação.",
+    "economy": "O comércio atacadista e os serviços de armazenagem apresentam outra rotina: recebimentos de origens diferentes, lotes fracionados e saídas conforme a demanda do varejo. O equipamento encontra paletes de condições variadas e pode percorrer trechos com juntas ou transições de piso. Para Foz, uma revisão útil precisa identificar o tipo de carga, o espaço de manobra e a frequência de deslocamento. Hotelaria e logística compartilham a necessidade de estoque organizado, mas não necessariamente as mesmas condições de desgaste ou de acesso para uma avaliação técnica.",
+    "logistics": "Foz do Iguaçu fica a aproximadamente 140 km de Cascavel pelo corredor da BR-277; o percurso efetivo depende do endereço do estabelecimento. A assistência é coordenada a partir da sede da Hidraumil em Cascavel, sem endereço local anunciado em Foz. Converse pelo WhatsApp sobre orçamento e logística de coleta ou atendimento. Em hotéis, indique onde ficam recebimento e depósito; em armazéns com controle de acesso, explique os procedimentos de entrada.",
+    "useCases": [
+      "Hotelaria e depósitos de hospedagem — abastecimento de materiais e alimentos paletizados.",
+      "Restaurantes e cozinhas de maior porte — organização de recebimentos em estoque.",
+      "Comércio atacadista de fronteira — separação e reposicionamento de lotes.",
+      "Armazéns e serviços logísticos — movimentação interna compatível com o equipamento.",
+      "Distribuição de bebidas — preparação de cargas para estabelecimentos comerciais."
     ],
-    industryH2: "Comércio exterior, turismo e logística: o perfil de Foz do Iguaçu",
-    industryProfile:
-      "Foz do Iguaçu tem um perfil econômico incomum no Oeste do Paraná: além do turismo receptivo — hotelaria, restaurantes, centros de convenções e parques —, a cidade concentra operações de comércio exterior via ponte da Amizade, transitários, armazéns alfandegados, atacadistas de importados e uma cadeia de distribuição regional. Todos esses setores usam paleteiras hidráulicas de forma intensiva: no recebimento de contêineres, no fracionamento de cargas, na expedição para atacado e no reabastecimento de estoques hoteleiros. A rotatividade é alta e a exposição à umidade da região (proximidade com o Rio Paraná e o Rio Iguaçu) acelera a corrosão de componentes metálicos e o desgaste de vedações.",
-    logisticsH2: "Logística de atendimento em Foz do Iguaçu",
-    logistics:
-      "Foz do Iguaçu está a 140 km de Cascavel pela BR-277, aproximadamente 1h50 de estrada. Para empresas de Foz, priorizamos coleta agendada com prazo definido: retiramos o equipamento no local, executamos o serviço em nossa oficina em Cascavel e devolvemos entre 3 e 5 dias úteis, dependendo da complexidade. Nos casos em que a empresa possui frota — cadeias hoteleiras, atacadistas e transportadoras — trabalhamos com contrato de manutenção com visitas técnicas mensais em Foz, o que dilui o custo do deslocamento entre vários equipamentos e evita paradas emergenciais.",
-    useCasesH2: "Setores atendidos pela Hidraumil em Foz do Iguaçu",
-    useCases: [
-      "Hotelaria e resorts — manutenção de paleteiras usadas em depósitos, cozinhas industriais e recebimento de fornecedores.",
-      "Atacadistas e importadoras — reparo e locação para operações de fracionamento e expedição para o varejo.",
-      "Armazéns alfandegados e transitários — serviço técnico em paleteiras de alta rotatividade em recebimento de contêineres.",
-      "Distribuidoras de bebidas e food service — troca de rodas, revisão hidráulica e substituição de garfo empenado.",
-    ],
-    extendedH2: "Umidade, corrosão e vida útil da paleteira em Foz do Iguaçu",
-    extendedContent:
-      "A umidade elevada da região de Foz do Iguaçu tem efeito direto no tempo de vida útil dos equipamentos: pinos oxidam, molas travam, o cromo da haste do cilindro pode pontuar e a graxa se degrada mais rápido. Isso significa que uma paleteira que duraria oito anos em ambiente seco pode começar a apresentar falhas graves em quatro ou cinco anos em Foz sem manutenção adequada. Nosso trabalho preventivo em equipamentos de Foz inclui lubrificação com graxa resistente à água, troca de óleo hidráulico com aditivos anticorrosivos, inspeção detalhada de todos os pontos de fixação e proteção adicional em componentes que ficam expostos. É esse cuidado que faz a diferença entre uma frota que dura o tempo esperado e uma frota que precisa ser substituída antes da hora.",
-    uniqueFaqs: [
+    "problemsH2": "Problemas mais comuns em paleteiras de hotelaria e logística de Foz do Iguaçu",
+    "problems": [
       {
-        q: "A Hidraumil atende hotéis e resorts de Foz do Iguaçu?",
-        a: "Sim. Vários estabelecimentos hoteleiros da região usam paleteiras em depósitos, cozinhas e recebimento — atendemos com coleta agendada em horário que não interfira na operação do hotel e devolvemos com garantia. Para redes com múltiplas unidades, oferecemos contrato consolidado.",
+        "title": "Manobras em depósitos compactos",
+        "text": "Mudanças frequentes de direção em espaços restritos podem evidenciar folgas no timão ou resistência das rodas direcionais. Não use o equipamento para forçar passagem entre volumes. A análise observa articulações e rolamentos, além de verificar se o corredor e o raio de manobra são compatíveis com a operação."
       },
       {
-        q: "Vale a pena consertar uma paleteira antiga em Foz do Iguaçu ou é melhor comprar nova?",
-        a: "Depende do estado do chassi e do cilindro hidráulico. Nosso diagnóstico é gratuito: se o custo do reparo passar de 60% do valor de uma paleteira nova equivalente, sugerimos a substituição — e podemos vender ou locar um equipamento revisado com garantia. Na maioria dos casos, no entanto, o conserto compensa.",
+        "title": "Impactos nas transições de piso",
+        "text": "Soleiras, juntas e desníveis entre recebimento e estoque podem sobrecarregar rodas e eixos. Trancos repetidos não devem ser tratados como característica normal do transporte. Em uma paleteira que circula no abastecimento hoteleiro, relate o trecho onde ocorre a dificuldade para diferenciar desgaste da roda de uma limitação do percurso."
       },
       {
-        q: "Fazem manutenção em paleteiras que operam em armazéns alfandegados?",
-        a: "Sim. Já atendemos operações de comércio exterior em Foz do Iguaçu, incluindo transitários e importadoras. Emitimos nota fiscal de serviço, laudo técnico e garantia formal — documentação compatível com exigências de auditoria interna.",
-      },
+        "title": "Lotes variados no atacado",
+        "text": "Paletes com bases incompatíveis, tábuas soltas ou distribuição desigual dificultam o encaixe dos garfos e podem danificar componentes. A manutenção verifica deformações e o sistema de elevação, mas não torna um palete inadequado seguro. A carga deve ser conferida antes de tentar deslocá-la."
+      }
     ],
+    "preventive": "Em Foz do Iguaçu, registrar a ocorrência por ponto de uso ajuda a organizar a revisão: recebimento de fornecedor, estoque de bebidas ou área de fracionamento de mercadorias. Um equipamento que passa a exigir mais esforço pode ter roda travada, sujeira no eixo ou carga acima do permitido. Interrompa a movimentação diante de vazamento ou instabilidade.",
+    "uniqueFaqs": [
+      {
+        "q": "A Hidraumil atende paleteiras usadas em hotéis de Foz do Iguaçu?",
+        "a": "Você pode consultar o atendimento pelo WhatsApp informando o modelo e a rotina do depósito hoteleiro. A equipe em Cascavel orienta a avaliação e combina o acesso ou o encaminhamento. Não é necessário apresentar a operação como um cliente já atendido para solicitar o serviço."
+      },
+      {
+        "q": "Como organizar a retirada em um armazém de Foz?",
+        "a": "Comunique pelo WhatsApp o endereço, as exigências de entrada e os recursos para carregar o equipamento. Coleta, transporte e orçamento são definidos com a equipe antes do envio. Procedimentos de acesso ao armazém devem ser combinados com o responsável pelo local."
+      },
+      {
+        "q": "Quanto tempo a paleteira de Foz ficará fora de operação?",
+        "a": "O período só pode ser estimado conforme diagnóstico, peças e logística. Envie os sintomas pelo WhatsApp para iniciar a orientação e explique se o equipamento abastece hotelaria ou expedição. A distância pela BR-277 não determina sozinha o prazo do reparo."
+      }
+    ],
+    "nearbyCities": [
+      {
+        "name": "Medianeira",
+        "slug": "medianeira"
+      },
+      {
+        "name": "Santa Helena",
+        "slug": "santa-helena"
+      }
+    ],
+    "nearbyIntro": "No corredor regional de Foz, veja o conteúdo de Medianeira e a cobertura de Santa Helena. Para consultar outros municípios, acesse a relação completa de cidades atendidas.",
+    "coverage": "Equipamentos de Foz são avaliados com coordenação em Cascavel. A organização do trajeto e das exigências de acesso acontece conforme o estabelecimento, sem anunciar uma filial na fronteira.",
+    "budget": "Informe pelo WhatsApp se a necessidade está no abastecimento hoteleiro ou no depósito comercial de Foz. Fotos e identificação ajudam a preparar a avaliação e o orçamento.",
+    "benefits": [
+      "Recebimento hoteleiro e comercial",
+      "Condições de acesso ao armazém",
+      "Encaminhamento de Foz acordado previamente"
+    ]
   },
   {
-    city: "Marechal Cândido Rondon",
-    citySlug: "marechal-candido-rondon",
-    distanceKm: 85,
-    driveTime: "1h15",
-    intro:
-      "Marechal Cândido Rondon é uma cidade com forte tradição agroindustrial e presença marcante de cooperativas e indústrias de alimentos. Essas operações usam paleteiras hidráulicas todos os dias para movimentar sacaria, caixas de produtos acabados e insumos entre linhas de produção, expedição e caminhões — e falhas nesse fluxo custam caro.",
-    economy:
-      "Manter a paleteira em ordem em Marechal Cândido Rondon significa manter linha de produção fluindo e docas de expedição operando dentro do horário. Trabalhamos com manutenção preventiva mensal para indústrias e cooperativas, evitando quebras justamente nos períodos de safra e picos de expedição.",
-    neighborhoods: ["Centro", "Jardim Líder", "Vila Gaúcha", "Jardim Concórdia", "Parque Industrial", "Vila Alto Alegre"],
-    nearbyCities: [
-      { name: "Toledo", slug: "toledo" },
-      { name: "Palotina", slug: "palotina" },
-      { name: "Santa Helena", slug: "santa-helena" },
-      { name: "Cascavel", slug: "cascavel" },
+    "city": "Marechal Cândido Rondon",
+    "citySlug": "marechal-candido-rondon",
+    "distanceKm": 90,
+    "road": "BR-467 e BR-163",
+    "seoTitle": "Manutenção Paleteira em Marechal Cândido Rondon | Hidraumil",
+    "description": "Paleteiras em Marechal Cândido Rondon: manutenção para laticínios e cooperativas, com base em Cascavel. Consulte pelo WhatsApp.",
+    "subtitle": "Cuidados com paleteiras na cadeia de laticínios, alimentos e insumos de Marechal Cândido Rondon.",
+    "intro": "Marechal Cândido Rondon combina produção agropecuária com transformação de alimentos e serviços que apoiam o trabalho rural. A cadeia de leite e derivados, as atividades cooperativas e o comércio de insumos formam contextos distintos de armazenagem. Caixas de produtos, embalagens e sacaria precisam circular entre estoque, preparação e expedição. Nesse caminho, a paleteira hidráulica facilita pequenas transferências de carga e posicionamento de paletes, desde que o equipamento tenha capacidade e configuração adequadas ao piso e ao produto transportado.",
+    "economy": "Uma operação ligada a laticínios pode exigir atenção ao contato com água e às condições de limpeza, enquanto o depósito de insumos depende de rodas em bom estado para movimentar sacaria sem instabilidade. Em Marechal Cândido Rondon, o perfil agrícola e alimentar torna importante descrever a aplicação antes de definir o reparo. Uma perda de elevação não comprova, por si só, defeito na bomba: pode envolver acionamento, óleo ou passagem interna pelas vedações. A avaliação precisa considerar os sinais observados e o histórico de uso.",
+    "logistics": "Uma ligação rodoviária entre Cascavel e Marechal Cândido Rondon passa pela BR-467 e pela BR-163, via Toledo, em distância de aproximadamente 90 km. Os pontos de origem e destino podem alterar essa referência. O orçamento e a logística de coleta ou atendimento são combinados pelo WhatsApp com a Hidraumil, cuja sede fica em Cascavel. Para um depósito rural ou unidade com controle de entrada, descreva o acesso e as condições de retirada.",
+    "useCases": [
+      "Laticínios e beneficiamento de derivados — movimentação de embalagens e produtos.",
+      "Cooperativas de apoio ao produtor — estoques de sementes e materiais agrícolas.",
+      "Distribuição de insumos pecuários — reposicionamento de sacaria e lotes.",
+      "Processamento de alimentos — circulação entre estoque e expedição.",
+      "Comércio de abastecimento rural — recebimento de mercadorias paletizadas."
     ],
-    industryH2: "Agroindústria e cooperativas: o dia a dia da paleteira em Marechal Cândido Rondon",
-    industryProfile:
-      "Marechal Cândido Rondon é conhecida pela colonização de origem germânica e por uma base industrial diversificada: laticínios, embutidos, indústrias de alimentos, cooperativas agrícolas de grande porte e um parque crescente de logística. Nessas empresas, a paleteira hidráulica manual é o cavalo de batalha da movimentação interna — usada em recebimento de matéria-prima, transferência entre linhas de produção, expedição de produto acabado e armazenagem em prateleiras porta-pallet. Durante a safra e nos períodos de pico de expedição, o volume de movimentação praticamente dobra, o que expõe qualquer fragilidade do equipamento.",
-    logisticsH2: "Coleta, entrega e visita técnica em Marechal Cândido Rondon",
-    logistics:
-      "Marechal Cândido Rondon fica a 85 km de Cascavel, com trajeto de cerca de 1h15 pela PR-585. Trabalhamos com dois modelos de atendimento: coleta agendada — retirada, serviço em oficina em Cascavel e devolução em prazo combinado — e visita técnica em campo, para contratos de manutenção mensal com indústrias e cooperativas locais. Ao consolidar visitas em uma rota semanal de Marechal e Toledo, conseguimos oferecer preço competitivo sem sacrificar o tempo de resposta.",
-    useCasesH2: "Setores atendidos em Marechal Cândido Rondon",
-    useCases: [
-      "Cooperativas agrícolas — manutenção de paleteiras usadas em armazéns de insumos, sementes e embalados.",
-      "Laticínios e indústrias de alimentos — reparo em equipamentos que operam em ambientes de higienização constante.",
-      "Distribuidoras e transportadoras — revisão hidráulica, troca de rodas e substituição de garfo em paleteiras de alta rotatividade.",
-      "Supermercados e comércio atacadista — serviço pontual e locação para reforço em datas comemorativas.",
-    ],
-    extendedH2: "Por que a preventiva compensa em cooperativas de Marechal",
-    extendedContent:
-      "Em cooperativas agrícolas de Marechal Cândido Rondon, a janela de expedição durante a safra é curta: um dia parado por defeito em paleteira representa dezenas de caminhões atrasados e cooperados esperando pagamento. Por isso, o modelo de manutenção preventiva mensal — com inspeção completa, troca de óleo hidráulico, substituição preventiva de vedações críticas e ajuste de rolamentos — se paga rapidamente. Os principais defeitos que evitamos com preventiva são: perda de força de elevação por vazamento interno, empenamento do garfo por sobrecarga sistemática, folga excessiva no timão e travamento do sistema de descida. Nosso relatório mensal fica arquivado e pode ser apresentado em auditorias de segurança do trabalho.",
-    uniqueFaqs: [
+    "problemsH2": "Problemas mais comuns em paleteiras de laticínios e insumos de Marechal",
+    "problems": [
       {
-        q: "Quanto tempo demora para atender uma emergência em Marechal Cândido Rondon?",
-        a: "Para chamados de emergência, conseguimos coletar o equipamento em Marechal em 1 a 2 dias úteis. Se sua empresa tem contrato de manutenção, o atendimento em campo pode ser marcado para o próximo dia útil, dependendo do horário do chamado.",
+        "title": "Articulações expostas à limpeza",
+        "text": "A remoção frequente de resíduos pode deixar água em pinos e rolamentos, dependendo do método utilizado. Oxidação, folga e dificuldade de manobra justificam inspeção. A rotina de higienização do laticínio precisa ser conciliada com as instruções do equipamento; aplicar jato indiscriminadamente sobre o conjunto não substitui uma limpeza correta."
       },
       {
-        q: "A Hidraumil trabalha com cooperativas em Marechal? Emite nota fiscal e laudo?",
-        a: "Sim. Atendemos cooperativas de Marechal Cândido Rondon com nota fiscal de serviço, laudo técnico assinado, garantia por escrito e histórico de manutenção arquivado por equipamento — documentação compatível com exigências fiscais e de auditoria.",
+        "title": "Sacaria com apoio desigual",
+        "text": "Em depósitos de insumos, sacos acomodados de forma irregular podem deslocar o centro da carga e concentrar esforço nos garfos. A revisão observa alinhamento e integridade estrutural. Se a paleteira inclina ou encosta de maneira diferente no piso, interrompa o uso e confira também o estado do palete."
       },
       {
-        q: "Vocês locam paleteira reserva durante a safra em Marechal?",
-        a: "Sim. Oferecemos locação temporária de paleteiras hidráulicas manuais e semielétricas em Marechal Cândido Rondon, especialmente para cooperativas que precisam reforçar a frota nos picos de safra e expedição. Contratos flexíveis, com prazo mínimo semanal ou mensal.",
-      },
+        "title": "Resistência no comando de descida",
+        "text": "Acionamento duro ou resposta irregular pode estar relacionado à ligação mecânica do comando, à válvula ou à contaminação. Não force a alavanca para compensar o sintoma. Informe se a dificuldade aparece com a carga elevada, durante o retorno vazio ou após limpeza do equipamento."
+      }
     ],
+    "preventive": "Para a manutenção em Marechal, associe cada paleteira ao setor em que trabalha e registre alterações de comportamento. Um equipamento reservado a embalagens secas pode exigir inspeção diferente daquele que acompanha o fluxo de produtos refrigerados. A escolha de óleo, rodas e vedações deve respeitar o modelo e as condições efetivas de uso.",
+    "uniqueFaqs": [
+      {
+        "q": "Posso solicitar manutenção para uma cooperativa de Marechal?",
+        "a": "Sim, encaminhe pelo WhatsApp os dados da paleteira, o endereço da unidade e a aplicação no estoque. A equipe baseada em Cascavel verifica a necessidade e combina a forma de atendimento. A consulta não pressupõe um contrato existente ou uma visita já programada."
+      },
+      {
+        "q": "A coleta pode ser combinada para um depósito fora do centro de Marechal?",
+        "a": "Informe pelo WhatsApp o ponto de acesso, a condição da estrada e os meios de carregamento. A possibilidade de coleta ou outra solução logística é definida com a equipe para aquele local. Não há confirmação automática para todo endereço rural do município."
+      },
+      {
+        "q": "Como saber a previsão do reparo de uma paleteira de Marechal?",
+        "a": "A previsão considera diagnóstico, componentes e encaminhamento aprovado. Descreva no WhatsApp o defeito e se o equipamento trabalha em área lavável ou estoque de sacaria. O orçamento orienta a decisão sem anunciar um prazo único para todas as operações da cidade."
+      }
+    ],
+    "nearbyCities": [
+      {
+        "name": "Toledo",
+        "slug": "toledo"
+      },
+      {
+        "name": "Palotina",
+        "slug": "palotina"
+      },
+      {
+        "name": "Santa Helena",
+        "slug": "santa-helena"
+      }
+    ],
+    "nearbyIntro": "As páginas de Toledo, Palotina e Santa Helena apresentam outros contextos de uso na região de Marechal. Consulte os links e a lista completa para localizar a cobertura desejada.",
+    "coverage": "Marechal Cândido Rondon integra a área regional consultada a partir de Cascavel. A localização da unidade produtiva e os meios de transporte são verificados antes de combinar a avaliação.",
+    "budget": "Converse no WhatsApp sobre a paleteira do laticínio ou depósito agrícola em Marechal. O escopo é definido pelo estado do equipamento, com orçamento apresentado para o caso.",
+    "benefits": [
+      "Aplicação em laticínio ou insumos",
+      "Verificação do comando e das articulações",
+      "Acesso à unidade combinado com a equipe"
+    ]
   },
   {
-    city: "Medianeira",
-    citySlug: "medianeira",
-    distanceKm: 85,
-    driveTime: "1h",
-    intro:
-      "Medianeira reúne indústrias de alimentos, frigoríficos e operações de logística que movimentam grandes volumes de carga paletizada todos os dias. Paleteira hidráulica é equipamento de linha de frente em Medianeira — e por isso o serviço de manutenção precisa ser rápido, técnico e com garantia.",
-    economy:
-      "Uma paleteira travada em uma câmara fria ou em uma doca de carregamento em Medianeira gera prejuízo em minutos. Nossos técnicos conhecem os defeitos típicos dos equipamentos usados em ambientes frios e úmidos — desgaste acelerado de rodas, ressecamento de vedações e oxidação de válvulas — e resolvem com peças adequadas.",
-    neighborhoods: ["Centro", "Bairro Ipê", "Jardim Irriguáçú", "Vila Cabral", "Parque Independência", "Frigobrás"],
-    nearbyCities: [
-      { name: "Foz do Iguaçu", slug: "foz-do-iguacu" },
-      { name: "Cascavel", slug: "cascavel" },
-      { name: "Santa Helena", slug: "santa-helena" },
-      { name: "Toledo", slug: "toledo" },
+    "city": "Medianeira",
+    "citySlug": "medianeira",
+    "distanceKm": 85,
+    "road": "BR-277",
+    "seoTitle": "Manutenção de Paleteira em Medianeira, PR | Hidraumil",
+    "description": "Manutenção de paleteiras em Medianeira para processamento de alimentos e expedição refrigerada. Solicite avaliação pelo WhatsApp.",
+    "subtitle": "Revisão de paleteiras no fluxo de alimentos, embalagens e distribuição de Medianeira.",
+    "intro": "Medianeira integra o eixo rodoviário do Oeste do Paraná e possui atividades vinculadas à agroindústria, ao processamento de alimentos e ao comércio regional. A organização de matérias-primas, embalagens e produtos acabados cria trajetos curtos dentro de depósitos e áreas de expedição. A paleteira hidráulica é útil nessas transferências quando o lote está devidamente apoiado. Ela permite aproximar volumes da área de carregamento sem dispensar os cuidados de capacidade, estabilidade e compatibilidade entre equipamento, palete e piso.",
+    "economy": "Em uma cadeia de alimentos, a movimentação pode cruzar áreas secas, setores com lavagem e ambientes refrigerados. Essa diferença merece atenção na manutenção em Medianeira: um conjunto que funciona no depósito de embalagens pode apresentar outra resposta quando utilizado em temperatura mais baixa. A condição de operação deve estar dentro das especificações do fabricante. Relatar exposição ao frio, frequência de limpeza e trajetória da carga ajuda a reconhecer causas de vazamento, esforço excessivo ou perda de controle, sem presumir que toda paleteira local trabalha em câmara fria.",
+    "logistics": "O percurso de Cascavel a Medianeira pela BR-277 é de aproximadamente 85 km, conforme os endereços utilizados como referência. A Hidraumil organiza a assistência pela sede em Cascavel. Pelo WhatsApp, são combinados orçamento e logística de coleta ou atendimento, considerando o equipamento e o acesso à unidade. Se o recebimento exigir procedimentos sanitários ou circulação por área restrita, avise antes do encaminhamento.",
+    "useCases": [
+      "Processamento de aves e outros alimentos — estoques e expedição de caixas.",
+      "Fornecedores de embalagens alimentícias — organização de materiais paletizados.",
+      "Cooperativas agroalimentares — recebimento e armazenamento de insumos.",
+      "Distribuição refrigerada — movimentação em áreas compatíveis com o modelo.",
+      "Varejo alimentar regional — abastecimento de depósitos e recebimento."
     ],
-    industryH2: "Frigoríficos e agroindústria movem a economia de Medianeira",
-    industryProfile:
-      "Medianeira concentra grandes unidades de processamento de proteína animal — aves, suínos e industrializados — além de indústrias de rações, embalagens e cooperativas ligadas ao agronegócio. Esse perfil produtivo cria uma demanda enorme por movimentação interna de pallets: recebimento de matéria-prima, transferência entre setores, câmaras frias, salas de embalagem e expedição para caminhões refrigerados. A paleteira hidráulica é usada em praticamente todas essas etapas e opera em condições severas: baixa temperatura, umidade, lavagens frequentes com produtos químicos e piso escorregadio.",
-    logisticsH2: "Atendimento a partir de Cascavel para Medianeira",
-    logistics:
-      "Medianeira está a 85 km de Cascavel pela BR-277, cerca de 1 hora de trajeto. Nossa equipe atende com coleta agendada, entrega no prazo combinado e visitas técnicas em campo para contratos mensais. Trabalhamos em rota consolidada com Foz do Iguaçu e Santa Helena, o que permite responder rapidamente a chamados em Medianeira sem custo alto de deslocamento.",
-    useCasesH2: "Onde atuamos em Medianeira",
-    useCases: [
-      "Frigoríficos e plantas de processamento de proteína animal — manutenção de paleteiras que operam em câmaras frias.",
-      "Indústrias de rações e embalagens — reparo em equipamentos de alta rotatividade em armazém.",
-      "Cooperativas agroindustriais — locação e conserto de paleteiras em unidades de recebimento e expedição.",
-      "Distribuidoras e supermercados de Medianeira — serviço pontual com coleta e entrega.",
-    ],
-    extendedH2: "Paleteiras em câmara fria: cuidados específicos",
-    extendedContent:
-      "Paleteira hidráulica em câmara fria trabalha em uma condição que o fabricante geralmente não prevê no manual padrão: temperaturas próximas de zero grau, umidade elevada, gelo em pontos de contato e lavagem constante com hipoclorito. Esse ambiente ataca vedações comuns, oxida o cromo da haste do cilindro, endurece a graxa dos rolamentos e desgasta rodas de poliuretano padrão. Em Medianeira, quando fazemos manutenção em equipamentos de câmara fria, trocamos o óleo hidráulico por um de menor viscosidade a frio, aplicamos vedações resistentes a produtos químicos, substituímos rodas por versões apropriadas ao piso molhado e reforçamos a proteção dos pontos de fixação. É um serviço mais especializado — e é justamente esse conhecimento que evita quebras dentro da câmara, onde parar o equipamento é ainda mais crítico.",
-    uniqueFaqs: [
+    "problemsH2": "Problemas mais comuns em paleteiras da expedição alimentícia de Medianeira",
+    "problems": [
       {
-        q: "A Hidraumil tem experiência com paleteira em câmara fria de frigorífico em Medianeira?",
-        a: "Sim. Trabalhamos há anos com equipamentos que operam em câmaras frias e ambientes com lavagem química intensa. Usamos óleo hidráulico, vedações e rodas apropriadas — o que triplica o intervalo entre manutenções corretivas.",
+        "title": "Elevação irregular no frio",
+        "text": "Temperatura fora da faixa prevista pode afetar a viscosidade do óleo e a resposta do mecanismo hidráulico. Antes de recomendar um fluido, a avaliação considera o manual e a condição do conjunto. Não se deve usar qualquer óleo de menor viscosidade como solução universal para uma paleteira que demora a subir."
       },
       {
-        q: "Fazem manutenção de paleteira semielétrica e elétrica em Medianeira?",
-        a: "Sim. Além de paleteiras manuais, atendemos semielétricas e elétricas — revisão de bateria, motor, controlador, freios elétricos e sistema hidráulico. Coletamos o equipamento em Medianeira e devolvemos em prazo combinado.",
+        "title": "Desgaste entre áreas de lavagem e estoque",
+        "text": "A circulação por superfícies úmidas e depois secas pode levar resíduos para rodas e rolamentos. Resistência, ruídos e marcas de desgaste indicam a necessidade de verificar o contato com o piso. Componentes de reposição precisam ser selecionados para a aplicação, sem afirmar que um material resolve todos os ambientes."
       },
       {
-        q: "Vocês atendem com nota fiscal e laudo técnico para auditoria em Medianeira?",
-        a: "Sim. Todo serviço em Medianeira é entregue com nota fiscal, laudo técnico assinado e garantia por escrito — documentação exigida por auditorias de qualidade e segurança do trabalho de frigoríficos e indústrias de alimentos.",
-      },
+        "title": "Vazamento próximo à embalagem",
+        "text": "Óleo junto ao cilindro pode resultar de vedação comprometida ou superfície danificada. Em áreas alimentícias, a ocorrência exige retirada de operação e aplicação dos procedimentos internos pertinentes. Limpar o vazamento sem avaliar sua origem não recupera a capacidade de sustentação e pode deixar o defeito evoluir."
+      }
     ],
+    "preventive": "A identificação por área é especialmente útil em Medianeira: embalagem seca, recebimento, expedição ou ambiente refrigerado. Registre se a falha aparece ao iniciar o trabalho ou depois de movimentar uma carga, e se houve mudança de óleo ou limpeza recente. Essas observações ajudam a equipe a montar o diagnóstico. Durante a operação, evite paletes quebrados e passagem sobre obstáculos.",
+    "uniqueFaqs": [
+      {
+        "q": "Atendem paleteiras da indústria de alimentos em Medianeira?",
+        "a": "O atendimento pode ser consultado pelo WhatsApp com a identificação e a aplicação do equipamento. Informe as condições de temperatura e higiene da área. A equipe de Cascavel orienta a avaliação, sem assumir que qualquer modelo está apto a trabalhar no ambiente informado."
+      },
+      {
+        "q": "Como é definida a coleta em uma unidade de Medianeira?",
+        "a": "Envie a localização e as exigências de entrada pelo WhatsApp. Orçamento, retirada ou outra forma de atendimento são combinados considerando acesso, carregamento e necessidade técnica. A disponibilidade deve ser confirmada antes de preparar a paleteira para transporte."
+      },
+      {
+        "q": "O conserto para Medianeira tem um prazo fixo?",
+        "a": "Não há um prazo único definido para todos os defeitos. A estimativa depende de inspeção, peças e logística. Consulte pelo WhatsApp com fotos e descrição do sintoma, principalmente quando houver vazamento ou falha de elevação em área refrigerada."
+      }
+    ],
+    "nearbyCities": [
+      {
+        "name": "Foz do Iguaçu",
+        "slug": "foz-do-iguacu"
+      },
+      {
+        "name": "Santa Helena",
+        "slug": "santa-helena"
+      }
+    ],
+    "nearbyIntro": "Para comparar necessidades no eixo de Medianeira, acesse Foz do Iguaçu ou Santa Helena. Outros municípios estão reunidos na página de cidades atendidas, com os respectivos acessos internos.",
+    "coverage": "A cobertura de Medianeira é coordenada na oficina de Cascavel. Informe o local da unidade alimentícia e os procedimentos de recebimento para combinar o encaminhamento técnico de forma adequada.",
+    "budget": "Envie pelo WhatsApp as condições de uso e o defeito da paleteira de Medianeira. A análise do equipamento orienta o orçamento, inclusive quando ele circula em áreas refrigeradas.",
+    "benefits": [
+      "Temperatura de uso informada",
+      "Condições de limpeza consideradas",
+      "Logística da unidade avaliada previamente"
+    ]
   },
   {
-    city: "Assis Chateaubriand",
-    citySlug: "assis-chateaubriand",
-    distanceKm: 90,
-    driveTime: "1h10",
-    intro:
-      "Assis Chateaubriand tem uma economia fortemente ligada ao agronegócio, com cooperativas, unidades de recebimento de grãos e indústrias de rações. A paleteira hidráulica aparece em armazéns, depósitos de insumos, expedição de embalados e supermercados — em todos esses cenários, a Hidraumil atende.",
-    economy:
-      "Para empresas de Assis Chateaubriand, a alternativa mais comum é trazer o equipamento até Cascavel, onde temos oficina completa, ou receber nossa equipe em campo em casos de contrato. Assim você não fica dependendo de assistência que demora dias para dar retorno.",
-    neighborhoods: ["Centro", "Vila Nova", "Jardim América", "Parque Industrial", "Cohapar", "Distrito Encantado do Oeste"],
-    nearbyCities: [
-      { name: "Toledo", slug: "toledo" },
-      { name: "Palotina", slug: "palotina" },
-      { name: "Cascavel", slug: "cascavel" },
-      { name: "Marechal Cândido Rondon", slug: "marechal-candido-rondon" },
+    "city": "Assis Chateaubriand",
+    "citySlug": "assis-chateaubriand",
+    "distanceKm": 85,
+    "road": "BR-467 e PR-486",
+    "seoTitle": "Manutenção Paleteira em Assis Chateaubriand, PR | Hidraumil",
+    "description": "Paleteiras em Assis Chateaubriand: manutenção para armazéns de sementes e insumos agrícolas. Combine a avaliação pelo WhatsApp.",
+    "subtitle": "Movimentação de sementes, sacaria e materiais agrícolas nos depósitos de Assis Chateaubriand.",
+    "intro": "Assis Chateaubriand tem uma ligação econômica importante com lavouras de grãos e com os serviços que sustentam a produção rural. Sementes, materiais de embalagem e outros insumos passam por depósitos antes de chegar ao campo. Nesses espaços, a paleteira movimenta produtos ensacados ou caixas organizadas sobre paletes, aproximando lotes da separação e do carregamento. Sua função é especialmente útil nas transferências internas em piso adequado, mas não se confunde com transporte de grãos a granel nem com trabalho sobre terreno sem preparo.",
+    "economy": "A sazonalidade agrícola modifica a rotina dos estoques: em alguns períodos, há maior concentração de recebimentos; em outros, a prioridade é separar materiais para entrega. O equipamento pode ficar armazenado e depois voltar a uma sequência intensa de manobras. Para empresas de Assis Chateaubriand, observar a paleteira antes dessa retomada ajuda a identificar rodas presas, vazamentos ou dificuldade no comando. A distribuição da sacaria também merece cuidado, pois volumes aparentemente semelhantes podem formar cargas com pesos e pontos de apoio diferentes.",
+    "logistics": "Uma opção de acesso desde Cascavel utiliza a BR-467 e a PR-486, com percurso de aproximadamente 85 km até Assis Chateaubriand. O endereço e o caminho escolhido podem alterar a quilometragem. O orçamento e a logística de coleta ou atendimento são ajustados pelo WhatsApp com a equipe sediada em Cascavel. Informe se a paleteira está em depósito urbano ou unidade rural e descreva as condições de acesso e carregamento.",
+    "useCases": [
+      "Armazéns de sementes ensacadas — transferência de lotes para separação.",
+      "Revendas de insumos agrícolas — recebimento e organização de estoques.",
+      "Unidades cooperativas de grãos — movimentação de materiais embalados de apoio.",
+      "Depósitos de ração e nutrição animal — manobra de sacaria paletizada.",
+      "Comércio de materiais para o produtor — distribuição de cargas em depósito."
     ],
-    industryH2: "Agronegócio e insumos: o que movimenta Assis Chateaubriand",
-    industryProfile:
-      "Assis Chateaubriand tem economia centrada no agronegócio — soja, milho, trigo, produção leiteira — e em uma cadeia de suporte formada por cooperativas, unidades de recebimento e beneficiamento de grãos, indústrias de rações, revendas de insumos agrícolas e uma rede consolidada de supermercados e distribuidoras. A paleteira hidráulica é usada intensivamente em armazéns de sementes ensacadas, depósitos de defensivos, expedição de rações embaladas e movimentação interna em supermercados de médio e grande porte.",
-    logisticsH2: "Como atendemos Assis Chateaubriand a partir de Cascavel",
-    logistics:
-      "Assis Chateaubriand fica a 90 km de Cascavel, aproximadamente 1h10 pela PR-364. Priorizamos a coleta agendada do equipamento — retirada, serviço na oficina em Cascavel e devolução com garantia — que na maior parte dos casos sai mais barata do que uma visita técnica isolada. Para clientes com contrato, fazemos visita mensal com data fixa. Consolidamos a rota com Palotina e Toledo para reduzir o custo do deslocamento.",
-    useCasesH2: "Empresas que atendemos em Assis Chateaubriand",
-    useCases: [
-      "Cooperativas de grãos — manutenção de paleteiras em armazéns de sementes ensacadas e insumos.",
-      "Indústrias de rações — reparo em equipamentos de expedição de sacaria e big-bags.",
-      "Revendas de insumos agrícolas — serviço pontual com coleta e entrega.",
-      "Supermercados e distribuidoras — locação temporária e conserto de paleteiras de uso diário.",
-    ],
-    extendedH2: "Sacaria pesada e o desgaste da paleteira em Assis",
-    extendedContent:
-      "Movimentar sacos de sementes, adubo e rações — normalmente de 25 a 50 kg cada — em pallets de 1 a 1,5 tonelada exige da paleteira uma performance que muitos equipamentos não sustentam por muito tempo sem manutenção. Em Assis Chateaubriand, os principais defeitos que resolvemos são vazamento no cilindro hidráulico (queda de força de elevação), empenamento do garfo por sobrecarga, folga excessiva no eixo do timão e desgaste prematuro das rodas por atrito contra piso de concreto áspero. Nossa recomendação padrão para operações desse perfil é revisão a cada 60 dias, com troca preventiva de vedações e óleo hidráulico anual — o que costuma dobrar a vida útil do equipamento.",
-    uniqueFaqs: [
+    "problemsH2": "Problemas mais comuns em paleteiras de sementes e sacaria de Assis Chateaubriand",
+    "problems": [
       {
-        q: "A Hidraumil atende cooperativas de grãos em Assis Chateaubriand?",
-        a: "Sim. Fazemos manutenção e conserto de paleteiras usadas em armazéns de sementes, insumos e sacaria, com coleta e entrega agendada. Emitimos nota fiscal e laudo técnico compatíveis com auditorias internas de cooperativas.",
+        "title": "Poeira e resíduos junto aos eixos",
+        "text": "Partículas acumuladas no piso podem se prender às rodas e alcançar pontos de articulação. A resistência aumenta e o operador passa a aplicar mais esforço para puxar a carga. A inspeção verifica o acúmulo e o desgaste, sem recomendar abrir o sistema hidráulico como primeira medida para uma dificuldade de deslocamento."
       },
       {
-        q: "Vocês vendem paleteira nova ou revisada para empresas de Assis Chateaubriand?",
-        a: "Sim. Vendemos paleteiras hidráulicas manuais novas — principalmente Bovenau — e também paleteiras revisadas com garantia. Entregamos em Assis Chateaubriand e podemos fechar pacote com contrato de manutenção anual.",
+        "title": "Garfos sob pilhas desiguais de sacos",
+        "text": "Uma carga concentrada em apenas parte do palete pode produzir apoio irregular e esforço localizado. Se surgirem marcas de contato ou deformação dos garfos, é necessário avaliar a estrutura. Reorganizar a pilha e respeitar a capacidade nominal continua sendo indispensável mesmo depois de um reparo."
       },
       {
-        q: "Como funciona a garantia do serviço em Assis Chateaubriand?",
-        a: "Todo serviço é entregue com garantia por escrito de 90 dias sobre peças substituídas e mão de obra aplicada, contra defeito recorrente. A garantia é registrada em nota fiscal e no laudo técnico enviado com o equipamento.",
-      },
+        "title": "Retomada após armazenamento",
+        "text": "Uma paleteira guardada entre períodos de maior demanda pode apresentar articulação endurecida, roda presa ou sinais de vazamento quando volta ao uso. Verifique seu comportamento antes de carregar. Óleo e lubrificação precisam seguir a especificação do fabricante; produtos improvisados não são uma forma segura de recuperar o funcionamento."
+      }
     ],
+    "preventive": "Nos depósitos agrícolas de Assis, registrar a condição do equipamento antes da separação de insumos ajuda a organizar o atendimento. Fotos da placa, dos garfos e do ponto de vazamento podem ser obtidas sem desmontagem. Observe se a paleteira falha vazia ou apenas com sacaria e se o piso possui detritos.",
+    "uniqueFaqs": [
+      {
+        "q": "Atendem paleteiras de depósitos agrícolas em Assis Chateaubriand?",
+        "a": "A consulta de atendimento é feita pelo WhatsApp, informando o equipamento e a rotina de sementes ou insumos. A equipe em Cascavel orienta a avaliação e verifica o encaminhamento. Descreva o problema sem pressupor a troca de uma peça antes do diagnóstico."
+      },
+      {
+        "q": "Como organizar coleta em uma unidade rural de Assis?",
+        "a": "Informe pelo WhatsApp a localização, o acesso e os meios para movimentar a paleteira até o transporte. A coleta ou outra forma de atendimento depende dessa combinação. Estradas e condições do local devem ser verificadas antes de marcar o encaminhamento."
+      },
+      {
+        "q": "Quanto tempo leva a revisão para Assis Chateaubriand?",
+        "a": "A previsão é informada conforme avaliação, componentes e transporte acordado. Pelo WhatsApp, explique se a necessidade ocorre antes de um período de movimentação de insumos. Essa informação ajuda no planejamento, mas não estabelece atendimento imediato ou prazo fixo."
+      }
+    ],
+    "nearbyCities": [
+      {
+        "name": "Palotina",
+        "slug": "palotina"
+      },
+      {
+        "name": "Toledo",
+        "slug": "toledo"
+      },
+      {
+        "name": "Corbélia",
+        "slug": "corbelia"
+      }
+    ],
+    "nearbyIntro": "Palotina, Toledo e Corbélia oferecem outras referências de uso de paleteiras no entorno agrícola. Os links permitem consultar cada contexto e a relação geral de atendimento regional.",
+    "coverage": "O encaminhamento de Assis Chateaubriand é planejado com a sede em Cascavel. A localização do depósito e a condição de acesso rural precisam ser informadas para combinar a logística.",
+    "budget": "Converse pelo WhatsApp sobre o estoque de sementes ou insumos de Assis. Identificação, sintomas e condições da carga ajudam a definir a avaliação e o orçamento correspondente.",
+    "benefits": [
+      "Condições da sacaria consideradas",
+      "Acesso rural informado na consulta",
+      "Avaliação antes de definir peças"
+    ]
   },
   {
-    city: "Palotina",
-    citySlug: "palotina",
-    distanceKm: 105,
-    driveTime: "1h20",
-    intro:
-      "Palotina é um polo agroindustrial reconhecido pela presença de grandes plantas de processamento de proteína animal e uma rede robusta de cooperativas. Toda essa cadeia produtiva usa intensivamente paleteiras hidráulicas para movimentar carga paletizada — e o custo de parada nesse ambiente é alto.",
-    economy:
-      "Em Palotina, priorizamos contratos de manutenção preventiva para indústrias com frota de paleteiras, com revisões programadas que evitam quebras em horário de expedição. Também atendemos empresas menores e supermercados com serviços pontuais, com coleta e entrega.",
-    neighborhoods: ["Centro", "Jardim Gisele", "Vila Nova", "Jardim Petrópolis", "Parque Industrial", "Distrito de São Camilo"],
-    nearbyCities: [
-      { name: "Marechal Cândido Rondon", slug: "marechal-candido-rondon" },
-      { name: "Assis Chateaubriand", slug: "assis-chateaubriand" },
-      { name: "Toledo", slug: "toledo" },
-      { name: "Cascavel", slug: "cascavel" },
+    "city": "Palotina",
+    "citySlug": "palotina",
+    "distanceKm": 100,
+    "road": "BR-467 e PR-182",
+    "seoTitle": "Manutenção de Paleteira em Palotina, PR | Hidraumil",
+    "description": "Manutenção de paleteiras em Palotina para agroindústria, rações e embalagens. Atendimento coordenado em Cascavel. Fale pelo WhatsApp.",
+    "subtitle": "Paleteiras no abastecimento da produção agroindustrial e na preparação de cargas em Palotina.",
+    "intro": "Palotina associa a produção de grãos à transformação agroindustrial e a atividades de apoio às cadeias de alimentos e proteína animal. O fluxo não se limita à saída do produto acabado: embalagens, rações e insumos também precisam ser recebidos e organizados. Uma paleteira em boas condições participa dessas etapas ao reposicionar cargas dentro do depósito e aproximá-las do ponto de utilização. Esse trabalho depende de rodas livres, elevação estável e garfos compatíveis com os paletes empregados.",
+    "economy": "Na rotina produtiva de Palotina, a diferença entre materiais secos e produtos que exigem controle de temperatura é relevante para o equipamento. Uma paleteira usada em embalagens não deve ser transferida para outra área sem conferir sua adequação e os procedimentos da operação. O objetivo da revisão é entender o desgaste do conjunto na função real, e não atribuir o mesmo defeito a toda agroindústria. Relatos de ruído, vazamento e dificuldade ao completar a elevação ajudam a selecionar os pontos que precisam ser examinados.",
+    "logistics": "Pela BR-467 e pela PR-182, via Toledo, o deslocamento de Cascavel a Palotina tem aproximadamente 100 km. A referência varia de acordo com os endereços e a rota utilizada. A Hidraumil está em Cascavel e combina pelo WhatsApp o orçamento e a logística de coleta ou atendimento para Palotina. Ao enviar a solicitação, informe a unidade, o tipo de equipamento e as condições de recebimento.",
+    "useCases": [
+      "Agroindústrias de proteína animal — apoio à armazenagem e expedição.",
+      "Fabricação e distribuição de rações — organização de lotes ensacados.",
+      "Estoques de embalagens industriais — abastecimento de materiais de produção.",
+      "Cooperativas e depósitos de grãos — movimentação de produtos e insumos embalados.",
+      "Distribuição de alimentos processados — preparação de cargas para transporte."
     ],
-    industryH2: "Palotina: polo de proteína animal e cooperativas de grande porte",
-    industryProfile:
-      "Palotina abriga uma das maiores unidades de abate e processamento de aves do Brasil e é sede de cooperativas de referência nacional na cadeia de proteína animal e grãos. A operação industrial local trabalha em regime contínuo, com movimentação de pallets de embalagens, produtos acabados e insumos 24 horas por dia. Nesse cenário, a paleteira hidráulica manual é usada especialmente em salas de embalagem, expedição para caminhões refrigerados, armazéns de secos e câmaras frias — sempre em ritmo intenso, com múltiplos turnos e operadores diferentes ao longo do dia.",
-    logisticsH2: "Rota Cascavel–Palotina e prazos de atendimento",
-    logistics:
-      "Palotina fica a 105 km de Cascavel, cerca de 1h20 pela BR-467 e PR-182. Priorizamos, para clientes de Palotina, o modelo de contrato mensal com visita técnica programada — a distância torna a visita isolada menos vantajosa financeiramente, enquanto o contrato dilui o custo e garante prevenção. Para chamados pontuais, oferecemos coleta em 2 a 3 dias úteis, com serviço executado em Cascavel e devolução com garantia.",
-    useCasesH2: "Setores que a Hidraumil atende em Palotina",
-    useCases: [
-      "Plantas de processamento de proteína animal — manutenção de paleteiras em câmaras frias e salas de embalagem.",
-      "Cooperativas agroindustriais — reparo em equipamentos de expedição de embalados e sacaria.",
-      "Indústrias de embalagens e rações — troca de rodas, revisão hidráulica e substituição de garfo.",
-      "Supermercados e distribuidoras — conserto pontual e locação em datas de pico.",
-    ],
-    extendedH2: "Frota de paleteiras em Palotina: por que padronizar o serviço",
-    extendedContent:
-      "Empresas de Palotina que operam com frotas de dez, vinte ou mais paleteiras hidráulicas ganham muito ao padronizar o serviço com um único prestador técnico: histórico consolidado por equipamento, previsibilidade de custo mensal, negociação melhor de peças de reposição e substituição planejada da frota conforme o desgaste. Trabalhamos com esse modelo em várias operações do Oeste do Paraná — inclusive em Palotina — com relatório mensal por equipamento, alertas de manutenção próxima e sugestões técnicas de troca preventiva de componentes críticos antes que virem parada não programada.",
-    uniqueFaqs: [
+    "problemsH2": "Problemas mais comuns em paleteiras do abastecimento agroindustrial de Palotina",
+    "problems": [
       {
-        q: "A Hidraumil atende frotas grandes de paleteira em Palotina?",
-        a: "Sim. Trabalhamos com contratos consolidados para frotas em Palotina, incluindo indústrias e cooperativas com dezenas de equipamentos. O contrato prevê revisão programada, laudo técnico por paleteira, desconto em peças e substituição planejada.",
+        "title": "Rodas na transferência de embalagens",
+        "text": "Percursos repetidos entre estoque e área de uso podem revelar desgaste desigual de rodas ou rolamentos. Um lado que exige mais esforço deve ser avaliado, não compensado pelo operador. A seleção de uma roda de reposição considera dimensões, piso e aplicação; aparência semelhante não garante compatibilidade com a paleteira."
       },
       {
-        q: "É possível revisar todas as paleteiras da fábrica em uma única visita em Palotina?",
-        a: "Sim. Para operações com frota, agendamos jornadas de visita técnica em Palotina em que revisamos várias paleteiras em sequência — sem interromper a produção. Levamos ferramentas, peças de maior giro e emitimos o laudo por equipamento no mesmo dia.",
+        "title": "Resíduos de ração na movimentação",
+        "text": "Partículas e fragmentos de sacaria no chão podem alcançar eixos e dificultar o giro. Em depósitos de rações, observe o caminho percorrido e a limpeza permitida para o equipamento. A revisão separa resistência mecânica de falha hidráulica, evitando tratar todo esforço para deslocar como defeito na bomba."
       },
       {
-        q: "Vocês fornecem peças originais para paleteiras Bovenau em Palotina?",
-        a: "Sim. Somos revenda de peças e trabalhamos com Bovenau, Paletrans, Ybarra, Marcon e outras marcas. Peças de maior giro ficam em estoque em Cascavel para atender rapidamente chamados em Palotina.",
-      },
+        "title": "Elevação instável sob carga",
+        "text": "Descida inesperada ou perda de sustentação pode indicar passagem de óleo pelas vedações ou dificuldade de fechamento da válvula. O conjunto deve ser retirado de operação. Não acrescente carga para reproduzir o problema e não mantenha pessoas próximas ao palete durante uma tentativa improvisada de teste."
+      }
     ],
+    "preventive": "A identificação individual das paleteiras é útil quando diferentes setores de Palotina compartilham equipamentos. Registre em qual ambiente surgiu o sintoma, que tipo de material estava sendo transportado e se houve impacto ou mudança de comportamento. Não transfira automaticamente uma paleteira com falha para uma tarefa mais leve: isso não determina se a estrutura ou a sustentação são seguras.",
+    "uniqueFaqs": [
+      {
+        "q": "É possível avaliar mais de uma paleteira de uma unidade em Palotina?",
+        "a": "Informe pelo WhatsApp a quantidade, a identificação e os sintomas de cada equipamento. A equipe combina a forma de avaliação a partir de Cascavel. A consulta não significa revisão de todos no mesmo dia nem um contrato de frota já estabelecido."
+      },
+      {
+        "q": "Como enviar uma paleteira de Palotina para a oficina?",
+        "a": "Converse pelo WhatsApp sobre transporte, acondicionamento e condições de recebimento. A logística pode envolver coleta ou outro encaminhamento acordado, conforme o caso. Antes de movimentar o equipamento, confirme os meios de carregamento e a combinação feita com a equipe."
+      },
+      {
+        "q": "Quando recebo o prazo do reparo para Palotina?",
+        "a": "A previsão depende do diagnóstico e da disponibilidade dos componentes necessários, além do transporte. Descreva a aplicação e o defeito pelo WhatsApp para iniciar a orientação. Não se deve deduzir o prazo pela distância rodoviária ou pelo setor industrial."
+      }
+    ],
+    "nearbyCities": [
+      {
+        "name": "Assis Chateaubriand",
+        "slug": "assis-chateaubriand"
+      },
+      {
+        "name": "Toledo",
+        "slug": "toledo"
+      },
+      {
+        "name": "Marechal Cândido Rondon",
+        "slug": "marechal-candido-rondon"
+      }
+    ],
+    "nearbyIntro": "Para consultar a região ligada a Palotina, veja Assis Chateaubriand, Toledo e Marechal Cândido Rondon. A página de cidades atendidas reúne os caminhos para os demais municípios.",
+    "coverage": "A cobertura de Palotina é organizada a partir da sede cascavelense. O ponto de retirada, o tipo de carga e os meios de transporte são discutidos para cada necessidade apresentada.",
+    "budget": "Envie no WhatsApp os sintomas da paleteira usada na produção ou no estoque de Palotina. A equipe orienta a avaliação e apresenta as condições do serviço conforme o diagnóstico.",
+    "benefits": [
+      "Identificação por equipamento",
+      "Uso produtivo descrito na solicitação",
+      "Transporte de Palotina previamente combinado"
+    ]
   },
   {
-    city: "Santa Helena",
-    citySlug: "santa-helena",
-    distanceKm: 110,
-    driveTime: "1h30",
-    intro:
-      "Santa Helena, às margens do Lago de Itaipu, combina turismo, agroindústria e uma rede crescente de operações logísticas e supermercadistas. A paleteira hidráulica é presença certa em depósitos de bebidas, atacadistas, cooperativas e distribuidoras da cidade.",
-    economy:
-      "Atendemos Santa Helena com coleta e entrega agendadas, além de visitas técnicas em campo para contratos de manutenção. Nosso foco é resolver o problema na primeira visita, com peças em mãos e garantia por escrito.",
-    neighborhoods: ["Centro", "Vila Panorama", "Jardim Aliança", "Bairro São João", "Parque Industrial"],
-    nearbyCities: [
-      { name: "Marechal Cândido Rondon", slug: "marechal-candido-rondon" },
-      { name: "Medianeira", slug: "medianeira" },
-      { name: "Foz do Iguaçu", slug: "foz-do-iguacu" },
-      { name: "Cascavel", slug: "cascavel" },
+    "city": "Santa Helena",
+    "citySlug": "santa-helena",
+    "distanceKm": 115,
+    "road": "BR-277 e PR-495",
+    "seoTitle": "Manutenção de Paleteira em Santa Helena, PR | Hidraumil",
+    "description": "Paleteiras em Santa Helena: manutenção para depósitos de bebidas, agro e abastecimento turístico. Solicite orçamento pelo WhatsApp.",
+    "subtitle": "Estoques agrícolas e abastecimento comercial na região do lago em Santa Helena.",
+    "intro": "Santa Helena reúne produção agropecuária, comércio de abastecimento e atividades turísticas relacionadas à região do lago. Esses setores geram usos diferentes para cargas paletizadas: materiais agrícolas passam por depósitos, enquanto bebidas e alimentos seguem para estabelecimentos comerciais e de hospedagem. A paleteira ajuda a organizar recebimentos e a preparar lotes em áreas de estoque com piso adequado. Não se trata de um equipamento para transportar volumes em praias ou terrenos irregulares, mas de um recurso de movimentação interna compatível com sua especificação.",
+    "economy": "No abastecimento do comércio de Santa Helena, alguns depósitos precisam lidar com maior variedade de itens e alteração de demanda ligada ao movimento turístico. Produtos agrícolas, por sua vez, exigem atenção à sacaria e aos resíduos presentes na área de armazenagem. A manutenção deve reconhecer essas diferenças. A proximidade do lago não permite concluir sozinha que existe corrosão: exposição à água, modo de limpeza e local de guarda influenciam o estado das peças. O sintoma observado no equipamento é o ponto de partida para a avaliação.",
+    "logistics": "Uma opção rodoviária de Cascavel a Santa Helena passa pela BR-277 e pela PR-495, com aproximadamente 115 km, conforme o destino e o percurso. O orçamento e a logística de coleta ou atendimento são combinados pelo WhatsApp com a sede da Hidraumil em Cascavel. Informe onde o equipamento está guardado, se há restrições de entrada e quais recursos estão disponíveis para carregar.",
+    "useCases": [
+      "Depósitos de bebidas — preparação de lotes para comércio e alimentação.",
+      "Estoques de insumos para produção rural — organização de materiais embalados.",
+      "Supermercados de abastecimento local — recebimento e reposição do depósito.",
+      "Apoio à hotelaria e ao turismo do lago — movimentação de suprimentos paletizados.",
+      "Comércio de produtos da cadeia aquícola — armazenagem compatível com a carga."
     ],
-    industryH2: "Santa Helena: turismo do Lago, agroindústria e supermercados regionais",
-    industryProfile:
-      "Santa Helena tem uma economia diversificada: turismo do Lago de Itaipu, pesca, agroindústria (grãos, laticínios, avicultura), rede consolidada de supermercados que abastecem a região do lago e operações logísticas ligadas ao corredor da BR-163 e da BR-277. A paleteira hidráulica aparece em depósitos de bebidas, cozinhas de restaurantes e pousadas, atacadistas, distribuidoras e cooperativas — em todos esses cenários com uso diário e desgaste típico de operação intensa.",
-    logisticsH2: "Deslocamento e prazos até Santa Helena",
-    logistics:
-      "Santa Helena fica a 110 km de Cascavel, aproximadamente 1h30. Trabalhamos com coleta agendada — retirada do equipamento, serviço em oficina em Cascavel e devolução com garantia — e com visita técnica em campo para clientes com contrato mensal. Consolidamos rotas com Marechal Cândido Rondon para reduzir o custo do deslocamento e conseguir manter preço competitivo em Santa Helena.",
-    useCasesH2: "Onde a Hidraumil atua em Santa Helena",
-    useCases: [
-      "Distribuidoras de bebidas — manutenção e troca de rodas em paleteiras de alta rotatividade.",
-      "Cooperativas e indústrias de alimentos — reparo em equipamentos de expedição e armazém.",
-      "Supermercados regionais — conserto pontual e locação em datas comemorativas.",
-      "Hotelaria e restaurantes do Lago — manutenção em paleteiras usadas em depósitos e recebimento.",
-    ],
-    extendedH2: "Resolver na primeira visita: nosso modelo em Santa Helena",
-    extendedContent:
-      "Uma visita técnica em Santa Helena tem custo real de deslocamento — por isso nossa prioridade é resolver o problema na primeira visita, sempre que possível. Antes de sair de Cascavel, o técnico entra em contato com o cliente para entender exatamente o sintoma (não desce, não sobe, vaza óleo, empenamento visível, ruído estranho), avalia o histórico do equipamento e leva as peças mais prováveis para substituição imediata. Esse cuidado prévio faz com que a maior parte dos atendimentos em Santa Helena seja concluída no mesmo dia, sem necessidade de retorno — o que reduz o custo total para o cliente e evita nova parada do equipamento.",
-    uniqueFaqs: [
+    "problemsH2": "Problemas mais comuns em paleteiras dos depósitos comerciais de Santa Helena",
+    "problems": [
       {
-        q: "A Hidraumil atende distribuidoras de bebidas em Santa Helena?",
-        a: "Sim. Vários distribuidores da região usam paleteiras hidráulicas em depósito e expedição — atendemos com coleta agendada e serviço rápido em Cascavel, ou com visita em campo para contratos mensais.",
+        "title": "Rodas sob cargas de bebidas",
+        "text": "Lotes de bebidas podem reunir volumes pesados em uma base pequena. Distribuição inadequada, desníveis e rodas desgastadas dificultam o deslocamento. A inspeção considera o estado do conjunto e o peso completo da carga, sem assumir que o número de caixas indica automaticamente a capacidade necessária."
       },
       {
-        q: "É possível receber a paleteira revisada em Santa Helena no mesmo dia da coleta?",
-        a: "Depende da complexidade do serviço. Para trocas de rodas e ajustes simples, sim. Para reparo no cilindro hidráulico ou substituição de vedações completas, o prazo típico é de 3 a 5 dias úteis, com devolução em Santa Helena por conta da Hidraumil.",
+        "title": "Oxidação em armazenamento exposto",
+        "text": "Paleteiras guardadas onde há contato com chuva ou água podem apresentar corrosão em articulações e superfícies. A localização às margens do lago não substitui a análise da exposição real. Relate onde o equipamento permanece fora de uso e se surgiram pontos de ferrugem ou resistência nos comandos."
       },
       {
-        q: "Fazem contratos anuais em Santa Helena?",
-        a: "Sim. Oferecemos contratos anuais de manutenção preventiva para empresas de Santa Helena, com visitas programadas, laudo técnico, garantia e desconto em peças. Preço fechado por equipamento, sem taxa adicional de deslocamento.",
-      },
+        "title": "Resíduos no percurso do depósito rural",
+        "text": "Fragmentos de embalagens, poeira e detritos podem travar rodas ou desgastar seus pontos de apoio. A dificuldade de puxar precisa ser investigada antes de aumentar o esforço aplicado. O reparo e a limpeza correta do percurso têm funções diferentes; um conjunto revisado continua dependente de uma área apropriada para circular."
+      }
     ],
+    "preventive": "Para Santa Helena, vale distinguir os sintomas de movimentação daqueles ligados à elevação. Ruído em uma roda, folga ao virar e perda de sustentação não têm necessariamente a mesma origem. Fotos externas e uma descrição do momento em que a falha surge ajudam a equipe. Se a paleteira abastece um comércio com demanda variável, planeje a consulta sem contar com uma data não confirmada.",
+    "uniqueFaqs": [
+      {
+        "q": "Atendem paleteiras de depósitos de bebidas em Santa Helena?",
+        "a": "A necessidade pode ser apresentada no WhatsApp com modelo, sintomas e características do depósito. A equipe em Cascavel confirma a forma de avaliação. Informe o uso com bebidas ou outros produtos para orientar a inspeção, sem pressupor que o defeito exige apenas troca de rodas."
+      },
+      {
+        "q": "Como combinar coleta para Santa Helena?",
+        "a": "Envie pelo WhatsApp a localização e explique os meios de carregamento e as condições de acesso. Retirada, transporte ou outra modalidade de atendimento são acertados antes do encaminhamento. A cobertura regional não representa uma coleta automática para qualquer estabelecimento."
+      },
+      {
+        "q": "Existe prazo definido para devolver a paleteira em Santa Helena?",
+        "a": "O prazo depende do serviço identificado, dos componentes e da logística aprovada. Consulte pelo WhatsApp para receber uma previsão pertinente ao equipamento. Trocas simples e reparos hidráulicos podem ter necessidades diferentes, sem uma data universal anunciada."
+      }
+    ],
+    "nearbyCities": [
+      {
+        "name": "Marechal Cândido Rondon",
+        "slug": "marechal-candido-rondon"
+      },
+      {
+        "name": "Medianeira",
+        "slug": "medianeira"
+      },
+      {
+        "name": "Foz do Iguaçu",
+        "slug": "foz-do-iguacu"
+      }
+    ],
+    "nearbyIntro": "Consulte Marechal Cândido Rondon, Medianeira e Foz do Iguaçu para outras necessidades na região de Santa Helena. Os demais destinos estão disponíveis na relação de cidades atendidas.",
+    "coverage": "O atendimento regional para Santa Helena mantém a referência da oficina em Cascavel. Confirme o depósito e a forma de encaminhamento para que a avaliação seja organizada conforme a necessidade.",
+    "budget": "Solicite no WhatsApp a avaliação da paleteira do seu comércio ou estoque rural de Santa Helena. O orçamento acompanha o diagnóstico e a logística discutida com a equipe.",
+    "benefits": [
+      "Carga e armazenamento descritos",
+      "Avaliação da exposição à água",
+      "Encaminhamento do depósito sob combinação"
+    ]
   },
   {
-    city: "Corbélia",
-    citySlug: "corbelia",
-    distanceKm: 30,
-    driveTime: "30 minutos",
-    intro:
-      "Corbélia fica na porta de casa da Hidraumil — pouco mais de meia hora de Cascavel. Isso significa atendimento praticamente no mesmo dia para empresas locais: cooperativas, indústrias, supermercados e distribuidoras que dependem de paleteiras hidráulicas para manter a operação fluindo.",
-    economy:
-      "A proximidade com Cascavel torna o custo total do serviço em Corbélia muito competitivo: baixa taxa de deslocamento, coleta rápida e devolução ágil. Para empresas com frota de paleteiras, oferecemos contratos mensais com preço fixo e visitas programadas.",
-    neighborhoods: ["Centro", "Vila Industrial", "Jardim Universitário", "Bairro São Cristóvão", "Distrito de Sede Alvorada"],
-    nearbyCities: [
-      { name: "Cascavel", slug: "cascavel" },
-      { name: "Toledo", slug: "toledo" },
-      { name: "Assis Chateaubriand", slug: "assis-chateaubriand" },
-      { name: "Palotina", slug: "palotina" },
+    "city": "Corbélia",
+    "citySlug": "corbelia",
+    "distanceKm": 30,
+    "road": "BR-369",
+    "seoTitle": "Manutenção de Paleteira em Corbélia, PR | Hidraumil",
+    "description": "Manutenção de paleteiras em Corbélia para comércio agrícola, supermercados e distribuidores. Atendimento desde Cascavel. Chame no WhatsApp.",
+    "subtitle": "Paleteiras no comércio de apoio agrícola e na distribuição próxima a Cascavel.",
+    "intro": "Corbélia tem atividades econômicas associadas à agricultura e aos serviços comerciais que apoiam produtores e moradores da região. Estoques de materiais agrícolas, distribuidores e supermercados recebem produtos em lotes que precisam ser organizados antes da venda ou entrega. A paleteira hidráulica participa desse trabalho nos depósitos, transferindo cargas entre recebimento e separação. Sua utilidade está na facilidade de reposicionamento em área apropriada, com controle sobre o peso e a distribuição do que está sendo movimentado.",
+    "economy": "A ligação rodoviária próxima de Cascavel integra Corbélia a um circuito regional de abastecimento. Em depósitos menores, um mesmo equipamento pode alternar entre caixas de alimentos, bebidas e materiais destinados ao campo. Isso exige atenção à compatibilidade do palete, ao estado das rodas e à estabilidade do conjunto. A proximidade da assistência não elimina a necessidade de interromper o uso quando surge vazamento ou descida inesperada. Descrever a rotina permite orientar a manutenção sem atribuir a toda operação da cidade um uso industrial intenso.",
+    "logistics": "O acesso de Cascavel a Corbélia ocorre pela BR-369, com distância de aproximadamente 30 km, variável conforme o endereço. A Hidraumil fica em Cascavel e combina pelo WhatsApp o orçamento e a logística de coleta ou atendimento para Corbélia. Ao solicitar avaliação, informe o tipo de depósito, o modelo e o problema observado. A distância curta não representa conserto imediato, transporte gratuito ou devolução garantida no mesmo dia.",
+    "useCases": [
+      "Comércio de sementes e materiais agrícolas — separação de lotes embalados.",
+      "Supermercados e mercearias com depósito — recebimento de produtos paletizados.",
+      "Distribuidores de alimentos secos — organização e carregamento de mercadorias.",
+      "Armazenagem de apoio ao produtor — movimentação de sacaria sobre paletes.",
+      "Fornecedores de materiais de construção — cargas compatíveis com a capacidade."
     ],
-    industryH2: "Corbélia: vizinha da Hidraumil, com forte base agrícola e industrial",
-    industryProfile:
-      "Corbélia tem economia baseada no agronegócio (soja, milho, avicultura), com presença de cooperativas, agroindústrias de médio porte, comércio atacadista e uma rede de supermercados e distribuidoras que atende toda a região. A paleteira hidráulica é usada em recebimento de mercadorias, expedição, armazém e loja — geralmente em regime intenso e com equipe rotativa de operadores, o que exige revisões preventivas frequentes.",
-    logisticsH2: "Atendimento praticamente no mesmo dia em Corbélia",
-    logistics:
-      "Corbélia fica a 30 km de Cascavel — pouco mais de meia hora pela BR-369. Essa proximidade permite atendimento praticamente no mesmo dia útil: coletamos o equipamento pela manhã, executamos o serviço em Cascavel e conseguimos devolver no mesmo dia ou no dia seguinte, dependendo da complexidade. Para clientes com contrato, o técnico vai a Corbélia com frequência semanal, sem custo adicional de deslocamento.",
-    useCasesH2: "Onde a Hidraumil atua em Corbélia",
-    useCases: [
-      "Cooperativas e agroindústrias — manutenção de paleteiras em armazém e expedição.",
-      "Supermercados e atacadistas — conserto pontual e locação de paleteira reserva.",
-      "Distribuidoras de bebidas e alimentos — revisão hidráulica e troca de rodas.",
-      "Comércio em geral — serviços rápidos com coleta no mesmo dia.",
-    ],
-    extendedH2: "Contrato mensal em Corbélia: quando compensa",
-    extendedContent:
-      "Para empresas com uma ou duas paleteiras, o modelo pontual de conserto sob demanda geralmente é suficiente em Corbélia — a proximidade torna o custo da coleta muito baixo. Já operações com cinco ou mais equipamentos ganham mais com contrato mensal: revisão preventiva programada, previsibilidade orçamentária, desconto em peças e laudo técnico por equipamento. Muitos clientes de Corbélia começam com serviços pontuais e migram para contrato depois que percebem que a manutenção preventiva evita duas ou três paradas emergenciais por ano — que sempre acontecem no pior momento possível.",
-    uniqueFaqs: [
+    "problemsH2": "Problemas mais comuns em paleteiras do comércio agrícola e varejo de Corbélia",
+    "problems": [
       {
-        q: "A Hidraumil consegue atender chamados em Corbélia no mesmo dia?",
-        a: "Sim, na maior parte dos casos. Corbélia está a 30 km de Cascavel — se o chamado chegar até meio da manhã, conseguimos coletar o equipamento no mesmo dia e, dependendo do serviço, devolver no fim do dia ou no dia seguinte.",
+        "title": "Percurso com juntas e pequenos obstáculos",
+        "text": "No caminho entre descarga e estoque, juntas abertas ou resíduos podem provocar impactos e resistência ao giro. Rodas com marcas ou desgaste desigual precisam ser examinadas. Não puxe a paleteira sobre obstáculos para testar sua força; a manutenção deve ser acompanhada de um percurso compatível com o equipamento."
       },
       {
-        q: "Tem taxa de deslocamento para atendimento em Corbélia?",
-        a: "Para serviços pontuais, cobramos uma taxa de deslocamento reduzida (por conta da proximidade). Para clientes com contrato mensal, o deslocamento está incluso — sem custo adicional por visita.",
+        "title": "Garfos na alternância de mercadorias",
+        "text": "Uma paleteira usada em alimentos e materiais agrícolas pode encontrar bases de diferentes dimensões e condições. Entrada incompleta ou desalinhada nos paletes concentra esforços e pode danificar garfos. O reparo verifica a integridade estrutural, enquanto a seleção de uma base adequada continua necessária antes de movimentar cada lote."
       },
       {
-        q: "Vocês vendem e locam paleteira nova em Corbélia?",
-        a: "Sim. Vendemos paleteiras novas Bovenau e paleteiras revisadas com garantia, e também locamos para operações temporárias em Corbélia. Entregamos no local e podemos incluir contrato de manutenção no pacote.",
-      },
+        "title": "Falha hidráulica percebida no recebimento",
+        "text": "Quando a paleteira não sobe durante a chegada de mercadoria, a causa pode envolver óleo, válvula ou vedação. Não acrescente fluido desconhecido para liberar rapidamente a descarga. Identifique o equipamento e registre o sintoma; o conjunto precisa de avaliação, mesmo que tenha funcionado no dia anterior."
+      }
     ],
-  },
+    "preventive": "Em Corbélia, a inspeção de uso pode começar pela observação do depósito: estado do piso, espaço para virar e condições dos paletes recebidos. Depois, registre os sinais do equipamento, distinguindo ruído, vazamento, folga e comportamento da elevação. A equipe técnica utiliza essas informações para definir o serviço necessário. Uma revisão não aumenta a capacidade nominal e não autoriza transportar cargas de construção ou sacaria sem conferir o peso total.",
+    "uniqueFaqs": [
+      {
+        "q": "Vocês fazem manutenção para o comércio de Corbélia?",
+        "a": "Consulte pelo WhatsApp com a identificação da paleteira e a necessidade do depósito. O atendimento é organizado a partir de Cascavel, considerando o equipamento e as condições do local. Não há exigência de apresentar a empresa como cliente anterior para iniciar a conversa."
+      },
+      {
+        "q": "A proximidade de Corbélia garante coleta no mesmo dia?",
+        "a": "Não é possível assegurar retirada somente pela distância. Envie o endereço e as condições de carregamento pelo WhatsApp para combinar coleta ou atendimento. A programação depende da disponibilidade confirmada e da solução logística adequada ao equipamento."
+      },
+      {
+        "q": "Como consultar valor e prazo do conserto para Corbélia?",
+        "a": "Descreva pelo WhatsApp o sintoma e envie fotos externas que possam ser obtidas com segurança. Valor e previsão dependem do diagnóstico, dos componentes e do encaminhamento acordado. A localização próxima de Cascavel não define um preço ou prazo padrão."
+      }
+    ],
+    "nearbyCities": [
+      {
+        "name": "Toledo",
+        "slug": "toledo"
+      },
+      {
+        "name": "Assis Chateaubriand",
+        "slug": "assis-chateaubriand"
+      }
+    ],
+    "nearbyIntro": "Para o entorno regional de Corbélia, consulte Toledo e Assis Chateaubriand. A relação de cidades atendidas permite acessar outros municípios sem recorrer a endereços antigos ou páginas genéricas.",
+    "coverage": "A organização do atendimento a Corbélia parte da sede de Cascavel. Mesmo com um trajeto próximo, retirada e avaliação são acertadas conforme o equipamento, o acesso e os recursos do depósito.",
+    "budget": "Chame no WhatsApp para avaliar a paleteira de Corbélia e informar sua rotina de recebimento. A orientação inicial ajuda a combinar o orçamento sem prometer uma conclusão imediata.",
+    "benefits": [
+      "Rotina do depósito identificada",
+      "Capacidade e estado do palete observados",
+      "Programação confirmada antes da retirada"
+    ]
+  }
 ];

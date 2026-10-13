@@ -2,19 +2,21 @@ import { createFileRoute } from "@tanstack/react-router";
 import { CityServicePage } from "@/components/site/CityServicePage";
 import { CITIES } from "@/lib/citiesServed";
 
-const content = CITIES.find(c => c.citySlug === "corbelia")!;
+const content = CITIES.find(city => city.citySlug === "corbelia");
+if (!content) throw new Error("Missing city content: corbelia");
 
 export const Route = createFileRoute("/manutencao-paleteira-hidraulica-corbelia")({
   head: () => ({
     meta: [
-      { title: `Manutenção de Paleteira Hidráulica em Corbélia - PR | Hidraumil` },
-      { name: "description", content: `Manutenção, conserto, aluguel e venda de paleteiras hidráulicas em Corbélia e região. Assistência técnica com coleta, entrega e garantia — Hidraumil Cascavel.` },
-      { property: "og:title", content: `Manutenção de Paleteira Hidráulica em Corbélia - PR | Hidraumil` },
-      { property: "og:description", content: `Atendimento técnico especializado em paleteiras hidráulicas em Corbélia e Oeste do Paraná.` },
-      { property: "og:url", content: "https://hidraumil.com.br/manutencao-paleteira-hidraulica-corbelia" },
+      { title: content.seoTitle },
+      { name: "description", content: content.description },
+      { property: "og:title", content: content.seoTitle },
+      { property: "og:description", content: content.description },
+      { property: "og:url", content: "https://hidraumil.lovable.app/manutencao-paleteira-hidraulica-corbelia" },
       { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://hidraumil.com.br/manutencao-paleteira-hidraulica-corbelia" }],
+    links: [{ rel: "canonical", href: "https://hidraumil.lovable.app/manutencao-paleteira-hidraulica-corbelia" }],
   }),
   component: () => <CityServicePage content={content} />,
 });

@@ -2,9 +2,11 @@ import { Link } from "@tanstack/react-router";
 import { ServicePageShell, H2, P } from "@/components/site/ServicePageShell";
 import { CheckCircle2, HelpCircle } from "lucide-react";
 
+export type CitySlug = "toledo" | "foz-do-iguacu" | "marechal-candido-rondon" | "medianeira" | "assis-chateaubriand" | "palotina" | "santa-helena" | "corbelia";
+
 export interface CityContent {
   city: string;
-  citySlug: string;
+  citySlug: CitySlug;
   distanceKm: number;
   road: string;
   seoTitle: string;
@@ -17,7 +19,7 @@ export interface CityContent {
   problemsH2: string;
   problems: { title: string; text: string }[];
   preventive: string;
-  nearbyCities: { name: string; slug: string }[];
+  nearbyCities: { name: string; slug: CitySlug }[];
   nearbyIntro: string;
   uniqueFaqs: { q: string; a: string }[];
   coverage: string;

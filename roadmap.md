@@ -10,6 +10,6 @@
 - [x] Verify both pages, WhatsApp links, structured data and existing SEO tests.
 
 # City content differentiation
-- [ ] Rewrite the eight city pages with 600–900 words and city-specific sectors, logistics, problems and three FAQs.
-- [ ] Preserve URLs and visual patterns; update unique SEO and city Service coverage, nearby links and city directory links.
-- [ ] Validate content uniqueness, word counts, metadata, schema and real navigation.
+- [x] Rewrite the eight city pages with 600–900 words and city-specific sectors, logistics, problems and three FAQs.
+- [x] Preserve URLs and visual patterns; update unique SEO and city Service coverage, nearby links and city directory links.
+- [x] Validate content uniqueness, word counts, metadata, schema and real navigation.

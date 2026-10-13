@@ -12,6 +12,7 @@ export const Route = createFileRoute("/cidades-atendidas")({
       { property: "og:description", content: "Veja todas as cidades atendidas pela Hidraumil no Oeste do Paraná." },
       { property: "og:url", content: "https://hidraumil.com.br/cidades-atendidas" },
       { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "https://hidraumil.com.br/cidades-atendidas" }],
     scripts: [{
@@ -50,7 +51,7 @@ function CidadesAtendidas() {
     city: c.city,
     citySlug: c.citySlug,
     distanceKm: c.distanceKm,
-    driveTime: c.driveTime,
+    road: c.road,
     href: `/manutencao-paleteira-hidraulica-${c.citySlug}`,
     description: c.intro.split(". ")[0] + ".",
     highlight: false,
@@ -96,7 +97,7 @@ function CidadesAtendidas() {
                 {!c.highlight && (
                   <p className="mt-5 inline-flex items-center gap-2 text-xs text-muted-foreground">
                     <Clock className="h-3.5 w-3.5 text-primary" />
-                    {c.distanceKm} km de Cascavel · {c.driveTime}
+                    Aproximadamente {c.distanceKm} km de Cascavel
                   </p>
                 )}
 
