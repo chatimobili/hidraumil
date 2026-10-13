@@ -282,7 +282,7 @@ export const CITIES: CityContent[] = [
     "citySlug": "assis-chateaubriand",
     "distanceKm": 85,
     "road": "BR-467 e PR-486",
-    "seoTitle": "Manutenção de Paleteira em Assis Chateaubriand, PR | Hidraumil",
+    "seoTitle": "Manutenção Paleteira em Assis Chateaubriand, PR | Hidraumil",
     "description": "Paleteiras em Assis Chateaubriand: manutenção para armazéns de sementes e insumos agrícolas. Combine a avaliação pelo WhatsApp.",
     "subtitle": "Movimentação de sementes, sacaria e materiais agrícolas nos depósitos de Assis Chateaubriand.",
     "intro": "Assis Chateaubriand tem uma ligação econômica importante com lavouras de grãos e com os serviços que sustentam a produção rural. Sementes, materiais de embalagem e outros insumos passam por depósitos antes de chegar ao campo. Nesses espaços, a paleteira movimenta produtos ensacados ou caixas organizadas sobre paletes, aproximando lotes da separação e do carregamento. Sua função é especialmente útil nas transferências internas em piso adequado, mas não se confunde com transporte de grãos a granel nem com trabalho sobre terreno sem preparo.",

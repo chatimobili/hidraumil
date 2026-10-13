@@ -14,3 +14,5 @@
 
 - Keep new hydraulic repair service content in a typed shared catalog rendered by the existing service shell, with opt-in factual copy so existing pages remain unchanged.
 - Service-specific FAQ data must drive both the visible answers and FAQPage schema through the shared FAQ renderer.
+
+- City-specific prose, FAQs, road context and SEO copy live in the city catalog; leaf routes own head metadata and the service shell receives city-specific coverage to avoid duplicate generic claims.
