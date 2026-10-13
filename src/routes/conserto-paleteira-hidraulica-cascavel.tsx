@@ -1,3 +1,4 @@
+import { ServiceFAQ } from "@/components/site/ServiceFAQ";
 import { createFileRoute } from "@tanstack/react-router";
 import { ServicePageShell, H2, P } from "@/components/site/ServicePageShell";
 import { Wrench } from "lucide-react";
@@ -5,11 +6,15 @@ import { Wrench } from "lucide-react";
 export const Route = createFileRoute("/conserto-paleteira-hidraulica-cascavel")({
   head: () => ({
     meta: [
-      { title: "Conserto de Paleteira Hidráulica em Cascavel | Hidraumil" },
-      { name: "description", content: "Conserto especializado de paleteiras hidráulicas em Cascavel e Oeste do Paraná. Diagnóstico gratuito, reparo rápido e garantia. Atendemos todas as marcas." },
-      { property: "og:title", content: "Conserto de Paleteira Hidráulica em Cascavel | Hidraumil" },
-      { property: "og:description", content: "Reparo rápido com garantia para todas as marcas em Cascavel." },
+      { title: "Conserto de Paleteira em Cascavel: Manual e Hidráulica" },
+      { name: "description", content: "Paleteira vazando óleo, sem subir ou sem segurar carga? Consertamos paleteiras manuais e hidráulicas em Cascavel. Orçamento rápido pelo WhatsApp." },
+      { property: "og:title", content: "Conserto de Paleteira em Cascavel: Manual e Hidráulica" },
+      { property: "og:description", content: "Paleteira vazando óleo, sem subir ou sem segurar carga? Consertamos paleteiras manuais e hidráulicas em Cascavel. Orçamento rápido pelo WhatsApp." },
       { property: "og:url", content: "https://hidraumil.com.br/conserto-paleteira-hidraulica-cascavel" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Conserto de Paleteira em Cascavel: Manual e Hidráulica" },
+      { name: "twitter:description", content: "Paleteira vazando óleo, sem subir ou sem segurar carga? Consertamos paleteiras manuais e hidráulicas em Cascavel. Orçamento rápido pelo WhatsApp." },
     ],
     links: [{ rel: "canonical", href: "https://hidraumil.com.br/conserto-paleteira-hidraulica-cascavel" }],
   }),
@@ -31,6 +36,7 @@ const marcas = ["Bovenau", "Paletrans", "Ybarra", "Tecnomafra", "Lift Mais", "Ma
 
 function Page() {
   return (
+    <>
     <ServicePageShell
       title="Conserto de Paleteira Hidráulica em Cascavel e Região"
       subtitle="Diagnóstico gratuito, reparo com peças de qualidade e garantia em todas as marcas e modelos."
@@ -74,5 +80,7 @@ function Page() {
         </P>
       </section>
     </ServicePageShell>
+    <ServiceFAQ />
+    </>
   );
 }

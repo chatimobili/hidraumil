@@ -35,12 +35,17 @@ import { Testimonials } from "@/components/site/Testimonials";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Manutenção e Conserto de Paleteiras em Cascavel | Hidraumil" },
-      { name: "description", content: "Manutenção, conserto e aluguel de paleteiras em Cascavel. Técnicos especializados, peças originais e atendimento rápido. Solicite seu orçamento!" },
-      { property: "og:title", content: "Manutenção de Paleteira | Conserto e Aluguel | Hidraumil Cascavel" },
-      { property: "og:description", content: "Especialistas em manutenção, conserto e aluguel de paleteiras hidráulicas em Cascavel. Orçamento grátis, coleta e entrega inclusa." },
+      { title: "Hidráulica em Cascavel | Conserto de Paleteiras – Hidraumil" },
+      { name: "description", content: "Hidráulica em Cascavel há mais de 15 anos: conserto, manutenção e aluguel de paleteiras e macacos hidráulicos. Orçamento rápido pelo WhatsApp." },
+      { property: "og:title", content: "Hidráulica em Cascavel | Conserto de Paleteiras – Hidraumil" },
+      { property: "og:description", content: "Hidráulica em Cascavel há mais de 15 anos: conserto, manutenção e aluguel de paleteiras e macacos hidráulicos. Orçamento rápido pelo WhatsApp." },
       { property: "og:url", content: "https://hidraumil.com.br" },
       { property: "og:image", content: absoluteUrl(heroImg) },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Hidráulica em Cascavel | Conserto de Paleteiras – Hidraumil" },
+      { name: "twitter:description", content: "Hidráulica em Cascavel há mais de 15 anos: conserto, manutenção e aluguel de paleteiras e macacos hidráulicos. Orçamento rápido pelo WhatsApp." },
+      { name: "twitter:image", content: absoluteUrl(heroImg) },
     ],
     links: [
       { rel: "canonical", href: "https://hidraumil.com.br/" },

@@ -1,3 +1,5 @@
+import { Link } from "@tanstack/react-router";
+import { RevisionCTA } from "@/components/site/RevisionCTA";
 import { createFileRoute } from "@tanstack/react-router";
 import { BlogArticle } from "@/components/site/BlogArticle";
 
@@ -12,12 +14,15 @@ const meta = {
 export const Route = createFileRoute("/blog/manutencao-preventiva-paleteira-hidraulica")({
   head: () => ({
     meta: [
-      { title: `${meta.title} | Hidraumil` },
-      { name: "description", content: "Aprenda como fazer a manutenção preventiva da sua paleteira hidráulica, evitar falhas e aumentar a vida útil do equipamento. Guia completo da Hidraumil." },
+      { title: "Manutenção Preventiva de Paleteira: Checklist e Prazos" },
+      { name: "description", content: "Checklist de manutenção preventiva da paleteira hidráulica: o que revisar, a cada quanto tempo e os sinais de defeito. Veja o passo a passo." },
       { property: "og:type", content: "article" },
-      { property: "og:title", content: meta.title },
-      { property: "og:description", content: meta.excerpt },
+      { property: "og:title", content: "Manutenção Preventiva de Paleteira: Checklist e Prazos" },
+      { property: "og:description", content: "Checklist de manutenção preventiva da paleteira hidráulica: o que revisar, a cada quanto tempo e os sinais de defeito. Veja o passo a passo." },
       { property: "og:url", content: `https://hidraumil.com.br/blog/${meta.slug}` },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Manutenção Preventiva de Paleteira: Checklist e Prazos" },
+      { name: "twitter:description", content: "Checklist de manutenção preventiva da paleteira hidráulica: o que revisar, a cada quanto tempo e os sinais de defeito. Veja o passo a passo." },
     ],
     links: [{ rel: "canonical", href: `https://hidraumil.com.br/blog/${meta.slug}` }],
   }),
@@ -31,6 +36,7 @@ function Page() {
       <p>
         Manutenção preventiva é o conjunto de inspeções e serviços realizados em intervalos programados, antes que qualquer falha aconteça. Em paleteiras hidráulicas, ela envolve verificar nível e qualidade do óleo, lubrificar articulações, conferir vedações, testar a bomba e o cilindro, examinar rodas e garfos e validar o funcionamento da válvula de descida. A lógica é simples: identificar desgastes pequenos antes que virem grandes problemas.
       </p>
+      <RevisionCTA />
 
       <h2>Por que é importante</h2>
       <p>
@@ -77,6 +83,10 @@ function Page() {
       <p>
         A Hidraumil oferece planos de manutenção preventiva sob medida para empresas em Cascavel e região Oeste do Paraná. Cuidamos do agendamento, do checklist técnico, das peças de reposição e da garantia. Você foca na sua operação; nós cuidamos da paleteira. Fale com a gente pelo WhatsApp e monte um plano para a sua frota.
       </p>
+      <p>
+        <Link to="/manutencao-paleteiras-hidraulicas-cascavel" className="font-semibold text-primary hover:underline">Manutenção de paleteiras hidráulicas em Cascavel</Link>
+      </p>
+      <RevisionCTA />
     </BlogArticle>
   );
 }

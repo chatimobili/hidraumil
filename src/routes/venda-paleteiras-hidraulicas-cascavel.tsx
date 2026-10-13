@@ -5,11 +5,15 @@ import { CheckCircle2 } from "lucide-react";
 export const Route = createFileRoute("/venda-paleteiras-hidraulicas-cascavel")({
   head: () => ({
     meta: [
-      { title: "Venda de Paleteiras Hidráulicas em Cascavel | Hidraumil" },
-      { name: "description", content: "Compre paleteiras hidráulicas em Cascavel com a Hidraumil. Equipamentos novos e revisados, manuais e elétricas, com assistência técnica e garantia." },
-      { property: "og:title", content: "Venda de Paleteiras Hidráulicas em Cascavel | Hidraumil" },
-      { property: "og:description", content: "Paleteiras novas e revisadas com garantia em Cascavel, PR." },
+      { title: "Paleteira Hidráulica à Venda em Cascavel | Hidraumil" },
+      { name: "description", content: "Paleteiras hidráulicas novas em Cascavel com assistência técnica própria depois da compra. Consulte modelos e preços pelo WhatsApp." },
+      { property: "og:title", content: "Paleteira Hidráulica à Venda em Cascavel | Hidraumil" },
+      { property: "og:description", content: "Paleteiras hidráulicas novas em Cascavel com assistência técnica própria depois da compra. Consulte modelos e preços pelo WhatsApp." },
       { property: "og:url", content: "https://hidraumil.com.br/venda-paleteiras-hidraulicas-cascavel" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Paleteira Hidráulica à Venda em Cascavel | Hidraumil" },
+      { name: "twitter:description", content: "Paleteiras hidráulicas novas em Cascavel com assistência técnica própria depois da compra. Consulte modelos e preços pelo WhatsApp." },
     ],
     links: [{ rel: "canonical", href: "https://hidraumil.com.br/venda-paleteiras-hidraulicas-cascavel" }],
   }),
