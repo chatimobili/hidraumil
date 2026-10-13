@@ -9,136 +9,46 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as VendaPecasPaleteirasRouteImport } from './routes/venda-pecas-paleteiras'
-import { Route as VendaPaleteirasHidraulicasCascavelRouteImport } from './routes/venda-paleteiras-hidraulicas-cascavel'
-import { Route as SobreNosRouteImport } from './routes/sobre-nos'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as ManutencaoPaleteirasHidraulicasCascavelRouteImport } from './routes/manutencao-paleteiras-hidraulicas-cascavel'
-import { Route as ManutencaoPaleteiraHidraulicaToledoRouteImport } from './routes/manutencao-paleteira-hidraulica-toledo'
-import { Route as ManutencaoPaleteiraHidraulicaSantaHelenaRouteImport } from './routes/manutencao-paleteira-hidraulica-santa-helena'
-import { Route as ManutencaoPaleteiraHidraulicaPalotinaRouteImport } from './routes/manutencao-paleteira-hidraulica-palotina'
-import { Route as ManutencaoPaleteiraHidraulicaMedianeiraRouteImport } from './routes/manutencao-paleteira-hidraulica-medianeira'
-import { Route as ManutencaoPaleteiraHidraulicaMarechalCandidoRondonRouteImport } from './routes/manutencao-paleteira-hidraulica-marechal-candido-rondon'
-import { Route as ManutencaoPaleteiraHidraulicaFozDoIguacuRouteImport } from './routes/manutencao-paleteira-hidraulica-foz-do-iguacu'
-import { Route as ManutencaoPaleteiraHidraulicaCorbeliaRouteImport } from './routes/manutencao-paleteira-hidraulica-corbelia'
-import { Route as ManutencaoPaleteiraHidraulicaAssisChateaubriandRouteImport } from './routes/manutencao-paleteira-hidraulica-assis-chateaubriand'
-import { Route as LocacaoPaleteirasHidraulicasCascavelRouteImport } from './routes/locacao-paleteiras-hidraulicas-cascavel'
-import { Route as ContatoRouteImport } from './routes/contato'
-import { Route as ConsertoPaleteiraHidraulicaCascavelRouteImport } from './routes/conserto-paleteira-hidraulica-cascavel'
-import { Route as CidadesAtendidasRouteImport } from './routes/cidades-atendidas'
-import { Route as AssistenciaTecnicaEquipamentosHidraulicosCascavelRouteImport } from './routes/assistencia-tecnica-equipamentos-hidraulicos-cascavel'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AssistenciaTecnicaEquipamentosHidraulicosCascavelRouteImport } from './routes/assistencia-tecnica-equipamentos-hidraulicos-cascavel'
+import { Route as CidadesAtendidasRouteImport } from './routes/cidades-atendidas'
+import { Route as ConsertoMacacoHidraulicoCascavelRouteImport } from './routes/conserto-macaco-hidraulico-cascavel'
+import { Route as ConsertoPaleteiraHidraulicaCascavelRouteImport } from './routes/conserto-paleteira-hidraulica-cascavel'
+import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as LocacaoPaleteirasHidraulicasCascavelRouteImport } from './routes/locacao-paleteiras-hidraulicas-cascavel'
+import { Route as ManutencaoPaleteiraHidraulicaAssisChateaubriandRouteImport } from './routes/manutencao-paleteira-hidraulica-assis-chateaubriand'
+import { Route as ManutencaoPaleteiraHidraulicaCorbeliaRouteImport } from './routes/manutencao-paleteira-hidraulica-corbelia'
+import { Route as ManutencaoPaleteiraHidraulicaFozDoIguacuRouteImport } from './routes/manutencao-paleteira-hidraulica-foz-do-iguacu'
+import { Route as ManutencaoPaleteiraHidraulicaMarechalCandidoRondonRouteImport } from './routes/manutencao-paleteira-hidraulica-marechal-candido-rondon'
+import { Route as ManutencaoPaleteiraHidraulicaMedianeiraRouteImport } from './routes/manutencao-paleteira-hidraulica-medianeira'
+import { Route as ManutencaoPaleteiraHidraulicaPalotinaRouteImport } from './routes/manutencao-paleteira-hidraulica-palotina'
+import { Route as ManutencaoPaleteiraHidraulicaSantaHelenaRouteImport } from './routes/manutencao-paleteira-hidraulica-santa-helena'
+import { Route as ManutencaoPaleteiraHidraulicaToledoRouteImport } from './routes/manutencao-paleteira-hidraulica-toledo'
+import { Route as ManutencaoPaleteirasHidraulicasCascavelRouteImport } from './routes/manutencao-paleteiras-hidraulicas-cascavel'
+import { Route as ReparoCilindroHidraulicoCascavelRouteImport } from './routes/reparo-cilindro-hidraulico-cascavel'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SobreNosRouteImport } from './routes/sobre-nos'
+import { Route as VendaPaleteirasHidraulicasCascavelRouteImport } from './routes/venda-paleteiras-hidraulicas-cascavel'
+import { Route as VendaPecasPaleteirasRouteImport } from './routes/venda-pecas-paleteiras'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
-import { Route as BlogSegurancaOperacaoPaleteiraCascavelRouteImport } from './routes/blog.seguranca-operacao-paleteira-cascavel'
-import { Route as BlogQuantoCustaConsertarPaleteiraHidraulicaRouteImport } from './routes/blog.quanto-custa-consertar-paleteira-hidraulica'
-import { Route as BlogPrincipaisDefeitosPaleteiraHidraulicaRouteImport } from './routes/blog.principais-defeitos-paleteira-hidraulica'
-import { Route as BlogPecasPaleteiraHidraulicaCascavelRouteImport } from './routes/blog.pecas-paleteira-hidraulica-cascavel'
-import { Route as BlogPaleteiraManualVsHidraulicaRouteImport } from './routes/blog.paleteira-manual-vs-hidraulica'
-import { Route as BlogPaleteiraIndustriaAlimentosCascavelRouteImport } from './routes/blog.paleteira-industria-alimentos-cascavel'
-import { Route as BlogPaleteiraCooperativasOesteParanaRouteImport } from './routes/blog.paleteira-cooperativas-oeste-parana'
-import { Route as BlogPaleteira2000kgVs3000kgCascavelRouteImport } from './routes/blog.paleteira-2000kg-vs-3000kg-cascavel'
-import { Route as BlogOleoHidraulicoPaleteiraCascavelRouteImport } from './routes/blog.oleo-hidraulico-paleteira-cascavel'
-import { Route as BlogManutencaoPreventivaPaleteiraHidraulicaRouteImport } from './routes/blog.manutencao-preventiva-paleteira-hidraulica'
-import { Route as BlogLocacaoVsCompraPaleteiraCascavelRouteImport } from './routes/blog.locacao-vs-compra-paleteira-cascavel'
-import { Route as BlogGuiaConsertoPaleteiraHidraulicaCascavelRouteImport } from './routes/blog.guia-conserto-paleteira-hidraulica-cascavel'
-import { Route as BlogAssistenciaTecnicaPaleteiraCascavelRouteImport } from './routes/blog.assistencia-tecnica-paleteira-cascavel'
 import { Route as BlogAluguelPaleteiraHidraulicaCascavelRouteImport } from './routes/blog.aluguel-paleteira-hidraulica-cascavel'
+import { Route as BlogAssistenciaTecnicaPaleteiraCascavelRouteImport } from './routes/blog.assistencia-tecnica-paleteira-cascavel'
+import { Route as BlogGuiaConsertoPaleteiraHidraulicaCascavelRouteImport } from './routes/blog.guia-conserto-paleteira-hidraulica-cascavel'
+import { Route as BlogLocacaoVsCompraPaleteiraCascavelRouteImport } from './routes/blog.locacao-vs-compra-paleteira-cascavel'
+import { Route as BlogManutencaoPreventivaPaleteiraHidraulicaRouteImport } from './routes/blog.manutencao-preventiva-paleteira-hidraulica'
+import { Route as BlogOleoHidraulicoPaleteiraCascavelRouteImport } from './routes/blog.oleo-hidraulico-paleteira-cascavel'
+import { Route as BlogPaleteira2000kgVs3000kgCascavelRouteImport } from './routes/blog.paleteira-2000kg-vs-3000kg-cascavel'
+import { Route as BlogPaleteiraCooperativasOesteParanaRouteImport } from './routes/blog.paleteira-cooperativas-oeste-parana'
+import { Route as BlogPaleteiraIndustriaAlimentosCascavelRouteImport } from './routes/blog.paleteira-industria-alimentos-cascavel'
+import { Route as BlogPaleteiraManualVsHidraulicaRouteImport } from './routes/blog.paleteira-manual-vs-hidraulica'
+import { Route as BlogPecasPaleteiraHidraulicaCascavelRouteImport } from './routes/blog.pecas-paleteira-hidraulica-cascavel'
+import { Route as BlogPrincipaisDefeitosPaleteiraHidraulicaRouteImport } from './routes/blog.principais-defeitos-paleteira-hidraulica'
+import { Route as BlogQuantoCustaConsertarPaleteiraHidraulicaRouteImport } from './routes/blog.quanto-custa-consertar-paleteira-hidraulica'
+import { Route as BlogSegurancaOperacaoPaleteiraCascavelRouteImport } from './routes/blog.seguranca-operacao-paleteira-cascavel'
 
-const VendaPecasPaleteirasRoute = VendaPecasPaleteirasRouteImport.update({
-  id: '/venda-pecas-paleteiras',
-  path: '/venda-pecas-paleteiras',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const VendaPaleteirasHidraulicasCascavelRoute =
-  VendaPaleteirasHidraulicasCascavelRouteImport.update({
-    id: '/venda-paleteiras-hidraulicas-cascavel',
-    path: '/venda-paleteiras-hidraulicas-cascavel',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const SobreNosRoute = SobreNosRouteImport.update({
-  id: '/sobre-nos',
-  path: '/sobre-nos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ManutencaoPaleteirasHidraulicasCascavelRoute =
-  ManutencaoPaleteirasHidraulicasCascavelRouteImport.update({
-    id: '/manutencao-paleteiras-hidraulicas-cascavel',
-    path: '/manutencao-paleteiras-hidraulicas-cascavel',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ManutencaoPaleteiraHidraulicaToledoRoute =
-  ManutencaoPaleteiraHidraulicaToledoRouteImport.update({
-    id: '/manutencao-paleteira-hidraulica-toledo',
-    path: '/manutencao-paleteira-hidraulica-toledo',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ManutencaoPaleteiraHidraulicaSantaHelenaRoute =
-  ManutencaoPaleteiraHidraulicaSantaHelenaRouteImport.update({
-    id: '/manutencao-paleteira-hidraulica-santa-helena',
-    path: '/manutencao-paleteira-hidraulica-santa-helena',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ManutencaoPaleteiraHidraulicaPalotinaRoute =
-  ManutencaoPaleteiraHidraulicaPalotinaRouteImport.update({
-    id: '/manutencao-paleteira-hidraulica-palotina',
-    path: '/manutencao-paleteira-hidraulica-palotina',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ManutencaoPaleteiraHidraulicaMedianeiraRoute =
-  ManutencaoPaleteiraHidraulicaMedianeiraRouteImport.update({
-    id: '/manutencao-paleteira-hidraulica-medianeira',
-    path: '/manutencao-paleteira-hidraulica-medianeira',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ManutencaoPaleteiraHidraulicaMarechalCandidoRondonRoute =
-  ManutencaoPaleteiraHidraulicaMarechalCandidoRondonRouteImport.update({
-    id: '/manutencao-paleteira-hidraulica-marechal-candido-rondon',
-    path: '/manutencao-paleteira-hidraulica-marechal-candido-rondon',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ManutencaoPaleteiraHidraulicaFozDoIguacuRoute =
-  ManutencaoPaleteiraHidraulicaFozDoIguacuRouteImport.update({
-    id: '/manutencao-paleteira-hidraulica-foz-do-iguacu',
-    path: '/manutencao-paleteira-hidraulica-foz-do-iguacu',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ManutencaoPaleteiraHidraulicaCorbeliaRoute =
-  ManutencaoPaleteiraHidraulicaCorbeliaRouteImport.update({
-    id: '/manutencao-paleteira-hidraulica-corbelia',
-    path: '/manutencao-paleteira-hidraulica-corbelia',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ManutencaoPaleteiraHidraulicaAssisChateaubriandRoute =
-  ManutencaoPaleteiraHidraulicaAssisChateaubriandRouteImport.update({
-    id: '/manutencao-paleteira-hidraulica-assis-chateaubriand',
-    path: '/manutencao-paleteira-hidraulica-assis-chateaubriand',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const LocacaoPaleteirasHidraulicasCascavelRoute =
-  LocacaoPaleteirasHidraulicasCascavelRouteImport.update({
-    id: '/locacao-paleteiras-hidraulicas-cascavel',
-    path: '/locacao-paleteiras-hidraulicas-cascavel',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ContatoRoute = ContatoRouteImport.update({
-  id: '/contato',
-  path: '/contato',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ConsertoPaleteiraHidraulicaCascavelRoute =
-  ConsertoPaleteiraHidraulicaCascavelRouteImport.update({
-    id: '/conserto-paleteira-hidraulica-cascavel',
-    path: '/conserto-paleteira-hidraulica-cascavel',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const CidadesAtendidasRoute = CidadesAtendidasRouteImport.update({
-  id: '/cidades-atendidas',
-  path: '/cidades-atendidas',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AssistenciaTecnicaEquipamentosHidraulicosCascavelRoute =
@@ -147,9 +57,113 @@ const AssistenciaTecnicaEquipamentosHidraulicosCascavelRoute =
     path: '/assistencia-tecnica-equipamentos-hidraulicos-cascavel',
     getParentRoute: () => rootRouteImport,
   } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const CidadesAtendidasRoute = CidadesAtendidasRouteImport.update({
+  id: '/cidades-atendidas',
+  path: '/cidades-atendidas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConsertoMacacoHidraulicoCascavelRoute =
+  ConsertoMacacoHidraulicoCascavelRouteImport.update({
+    id: '/conserto-macaco-hidraulico-cascavel',
+    path: '/conserto-macaco-hidraulico-cascavel',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ConsertoPaleteiraHidraulicaCascavelRoute =
+  ConsertoPaleteiraHidraulicaCascavelRouteImport.update({
+    id: '/conserto-paleteira-hidraulica-cascavel',
+    path: '/conserto-paleteira-hidraulica-cascavel',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocacaoPaleteirasHidraulicasCascavelRoute =
+  LocacaoPaleteirasHidraulicasCascavelRouteImport.update({
+    id: '/locacao-paleteiras-hidraulicas-cascavel',
+    path: '/locacao-paleteiras-hidraulicas-cascavel',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ManutencaoPaleteiraHidraulicaAssisChateaubriandRoute =
+  ManutencaoPaleteiraHidraulicaAssisChateaubriandRouteImport.update({
+    id: '/manutencao-paleteira-hidraulica-assis-chateaubriand',
+    path: '/manutencao-paleteira-hidraulica-assis-chateaubriand',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ManutencaoPaleteiraHidraulicaCorbeliaRoute =
+  ManutencaoPaleteiraHidraulicaCorbeliaRouteImport.update({
+    id: '/manutencao-paleteira-hidraulica-corbelia',
+    path: '/manutencao-paleteira-hidraulica-corbelia',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ManutencaoPaleteiraHidraulicaFozDoIguacuRoute =
+  ManutencaoPaleteiraHidraulicaFozDoIguacuRouteImport.update({
+    id: '/manutencao-paleteira-hidraulica-foz-do-iguacu',
+    path: '/manutencao-paleteira-hidraulica-foz-do-iguacu',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ManutencaoPaleteiraHidraulicaMarechalCandidoRondonRoute =
+  ManutencaoPaleteiraHidraulicaMarechalCandidoRondonRouteImport.update({
+    id: '/manutencao-paleteira-hidraulica-marechal-candido-rondon',
+    path: '/manutencao-paleteira-hidraulica-marechal-candido-rondon',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ManutencaoPaleteiraHidraulicaMedianeiraRoute =
+  ManutencaoPaleteiraHidraulicaMedianeiraRouteImport.update({
+    id: '/manutencao-paleteira-hidraulica-medianeira',
+    path: '/manutencao-paleteira-hidraulica-medianeira',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ManutencaoPaleteiraHidraulicaPalotinaRoute =
+  ManutencaoPaleteiraHidraulicaPalotinaRouteImport.update({
+    id: '/manutencao-paleteira-hidraulica-palotina',
+    path: '/manutencao-paleteira-hidraulica-palotina',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ManutencaoPaleteiraHidraulicaSantaHelenaRoute =
+  ManutencaoPaleteiraHidraulicaSantaHelenaRouteImport.update({
+    id: '/manutencao-paleteira-hidraulica-santa-helena',
+    path: '/manutencao-paleteira-hidraulica-santa-helena',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ManutencaoPaleteiraHidraulicaToledoRoute =
+  ManutencaoPaleteiraHidraulicaToledoRouteImport.update({
+    id: '/manutencao-paleteira-hidraulica-toledo',
+    path: '/manutencao-paleteira-hidraulica-toledo',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ManutencaoPaleteirasHidraulicasCascavelRoute =
+  ManutencaoPaleteirasHidraulicasCascavelRouteImport.update({
+    id: '/manutencao-paleteiras-hidraulicas-cascavel',
+    path: '/manutencao-paleteiras-hidraulicas-cascavel',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ReparoCilindroHidraulicoCascavelRoute =
+  ReparoCilindroHidraulicoCascavelRouteImport.update({
+    id: '/reparo-cilindro-hidraulico-cascavel',
+    path: '/reparo-cilindro-hidraulico-cascavel',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SobreNosRoute = SobreNosRouteImport.update({
+  id: '/sobre-nos',
+  path: '/sobre-nos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VendaPaleteirasHidraulicasCascavelRoute =
+  VendaPaleteirasHidraulicasCascavelRouteImport.update({
+    id: '/venda-paleteiras-hidraulicas-cascavel',
+    path: '/venda-paleteiras-hidraulicas-cascavel',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const VendaPecasPaleteirasRoute = VendaPecasPaleteirasRouteImport.update({
+  id: '/venda-pecas-paleteiras',
+  path: '/venda-pecas-paleteiras',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
@@ -157,76 +171,10 @@ const BlogIndexRoute = BlogIndexRouteImport.update({
   path: '/blog/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogSegurancaOperacaoPaleteiraCascavelRoute =
-  BlogSegurancaOperacaoPaleteiraCascavelRouteImport.update({
-    id: '/blog/seguranca-operacao-paleteira-cascavel',
-    path: '/blog/seguranca-operacao-paleteira-cascavel',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogQuantoCustaConsertarPaleteiraHidraulicaRoute =
-  BlogQuantoCustaConsertarPaleteiraHidraulicaRouteImport.update({
-    id: '/blog/quanto-custa-consertar-paleteira-hidraulica',
-    path: '/blog/quanto-custa-consertar-paleteira-hidraulica',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogPrincipaisDefeitosPaleteiraHidraulicaRoute =
-  BlogPrincipaisDefeitosPaleteiraHidraulicaRouteImport.update({
-    id: '/blog/principais-defeitos-paleteira-hidraulica',
-    path: '/blog/principais-defeitos-paleteira-hidraulica',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogPecasPaleteiraHidraulicaCascavelRoute =
-  BlogPecasPaleteiraHidraulicaCascavelRouteImport.update({
-    id: '/blog/pecas-paleteira-hidraulica-cascavel',
-    path: '/blog/pecas-paleteira-hidraulica-cascavel',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogPaleteiraManualVsHidraulicaRoute =
-  BlogPaleteiraManualVsHidraulicaRouteImport.update({
-    id: '/blog/paleteira-manual-vs-hidraulica',
-    path: '/blog/paleteira-manual-vs-hidraulica',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogPaleteiraIndustriaAlimentosCascavelRoute =
-  BlogPaleteiraIndustriaAlimentosCascavelRouteImport.update({
-    id: '/blog/paleteira-industria-alimentos-cascavel',
-    path: '/blog/paleteira-industria-alimentos-cascavel',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogPaleteiraCooperativasOesteParanaRoute =
-  BlogPaleteiraCooperativasOesteParanaRouteImport.update({
-    id: '/blog/paleteira-cooperativas-oeste-parana',
-    path: '/blog/paleteira-cooperativas-oeste-parana',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogPaleteira2000kgVs3000kgCascavelRoute =
-  BlogPaleteira2000kgVs3000kgCascavelRouteImport.update({
-    id: '/blog/paleteira-2000kg-vs-3000kg-cascavel',
-    path: '/blog/paleteira-2000kg-vs-3000kg-cascavel',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogOleoHidraulicoPaleteiraCascavelRoute =
-  BlogOleoHidraulicoPaleteiraCascavelRouteImport.update({
-    id: '/blog/oleo-hidraulico-paleteira-cascavel',
-    path: '/blog/oleo-hidraulico-paleteira-cascavel',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogManutencaoPreventivaPaleteiraHidraulicaRoute =
-  BlogManutencaoPreventivaPaleteiraHidraulicaRouteImport.update({
-    id: '/blog/manutencao-preventiva-paleteira-hidraulica',
-    path: '/blog/manutencao-preventiva-paleteira-hidraulica',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogLocacaoVsCompraPaleteiraCascavelRoute =
-  BlogLocacaoVsCompraPaleteiraCascavelRouteImport.update({
-    id: '/blog/locacao-vs-compra-paleteira-cascavel',
-    path: '/blog/locacao-vs-compra-paleteira-cascavel',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogGuiaConsertoPaleteiraHidraulicaCascavelRoute =
-  BlogGuiaConsertoPaleteiraHidraulicaCascavelRouteImport.update({
-    id: '/blog/guia-conserto-paleteira-hidraulica-cascavel',
-    path: '/blog/guia-conserto-paleteira-hidraulica-cascavel',
+const BlogAluguelPaleteiraHidraulicaCascavelRoute =
+  BlogAluguelPaleteiraHidraulicaCascavelRouteImport.update({
+    id: '/blog/aluguel-paleteira-hidraulica-cascavel',
+    path: '/blog/aluguel-paleteira-hidraulica-cascavel',
     getParentRoute: () => rootRouteImport,
   } as any)
 const BlogAssistenciaTecnicaPaleteiraCascavelRoute =
@@ -235,10 +183,76 @@ const BlogAssistenciaTecnicaPaleteiraCascavelRoute =
     path: '/blog/assistencia-tecnica-paleteira-cascavel',
     getParentRoute: () => rootRouteImport,
   } as any)
-const BlogAluguelPaleteiraHidraulicaCascavelRoute =
-  BlogAluguelPaleteiraHidraulicaCascavelRouteImport.update({
-    id: '/blog/aluguel-paleteira-hidraulica-cascavel',
-    path: '/blog/aluguel-paleteira-hidraulica-cascavel',
+const BlogGuiaConsertoPaleteiraHidraulicaCascavelRoute =
+  BlogGuiaConsertoPaleteiraHidraulicaCascavelRouteImport.update({
+    id: '/blog/guia-conserto-paleteira-hidraulica-cascavel',
+    path: '/blog/guia-conserto-paleteira-hidraulica-cascavel',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogLocacaoVsCompraPaleteiraCascavelRoute =
+  BlogLocacaoVsCompraPaleteiraCascavelRouteImport.update({
+    id: '/blog/locacao-vs-compra-paleteira-cascavel',
+    path: '/blog/locacao-vs-compra-paleteira-cascavel',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogManutencaoPreventivaPaleteiraHidraulicaRoute =
+  BlogManutencaoPreventivaPaleteiraHidraulicaRouteImport.update({
+    id: '/blog/manutencao-preventiva-paleteira-hidraulica',
+    path: '/blog/manutencao-preventiva-paleteira-hidraulica',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogOleoHidraulicoPaleteiraCascavelRoute =
+  BlogOleoHidraulicoPaleteiraCascavelRouteImport.update({
+    id: '/blog/oleo-hidraulico-paleteira-cascavel',
+    path: '/blog/oleo-hidraulico-paleteira-cascavel',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogPaleteira2000kgVs3000kgCascavelRoute =
+  BlogPaleteira2000kgVs3000kgCascavelRouteImport.update({
+    id: '/blog/paleteira-2000kg-vs-3000kg-cascavel',
+    path: '/blog/paleteira-2000kg-vs-3000kg-cascavel',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogPaleteiraCooperativasOesteParanaRoute =
+  BlogPaleteiraCooperativasOesteParanaRouteImport.update({
+    id: '/blog/paleteira-cooperativas-oeste-parana',
+    path: '/blog/paleteira-cooperativas-oeste-parana',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogPaleteiraIndustriaAlimentosCascavelRoute =
+  BlogPaleteiraIndustriaAlimentosCascavelRouteImport.update({
+    id: '/blog/paleteira-industria-alimentos-cascavel',
+    path: '/blog/paleteira-industria-alimentos-cascavel',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogPaleteiraManualVsHidraulicaRoute =
+  BlogPaleteiraManualVsHidraulicaRouteImport.update({
+    id: '/blog/paleteira-manual-vs-hidraulica',
+    path: '/blog/paleteira-manual-vs-hidraulica',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogPecasPaleteiraHidraulicaCascavelRoute =
+  BlogPecasPaleteiraHidraulicaCascavelRouteImport.update({
+    id: '/blog/pecas-paleteira-hidraulica-cascavel',
+    path: '/blog/pecas-paleteira-hidraulica-cascavel',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogPrincipaisDefeitosPaleteiraHidraulicaRoute =
+  BlogPrincipaisDefeitosPaleteiraHidraulicaRouteImport.update({
+    id: '/blog/principais-defeitos-paleteira-hidraulica',
+    path: '/blog/principais-defeitos-paleteira-hidraulica',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogQuantoCustaConsertarPaleteiraHidraulicaRoute =
+  BlogQuantoCustaConsertarPaleteiraHidraulicaRouteImport.update({
+    id: '/blog/quanto-custa-consertar-paleteira-hidraulica',
+    path: '/blog/quanto-custa-consertar-paleteira-hidraulica',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogSegurancaOperacaoPaleteiraCascavelRoute =
+  BlogSegurancaOperacaoPaleteiraCascavelRouteImport.update({
+    id: '/blog/seguranca-operacao-paleteira-cascavel',
+    path: '/blog/seguranca-operacao-paleteira-cascavel',
     getParentRoute: () => rootRouteImport,
   } as any)
 
@@ -246,6 +260,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/assistencia-tecnica-equipamentos-hidraulicos-cascavel': typeof AssistenciaTecnicaEquipamentosHidraulicosCascavelRoute
   '/cidades-atendidas': typeof CidadesAtendidasRoute
+  '/conserto-macaco-hidraulico-cascavel': typeof ConsertoMacacoHidraulicoCascavelRoute
   '/conserto-paleteira-hidraulica-cascavel': typeof ConsertoPaleteiraHidraulicaCascavelRoute
   '/contato': typeof ContatoRoute
   '/locacao-paleteiras-hidraulicas-cascavel': typeof LocacaoPaleteirasHidraulicasCascavelRoute
@@ -258,6 +273,7 @@ export interface FileRoutesByFullPath {
   '/manutencao-paleteira-hidraulica-santa-helena': typeof ManutencaoPaleteiraHidraulicaSantaHelenaRoute
   '/manutencao-paleteira-hidraulica-toledo': typeof ManutencaoPaleteiraHidraulicaToledoRoute
   '/manutencao-paleteiras-hidraulicas-cascavel': typeof ManutencaoPaleteirasHidraulicasCascavelRoute
+  '/reparo-cilindro-hidraulico-cascavel': typeof ReparoCilindroHidraulicoCascavelRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre-nos': typeof SobreNosRoute
   '/venda-paleteiras-hidraulicas-cascavel': typeof VendaPaleteirasHidraulicasCascavelRoute
@@ -282,6 +298,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/assistencia-tecnica-equipamentos-hidraulicos-cascavel': typeof AssistenciaTecnicaEquipamentosHidraulicosCascavelRoute
   '/cidades-atendidas': typeof CidadesAtendidasRoute
+  '/conserto-macaco-hidraulico-cascavel': typeof ConsertoMacacoHidraulicoCascavelRoute
   '/conserto-paleteira-hidraulica-cascavel': typeof ConsertoPaleteiraHidraulicaCascavelRoute
   '/contato': typeof ContatoRoute
   '/locacao-paleteiras-hidraulicas-cascavel': typeof LocacaoPaleteirasHidraulicasCascavelRoute
@@ -294,6 +311,7 @@ export interface FileRoutesByTo {
   '/manutencao-paleteira-hidraulica-santa-helena': typeof ManutencaoPaleteiraHidraulicaSantaHelenaRoute
   '/manutencao-paleteira-hidraulica-toledo': typeof ManutencaoPaleteiraHidraulicaToledoRoute
   '/manutencao-paleteiras-hidraulicas-cascavel': typeof ManutencaoPaleteirasHidraulicasCascavelRoute
+  '/reparo-cilindro-hidraulico-cascavel': typeof ReparoCilindroHidraulicoCascavelRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre-nos': typeof SobreNosRoute
   '/venda-paleteiras-hidraulicas-cascavel': typeof VendaPaleteirasHidraulicasCascavelRoute
@@ -319,6 +337,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/assistencia-tecnica-equipamentos-hidraulicos-cascavel': typeof AssistenciaTecnicaEquipamentosHidraulicosCascavelRoute
   '/cidades-atendidas': typeof CidadesAtendidasRoute
+  '/conserto-macaco-hidraulico-cascavel': typeof ConsertoMacacoHidraulicoCascavelRoute
   '/conserto-paleteira-hidraulica-cascavel': typeof ConsertoPaleteiraHidraulicaCascavelRoute
   '/contato': typeof ContatoRoute
   '/locacao-paleteiras-hidraulicas-cascavel': typeof LocacaoPaleteirasHidraulicasCascavelRoute
@@ -331,6 +350,7 @@ export interface FileRoutesById {
   '/manutencao-paleteira-hidraulica-santa-helena': typeof ManutencaoPaleteiraHidraulicaSantaHelenaRoute
   '/manutencao-paleteira-hidraulica-toledo': typeof ManutencaoPaleteiraHidraulicaToledoRoute
   '/manutencao-paleteiras-hidraulicas-cascavel': typeof ManutencaoPaleteirasHidraulicasCascavelRoute
+  '/reparo-cilindro-hidraulico-cascavel': typeof ReparoCilindroHidraulicoCascavelRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre-nos': typeof SobreNosRoute
   '/venda-paleteiras-hidraulicas-cascavel': typeof VendaPaleteirasHidraulicasCascavelRoute
@@ -357,6 +377,7 @@ export interface FileRouteTypes {
     | '/'
     | '/assistencia-tecnica-equipamentos-hidraulicos-cascavel'
     | '/cidades-atendidas'
+    | '/conserto-macaco-hidraulico-cascavel'
     | '/conserto-paleteira-hidraulica-cascavel'
     | '/contato'
     | '/locacao-paleteiras-hidraulicas-cascavel'
@@ -369,6 +390,7 @@ export interface FileRouteTypes {
     | '/manutencao-paleteira-hidraulica-santa-helena'
     | '/manutencao-paleteira-hidraulica-toledo'
     | '/manutencao-paleteiras-hidraulicas-cascavel'
+    | '/reparo-cilindro-hidraulico-cascavel'
     | '/sitemap.xml'
     | '/sobre-nos'
     | '/venda-paleteiras-hidraulicas-cascavel'
@@ -393,6 +415,7 @@ export interface FileRouteTypes {
     | '/'
     | '/assistencia-tecnica-equipamentos-hidraulicos-cascavel'
     | '/cidades-atendidas'
+    | '/conserto-macaco-hidraulico-cascavel'
     | '/conserto-paleteira-hidraulica-cascavel'
     | '/contato'
     | '/locacao-paleteiras-hidraulicas-cascavel'
@@ -405,6 +428,7 @@ export interface FileRouteTypes {
     | '/manutencao-paleteira-hidraulica-santa-helena'
     | '/manutencao-paleteira-hidraulica-toledo'
     | '/manutencao-paleteiras-hidraulicas-cascavel'
+    | '/reparo-cilindro-hidraulico-cascavel'
     | '/sitemap.xml'
     | '/sobre-nos'
     | '/venda-paleteiras-hidraulicas-cascavel'
@@ -429,6 +453,7 @@ export interface FileRouteTypes {
     | '/'
     | '/assistencia-tecnica-equipamentos-hidraulicos-cascavel'
     | '/cidades-atendidas'
+    | '/conserto-macaco-hidraulico-cascavel'
     | '/conserto-paleteira-hidraulica-cascavel'
     | '/contato'
     | '/locacao-paleteiras-hidraulicas-cascavel'
@@ -441,6 +466,7 @@ export interface FileRouteTypes {
     | '/manutencao-paleteira-hidraulica-santa-helena'
     | '/manutencao-paleteira-hidraulica-toledo'
     | '/manutencao-paleteiras-hidraulicas-cascavel'
+    | '/reparo-cilindro-hidraulico-cascavel'
     | '/sitemap.xml'
     | '/sobre-nos'
     | '/venda-paleteiras-hidraulicas-cascavel'
@@ -466,6 +492,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AssistenciaTecnicaEquipamentosHidraulicosCascavelRoute: typeof AssistenciaTecnicaEquipamentosHidraulicosCascavelRoute
   CidadesAtendidasRoute: typeof CidadesAtendidasRoute
+  ConsertoMacacoHidraulicoCascavelRoute: typeof ConsertoMacacoHidraulicoCascavelRoute
   ConsertoPaleteiraHidraulicaCascavelRoute: typeof ConsertoPaleteiraHidraulicaCascavelRoute
   ContatoRoute: typeof ContatoRoute
   LocacaoPaleteirasHidraulicasCascavelRoute: typeof LocacaoPaleteirasHidraulicasCascavelRoute
@@ -478,6 +505,7 @@ export interface RootRouteChildren {
   ManutencaoPaleteiraHidraulicaSantaHelenaRoute: typeof ManutencaoPaleteiraHidraulicaSantaHelenaRoute
   ManutencaoPaleteiraHidraulicaToledoRoute: typeof ManutencaoPaleteiraHidraulicaToledoRoute
   ManutencaoPaleteirasHidraulicasCascavelRoute: typeof ManutencaoPaleteirasHidraulicasCascavelRoute
+  ReparoCilindroHidraulicoCascavelRoute: typeof ReparoCilindroHidraulicoCascavelRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SobreNosRoute: typeof SobreNosRoute
   VendaPaleteirasHidraulicasCascavelRoute: typeof VendaPaleteirasHidraulicasCascavelRoute
@@ -501,123 +529,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/venda-pecas-paleteiras': {
-      id: '/venda-pecas-paleteiras'
-      path: '/venda-pecas-paleteiras'
-      fullPath: '/venda-pecas-paleteiras'
-      preLoaderRoute: typeof VendaPecasPaleteirasRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/venda-paleteiras-hidraulicas-cascavel': {
-      id: '/venda-paleteiras-hidraulicas-cascavel'
-      path: '/venda-paleteiras-hidraulicas-cascavel'
-      fullPath: '/venda-paleteiras-hidraulicas-cascavel'
-      preLoaderRoute: typeof VendaPaleteirasHidraulicasCascavelRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sobre-nos': {
-      id: '/sobre-nos'
-      path: '/sobre-nos'
-      fullPath: '/sobre-nos'
-      preLoaderRoute: typeof SobreNosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/manutencao-paleteiras-hidraulicas-cascavel': {
-      id: '/manutencao-paleteiras-hidraulicas-cascavel'
-      path: '/manutencao-paleteiras-hidraulicas-cascavel'
-      fullPath: '/manutencao-paleteiras-hidraulicas-cascavel'
-      preLoaderRoute: typeof ManutencaoPaleteirasHidraulicasCascavelRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/manutencao-paleteira-hidraulica-toledo': {
-      id: '/manutencao-paleteira-hidraulica-toledo'
-      path: '/manutencao-paleteira-hidraulica-toledo'
-      fullPath: '/manutencao-paleteira-hidraulica-toledo'
-      preLoaderRoute: typeof ManutencaoPaleteiraHidraulicaToledoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/manutencao-paleteira-hidraulica-santa-helena': {
-      id: '/manutencao-paleteira-hidraulica-santa-helena'
-      path: '/manutencao-paleteira-hidraulica-santa-helena'
-      fullPath: '/manutencao-paleteira-hidraulica-santa-helena'
-      preLoaderRoute: typeof ManutencaoPaleteiraHidraulicaSantaHelenaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/manutencao-paleteira-hidraulica-palotina': {
-      id: '/manutencao-paleteira-hidraulica-palotina'
-      path: '/manutencao-paleteira-hidraulica-palotina'
-      fullPath: '/manutencao-paleteira-hidraulica-palotina'
-      preLoaderRoute: typeof ManutencaoPaleteiraHidraulicaPalotinaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/manutencao-paleteira-hidraulica-medianeira': {
-      id: '/manutencao-paleteira-hidraulica-medianeira'
-      path: '/manutencao-paleteira-hidraulica-medianeira'
-      fullPath: '/manutencao-paleteira-hidraulica-medianeira'
-      preLoaderRoute: typeof ManutencaoPaleteiraHidraulicaMedianeiraRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/manutencao-paleteira-hidraulica-marechal-candido-rondon': {
-      id: '/manutencao-paleteira-hidraulica-marechal-candido-rondon'
-      path: '/manutencao-paleteira-hidraulica-marechal-candido-rondon'
-      fullPath: '/manutencao-paleteira-hidraulica-marechal-candido-rondon'
-      preLoaderRoute: typeof ManutencaoPaleteiraHidraulicaMarechalCandidoRondonRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/manutencao-paleteira-hidraulica-foz-do-iguacu': {
-      id: '/manutencao-paleteira-hidraulica-foz-do-iguacu'
-      path: '/manutencao-paleteira-hidraulica-foz-do-iguacu'
-      fullPath: '/manutencao-paleteira-hidraulica-foz-do-iguacu'
-      preLoaderRoute: typeof ManutencaoPaleteiraHidraulicaFozDoIguacuRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/manutencao-paleteira-hidraulica-corbelia': {
-      id: '/manutencao-paleteira-hidraulica-corbelia'
-      path: '/manutencao-paleteira-hidraulica-corbelia'
-      fullPath: '/manutencao-paleteira-hidraulica-corbelia'
-      preLoaderRoute: typeof ManutencaoPaleteiraHidraulicaCorbeliaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/manutencao-paleteira-hidraulica-assis-chateaubriand': {
-      id: '/manutencao-paleteira-hidraulica-assis-chateaubriand'
-      path: '/manutencao-paleteira-hidraulica-assis-chateaubriand'
-      fullPath: '/manutencao-paleteira-hidraulica-assis-chateaubriand'
-      preLoaderRoute: typeof ManutencaoPaleteiraHidraulicaAssisChateaubriandRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/locacao-paleteiras-hidraulicas-cascavel': {
-      id: '/locacao-paleteiras-hidraulicas-cascavel'
-      path: '/locacao-paleteiras-hidraulicas-cascavel'
-      fullPath: '/locacao-paleteiras-hidraulicas-cascavel'
-      preLoaderRoute: typeof LocacaoPaleteirasHidraulicasCascavelRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contato': {
-      id: '/contato'
-      path: '/contato'
-      fullPath: '/contato'
-      preLoaderRoute: typeof ContatoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/conserto-paleteira-hidraulica-cascavel': {
-      id: '/conserto-paleteira-hidraulica-cascavel'
-      path: '/conserto-paleteira-hidraulica-cascavel'
-      fullPath: '/conserto-paleteira-hidraulica-cascavel'
-      preLoaderRoute: typeof ConsertoPaleteiraHidraulicaCascavelRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cidades-atendidas': {
-      id: '/cidades-atendidas'
-      path: '/cidades-atendidas'
-      fullPath: '/cidades-atendidas'
-      preLoaderRoute: typeof CidadesAtendidasRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/assistencia-tecnica-equipamentos-hidraulicos-cascavel': {
@@ -627,11 +543,137 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AssistenciaTecnicaEquipamentosHidraulicosCascavelRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/cidades-atendidas': {
+      id: '/cidades-atendidas'
+      path: '/cidades-atendidas'
+      fullPath: '/cidades-atendidas'
+      preLoaderRoute: typeof CidadesAtendidasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/conserto-macaco-hidraulico-cascavel': {
+      id: '/conserto-macaco-hidraulico-cascavel'
+      path: '/conserto-macaco-hidraulico-cascavel'
+      fullPath: '/conserto-macaco-hidraulico-cascavel'
+      preLoaderRoute: typeof ConsertoMacacoHidraulicoCascavelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/conserto-paleteira-hidraulica-cascavel': {
+      id: '/conserto-paleteira-hidraulica-cascavel'
+      path: '/conserto-paleteira-hidraulica-cascavel'
+      fullPath: '/conserto-paleteira-hidraulica-cascavel'
+      preLoaderRoute: typeof ConsertoPaleteiraHidraulicaCascavelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/locacao-paleteiras-hidraulicas-cascavel': {
+      id: '/locacao-paleteiras-hidraulicas-cascavel'
+      path: '/locacao-paleteiras-hidraulicas-cascavel'
+      fullPath: '/locacao-paleteiras-hidraulicas-cascavel'
+      preLoaderRoute: typeof LocacaoPaleteirasHidraulicasCascavelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/manutencao-paleteira-hidraulica-assis-chateaubriand': {
+      id: '/manutencao-paleteira-hidraulica-assis-chateaubriand'
+      path: '/manutencao-paleteira-hidraulica-assis-chateaubriand'
+      fullPath: '/manutencao-paleteira-hidraulica-assis-chateaubriand'
+      preLoaderRoute: typeof ManutencaoPaleteiraHidraulicaAssisChateaubriandRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/manutencao-paleteira-hidraulica-corbelia': {
+      id: '/manutencao-paleteira-hidraulica-corbelia'
+      path: '/manutencao-paleteira-hidraulica-corbelia'
+      fullPath: '/manutencao-paleteira-hidraulica-corbelia'
+      preLoaderRoute: typeof ManutencaoPaleteiraHidraulicaCorbeliaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/manutencao-paleteira-hidraulica-foz-do-iguacu': {
+      id: '/manutencao-paleteira-hidraulica-foz-do-iguacu'
+      path: '/manutencao-paleteira-hidraulica-foz-do-iguacu'
+      fullPath: '/manutencao-paleteira-hidraulica-foz-do-iguacu'
+      preLoaderRoute: typeof ManutencaoPaleteiraHidraulicaFozDoIguacuRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/manutencao-paleteira-hidraulica-marechal-candido-rondon': {
+      id: '/manutencao-paleteira-hidraulica-marechal-candido-rondon'
+      path: '/manutencao-paleteira-hidraulica-marechal-candido-rondon'
+      fullPath: '/manutencao-paleteira-hidraulica-marechal-candido-rondon'
+      preLoaderRoute: typeof ManutencaoPaleteiraHidraulicaMarechalCandidoRondonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/manutencao-paleteira-hidraulica-medianeira': {
+      id: '/manutencao-paleteira-hidraulica-medianeira'
+      path: '/manutencao-paleteira-hidraulica-medianeira'
+      fullPath: '/manutencao-paleteira-hidraulica-medianeira'
+      preLoaderRoute: typeof ManutencaoPaleteiraHidraulicaMedianeiraRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/manutencao-paleteira-hidraulica-palotina': {
+      id: '/manutencao-paleteira-hidraulica-palotina'
+      path: '/manutencao-paleteira-hidraulica-palotina'
+      fullPath: '/manutencao-paleteira-hidraulica-palotina'
+      preLoaderRoute: typeof ManutencaoPaleteiraHidraulicaPalotinaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/manutencao-paleteira-hidraulica-santa-helena': {
+      id: '/manutencao-paleteira-hidraulica-santa-helena'
+      path: '/manutencao-paleteira-hidraulica-santa-helena'
+      fullPath: '/manutencao-paleteira-hidraulica-santa-helena'
+      preLoaderRoute: typeof ManutencaoPaleteiraHidraulicaSantaHelenaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/manutencao-paleteira-hidraulica-toledo': {
+      id: '/manutencao-paleteira-hidraulica-toledo'
+      path: '/manutencao-paleteira-hidraulica-toledo'
+      fullPath: '/manutencao-paleteira-hidraulica-toledo'
+      preLoaderRoute: typeof ManutencaoPaleteiraHidraulicaToledoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/manutencao-paleteiras-hidraulicas-cascavel': {
+      id: '/manutencao-paleteiras-hidraulicas-cascavel'
+      path: '/manutencao-paleteiras-hidraulicas-cascavel'
+      fullPath: '/manutencao-paleteiras-hidraulicas-cascavel'
+      preLoaderRoute: typeof ManutencaoPaleteirasHidraulicasCascavelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reparo-cilindro-hidraulico-cascavel': {
+      id: '/reparo-cilindro-hidraulico-cascavel'
+      path: '/reparo-cilindro-hidraulico-cascavel'
+      fullPath: '/reparo-cilindro-hidraulico-cascavel'
+      preLoaderRoute: typeof ReparoCilindroHidraulicoCascavelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sobre-nos': {
+      id: '/sobre-nos'
+      path: '/sobre-nos'
+      fullPath: '/sobre-nos'
+      preLoaderRoute: typeof SobreNosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/venda-paleteiras-hidraulicas-cascavel': {
+      id: '/venda-paleteiras-hidraulicas-cascavel'
+      path: '/venda-paleteiras-hidraulicas-cascavel'
+      fullPath: '/venda-paleteiras-hidraulicas-cascavel'
+      preLoaderRoute: typeof VendaPaleteirasHidraulicasCascavelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/venda-pecas-paleteiras': {
+      id: '/venda-pecas-paleteiras'
+      path: '/venda-pecas-paleteiras'
+      fullPath: '/venda-pecas-paleteiras'
+      preLoaderRoute: typeof VendaPecasPaleteirasRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/': {
@@ -641,88 +683,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog/seguranca-operacao-paleteira-cascavel': {
-      id: '/blog/seguranca-operacao-paleteira-cascavel'
-      path: '/blog/seguranca-operacao-paleteira-cascavel'
-      fullPath: '/blog/seguranca-operacao-paleteira-cascavel'
-      preLoaderRoute: typeof BlogSegurancaOperacaoPaleteiraCascavelRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog/quanto-custa-consertar-paleteira-hidraulica': {
-      id: '/blog/quanto-custa-consertar-paleteira-hidraulica'
-      path: '/blog/quanto-custa-consertar-paleteira-hidraulica'
-      fullPath: '/blog/quanto-custa-consertar-paleteira-hidraulica'
-      preLoaderRoute: typeof BlogQuantoCustaConsertarPaleteiraHidraulicaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog/principais-defeitos-paleteira-hidraulica': {
-      id: '/blog/principais-defeitos-paleteira-hidraulica'
-      path: '/blog/principais-defeitos-paleteira-hidraulica'
-      fullPath: '/blog/principais-defeitos-paleteira-hidraulica'
-      preLoaderRoute: typeof BlogPrincipaisDefeitosPaleteiraHidraulicaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog/pecas-paleteira-hidraulica-cascavel': {
-      id: '/blog/pecas-paleteira-hidraulica-cascavel'
-      path: '/blog/pecas-paleteira-hidraulica-cascavel'
-      fullPath: '/blog/pecas-paleteira-hidraulica-cascavel'
-      preLoaderRoute: typeof BlogPecasPaleteiraHidraulicaCascavelRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog/paleteira-manual-vs-hidraulica': {
-      id: '/blog/paleteira-manual-vs-hidraulica'
-      path: '/blog/paleteira-manual-vs-hidraulica'
-      fullPath: '/blog/paleteira-manual-vs-hidraulica'
-      preLoaderRoute: typeof BlogPaleteiraManualVsHidraulicaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog/paleteira-industria-alimentos-cascavel': {
-      id: '/blog/paleteira-industria-alimentos-cascavel'
-      path: '/blog/paleteira-industria-alimentos-cascavel'
-      fullPath: '/blog/paleteira-industria-alimentos-cascavel'
-      preLoaderRoute: typeof BlogPaleteiraIndustriaAlimentosCascavelRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog/paleteira-cooperativas-oeste-parana': {
-      id: '/blog/paleteira-cooperativas-oeste-parana'
-      path: '/blog/paleteira-cooperativas-oeste-parana'
-      fullPath: '/blog/paleteira-cooperativas-oeste-parana'
-      preLoaderRoute: typeof BlogPaleteiraCooperativasOesteParanaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog/paleteira-2000kg-vs-3000kg-cascavel': {
-      id: '/blog/paleteira-2000kg-vs-3000kg-cascavel'
-      path: '/blog/paleteira-2000kg-vs-3000kg-cascavel'
-      fullPath: '/blog/paleteira-2000kg-vs-3000kg-cascavel'
-      preLoaderRoute: typeof BlogPaleteira2000kgVs3000kgCascavelRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog/oleo-hidraulico-paleteira-cascavel': {
-      id: '/blog/oleo-hidraulico-paleteira-cascavel'
-      path: '/blog/oleo-hidraulico-paleteira-cascavel'
-      fullPath: '/blog/oleo-hidraulico-paleteira-cascavel'
-      preLoaderRoute: typeof BlogOleoHidraulicoPaleteiraCascavelRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog/manutencao-preventiva-paleteira-hidraulica': {
-      id: '/blog/manutencao-preventiva-paleteira-hidraulica'
-      path: '/blog/manutencao-preventiva-paleteira-hidraulica'
-      fullPath: '/blog/manutencao-preventiva-paleteira-hidraulica'
-      preLoaderRoute: typeof BlogManutencaoPreventivaPaleteiraHidraulicaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog/locacao-vs-compra-paleteira-cascavel': {
-      id: '/blog/locacao-vs-compra-paleteira-cascavel'
-      path: '/blog/locacao-vs-compra-paleteira-cascavel'
-      fullPath: '/blog/locacao-vs-compra-paleteira-cascavel'
-      preLoaderRoute: typeof BlogLocacaoVsCompraPaleteiraCascavelRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog/guia-conserto-paleteira-hidraulica-cascavel': {
-      id: '/blog/guia-conserto-paleteira-hidraulica-cascavel'
-      path: '/blog/guia-conserto-paleteira-hidraulica-cascavel'
-      fullPath: '/blog/guia-conserto-paleteira-hidraulica-cascavel'
-      preLoaderRoute: typeof BlogGuiaConsertoPaleteiraHidraulicaCascavelRouteImport
+    '/blog/aluguel-paleteira-hidraulica-cascavel': {
+      id: '/blog/aluguel-paleteira-hidraulica-cascavel'
+      path: '/blog/aluguel-paleteira-hidraulica-cascavel'
+      fullPath: '/blog/aluguel-paleteira-hidraulica-cascavel'
+      preLoaderRoute: typeof BlogAluguelPaleteiraHidraulicaCascavelRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/assistencia-tecnica-paleteira-cascavel': {
@@ -732,11 +697,88 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogAssistenciaTecnicaPaleteiraCascavelRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog/aluguel-paleteira-hidraulica-cascavel': {
-      id: '/blog/aluguel-paleteira-hidraulica-cascavel'
-      path: '/blog/aluguel-paleteira-hidraulica-cascavel'
-      fullPath: '/blog/aluguel-paleteira-hidraulica-cascavel'
-      preLoaderRoute: typeof BlogAluguelPaleteiraHidraulicaCascavelRouteImport
+    '/blog/guia-conserto-paleteira-hidraulica-cascavel': {
+      id: '/blog/guia-conserto-paleteira-hidraulica-cascavel'
+      path: '/blog/guia-conserto-paleteira-hidraulica-cascavel'
+      fullPath: '/blog/guia-conserto-paleteira-hidraulica-cascavel'
+      preLoaderRoute: typeof BlogGuiaConsertoPaleteiraHidraulicaCascavelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/locacao-vs-compra-paleteira-cascavel': {
+      id: '/blog/locacao-vs-compra-paleteira-cascavel'
+      path: '/blog/locacao-vs-compra-paleteira-cascavel'
+      fullPath: '/blog/locacao-vs-compra-paleteira-cascavel'
+      preLoaderRoute: typeof BlogLocacaoVsCompraPaleteiraCascavelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/manutencao-preventiva-paleteira-hidraulica': {
+      id: '/blog/manutencao-preventiva-paleteira-hidraulica'
+      path: '/blog/manutencao-preventiva-paleteira-hidraulica'
+      fullPath: '/blog/manutencao-preventiva-paleteira-hidraulica'
+      preLoaderRoute: typeof BlogManutencaoPreventivaPaleteiraHidraulicaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/oleo-hidraulico-paleteira-cascavel': {
+      id: '/blog/oleo-hidraulico-paleteira-cascavel'
+      path: '/blog/oleo-hidraulico-paleteira-cascavel'
+      fullPath: '/blog/oleo-hidraulico-paleteira-cascavel'
+      preLoaderRoute: typeof BlogOleoHidraulicoPaleteiraCascavelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/paleteira-2000kg-vs-3000kg-cascavel': {
+      id: '/blog/paleteira-2000kg-vs-3000kg-cascavel'
+      path: '/blog/paleteira-2000kg-vs-3000kg-cascavel'
+      fullPath: '/blog/paleteira-2000kg-vs-3000kg-cascavel'
+      preLoaderRoute: typeof BlogPaleteira2000kgVs3000kgCascavelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/paleteira-cooperativas-oeste-parana': {
+      id: '/blog/paleteira-cooperativas-oeste-parana'
+      path: '/blog/paleteira-cooperativas-oeste-parana'
+      fullPath: '/blog/paleteira-cooperativas-oeste-parana'
+      preLoaderRoute: typeof BlogPaleteiraCooperativasOesteParanaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/paleteira-industria-alimentos-cascavel': {
+      id: '/blog/paleteira-industria-alimentos-cascavel'
+      path: '/blog/paleteira-industria-alimentos-cascavel'
+      fullPath: '/blog/paleteira-industria-alimentos-cascavel'
+      preLoaderRoute: typeof BlogPaleteiraIndustriaAlimentosCascavelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/paleteira-manual-vs-hidraulica': {
+      id: '/blog/paleteira-manual-vs-hidraulica'
+      path: '/blog/paleteira-manual-vs-hidraulica'
+      fullPath: '/blog/paleteira-manual-vs-hidraulica'
+      preLoaderRoute: typeof BlogPaleteiraManualVsHidraulicaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/pecas-paleteira-hidraulica-cascavel': {
+      id: '/blog/pecas-paleteira-hidraulica-cascavel'
+      path: '/blog/pecas-paleteira-hidraulica-cascavel'
+      fullPath: '/blog/pecas-paleteira-hidraulica-cascavel'
+      preLoaderRoute: typeof BlogPecasPaleteiraHidraulicaCascavelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/principais-defeitos-paleteira-hidraulica': {
+      id: '/blog/principais-defeitos-paleteira-hidraulica'
+      path: '/blog/principais-defeitos-paleteira-hidraulica'
+      fullPath: '/blog/principais-defeitos-paleteira-hidraulica'
+      preLoaderRoute: typeof BlogPrincipaisDefeitosPaleteiraHidraulicaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/quanto-custa-consertar-paleteira-hidraulica': {
+      id: '/blog/quanto-custa-consertar-paleteira-hidraulica'
+      path: '/blog/quanto-custa-consertar-paleteira-hidraulica'
+      fullPath: '/blog/quanto-custa-consertar-paleteira-hidraulica'
+      preLoaderRoute: typeof BlogQuantoCustaConsertarPaleteiraHidraulicaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/seguranca-operacao-paleteira-cascavel': {
+      id: '/blog/seguranca-operacao-paleteira-cascavel'
+      path: '/blog/seguranca-operacao-paleteira-cascavel'
+      fullPath: '/blog/seguranca-operacao-paleteira-cascavel'
+      preLoaderRoute: typeof BlogSegurancaOperacaoPaleteiraCascavelRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -747,6 +789,7 @@ const rootRouteChildren: RootRouteChildren = {
   AssistenciaTecnicaEquipamentosHidraulicosCascavelRoute:
     AssistenciaTecnicaEquipamentosHidraulicosCascavelRoute,
   CidadesAtendidasRoute: CidadesAtendidasRoute,
+  ConsertoMacacoHidraulicoCascavelRoute: ConsertoMacacoHidraulicoCascavelRoute,
   ConsertoPaleteiraHidraulicaCascavelRoute:
     ConsertoPaleteiraHidraulicaCascavelRoute,
   ContatoRoute: ContatoRoute,
@@ -770,6 +813,7 @@ const rootRouteChildren: RootRouteChildren = {
     ManutencaoPaleteiraHidraulicaToledoRoute,
   ManutencaoPaleteirasHidraulicasCascavelRoute:
     ManutencaoPaleteirasHidraulicasCascavelRoute,
+  ReparoCilindroHidraulicoCascavelRoute: ReparoCilindroHidraulicoCascavelRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SobreNosRoute: SobreNosRoute,
   VendaPaleteirasHidraulicasCascavelRoute:

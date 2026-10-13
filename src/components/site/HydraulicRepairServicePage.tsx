@@ -21,7 +21,7 @@ export function HydraulicRepairServicePage({ service }: { service: RepairService
         </section>
       ))}
       <section>
-        <H2>{service === undefined ? "Como funciona" : "Como funciona o conserto e reparo"}</H2>
+        <H2>{service.path === "/conserto-macaco-hidraulico-cascavel" ? "Como funciona o conserto" : "Como funciona"}</H2>
         <ol className="mt-6 grid gap-6 sm:grid-cols-2">
           {service.steps.map((step, index) => (
             <li key={step.title} className="rounded-lg border border-border bg-card p-6">
