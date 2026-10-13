@@ -8,3 +8,8 @@
 - [x] Create the jack and cylinder repair pages with at least 700 useful words each, requested metadata and service-specific FAQ/schema.
 - [x] Add links in the services menu, home, assistance page and footer, and add both URLs to the sitemap.
 - [x] Verify both pages, WhatsApp links, structured data and existing SEO tests.
+
+# City content differentiation
+- [ ] Rewrite the eight city pages with 600–900 words and city-specific sectors, logistics, problems and three FAQs.
+- [ ] Preserve URLs and visual patterns; update unique SEO and city Service coverage, nearby links and city directory links.
+- [ ] Validate content uniqueness, word counts, metadata, schema and real navigation.
