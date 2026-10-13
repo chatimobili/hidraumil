@@ -1,261 +1,116 @@
 import { Link } from "@tanstack/react-router";
 import { ServicePageShell, H2, P } from "@/components/site/ServicePageShell";
-import { CheckCircle2, MapPin, Truck, Clock, Wrench, HelpCircle } from "lucide-react";
-import { SITE } from "@/lib/site";
+import { CheckCircle2, HelpCircle } from "lucide-react";
 
 export interface CityContent {
   city: string;
   citySlug: string;
   distanceKm: number;
-  driveTime: string;
+  road: string;
+  seoTitle: string;
+  description: string;
+  subtitle: string;
   intro: string;
   economy: string;
-  neighborhoods: string[];
-  nearbyCities: { name: string; slug: string }[];
-  industryH2: string;
-  industryProfile: string;
-  logisticsH2: string;
   logistics: string;
-  useCasesH2: string;
   useCases: string[];
-  extendedH2: string;
-  extendedContent: string;
+  problemsH2: string;
+  problems: { title: string; text: string }[];
+  preventive: string;
+  nearbyCities: { name: string; slug: string }[];
+  nearbyIntro: string;
   uniqueFaqs: { q: string; a: string }[];
+  coverage: string;
+  budget: string;
+  benefits: string[];
 }
 
-
 export function CityServicePage({ content }: { content: CityContent }) {
-  const title = `Manutenção de Paleteira Hidráulica em ${content.city} - PR`;
-  const subtitle = `Assistência técnica, conserto, aluguel e venda de paleteiras em ${content.city} e região. Atendimento a partir de Cascavel com coleta, entrega e garantia por escrito.`;
-  const pageUrl = `https://hidraumil.com.br/manutencao-paleteira-hidraulica-${content.citySlug}`;
-
-  const faqs = [
-    ...content.uniqueFaqs,
-    {
-      q: `A Hidraumil faz manutenção de paleteira hidráulica em ${content.city}?`,
-      a: `Sim. Atendemos ${content.city} com manutenção preventiva e corretiva de paleteiras hidráulicas manuais, semielétricas e elétricas, de todas as marcas. O atendimento é feito a partir da nossa sede em Cascavel, com coleta e entrega agendadas ou visita técnica em campo para contratos de manutenção.`,
-    },
-    {
-      q: `Como solicitar um orçamento de paleteira em ${content.city}?`,
-      a: `Basta chamar no WhatsApp (${SITE.phoneDisplay}) descrevendo o serviço — conserto, manutenção, aluguel ou compra — e a localização em ${content.city}. Retornamos com estimativa inicial em minutos e agendamos a visita técnica ou a coleta do equipamento.`,
-    },
-  ];
-
-
-  const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": `${pageUrl}#localbusiness`,
-    name: `${SITE.name} - Atendimento em ${content.city}`,
-    description: subtitle,
-    url: pageUrl,
-    telephone: SITE.phoneE164,
-    image: "https://hidraumil.com.br/og-hidraumil.jpg",
-    priceRange: "$$",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Cascavel",
-      addressRegion: "PR",
-      addressCountry: "BR",
-    },
-    areaServed: [
-      { "@type": "City", name: content.city, containedInPlace: { "@type": "AdministrativeArea", name: "Paraná" } },
-      ...content.nearbyCities.map((c) => ({ "@type": "City", name: c.name })),
-    ],
-    openingHoursSpecification: [{
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "08:00",
-      closes: "18:00",
-    }],
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: `Serviços de paleteira hidráulica em ${content.city}`,
-      itemListElement: [
-        "Manutenção preventiva e corretiva de paleteira hidráulica",
-        "Conserto de paleteira hidráulica",
-        "Aluguel de paleteira hidráulica",
-        "Venda de paleteiras hidráulicas",
-        "Venda de peças para paleteira hidráulica",
-      ].map((s) => ({
-        "@type": "Offer",
-        itemOffered: { "@type": "Service", name: `${s} em ${content.city}` },
-      })),
-    },
-  };
-
+  const pageUrl = `https://hidraumil.lovable.app/manutencao-paleteira-hidraulica-${content.citySlug}`;
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqs.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
+    mainEntity: content.uniqueFaqs.map(({ q, a }) => ({
+      "@type": "Question", name: q,
+      acceptedAnswer: { "@type": "Answer", text: a },
     })),
   };
-
   const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Início", item: "https://hidraumil.com.br/" },
-      { "@type": "ListItem", position: 2, name: "Cidades atendidas", item: "https://hidraumil.com.br/cidades-atendidas" },
-      { "@type": "ListItem", position: 3, name: `Paleteira em ${content.city}`, item: pageUrl },
+      { "@type": "ListItem", position: 1, name: "Início", item: "https://hidraumil.lovable.app/" },
+      { "@type": "ListItem", position: 2, name: "Cidades atendidas", item: "https://hidraumil.lovable.app/cidades-atendidas" },
+      { "@type": "ListItem", position: 3, name: content.city, item: pageUrl },
     ],
   };
-
   return (
     <ServicePageShell
-      title={title}
-      subtitle={subtitle}
+      title={`Manutenção de Paleteira Hidráulica em ${content.city}`}
+      subtitle={content.subtitle}
       serviceName={`Manutenção de paleteira hidráulica em ${content.city}`}
+      factualCopy
+      cityCopy={{ city: content.city, coverage: content.coverage, budget: content.budget, benefits: content.benefits }}
     >
       <section>
-        <H2>Paleteiras hidráulicas em {content.city}: atendimento completo</H2>
+        <H2>Paleteiras hidráulicas em {content.city}</H2>
         <P>{content.intro}</P>
-        <P>
-          Estamos sediados em Cascavel, a cerca de {content.distanceKm} km de {content.city} —
-          aproximadamente {content.driveTime} de estrada. Isso permite deslocamento
-          rápido para atendimentos em campo, coleta e entrega de equipamentos e reposição
-          ágil de peças, sem que sua empresa precise depender de fornecedores distantes.
-        </P>
+        <P>{content.economy}</P>
       </section>
-
       <section>
-        <H2>{content.industryH2}</H2>
-        <P>{content.industryProfile}</P>
-      </section>
-
-      <section>
-        <H2>{content.logisticsH2}</H2>
+        <H2>Atendimento em {content.city} a partir de Cascavel</H2>
         <P>{content.logistics}</P>
       </section>
-
       <section>
-        <H2>Serviços que atendemos em {content.city}</H2>
-        <div className="mt-6 grid sm:grid-cols-2 gap-5">
-          {[
-            { icon: Wrench, t: "Manutenção preventiva e corretiva", d: `Planos de manutenção mensais para empresas de ${content.city}, com técnicos que vão até o seu galpão.`, href: "/manutencao-paleteiras-hidraulicas-cascavel" },
-            { icon: Truck, t: "Conserto de paleteira hidráulica", d: `Diagnóstico gratuito e reparo com peças de procedência. Coleta e entrega em ${content.city}.`, href: "/conserto-paleteira-hidraulica-cascavel" },
-            { icon: Clock, t: "Aluguel de paleteira", d: `Locação de paleteiras manuais, semielétricas e elétricas com contratos flexíveis para operações em ${content.city}.`, href: "/locacao-paleteiras-hidraulicas-cascavel" },
-            { icon: CheckCircle2, t: "Venda de paleteiras e peças", d: `Equipamentos novos e revisados, com garantia, e peças originais para reposição em ${content.city}.`, href: "/venda-paleteiras-hidraulicas-cascavel" },
-          ].map((s, i) => (
-            <Link key={i} to={s.href} className="block rounded-2xl border border-gray-200 bg-white p-7 hover:shadow-md hover:border-primary transition">
-              <s.icon className="h-7 w-7 text-primary" />
-              <h3 className="mt-4 text-lg font-semibold text-secondary">{s.t}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{s.d}</p>
-              <span className="mt-3 inline-block text-sm font-semibold text-primary">Ver detalhes →</span>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      <section>
-        <H2>{content.useCasesH2}</H2>
-        <ul className="mt-6 space-y-3">
-          {content.useCases.map((u) => (
-            <li key={u} className="flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4">
-              <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-              <span className="text-sm text-secondary">{u}</span>
+        <H2>Segmentos que atendemos em {content.city}</H2>
+        <ul className="mt-6 grid gap-5 sm:grid-cols-2">
+          {content.useCases.map(text => (
+            <li key={text} className="flex items-start gap-3 rounded-xl border border-border bg-card p-4">
+              <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+              <span className="text-sm text-secondary">{text}</span>
             </li>
           ))}
         </ul>
       </section>
-
       <section>
-        <H2>{content.extendedH2}</H2>
-        <P>{content.extendedContent}</P>
-      </section>
-
-
-
-
-      <section>
-        <H2>Por que empresas de {content.city} escolhem a Hidraumil</H2>
-        <P>{content.economy}</P>
-        <ul className="mt-6 grid sm:grid-cols-2 gap-3">
-          {[
-            "Diagnóstico técnico gratuito",
-            "Orçamento sem compromisso pelo WhatsApp",
-            "Coleta e entrega agendada",
-            "Peças originais e compatíveis de procedência",
-            "Garantia formal por escrito",
-            "Contratos de manutenção mensal para indústrias",
-          ].map((b) => (
-            <li key={b} className="flex items-start gap-3 rounded-xl bg-[#FEF3EC] p-4">
-              <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-              <span className="text-sm text-secondary">{b}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section>
-        <H2>Regiões e bairros atendidos em {content.city}</H2>
-        <P>
-          Atendemos indústrias, distribuidoras, supermercados, cooperativas e transportadoras
-          em toda a área urbana e rural de {content.city}, incluindo:
-        </P>
-        <div className="mt-5 flex flex-wrap gap-2">
-          {content.neighborhoods.map((n) => (
-            <span key={n} className="inline-flex items-center gap-1.5 rounded-full bg-white border border-gray-200 px-4 py-2 text-sm text-secondary">
-              <MapPin className="h-3.5 w-3.5 text-primary" /> {n}
-            </span>
+        <H2>{content.problemsH2}</H2>
+        <div className="mt-6 grid gap-5 sm:grid-cols-2">
+          {content.problems.map(problem => (
+            <div key={problem.title} className="rounded-2xl border border-border bg-card p-7">
+              <h3 className="text-lg font-semibold text-secondary">{problem.title}</h3>
+              <P>{problem.text}</P>
+            </div>
           ))}
         </div>
+        <P>{content.preventive}</P>
       </section>
-
       <section>
-        <H2>Cidades vizinhas que também atendemos</H2>
-        <P>
-          Além de {content.city}, a Hidraumil atende diversas cidades do Oeste do Paraná com
-          manutenção, conserto, aluguel e venda de paleteiras hidráulicas:
-        </P>
-        <div className="mt-5 grid grid-cols-2 sm:grid-cols-3 gap-3">
-          {content.nearbyCities.map((c) => {
-            const href = c.slug === "cascavel"
-              ? "/manutencao-paleteiras-hidraulicas-cascavel"
-              : `/manutencao-paleteira-hidraulica-${c.slug}`;
-            return (
-              <Link
-                key={c.slug}
-                to={href as string}
-                className="rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-semibold text-secondary hover:border-primary hover:text-primary transition"
-              >
-                Paleteira em {c.name}
-              </Link>
-            );
-          })}
-        </div>
-      </section>
-
-      <section>
-        <H2>Perguntas frequentes sobre paleteira hidráulica em {content.city}</H2>
+        <H2>Perguntas frequentes sobre paleteira em {content.city}</H2>
         <div className="mt-6 space-y-4">
-          {faqs.map((f) => (
-            <details key={f.q} className="group rounded-2xl border border-gray-200 bg-white p-6 open:shadow-md transition">
-              <summary className="flex items-start gap-3 cursor-pointer list-none font-semibold text-secondary">
-                <HelpCircle className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <span className="flex-1">{f.q}</span>
+          {content.uniqueFaqs.map(({ q, a }) => (
+            <details key={q} className="group rounded-2xl border border-border bg-card p-6 open:shadow-md transition">
+              <summary className="flex cursor-pointer list-none items-start gap-3 font-semibold text-secondary">
+                <HelpCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                <span className="flex-1">{q}</span>
               </summary>
-              <p className="mt-3 pl-8 text-muted-foreground leading-relaxed">{f.a}</p>
+              <p className="mt-3 pl-8 leading-relaxed text-muted-foreground">{a}</p>
             </details>
           ))}
         </div>
       </section>
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+      <section>
+        <H2>Também atendemos</H2>
+        <P>{content.nearbyIntro}</P>
+        <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
+          {content.nearbyCities.map(city => (
+            <Link key={city.slug} to={`/manutencao-paleteira-hidraulica-${city.slug}`} className="rounded-xl border border-border bg-card px-4 py-3 text-sm font-semibold text-secondary transition hover:border-primary hover:text-primary">
+              Paleteira em {city.name}
+            </Link>
+          ))}
+          <Link to="/cidades-atendidas" className="rounded-xl border border-border bg-card px-4 py-3 text-sm font-semibold text-secondary transition hover:border-primary hover:text-primary">Todas as cidades atendidas</Link>
+        </div>
+      </section>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     </ServicePageShell>
   );
 }
