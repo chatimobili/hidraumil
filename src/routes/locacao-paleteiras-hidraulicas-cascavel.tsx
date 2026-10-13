@@ -1,3 +1,4 @@
+import { ServiceFAQ } from "@/components/site/ServiceFAQ";
 import { createFileRoute } from "@tanstack/react-router";
 import { ServicePageShell, H2, P } from "@/components/site/ServicePageShell";
 import { CheckCircle2 } from "lucide-react";
@@ -5,11 +6,15 @@ import { CheckCircle2 } from "lucide-react";
 export const Route = createFileRoute("/locacao-paleteiras-hidraulicas-cascavel")({
   head: () => ({
     meta: [
-      { title: "Locação de Paleteiras Hidráulicas em Cascavel | Hidraumil" },
-      { name: "description", content: "Aluguel de paleteiras hidráulicas em Cascavel e Oeste do Paraná. Planos mensais flexíveis, equipamentos revisados e manutenção inclusa. Ideal para demandas temporárias." },
-      { property: "og:title", content: "Locação de Paleteiras Hidráulicas em Cascavel | Hidraumil" },
-      { property: "og:description", content: "Aluguel com manutenção inclusa em Cascavel e região." },
+      { title: "Aluguel de Paleteira Hidráulica em Cascavel | Hidraumil" },
+      { name: "description", content: "Alugue paleteiras hidráulicas em Cascavel para picos de demanda ou enquanto a sua está no conserto. Consulte a disponibilidade pelo WhatsApp." },
+      { property: "og:title", content: "Aluguel de Paleteira Hidráulica em Cascavel | Hidraumil" },
+      { property: "og:description", content: "Alugue paleteiras hidráulicas em Cascavel para picos de demanda ou enquanto a sua está no conserto. Consulte a disponibilidade pelo WhatsApp." },
       { property: "og:url", content: "https://hidraumil.com.br/locacao-paleteiras-hidraulicas-cascavel" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Aluguel de Paleteira Hidráulica em Cascavel | Hidraumil" },
+      { name: "twitter:description", content: "Alugue paleteiras hidráulicas em Cascavel para picos de demanda ou enquanto a sua está no conserto. Consulte a disponibilidade pelo WhatsApp." },
     ],
     links: [{ rel: "canonical", href: "https://hidraumil.com.br/locacao-paleteiras-hidraulicas-cascavel" }],
   }),
@@ -33,6 +38,7 @@ const planos = [
 
 function Page() {
   return (
+    <>
     <ServicePageShell
       title="Locação de Paleteiras Hidráulicas em Cascavel, PR"
       subtitle="Aluguel mensal flexível com equipamentos revisados e manutenção inclusa. Ideal para indústrias, supermercados, operações logísticas e demandas temporárias."
@@ -89,5 +95,7 @@ function Page() {
         </P>
       </section>
     </ServicePageShell>
+    <ServiceFAQ />
+    </>
   );
 }

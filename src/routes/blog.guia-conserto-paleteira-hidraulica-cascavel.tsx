@@ -12,12 +12,15 @@ const meta = {
 export const Route = createFileRoute("/blog/guia-conserto-paleteira-hidraulica-cascavel")({
   head: () => ({
     meta: [
-      { title: `${meta.title} | Hidraumil` },
-      { name: "description", content: meta.excerpt },
+      { title: "Paleteira com Defeito? Guia de Diagnóstico e Conserto" },
+      { name: "description", content: "Paleteira sem subir, descendo sozinha ou vazando óleo? Veja as causas mais comuns, quando dá para resolver e quando chamar um técnico em Cascavel." },
       { property: "og:type", content: "article" },
-      { property: "og:title", content: meta.title },
-      { property: "og:description", content: meta.excerpt },
+      { property: "og:title", content: "Paleteira com Defeito? Guia de Diagnóstico e Conserto" },
+      { property: "og:description", content: "Paleteira sem subir, descendo sozinha ou vazando óleo? Veja as causas mais comuns, quando dá para resolver e quando chamar um técnico em Cascavel." },
       { property: "og:url", content: `https://hidraumil.com.br/blog/${meta.slug}` },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Paleteira com Defeito? Guia de Diagnóstico e Conserto" },
+      { name: "twitter:description", content: "Paleteira sem subir, descendo sozinha ou vazando óleo? Veja as causas mais comuns, quando dá para resolver e quando chamar um técnico em Cascavel." },
     ],
     links: [{ rel: "canonical", href: `https://hidraumil.com.br/blog/${meta.slug}` }],
   }),

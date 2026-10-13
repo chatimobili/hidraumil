@@ -1,3 +1,4 @@
+import { ServiceFAQ } from "@/components/site/ServiceFAQ";
 import { createFileRoute } from "@tanstack/react-router";
 import { ServicePageShell, H2, P } from "@/components/site/ServicePageShell";
 import { Search, Wrench, Cog, ShieldCheck } from "lucide-react";
@@ -5,11 +6,15 @@ import { Search, Wrench, Cog, ShieldCheck } from "lucide-react";
 export const Route = createFileRoute("/assistencia-tecnica-equipamentos-hidraulicos-cascavel")({
   head: () => ({
     meta: [
-      { title: "Assistência Técnica em Equipamentos Hidráulicos em Cascavel | Hidraumil" },
-      { name: "description", content: "Assistência técnica especializada em equipamentos hidráulicos em Cascavel. Atendemos paleteiras, equipamentos Bovenau e outros sistemas hidráulicos industriais." },
-      { property: "og:title", content: "Assistência Técnica em Equipamentos Hidráulicos em Cascavel | Hidraumil" },
-      { property: "og:description", content: "Atendimento especializado em equipamentos hidráulicos industriais, incluindo Bovenau." },
+      { title: "Assistência Técnica Hidráulica em Cascavel | Hidraumil" },
+      { name: "description", content: "Conserto de macacos hidráulicos, cilindros, prensas e paleteiras em Cascavel e no Oeste do Paraná. Diagnóstico rápido e orçamento pelo WhatsApp." },
+      { property: "og:title", content: "Assistência Técnica Hidráulica em Cascavel | Hidraumil" },
+      { property: "og:description", content: "Conserto de macacos hidráulicos, cilindros, prensas e paleteiras em Cascavel e no Oeste do Paraná. Diagnóstico rápido e orçamento pelo WhatsApp." },
       { property: "og:url", content: "https://hidraumil.com.br/assistencia-tecnica-equipamentos-hidraulicos-cascavel" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Assistência Técnica Hidráulica em Cascavel | Hidraumil" },
+      { name: "twitter:description", content: "Conserto de macacos hidráulicos, cilindros, prensas e paleteiras em Cascavel e no Oeste do Paraná. Diagnóstico rápido e orçamento pelo WhatsApp." },
     ],
     links: [{ rel: "canonical", href: "https://hidraumil.com.br/assistencia-tecnica-equipamentos-hidraulicos-cascavel" }],
   }),
@@ -25,6 +30,7 @@ const etapas = [
 
 function Page() {
   return (
+    <>
     <ServicePageShell
       title="Assistência Técnica em Equipamentos Hidráulicos em Cascavel"
       subtitle="Atendimento técnico especializado para paleteiras, equipamentos Bovenau e sistemas hidráulicos industriais em Cascavel e Oeste do Paraná."
@@ -60,5 +66,7 @@ function Page() {
         </P>
       </section>
     </ServicePageShell>
+    <ServiceFAQ />
+    </>
   );
 }

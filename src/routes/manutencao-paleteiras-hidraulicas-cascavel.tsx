@@ -1,3 +1,4 @@
+import { ServiceFAQ } from "@/components/site/ServiceFAQ";
 import { createFileRoute } from "@tanstack/react-router";
 import { ServicePageShell, H2, H3, P } from "@/components/site/ServicePageShell";
 import { AlertTriangle, ShieldCheck, Clock, Award, Users } from "lucide-react";
@@ -5,11 +6,15 @@ import { AlertTriangle, ShieldCheck, Clock, Award, Users } from "lucide-react";
 export const Route = createFileRoute("/manutencao-paleteiras-hidraulicas-cascavel")({
   head: () => ({
     meta: [
-      { title: "Manutenção de Paleteiras Hidráulicas em Cascavel | Hidraumil" },
-      { name: "description", content: "Serviço completo de manutenção preventiva e corretiva de paleteiras hidráulicas em Cascavel, PR. Técnicos especializados, atendimento rápido e garantia. Solicite orçamento gratuito." },
-      { property: "og:title", content: "Manutenção de Paleteiras Hidráulicas em Cascavel | Hidraumil" },
-      { property: "og:description", content: "Manutenção preventiva e corretiva de paleteiras em Cascavel e Oeste do PR." },
+      { title: "Manutenção de Paleteira Hidráulica em Cascavel | Hidraumil" },
+      { name: "description", content: "Manutenção preventiva e corretiva de paleteiras hidráulicas em Cascavel. Revisão, troca de vedações e óleo para sua operação não parar. Fale no WhatsApp." },
+      { property: "og:title", content: "Manutenção de Paleteira Hidráulica em Cascavel | Hidraumil" },
+      { property: "og:description", content: "Manutenção preventiva e corretiva de paleteiras hidráulicas em Cascavel. Revisão, troca de vedações e óleo para sua operação não parar. Fale no WhatsApp." },
       { property: "og:url", content: "https://hidraumil.com.br/manutencao-paleteiras-hidraulicas-cascavel" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Manutenção de Paleteira Hidráulica em Cascavel | Hidraumil" },
+      { name: "twitter:description", content: "Manutenção preventiva e corretiva de paleteiras hidráulicas em Cascavel. Revisão, troca de vedações e óleo para sua operação não parar. Fale no WhatsApp." },
     ],
     links: [{ rel: "canonical", href: "https://hidraumil.com.br/manutencao-paleteiras-hidraulicas-cascavel" }],
   }),
@@ -34,6 +39,7 @@ const diferenciais = [
 
 function Page() {
   return (
+    <>
     <ServicePageShell
       title="Manutenção de Paleteiras Hidráulicas em Cascavel, PR"
       subtitle="Manutenção preventiva, corretiva e revisão completa do sistema hidráulico. Atendemos indústrias e empresas em Cascavel e toda a região Oeste do Paraná."
@@ -90,5 +96,7 @@ function Page() {
         </div>
       </section>
     </ServicePageShell>
+    <ServiceFAQ />
+    </>
   );
 }

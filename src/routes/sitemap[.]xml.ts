@@ -19,6 +19,7 @@ export const Route = createFileRoute("/sitemap.xml")({
       GET: async () => {
         const entries: SitemapEntry[] = [
           { path: "/", changefreq: "weekly", priority: "1.0" },
+          { path: "/assistencia-tecnica-equipamentos-hidraulicos-cascavel", changefreq: "monthly", priority: "0.9" },
           { path: "/sobre-nos", changefreq: "monthly", priority: "0.8" },
           { path: "/manutencao-paleteiras-hidraulicas-cascavel", changefreq: "monthly", priority: "0.9" },
           { path: "/conserto-paleteira-hidraulica-cascavel", changefreq: "monthly", priority: "0.9" },
