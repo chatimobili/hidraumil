@@ -11,11 +11,13 @@ export function ServicePageShell({
   subtitle,
   serviceName,
   children,
+  factualCopy = false,
 }: {
   title: string;
   subtitle: string;
   serviceName: string;
   children: ReactNode;
+  factualCopy?: boolean;
 }) {
   const schema = {
     "@context": "https://schema.org",
@@ -27,12 +29,15 @@ export function ServicePageShell({
       address: { "@type": "PostalAddress", addressLocality: "Cascavel", addressRegion: "PR", addressCountry: "BR" },
       telephone: SITE.phoneE164,
     },
-    areaServed: { "@type": "AdministrativeArea", name: "Oeste do Paraná" },
+    areaServed: factualCopy ? [
+      { "@type": "City", name: "Cascavel, PR" },
+      { "@type": "AdministrativeArea", name: "Oeste do Paraná" },
+    ] : { "@type": "AdministrativeArea", name: "Oeste do Paraná" },
   };
 
   return (
     <>
-      <PageHero eyebrow="Cascavel · PR" title={title} subtitle={subtitle} />
+      <PageHero eyebrow="Cascavel · PR" title={title} subtitle={subtitle} badges={!factualCopy} />
 
       <article id="detalhes" className="bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-24 space-y-20">
@@ -48,9 +53,7 @@ export function ServicePageShell({
                   Atendemos em Cascavel e toda a <span className="text-primary">Região Oeste do Paraná</span>
                 </h2>
                 <p className="mt-5 text-white/80 text-lg leading-relaxed max-w-2xl">
-                  Cascavel, Toledo, Foz do Iguaçu, Marechal Cândido Rondon, Medianeira, Assis Chateaubriand,
-                  Palotina, Santa Helena, Guaíra e demais cidades do Oeste do Paraná. Vamos até o seu galpão
-                  ou recebemos a paleteira na nossa oficina em Cascavel.
+                  {factualCopy ? "Atendimento em Cascavel e no Oeste do Paraná. Informe sua cidade e o equipamento pelo WhatsApp para combinar a avaliação e a forma de encaminhamento." : <>Cascavel, Toledo, Foz do Iguaçu, Marechal Cândido Rondon, Medianeira, Assis Chateaubriand, Palotina, Santa Helena, Guaíra e demais cidades do Oeste do Paraná. Vamos até o seu galpão ou recebemos a paleteira na nossa oficina em Cascavel.</>}
                 </p>
                 <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white">
                   <MapPin className="h-4 w-4 text-primary" /> Sede: Cascavel, Paraná
@@ -68,14 +71,14 @@ export function ServicePageShell({
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Orçamento</p>
               <h2 className="text-secondary leading-[1.15]">Solicite seu orçamento</h2>
               <p className="text-muted-foreground text-lg leading-[1.55]">
-                Resposta rápida pelo WhatsApp ou pelo formulário. Sem compromisso.
+                {factualCopy ? "Informe o equipamento e os sintomas pelo WhatsApp ou pelo formulário para orientar a avaliação e o orçamento." : "Resposta rápida pelo WhatsApp ou pelo formulário. Sem compromisso."}
               </p>
               <ul className="space-y-3 pt-2">
-                {[
+                {(factualCopy ? ["Avaliação do equipamento", "Orçamento para aprovação", "Reparo e testes conforme o diagnóstico"] : [
                   "Orçamento gratuito",
                   "Diagnóstico técnico especializado",
                   "Garantia formal por escrito",
-                ].map((b) => (
+                ]).map((b) => (
                   <li key={b} className="flex items-start gap-3 text-secondary">
                     <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                     <span className="font-medium">{b}</span>

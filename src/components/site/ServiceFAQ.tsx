@@ -17,11 +17,11 @@ const questions = [
   },
 ];
 
-export function ServiceFAQ() {
+export function ServiceFAQ({ questions: faqQuestions = questions }: { questions?: { q: string; a: string }[] } = {}) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: questions.map(({ q, a }) => ({
+    mainEntity: faqQuestions.map(({ q, a }) => ({
       "@type": "Question",
       name: q,
       acceptedAnswer: { "@type": "Answer", text: a },
@@ -33,7 +33,7 @@ export function ServiceFAQ() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <h2 id="service-faq-title" className="text-secondary">Perguntas frequentes</h2>
         <dl className="mt-8 divide-y divide-border">
-          {questions.map(({ q, a }) => (
+          {faqQuestions.map(({ q, a }) => (
             <div key={q} className="py-6">
               <dt className="text-xl font-semibold text-secondary">{q}</dt>
               <dd className="mt-3 text-muted-foreground leading-relaxed">
