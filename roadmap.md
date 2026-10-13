@@ -4,3 +4,7 @@
 - [x] Add two WhatsApp CTAs and the maintenance link to the preventive maintenance article.
 - [x] Include the existing assistance page in the sitemap.
 - [x] Verify rendered HTML, FAQ interactions, links and sitemap; apply required package security update.
+# New hydraulic repair services
+- [ ] Create the jack and cylinder repair pages with at least 700 useful words each, requested metadata and service-specific FAQ/schema.
+- [ ] Add links in the services menu, home, assistance page and footer, and add both URLs to the sitemap.
+- [ ] Verify both pages, WhatsApp links, structured data and existing SEO tests.
